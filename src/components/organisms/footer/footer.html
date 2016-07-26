@@ -1,0 +1,76 @@
+<footer class="footer">
+  <div id="footer-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 menu">
+          <h3>Overview</h3>
+            <ul>
+              {% for navItem in navigation.footer1 %}
+              {% set navItemIsActivePage = navItem.name|isSlugMatch(pageSlug) %}
+              {% if navItemIsActivePage == true %}
+              <li class="{{ navItem.name|slug }} active">
+              {% else %}
+              <li class="{{ navItem.name|slug }}">
+              {% endif %}
+                <a href="{{ navItem.url }}" title="{{ navItem.title|'' }}">{{ navItem.name }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+        </div>
+        <div class="col-sm-3 menu">
+          <h3>Menu</h3>
+            <ul>
+              {% for navItem in navigation.footer2 %}
+              {% set navItemIsActivePage = navItem.name|isSlugMatch(pageSlug) %}
+              {% if navItemIsActivePage == true %}
+              <li class="{{ navItem.name|slug }} active">
+              {% else %}
+              <li class="{{ navItem.name|slug }}">
+              {% endif %}
+                <a href="{{ navItem.url }}" title="{{ navItem.title|'' }}">{{ navItem.name }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+        </div>
+        <div class="col-sm-2 menu">
+          <h3>Social</h3>
+            <ul>
+              {% for navItem in navigation.footer3 %}
+              {% set navItemIsActivePage = navItem.name|isSlugMatch(pageSlug) %}
+              {% if navItemIsActivePage == true %}
+              <li class="{{ navItem.name|slug }} active">
+              {% else %}
+              <li class="{{ navItem.name|slug }}">
+              {% endif %}
+                <a href="{{ navItem.url }}" title="{{ navItem.title|'' }}">{{ navItem.name }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+        </div>
+        <div class="col-sm-4 newsletter">
+          <div class="signup clearfix">
+            <p>
+              Sign up for the newsletter and we'll inform you of updates, offers and more.
+            </p>
+            <form>
+              <input type="text" name="email" class="form-control" placeholder="Your email address" />
+              <input type="submit" value="Sign up" />
+            </form>
+          </div>
+          <a href="#">
+            <img src="images/social/social-tw.png" alt="twitter" />
+          </a>
+          <a href="#">
+            <img src="images/social/social-dbl.png" alt="dribbble" />
+          </a>
+        </div>
+      </div>
+      <div class="row credits">
+        <div class="col-md-12">
+          Copyright © 2016 by Kalabox, Inc. DBA Tandem.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+

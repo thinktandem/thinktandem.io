@@ -1,0 +1,19 @@
+{% if title or contents|striptags %}
+
+<section class="lede">
+
+  {% if title %}
+  <h2>{{title}}</h2>
+  {% endif %}
+
+  {% if contents|striptags %}
+    <div class="content">
+      <p>
+        {{contents}}
+      </p>
+    </div>
+  {% endif %}
+
+</section>
+
+{% endif %}

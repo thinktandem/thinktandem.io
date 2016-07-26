@@ -1,0 +1,11 @@
+{
+  "name": "kalastatic",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap-sass-twbs": "~3.3.5",
+    "fontawesome": "~4.2.0",
+    "matchHeight": "~0.5.2",
+    "holderjs": "~2.4.0",
+    "flexslider": "~2.5.0"
+  }
+}

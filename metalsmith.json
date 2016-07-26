@@ -1,0 +1,55 @@
+{
+  "plugins": {
+    "metalsmith-collections-convention": {},
+    "metalsmith-metadata-convention": {},
+    "metalsmith-move-up": {
+      "pattern": "content/**/*"
+    },
+    "metalsmith-env": {
+      "variables": {
+        "basePath": "/"
+      }
+    },
+    "metalsmith-markdown": {},
+    "metalsmith-include": {},
+    "metalsmith-permalinks": {
+      "pattern": ":url",
+      "relative": false
+    },
+    "metalsmith-swig-helpers": {
+      "filters": {
+        "xorcrypt": "xor-crypt"
+      }
+    },
+    "metalsmith-in-place": {
+      "engine": "swig",
+      "partials": "src/components"
+    },
+    "metalsmith-layouts": {
+      "engine": "swig",
+      "directory": "templates"
+    },
+    "metalsmith-browserify": {
+      "files": [
+        "js/entry.js",
+        "js/theme.js",
+        "js/jquery.flexslider.min.js"
+      ],
+      "dest": "js/scripts.js"
+    },
+    "metalsmith-assets": {
+      "source": "./assets",
+      "dest": "."
+    },
+    "metalsmith-sass": {
+      "outputStyle": "nested",
+      "sourceComments": false,
+      "sourceMap": true,
+      "includePaths": [
+        "assets/vendor",
+        "assets/vendor/bootstrap-sass-twbs/assets/stylesheets",
+        "assets/vendor/fontawesome/scss/"
+      ]
+    }
+  }
+}
