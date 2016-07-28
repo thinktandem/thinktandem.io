@@ -38,7 +38,7 @@
   {% block header %}
   <header id="header" class="navbar navbar-inverse hero" role="banner">
     {% block navigation %}
-      {% set headerComponent = "../"+config.headerComponent %}
+      {% set headerComponent = config.headerComponent %}
       {% include headerComponent %}
     {% endblock %}
   </header>
@@ -62,7 +62,7 @@
 </main>
 
   {% block footer %}
-    {% set footerComponent = "../"+config.footerComponent %}
+    {% set footerComponent = config.footerComponent %}
     {% include footerComponent %}
   {% endblock %}
 

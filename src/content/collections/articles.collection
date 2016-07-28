@@ -1,5 +1,5 @@
 ---
-pattern: content/news/*.md
+pattern: content/articles/*.md
 sortBy: order
 ---
 

@@ -1,0 +1,138 @@
+#hero {
+  overflow: hidden;
+  background: #4B4848;
+  background-size: cover;
+  background-image: url("http://farm9.staticflickr.com/8222/8254861601_1fbf969a14_b.jpg");
+
+
+  /* These are some ready-to-use backgrounds you can test out by uncommenting them */
+  
+  /*background-image: url("../../images/bg2.png");*/
+  /*background-image: url("../../images/bg3.png");*/
+  /*background-image: url("http://25.media.tumblr.com/665f306a0a5a5eae6e0c91f33ce74695/tumblr_mzzqv2P7MY1st5lhmo1_1280.jpg");*/
+  /*background: -webkit-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.26)), -webkit-linear-gradient(108deg, #5E8199, #153752 90%);*/
+
+  background-position: center 16%;
+  height: 580px;
+  position: relative;
+  top: -60px;
+  padding-top: 150px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+
+  @media (max-width: 991px) {
+    padding-top: 100px;
+  }
+
+  @media (max-width: 767px) {
+    height: 550px;
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(right, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.1) 26%, rgba(0, 0, 0, 0.35) 71%, rgba(0, 0, 0, 0.5) 100%);
+    background: -moz-linear-gradient(right, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.1) 26%, rgba(0, 0, 0, 0.35) 71%, rgba(0, 0, 0, 0.5) 100%);
+      background: -o-linear-gradient(right, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.1) 26%, rgba(0, 0, 0, 0.35) 71%, rgba(0, 0, 0, 0.5) 100%);
+      background: linear-gradient(right, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.1) 26%, rgba(0, 0, 0, 0.35) 71%, rgba(0, 0, 0, 0.5) 100%);
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*background: rgba(6, 13, 32, 0.15);*/
+    /*background: rgba(13, 37, 102, 0.24);*/
+    background: rgba(32, 54, 114, 0.29);
+  }
+  
+  .container {
+    position: relative;
+    z-index: 33;
+  }
+
+  h1.hero-text {
+    font-family: $lato;
+    line-height: 52px;
+    text-align: left;
+    font-size: 37px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: .3px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+    -webkit-animation-duration: 1s;
+
+    @media (max-width: 767px) {
+      font-size: 25px;
+      line-height: 38px;
+      margin-top: 0;
+      text-align: center;
+    }
+  }
+
+  .sub-text {
+    -webkit-font-smoothing: antialiased;
+    width: 50%;
+    margin-top: 25px;
+    font-family: $lato;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+
+    -webkit-animation-duration: 1s;
+
+    @media (max-width: 991px) {
+      width: 70%;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 15px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .cta {
+    @include animationDelay(0.6s);
+    margin-top: 60px;
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+
+    a {
+      margin-right: 20px;
+      padding: 15px 31px;
+
+      @media (max-width: 767px) {
+        font-size: 14px;
+        padding: 12px 25px;
+        margin: 0px 15px 15px 0px;
+      }
+    }
+  }
+
+  .img {
+    position: absolute;
+    top: 15px;
+    left: 625px;
+    width: 570px;
+    height: 333px;
+    background-image: url("../../images/static-hero.png");
+    background-repeat: no-repeat;
+
+    @media(max-width: 991px) {
+      display: none;
+    }
+  }
+}

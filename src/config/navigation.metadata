@@ -2,15 +2,7 @@
 primary:
   - name: About
     title: About Us
-    url: about
-
-  - name: Services
-    title: What we do
-    url: services
-
-  - name: Training
-    title: Improving your team
-    url: training
+    url: /
 
   - name: Blog
     title: Our thoughts

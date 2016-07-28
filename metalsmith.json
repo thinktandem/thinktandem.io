@@ -1,6 +1,12 @@
 {
   "plugins": {
-    "metalsmith-collections-convention": {},
+    "metalsmith-collections": {
+      "articles": {
+        "sortBy": "date",
+        "reverse": true,
+        "pattern": "content/articles/*.md"
+      }
+    },
     "metalsmith-metadata-convention": {},
     "metalsmith-move-up": {
       "pattern": "content/**/*"
@@ -14,7 +20,19 @@
     "metalsmith-include": {},
     "metalsmith-permalinks": {
       "pattern": ":url",
-      "relative": false
+      "relative": false,
+      "linksets": [{
+        "match": {"collection": "articles"},
+        "pattern": "blog/:date/:title"
+      }]
+    },
+    "metalsmith-pagination": {
+      "collections.articles": {
+        "perPage": 2,
+        "layout": "pages/blog.html",
+        "first": "blog/index.html",
+        "path": "blog/:num/index.html"
+      }
     },
     "metalsmith-swig-helpers": {
       "filters": {
@@ -23,7 +41,7 @@
     },
     "metalsmith-in-place": {
       "engine": "swig",
-      "partials": "src/components"
+      "partials": "templates/components"
     },
     "metalsmith-layouts": {
       "engine": "swig",
@@ -48,7 +66,8 @@
       "includePaths": [
         "assets/vendor",
         "assets/vendor/bootstrap-sass-twbs/assets/stylesheets",
-        "assets/vendor/fontawesome/scss/"
+        "assets/vendor/fontawesome/scss/",
+        "templates/components/**/*"
       ]
     }
   }

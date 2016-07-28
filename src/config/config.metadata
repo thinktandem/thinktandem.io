@@ -1,7 +1,7 @@
 ---
 title: Tandem
 description: The devops consultancy that works with you to develop, test, and deploy your application quickly and reliably.
-headerComponent: "../src/components/organisms/header/header.html"
-footerComponent: "../src/components/organisms/footer/footer.html"
+headerComponent: "../components/organisms/header/header.html"
+footerComponent: "../components/organisms/footer/footer.html"
 ---
 This is the global configuration for the whole site.

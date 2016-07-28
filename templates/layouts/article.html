@@ -1,19 +1,47 @@
-{% extends '../layouts/html.html' %}
+{% extends './html.html' %}
 
 {% block contents %}
 
-  <article>
-
-    <h1>{{title|safe}}</h1>
-
-    {% include "../../src/components/molecules/lede/lede.html" with lede only%}
-
-    {{contents|safe}}
-
+  <article id="blogpost-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {% if mainImage %} 
+            <div class="main-pic">
+              <img src="{{mainImage}}" class="img-responsive" alt="blogpost" />
+            </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-10 post">
+          <h1 class="title">
+            {{title|safe}}
+          </h1>
+          <div class="author">
+            <img src="images/testimonials/testimonial3.jpg" class="avatar" alt="author" />
+            {{author|safe}}
+          </div>
+          <div class="content">
+            {{contents|safe}}
+          </div>
+          <div class="share">
+            <img src="images/share.png" alt="share" />
+          </div>
+          <div class="other-posts">
+            <a href="#" class="prev">
+              ← Learn Rails in 30 days
+            </a>
+            <a href="#" class="next pull-right">
+              Take care of yourself →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     <section class="cta-wrapper">
-      {% include "../../src/components/molecules/cta/cta.html" with cta only %}
+      {% include "../components/molecules/cta/cta.html" %}
     </section>
-
   </article>
 
 {% endblock %}

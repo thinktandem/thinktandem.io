@@ -1,0 +1,46 @@
+{% extends '../layouts/html.html' %}
+
+{% block contents %}
+  <div id="posts">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          {% for article in pagination.files %}
+            {% include "../components/molecules/teaser/teaser.html" %}
+          {% endfor %}
+          <div class="pages">
+            <ul class="pagination">
+              {% set pages = pagination.getPages(4) %}
+              {% for key, page in pages %}
+                <li class="{% if pagination.num == page.pagination.num %}active{% endif %}"><a href="{{ page.path }}">{{page.pagination.num}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 sidebar">
+          <div class="updates">
+            <strong>
+              Free blog updates
+              <i class="fa fa-rss"></i>
+            </strong>
+            <p>
+              Never miss an update. 
+              Sign up  to receieve an email whenever we post something in the blog.
+            </p>
+          </div>
+          <div class="follow-tw">
+            <img src="images/twitterfollow.png" alt="follow-tw" />
+          </div>
+          <div class="best-hits">
+            <strong>Check out our best hits:</strong>
+            <a href="#">How to start a business</a>
+            <a href="#">How to sell online</a>
+            <a href="#">Climate change when needed</a>
+            <a href="#">Web development upstart</a>
+            <a href="#">Learn Rails in 30 days</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

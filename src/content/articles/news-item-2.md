@@ -1,8 +1,13 @@
 ---
-template: layouts/article.html
+layout: layouts/article.html
 title: This is some news
 permalink: true
+author: Alec Reynolds
+mainImage: images/blogpost1.png
+private: false
 img-src: holder.js/200x200/#222:#aaa/text:{{title|slug}}
+teaser: Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur.
+date: 2016-04-23
 ---
 
 Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur.
