@@ -1,5 +1,5 @@
 ---
-template: pages/contact-thanks.html
+layout: pages/contact-thanks.html
 title: Thank You
 ---
 
