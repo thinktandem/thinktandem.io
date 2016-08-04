@@ -35,16 +35,16 @@
 </head>
 <body class="{% if pageSlug %}{{pageSlug}}{% else %}{{title|slug}}{% endif %}">
 
-  {% block header %}
-  <header id="header" class="navbar navbar-inverse hero" role="banner">
-    {% block navigation %}
-      {% set headerComponent = config.headerComponent %}
-      {% include headerComponent %}
-    {% endblock %}
-  </header>
-  {% endblock %}
 
   <main role="main" class="main">
+    {% block header %}
+    <header id="header" class="navbar navbar-inverse hero" role="banner">
+      {% block navigation %}
+        {% set headerComponent = config.headerComponent %}
+        {% include headerComponent %}
+      {% endblock %}
+    </header>
+    {% endblock %}
   {% block contents %}
 
     <article>

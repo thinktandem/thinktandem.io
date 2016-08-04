@@ -23,3 +23,30 @@ a {
 .pagination>li>span {
 	@include transition(all 0.25s linear);
 }
+
+.btn-primary {
+  background: $brand-primary;
+  color: #FFF;
+  font-family: Lato;
+  text-transform: uppercase;
+  @include transition(all .2s linear);
+  &:hover {
+    text-decoration: none;
+    background: $brand-success;
+  }
+  border-color: none;
+}
+
+.btn-secondary {
+  background: $brand-success;
+  color: #FFF;
+  font-family: Lato;
+  text-transform: uppercase;
+  @include transition(all .2s linear);
+  &:hover {
+    text-decoration: none;
+    background: #3FD8DF;
+  }
+}
+
+

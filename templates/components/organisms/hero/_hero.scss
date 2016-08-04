@@ -12,7 +12,7 @@
   /*background: -webkit-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.26)), -webkit-linear-gradient(108deg, #5E8199, #153752 90%);*/
 
   background-position: center 16%;
-  height: 40em;
+  height: 34em;
   position: relative;
   top: -60px;
   padding-top: 150px;
@@ -23,7 +23,7 @@
   }
 
   @media (max-width: 767px) {
-    height: 550px;
+    height: 20em;
   }
 
   &:before {
@@ -53,7 +53,7 @@
     font-family: $lato;
     line-height: 1.1em;
     text-align: center;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 300;
     letter-spacing: .3px;
     color: #FFF;
@@ -127,14 +127,17 @@
   }
   .hero-icons {
     margin-top: 8em;
+    @media(max-width: 767px) {
+      margin-top: 4em;
+    }
   }
   .hero-icon {
     display: inline-block;
-    width: 180px;
     img {
-      width: 90px;
       margin: auto;
       display: block;
+      width: 100%;
+      max-width: 90px;
     }
     h3 {
       @extend h2;
@@ -145,6 +148,10 @@
       margin-top: 1.2em;
       font-weight: 300;
       font-family: Lato;
+      @media(max-width: 767px) {
+        font-size: .7em;
+      }
     }
   }
+
 }

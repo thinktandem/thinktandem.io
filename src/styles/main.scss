@@ -1,13 +1,15 @@
+// Override.
+@import "base/variables";
+
+// Vendor stylesheets
 @import "bootstrap-sass-twbs/assets/stylesheets/bootstrap";
 @import "flexslider";
 
-        
 // KalaStatic Extendables and Mixins
 @import "base/mixins";
 @import "base/bootstrap-overrides";
 @import "base/extendables";
 @import "base/typography";
-@import "base/variables";
 @import "base/elements";
 @import "fontawesome";
 
@@ -35,6 +37,10 @@ Styleguide custom
 @import "pages/contact";
 @import "pages/article";
 @import "pages/blog";
+
+body {
+  font-size: $font-size-base;
+}
 
 a, button {
   &:focus {
@@ -149,14 +155,13 @@ a, button {
     border-radius: 0px;   
     border: 0px;
     z-index: 999;
+    background-color: $brand-primary;
+    padding: .5em 0em;
     -webkit-font-smoothing: antialiased;
     
     @media (min-width: 768px) {
-      background: transparent;
-      padding-top: 10px;
 
       .navbar-nav >.active > a {
-        background: transparent;
         color: #fff;
       }
     }
@@ -164,7 +169,7 @@ a, button {
     .navbar-brand {
       color: #fff;
       font-weight: 500;
-      font-size: 26px;
+      font-size: 1.5em;
       font-family: $lato;
     }
 
@@ -177,9 +182,9 @@ a, button {
         
         > a {
           color: #fff;
-          font-size: 15px;
+          font-size: 1em;
           padding: 15px 20px;
-          font-weight: 500;
+          font-weight: 300;
           @include transition(color 0.2s linear);
 
           &:hover {
