@@ -77,11 +77,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kalabox/tandem-live"
+    "url": "https://github.com/kalabox/tandem"
   },
   "config": {
-    "repo": "kalabox/tandem",
-    "deploy": "git@github.com:kalabox/tandem.git",
+    "repo": "kalabox/kalabox.github.io",
+    "deploy": "git@github.com:kalabox/kalabox.github.io.git",
     "branch": "master"
   }
 }
