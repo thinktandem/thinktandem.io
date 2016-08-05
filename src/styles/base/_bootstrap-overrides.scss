@@ -33,6 +33,7 @@ a {
   &:hover {
     text-decoration: none;
     background: $brand-success;
+    border-color: none;
   }
   border-color: none;
 }
@@ -45,7 +46,7 @@ a {
   @include transition(all .2s linear);
   &:hover {
     text-decoration: none;
-    background: #3FD8DF;
+    background: #C2EFEB;
   }
 }
 

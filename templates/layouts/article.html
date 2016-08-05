@@ -1,5 +1,9 @@
 {% extends './html.html' %}
 
+{% block title %}
+  {%parent%} | {{title}} | {{pageSlogan}}
+{% endblock %}
+
 {% block contents %}
 
   <article id="blogpost-wrapper">
@@ -19,22 +23,21 @@
             {{title|safe}}
           </h1>
           <div class="author">
-            <img src="images/testimonials/testimonial3.jpg" class="avatar" alt="author" />
+            <img src="images/authors/{{author|slug}}.jpg" class="avatar" alt="author" />
             {{author|safe}}
           </div>
           <div class="content">
             {{contents|safe}}
           </div>
           <div class="share">
-            <img src="images/share.png" alt="share" />
-          </div>
-          <div class="other-posts">
-            <a href="#" class="prev">
-              ← Learn Rails in 30 days
-            </a>
-            <a href="#" class="next pull-right">
-              Take care of yourself →
-            </a>
+            <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+              <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+              <a class="a2a_button_twitter"></a>
+              <a class="a2a_button_linkedin"></a>
+              <a class="a2a_button_facebook"></a>
+              <a class="a2a_button_hacker_news"></a>
+            </div>
+            <script async src="https://static.addtoany.com/menu/page.js"></script>
           </div>
         </div>
       </div>

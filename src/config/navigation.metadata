@@ -15,20 +15,12 @@ primary:
 footer1:
 
   - name: Contact
-    title: Contact us about anything at all!
+    title: Drop us a line!
     url: contact
 
-  - name: Docs
-    title: Kalastatic Documentation.
-    url: https://github.com/kalamuna/kalastatic/wiki
-
-  - name: Source
-    title: Kalastatic on Github.
-    url: https://github.com/kalamuna/kalastatic/
-
-  - name: MIT License
-    title: Kalastatic on Github.
-    url: https://tldrlegal.com/license/mit-license
+  - name: Kalabox
+    title: Our local development solution
+    url: http://www.kalabox.io
 
 footer2:
 
@@ -50,21 +42,18 @@ footer2:
 
 footer3:
 
-  - name: Contact
-    title: Contact us about anything at all!
-    url: contact
+  - name: Twitter
+    title: Tandem on Twitter
+    url: https://twitter.com/kalaboxme
 
-  - name: Docs
-    title: Kalastatic Documentation.
-    url: https://github.com/kalamuna/kalastatic/wiki
+  - name: LinkedIn
+    title: Tandem on LinkedIn.
+    url: https://www.linkedin.com/company/kalabox
 
-  - name: Source
-    title: Kalastatic on Github.
-    url: https://github.com/kalamuna/kalastatic/
+  - name: Github
+    title: Tandem on Github.
+    url: https://github.com/kalabox
 
-  - name: MIT License
-    title: Kalastatic on Github.
-    url: https://tldrlegal.com/license/mit-license
 ---
 This is the navigation for the site. There are two navs...
 

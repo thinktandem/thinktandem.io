@@ -1,15 +1,15 @@
 <div class="post">
   {% if article.mainImage %} 
-    <a href="{{'blog/' + article.date + '/' + article.title}}" class="pic">
+    <a href="{{'blog/' + article.date|date('Y/m/d') + '/' + article.title|slug }}" class="pic">
       <img src="{{article.mainImage}}" class="img-responsive" alt="blogpost" />
     </a>
   {% endif %}
 
   <div class="title">
-    <a href="{{'blog/' + article.date + '/' + article.title}}">{{article.title}}</a>
+    <a href="{{'blog/' + article.date|date('Y/m/d') + '/' + article.title|slug }}">{{article.title}}</a>
   </div>
   <div class="author">
-    <img src="images/testimonials/testimonial2.jpg" class="avatar" alt="author" />
+    <img src="images/authors/{{article.author|slug}}.jpg" class="avatar" alt="author" />
     {{article.author}}, {{article.date|date('F jS Y')}}
   </div>
   <p class="intro">

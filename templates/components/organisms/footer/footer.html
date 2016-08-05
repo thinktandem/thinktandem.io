@@ -3,24 +3,9 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-3 menu">
-          <h3>Overview</h3>
+          <h3>Other Links</h3>
             <ul>
               {% for navItem in navigation.footer1 %}
-              {% set navItemIsActivePage = navItem.name|isSlugMatch(pageSlug) %}
-              {% if navItemIsActivePage == true %}
-              <li class="{{ navItem.name|slug }} active">
-              {% else %}
-              <li class="{{ navItem.name|slug }}">
-              {% endif %}
-                <a href="{{ navItem.url }}" title="{{ navItem.title|'' }}">{{ navItem.name }}</a>
-              </li>
-              {% endfor %}
-            </ul>
-        </div>
-        <div class="col-sm-3 menu">
-          <h3>Menu</h3>
-            <ul>
-              {% for navItem in navigation.footer2 %}
               {% set navItemIsActivePage = navItem.name|isSlugMatch(pageSlug) %}
               {% if navItemIsActivePage == true %}
               <li class="{{ navItem.name|slug }} active">
@@ -52,17 +37,11 @@
             <p>
               Sign up for the newsletter and we'll inform you of updates, offers and more.
             </p>
-            <form>
-              <input type="text" name="email" class="form-control" placeholder="Your email address" />
+            <form action="//kalabox.us12.list-manage.com/subscribe/post?u=59874b4d6910fa65e724a4648&amp;id=512ca1c79c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <input  type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
               <input type="submit" value="Sign up" />
             </form>
           </div>
-          <a href="#">
-            <img src="images/social/social-tw.png" alt="twitter" />
-          </a>
-          <a href="#">
-            <img src="images/social/social-dbl.png" alt="dribbble" />
-          </a>
         </div>
       </div>
       <div class="row credits">
