@@ -1,41 +1,57 @@
 @media (min-width: 1200px) {
-	.container {
-		width: 970px;
-	}
+  .container {
+    width: 970px;
+  }
 }
 
 a {
-	color: #459CE7;
+  color: #459CE7;
+}
+
+p {
+  color: $gray-light;
+  font-size: 1em;
+  margin-top: 1em;
+  line-height: 1.3em;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
 }
 
 .pagination>.active {
-	>a,
-	>span, 
-	>a:hover, 
-	>span:hover, 
-	>a:focus, 
-	>span:focus { 
-		background-color: #5585B3;
-		border-color: #4477A3;
-	}
+  >a,
+  >span, 
+  >a:hover, 
+  >span:hover, 
+  >a:focus, 
+  >span:focus { 
+    background-color: #5585B3;
+    border-color: #4477A3;
+  }
 }
 .pagination>li>a, 
 .pagination>li>span {
-	@include transition(all 0.25s linear);
+  @include transition(all 0.25s linear);
 }
 
 .btn-primary {
   background: $brand-primary;
   color: #FFF;
   font-family: Lato;
-  text-transform: uppercase;
+  letter-spacing: 0.7px;
   @include transition(all .2s linear);
   &:hover {
     text-decoration: none;
     background: $brand-success;
-    border-color: none;
+    border: none;
   }
-  border-color: none;
+  border: none;
+}
+
+.btn {
+  border-radius: 5px;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: .5em 1em;
 }
 
 .btn-secondary {
@@ -51,3 +67,6 @@ a {
 }
 
 
+.navbar.hero .navbar-nav > li > a:hover {
+  background: none;
+}
