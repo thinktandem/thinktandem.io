@@ -13,12 +13,13 @@
 
   background-position: center 16%;
   height: 90vh;
-  min-height: 35em;
+  min-height: 28em;
   max-height: 40em;
   position: relative;
 
   @media (max-width: 767px) {
-    min-height: 15em;
+    min-height: 10em;
+    max-height: 20em;
   }
 
   &:before {
@@ -97,6 +98,7 @@
     letter-spacing: .3px;
     color: #FFF;
     margin: 2em 1em 1em 1em;
+    margin-top: 10vh;
 
     -webkit-animation-duration: 1s;
 
