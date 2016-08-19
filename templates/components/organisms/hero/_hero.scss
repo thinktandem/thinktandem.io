@@ -12,11 +12,13 @@
   /*background: -webkit-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.26)), -webkit-linear-gradient(108deg, #5E8199, #153752 90%);*/
 
   background-position: center 16%;
-  height: 20em;
+  height: 90vh;
+  min-height: 35em;
+  max-height: 40em;
   position: relative;
 
   @media (max-width: 767px) {
-    height: 15em;
+    min-height: 15em;
   }
 
   &:before {
@@ -65,6 +67,12 @@
     -webkit-transition: .5s;
     -o-transition: .5s;
     transition: .5s;
+    @media (max-width: 767px) {
+      font-size: 40px;
+      padding: 8px;
+      width: 45px;
+      height: 45px;
+    }
   }
   .fix-editor {
     display:none;
@@ -77,31 +85,37 @@
     position: relative;
     z-index: 33;
     top: 2em;
+    height: 100%;
   }
 
   h1.hero-text {
     font-family: $lato;
     line-height: 1.1em;
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
     font-weight: 300;
     letter-spacing: .3px;
     color: #FFF;
+    margin: 2em 1em 1em 1em;
 
     -webkit-animation-duration: 1s;
 
     @media (max-width: 767px) {
-      font-size: 50px;
-      line-height: 38px;
-      margin-top: 0;
-      text-align: center;
+      font-size: 2em;
+      line-height: 2em;
+      margin: 0;
     }
   }
 
   h2.hero-text {
-    font-size: 1.6em;
+    font-size: 2em;
     color: #ACE2F7;
-    margin-top: 10px;
+    margin-bottom: 1em;
+    @media (max-width: 767px) {
+      font-size: 1em;
+      line-height: 2em;
+      margin: 0;
+    }
   }
 
   .sub-text {
@@ -125,6 +139,25 @@
       font-size: 15px;
       width: 100%;
       text-align: center;
+    }
+  }
+
+  .hero-readmore {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    bottom: 2em;
+    a {
+      display: block;
+      text-decoration: none;
+      font-weight: 100;
+      color: white;
+    }
+
+    i {
+      display: block;
+      margin-top: -.3em;
     }
   }
 
