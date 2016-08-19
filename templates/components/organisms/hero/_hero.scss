@@ -5,25 +5,18 @@
 
 
   /* These are some ready-to-use backgrounds you can test out by uncommenting them */
-  
+
   /*background-image: url("../../images/bg2.png");*/
   /*background-image: url("../../images/bg3.png");*/
   /*background-image: url("http://25.media.tumblr.com/665f306a0a5a5eae6e0c91f33ce74695/tumblr_mzzqv2P7MY1st5lhmo1_1280.jpg");*/
   /*background: -webkit-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.26)), -webkit-linear-gradient(108deg, #5E8199, #153752 90%);*/
 
   background-position: center 16%;
-  height: 34em;
+  height: 20em;
   position: relative;
-  top: -60px;
-  padding-top: 150px;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
-
-  @media (max-width: 991px) {
-    padding-top: 100px;
-  }
 
   @media (max-width: 767px) {
-    height: 20em;
+    height: 15em;
   }
 
   &:before {
@@ -43,10 +36,47 @@
     width: 100%;
     height: 100%;
   }
-  
+
+  i {
+    color: #FFFFFF;
+    font-size: 2.5em;
+    margin: 10px;
+  }
+
+  .custom-icon {
+    font-size: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: #72F0A1;
+    opacity: .88;
+    padding: 10px;
+    -webkit-border-radius: 1100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    border: 0;
+    color: #fff;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+  }
+  .fix-editor {
+    display:none;
+  }
+  .icon-wrapper {
+    display:inline-block;
+  }
+
   .container {
     position: relative;
     z-index: 33;
+    top: 2em;
   }
 
   h1.hero-text {
@@ -61,11 +91,17 @@
     -webkit-animation-duration: 1s;
 
     @media (max-width: 767px) {
-      font-size: 25px;
+      font-size: 50px;
       line-height: 38px;
       margin-top: 0;
       text-align: center;
     }
+  }
+
+  h2.hero-text {
+    font-size: 1.6em;
+    color: #ACE2F7;
+    margin-top: 10px;
   }
 
   .sub-text {

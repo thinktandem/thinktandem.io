@@ -48,7 +48,16 @@ a, button {
   }
 }
 
+canvas.particles-js-canvas-el {
+  position: absolute;
+}
+
 .navbar {
+  .icon-bar {
+    width: 33px;
+    height: 4px;
+    border-bottom: 3px solid #fff;
+  }
   &.normal {
     min-height: 70px;
     background: #223741;
@@ -70,7 +79,7 @@ a, button {
       }
     }
     .navbar-collapse {
-      
+
       @media(min-width: 768px) {
         text-align: center;
       }
@@ -111,7 +120,7 @@ a, button {
               color: #fff;
             }
           }
-          
+
           &.open {
             ul.dropdown-menu {
               a {
@@ -152,20 +161,21 @@ a, button {
 
   &.hero {
     margin: 0px;
-    border-radius: 0px;   
+    border-radius: 0px;
     border: 0px;
     z-index: 999;
-    background-color: $brand-primary;
+    background-color: #72C8E9;
     padding: .5em 0em;
+    padding-bottom: 0px;
     -webkit-font-smoothing: antialiased;
-    
+
     @media (min-width: 768px) {
 
       .navbar-nav >.active > a {
         color: #fff;
       }
     }
-    
+
     .navbar-brand {
       color: #fff;
       font-weight: 500;
@@ -175,11 +185,11 @@ a, button {
 
     .navbar-nav {
       > li {
-        
+
         &.dropdown > a .caret {
           border-top-color: #EBEBEB;
         }
-        
+
         > a {
           color: #fff;
           font-size: 1em;
@@ -267,7 +277,7 @@ a, button {
     }
 
     .navbar-collapse {
-      
+
       @media(min-width: 768px) {
         text-align: center;
       }
@@ -330,7 +340,7 @@ a, button {
               }
             }
           }
-          
+
           &.open {
             > a {
               @media(min-width: 768px) {
