@@ -2,69 +2,30 @@
   <div id="tabs">
     <div class="container">
       <div class="row header">
-        <h3>Formats to showcase features</h3>
-        <p>Choose your favorite formats for your own sites</p>
+        <h3>{{ config.positionPri }}</h3>
+        <p>{{ config.positionSec }}</p>
       </div>
       <div class="row">
         <div class="col-md-12 tabs-wrapper">
           <ul class="nav nav-tabs">
-              <li class="active"><a href="#home" data-toggle="tab">Upstart your development</a></li>
-              <li><a href="#profile" data-toggle="tab">Get ready in half the time</a></li>
-              <li><a href="#messages" data-toggle="tab">Collaborate with everyone</a></li>
-              <li><a href="#settings" data-toggle="tab">Get more done faster</a></li>
+            {% for f in features.features %}
+              <li {% if f.first %} class="active" {% endif %}>
+                <a href="#{{ f.anchor }}" data-toggle="tab">{{ f.linktext }}</a>
+              </li>
+            {% endfor %}
           </ul>
-
           <div class="tab-content">
-              <div class="tab-pane fade in active" id="home">
-                <div class="col-md-6 info">
-                  <h4>You don't need to have any advanced technical</h4>
-                  <p>
-                    Whether you want to fill this paragraph with some text like I'm doing right now, this place is perfect to describe some features or anything you want - React has a complete solution for you.
-                  </p>
-                  <p>
-                    You have complete control over the look &amp; feel of your website, we offer the best quality so you take your site up and running in no time.
-                  </p>
+            {% for f in features.features %}
+              <div class="tab-pane fade in {% if f.first %} active {% endif %}" id="{{ f.anchor }}">
+                <div class="col-md-6 info pull-{{ f.imagefloat }}">
+                  <h4>{{ f.title }}</h4>
+                  <p>{{ f.content }}</p>
                 </div>
-                <div class="col-md-6 image">
-                  <img src="http://placehold.it/500x325" class="img-responsive" alt="picture1">
+                <div class="col-md-6 image pull-{{ f.imagefloat }}">
+                  <img src="{{ f.image }}" class="img-responsive" alt="{{ f.title }}">
                 </div>
               </div>
-              <div class="tab-pane fade" id="profile">
-                <div class="col-md-6 image">
-                  <img src="http://placehold.it/500x325" class="img-responsive" alt="picture1">
-                </div>
-                <div class="col-md-6 info">
-                  <h4>You don't need to have any advanced technical</h4>
-                  <p>
-                    Whether you want to fill this paragraph with some text like I'm doing right now, this place is perfect to describe some features or anything you want - React has a complete solution for you.
-                  </p>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="messages">
-                <div class="col-md-6 info">
-                  <h4>You don't need to have any advanced technical</h4>
-                  <p>
-                    Whether you want to fill this paragraph with some text like I'm doing right now, this place is perfect to describe some features or anything you want - React has a complete solution for you.
-                  </p>
-                  <p>
-                    You have complete control over the look &amp; feel of your website, we offer the best quality so you take your site up and running in no time.
-                  </p>
-                </div>
-                <div class="col-md-6 image">
-                  <img src="http://placehold.it/500x325" class="img-responsive" style="position: relative;top: 15px;" alt="picture3">
-                </div>
-              </div>
-              <div class="tab-pane fade" id="settings">
-                <div class="col-md-6 image">
-                  <img src="http://placehold.it/500x325" class="img-responsive" alt="picture4">
-                </div>
-                <div class="col-md-6 info">
-                  <h4>You don't need to have any advanced technical</h4>
-                  <p>
-                    Whether you want to fill this paragraph with some text like I'm doing right now, this place is perfect to describe some features or anything you want - React has a complete solution for you.
-                  </p>
-                </div>
-              </div>
+            {% endfor %}
           </div>
         </div>
       </div>

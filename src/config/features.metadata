@@ -1,0 +1,35 @@
+---
+features:
+
+  - anchor: first
+    first: true
+    linktext: Upstart your development
+    title: You don't need to have any advanced technical
+    content: "Whether you want to fill this paragraph with some text like I am m doing right now, this place is perfect to describe some features or anything you want - React has a complete solution for you.
+
+    You have complete control over the look &amp; feel of your website, we offer the best quality so you take your site up and running in no time."
+    image: http://placehold.it/500x325
+    imagefloat: right
+
+  - anchor: second
+    linktext: Get ready in half the time
+    title: You don't need to have any advanced technical
+    content: "Whether you want to fill this paragraph with some text like I'm doing right now, this place is perfect to describe some features or anything you want - React has a complete solution for you."
+    image: http://placehold.it/500x325
+    imagefloat: left
+
+  - anchor: third
+    linktext: Get ready in half the time
+    title: You don't need to have any advanced technical
+    content: "Whether you want to fill this paragraph with some text like I'm doing right now, this place is perfect to describe some features or anything you want - React has a complete solution for you."
+    image: http://placehold.it/500x325
+    imagefloat: right
+
+  - anchor: fourth
+    linktext: Get ready in half the time
+    title: You don't need to have any advanced technical
+    content: "Whether you want to fill this paragraph with some text like I'm doing right now, this place is perfect to describe some features or anything you want - React has a complete solution for you."
+    image: http://placehold.it/500x325
+    imagefloat: left
+
+---
