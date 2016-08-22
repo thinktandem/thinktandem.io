@@ -2,7 +2,11 @@
 primary:
   - name: About
     title: About Us
-    url: /
+    url: about
+
+  - name: Services
+    title: Services
+    url: services
 
   - name: Blog
     title: Our thoughts
