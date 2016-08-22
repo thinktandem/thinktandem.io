@@ -4,4 +4,3 @@ description: The devops consultancy that works with you to develop, test, and de
 headerComponent: "../components/organisms/header/header.html"
 footerComponent: "../components/organisms/footer/footer.html"
 ---
-This is the global configuration for the whole site.

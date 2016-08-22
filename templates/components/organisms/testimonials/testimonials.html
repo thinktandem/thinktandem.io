@@ -4,38 +4,23 @@
       <h3>People need some reason to believe..<a href="https://youtu.be/oJYRtOPUonA?t=2m18s">.</a></h3>
     </div>
     <div class="row">
-      <div class="col-sm-6">
-        <div class="testimonial pull-right">
-          <div class="quote">
-            Tandem gave us a jumpstart towards creating our Docker infrastructure. The automated build testing and Kalabox integration they provided allowed me to start developing immediately.
-            <div class="arrow-down">
-                      <div class="arrow"></div>
-                      <div class="arrow-border"></div>
-                  </div>
-          </div>
-          <div class="author">
-            <img src="images/bradchesney.jpg" class="pic" alt="testimonial3" />
-            <div class="name">Brad Chesney</div>
-            <div class="company">Rust Belt Rebellion</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="testimonial">
-          <div class="quote">
-            Tandem duplicated our infrastructure in Docker and created a tight integration in Kalabox that allows our users an easy way to start working with the Pantheon platform...very impressive technology!
-            <div class="arrow-down">
-                      <div class="arrow"></div>
-                      <div class="arrow-border"></div>
-                  </div>
-          </div>
-          <div class="author">
-            <img src="images/joshkoenig.jpg" class="pic" alt="testimonial2" />
-            <div class="name">Josh Koenig</div>
-            <div class="company">Pantheon Website Management Platform</div>
+      {% for t in testimonials.testimonials %}
+        <div class="col-sm-6">
+          <div class="testimonial pull-right">
+            <div class="quote">{{ t.quote }}
+              <div class="arrow-down">
+                        <div class="arrow"></div>
+                        <div class="arrow-border"></div>
+                    </div>
+            </div>
+            <div class="author">
+              <img src="{{ t.image }}" class="pic" alt="{{ t.company }}" />
+              <div class="name">{{ t.name }}</div>
+              <div class="company">{{ t.company }}</div>
+            </div>
           </div>
         </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>

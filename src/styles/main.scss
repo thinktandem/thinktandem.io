@@ -20,23 +20,10 @@ The following are components that are built specifically for the site.
 
 Styleguide custom
 */
-
-
 @import "../../templates/components/organisms/footer/footer";
-@import "../../templates/components/organisms/slider/slider";
 @import "../../templates/components/organisms/hero/hero";
 @import "../../templates/components/organisms/features/features";
 @import "../../templates/components/organisms/testimonials/testimonials";
-@import "../../templates/components/organisms/clients/clients";
-@import "../../templates/components/molecules/cta/cta";
-
-/**
- * Pages
- */
-@import "pages/homepage";
-@import "pages/contact";
-@import "pages/article";
-@import "pages/blog";
 
 body {
   font-size: $font-size-base;
