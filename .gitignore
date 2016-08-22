@@ -3,3 +3,4 @@ bower_components
 build
 npm-debug.log
 assets/vendor
+.DS_Store
