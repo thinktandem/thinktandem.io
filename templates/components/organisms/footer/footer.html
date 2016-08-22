@@ -1,42 +1,16 @@
 <footer class="footer">
   <div id="footer">
-    <div class="container">
+    <div class="container social">
       <div class="row">
-        <div class="col-sm-4 menu">
-          <h3>Other Links</h3>
-            <ul>
-              {% for navItem in navigation.footer1 %}
-              {% set navItemIsActivePage = navItem.name|isSlugMatch(pageSlug) %}
-              {% if navItemIsActivePage == true %}
-              <li class="{{ navItem.name|slug }} active">
-              {% else %}
-              <li class="{{ navItem.name|slug }}">
-              {% endif %}
-                <a href="{{ navItem.url }}" title="{{ navItem.title|'' }}">{{ navItem.name }}</a>
-              </li>
-              {% endfor %}
-            </ul>
+        <div class="col-sm-6 icons">
+          {% for navItem in navigation.socialfooter %}
+          <a href="{{ navItem.url }}" title="{{ navItem.name }}">
+            <i class="fa {{ navItem.icon }}" aria-hidden="true"></i>
+          </a>
+          {% endfor %}
         </div>
-        <div class="col-sm-4 menu">
-          <h3>Social</h3>
-            <ul>
-              {% for navItem in navigation.footer3 %}
-              {% set navItemIsActivePage = navItem.name|isSlugMatch(pageSlug) %}
-              {% if navItemIsActivePage == true %}
-              <li class="{{ navItem.name|slug }} active">
-              {% else %}
-              <li class="{{ navItem.name|slug }}">
-              {% endif %}
-                <a href="{{ navItem.url }}" title="{{ navItem.title|'' }}">{{ navItem.name }}</a>
-              </li>
-              {% endfor %}
-            </ul>
-        </div>
-        <div class="col-sm-4 newsletter">
-          <div class="signup clearfix">
-            <p>
-              Sign up for the newsletter and we'll inform you of updates, offers and more.
-            </p>
+        <div class="col-sm-6 newsletter">
+         <div class="signup clearfix">
             <form action="//kalabox.us12.list-manage.com/subscribe/post?u=59874b4d6910fa65e724a4648&amp;id=512ca1c79c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
               <input  type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
               <input type="submit" value="Sign up" />

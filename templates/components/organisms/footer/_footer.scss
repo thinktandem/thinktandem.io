@@ -1,89 +1,5 @@
 #footer {
-  background: #414B5B;
-  padding-top: 47px;
-  padding-bottom: 0px;
-  -webkit-font-smoothing: antialiased;
-
-  .copyright {
-    color: #B5C5CF;
-    font-size: 14px;
-    font-weight: 500;
-
-    @media(max-width: 991px) {
-      margin-bottom: 20px;
-    }
-
-    @media(max-width: 767px) {
-      text-align: center;
-    }
-  }
-  .menu {
-    @media(max-width: 767px) {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-      li {
-        display: inline-block;
-        &.active {
-          a {
-            color: #fff;
-          }
-        }
-        a {
-          color: #ccc;
-          padding: 15px 17px;
-          font-weight: 500;
-          @include transition(color 0.2s linear);
-
-          &:hover {
-            color: #fff;
-            text-decoration: none;
-          }
-
-          @media(max-width: 991px) {
-            padding: 15px 17px 15px 0px;
-          }
-        }
-      }
-    }
-  }
-  .social {
-    text-align: right;
-
-    @media(max-width: 767px) {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    a {
-      border: 0;
-      text-decoration: none;
-      opacity: 1;
-      filter: alpha(opacity=100);
-      margin-left: 15px;
-      position: relative;
-      top: -10px;
-      -webkit-transition: all .3s ease;
-      -moz-transition: all .3s ease;
-      -o-transition: all .3s ease;
-      -ms-transition: all .3s ease;
-      transition: all .3s ease;
-      &:hover {
-        opacity: 0.7;
-        filter: alpha(opacity=70);
-      }
-    }
-  }
-}
-
-#footer {
   background: #72C8E9;
-  padding-top: 70px;
-  padding-bottom: 0px;
   -webkit-font-smoothing: antialiased;
 
   @media(max-width: 991px) {
@@ -153,101 +69,134 @@
     }
   }
 
-  .newsletter {
-    text-align: right;
+  .social {
 
-    @media(max-width: 767px) {
-      text-align: center;
-      margin-top: 40px;
-    }
+    padding-top: 40px;
+    padding-bottom: 40px;
 
-    .signup {
-      margin-bottom: 40px;
+    .icons {
 
-      p {
-        font-size: 13px;
+      a {
+        text-decoration: none;
+      }
+
+      i {
+        font-size: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+        background: #72F0A1;
+        opacity: .88;
+        padding: 10px;
+        -webkit-border-radius: 1100%;
+        -moz-border-radius: 100%;
+        -o-border-radius: 100%;
+        border-radius: 100%;
+        border: 0;
         color: #FFFFFF;
-        width: 90%;
-        float: right;
-        text-align: left;
-        line-height: 20px;
-
-        @media(max-width: 767px) {
-          float: none;
-          text-align: center;
-          width: 100%;
-        }
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        width: 60px;
+        height: 60px;
+        -moz-transition: .5s;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
       }
 
-      form {
-        float: right;
-        width: 90%;
-        position: relative;
-
-        @media(max-width: 767px) {
-          float: none;
-          width: 100%;
-        }
-
-        input[type="text"] {
-          font-size: 13px;
-
-          @include placeholder {
-            font-size: 13px;
-            line-height: 17px;
-          }
-        }
-
-        input[type="submit"] {
-          border: 0;
-          background: #84B0E2;
-          color: #FFF;
-          border-radius: 3px;
-          padding: 6px 10px;
-          position: absolute;
-          top: 5px;
-          text-shadow: 1px 1px rgba(0, 0, 0, 0.28);
-          right: 5px;
-          font-size: 13px;
-
-          @include transition(all .2s linear);
-
-          &:hover {
-            background: #6284AC;
-          }
-        }
-      }
     }
 
-    a {
-      border: 0;
-      text-decoration: none;
-      opacity: 1;
-      filter: alpha(opacity=100);
-      margin-left: 15px;
-      position: relative;
-      top: -10px;
-      -webkit-transition: all .3s ease;
-      -moz-transition: all .3s ease;
-      -o-transition: all .3s ease;
-      -ms-transition: all .3s ease;
-      transition: all .3s ease;
-      &:hover {
-        opacity: 0.7;
-        filter: alpha(opacity=70);
+    .newsletter {
+      text-align: right;
+
+      @media(max-width: 767px) {
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .signup {
+
+        p {
+          font-size: 13px;
+          color: #FFFFFF;
+          width: 90%;
+          float: right;
+          text-align: left;
+          line-height: 20px;
+
+          @media(max-width: 767px) {
+            float: none;
+            text-align: center;
+            width: 100%;
+          }
+        }
+
+        form {
+          float: right;
+          width: 90%;
+          position: relative;
+
+          @media(max-width: 767px) {
+            float: none;
+            width: 100%;
+          }
+
+          input[type="text"] {
+            font-size: 13px;
+
+            @include placeholder {
+              font-size: 13px;
+              line-height: 17px;
+            }
+          }
+
+          input[type="submit"] {
+            border: 0;
+            background: #84B0E2;
+            color: #FFF;
+            border-radius: 3px;
+            padding: 6px 10px;
+            position: absolute;
+            top: 5px;
+            text-shadow: 1px 1px rgba(0, 0, 0, 0.28);
+            right: 5px;
+            font-size: 13px;
+
+            @include transition(all .2s linear);
+
+            &:hover {
+              background: #6284AC;
+            }
+          }
+        }
+      }
+
+      a {
+        border: 0;
+        text-decoration: none;
+        opacity: 1;
+        filter: alpha(opacity=100);
+        margin-left: 15px;
+        position: relative;
+        top: -10px;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        transition: all .3s ease;
+        &:hover {
+          opacity: 0.7;
+          filter: alpha(opacity=70);
+        }
       }
     }
   }
 
   .credits {
-    margin-top: 30px;
     background-color: #4BB5DD;
-
-    .col-md-12 {
-      font-size: 13px;
-      text-align: center;
-      padding: 20px;
-      color: #fff;
-    }
+    color: #ACE2F7;
+    font-size: 13px;
+    text-align: center;
+    padding: 20px;
   }
 }

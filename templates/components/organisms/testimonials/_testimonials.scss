@@ -1,5 +1,6 @@
 #testimonials {
-  padding: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   -webkit-font-smoothing: antialiased;
   background-color: #4BB5DD;
 
@@ -11,6 +12,11 @@
       color: #FFFFFF;
       line-height: 25px;
       margin-bottom: 45px;
+
+      a {
+        color: #FFFFFF;
+      }
+
     }
   }
   .testimonial {
