@@ -25,8 +25,17 @@ Styleguide custom
 @import "../../templates/components/organisms/features/features";
 @import "../../templates/components/organisms/testimonials/testimonials";
 
+/**
+ * Pages
+ */
+@import "pages/homepage";
+@import "pages/contact";
+@import "pages/article";
+@import "pages/blog";
+
 body {
   font-size: $font-size-base;
+
 }
 
 a, button {
