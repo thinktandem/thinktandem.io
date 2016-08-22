@@ -8,4 +8,10 @@ heroSec: "We make is easy using..."
 heroCta: "Find out how we connect the DevOps dots"
 positionPri: "All the things she said"
 positionSec: "Running through your head"
+tools:
+  - icon: fa-drupal
+  - icon: fa-wordpress
+  - icon: fa-github
+  - icon: fa-ra
+  - icon: fa-empire
 ---

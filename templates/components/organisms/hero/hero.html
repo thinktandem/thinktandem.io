@@ -5,11 +5,11 @@
       <h1 class="hero-text animated fadeInDown text-center" data-text="{{title|safe}}">{{ config.heroPri }}</h1>
       <h2 class="hero-text animated fadeInDown text-center" data-text="{{title|safe}}">{{ config.heroSec}}</h1>
       <div class="hero-service text-center">
-        <div class="icon-wrapper"><i class="fa fa-drupal custom-icon"><span class="fix-editor">&nbsp;</span></i></div>
-        <div class="icon-wrapper"><i class="fa fa-wordpress custom-icon"><span class="fix-editor">&nbsp;</span></i></div>
-        <div class="icon-wrapper"><i class="fa fa-github custom-icon"><span class="fix-editor">&nbsp;</span></i></div>
-        <div class="icon-wrapper"><i class="fa fa-ra custom-icon"><span class="fix-editor">&nbsp;</span></i></div>
-        <div class="icon-wrapper"><i class="fa fa-empire custom-icon"><span class="fix-editor">&nbsp;</span></i></div>
+        {% for i in config.tools %}
+          <div class="icon-wrapper">
+            <i class="fa {{ i.icon }} custom-icon"><span class="fix-editor">&nbsp;</span></i>
+          </div>
+        {% endfor %}
       </div>
       <div class="hero-readmore text-center">
         <a href="#features">{{ config.heroCta }}</a>
