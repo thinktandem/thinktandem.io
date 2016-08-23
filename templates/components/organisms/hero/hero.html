@@ -7,9 +7,12 @@
       <div class="hero-service text-center">
         {% for i in config.tools %}
           <div class="icon-wrapper">
-            <i class="fa {{ i.icon }} custom-icon"><span class="fix-editor">&nbsp;</span></i>
+            <span class="custom-icon">
+              <img src="{{ i.icon }}">
+            </span>
           </div>
         {% endfor %}
+
       </div>
       <div class="hero-readmore text-center">
         <a href="#features">{{ config.heroCta }}</a>
