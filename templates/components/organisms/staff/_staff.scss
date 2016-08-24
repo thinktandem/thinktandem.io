@@ -1,0 +1,33 @@
+#staff {
+
+  padding-top: 50px;
+
+  h3 {
+    font-family: $lato;
+    color: #333;
+    line-height: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    a {
+      color: #FFFFFF;
+    }
+
+    @media(max-width: 991px) {
+      line-height: 50px;
+    }
+  }
+
+  .staff-img {
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  .staff-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+}

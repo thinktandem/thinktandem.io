@@ -17,6 +17,9 @@
         color: #FFFFFF;
       }
 
+      @media(max-width: 991px) {
+        line-height: 50px;
+      }
     }
   }
   .testimonial {

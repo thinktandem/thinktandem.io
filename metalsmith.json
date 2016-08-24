@@ -51,7 +51,6 @@
       "files": [
         "js/entry.js",
         "js/theme.js",
-        "js/jquery.flexslider.min.js",
         "../assets/vendor/particles.js/particles.min.js"
       ],
       "dest": "js/scripts.js"

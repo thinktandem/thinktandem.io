@@ -1,0 +1,22 @@
+#info {
+
+  h2 {
+    font-family: $lato;
+    color: #333;
+    line-height: 25px;
+    margin-top: 50px;
+
+    a {
+      color: #FFFFFF;
+    }
+
+    @media(max-width: 991px) {
+      line-height: 50px;
+    }
+  }
+
+  .container {
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 50px;
+  }
+}

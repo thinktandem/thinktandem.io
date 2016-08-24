@@ -1,0 +1,24 @@
+#stats {
+  .stats {
+    margin-top: 60px;
+    font-size: 16px;
+    color: #757575;
+    strong {
+      font-size: 30px;
+      color: #656565;
+      font-weight: 500;
+      position: relative;
+      top: 1px;
+      margin-right: 5px;
+    }
+    .col-sm-3 {
+      border-bottom: 1px solid #efefef;
+      padding-bottom: 25px;
+
+      @media(max-width: 767px) {
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

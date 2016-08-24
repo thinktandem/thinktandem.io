@@ -1,0 +1,39 @@
+<div id="social">
+  <div class="container social">
+    <div class="row header text-center">
+      <h3>Engage with all the socials.</h3>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 icons text-center">
+        <a href="#newsletter" data-toggle="modal" data-target="#newsletter-modal">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a>
+        {% for navItem in navigation.socialfooter %}
+        <a href="{{ navItem.url }}" title="{{ navItem.name }}">
+          <i class="fa {{ navItem.icon }}" aria-hidden="true"></i>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="newsletter-modal" tabindex="-1" role="dialog" aria-labelledby="newsletter-modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <form action="//kalabox.us12.list-manage.com/subscribe/post?u=59874b4d6910fa65e724a4648&amp;id=512ca1c79c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <input  type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <input type="submit" class="btn btn-primary" value="Sign up" />
+      </div>
+    </div>
+  </div>
+</div>

@@ -21,8 +21,13 @@ The following are components that are built specifically for the site.
 Styleguide custom
 */
 @import "../../templates/components/organisms/footer/footer";
-@import "../../templates/components/organisms/hero/hero";
 @import "../../templates/components/organisms/features/features";
+@import "../../templates/components/organisms/hero/hero";
+@import "../../templates/components/organisms/info/info";
+@import "../../templates/components/organisms/sf/sf";
+@import "../../templates/components/organisms/social/social";
+@import "../../templates/components/organisms/staff/staff";
+@import "../../templates/components/organisms/stats/stats";
 @import "../../templates/components/organisms/testimonials/testimonials";
 
 /**

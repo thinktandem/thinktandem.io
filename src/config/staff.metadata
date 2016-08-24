@@ -1,0 +1,17 @@
+---
+staff:
+
+  - name: Alec Reynolds
+    content: "The goal of discovery is to find the most valuable areas to focus our work. Through a series of exercises, we establish KPIs, uncover risk vectors, and chart the cultural terrain of your team.
+    Discovery not only establishes the priorities and scope of our engagement with you, but also provides an essential opportunity to start building a close working relationship."
+    image: http://www.kalamuna.com/images/team/alec-sm.jpg
+    hover: http://stream1.gifsoup.com/webroot/animatedgifs/167321_s.gif
+    link: https://twitter.com/reynoldsalec
+
+  - name: Mike Pirog
+    content: "Guided by the results of discovery, we establish a new development workflow that can start producing value immediately. Here we also have an opportunity to address areas of technical debt by writting tests for legacy features and converting aging infrastructure to less costly, more developer-friendly alternatives."
+    image: http://www.kalamuna.com/images/team/mike-sm.jpg
+    hover: http://i.imgur.com/BF1ybti.gif
+    link: https://twitter.com/pirogcommamike
+
+---
