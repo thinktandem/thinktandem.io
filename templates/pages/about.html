@@ -2,10 +2,32 @@
 
 {% block contents %}
 
-  <h1 class="invisible">About Us</h1>
+  <div id="info">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center">{{ title|safe }}</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <img src="http://www.upsetmagazine.com/wp-content/uploads/2016/05/Weezer_feature_2.jpg" class="img-responsive" alt="office3" draggable="false">
+        </div>
+      </div>
+      {{ contents|safe }}
+    </div>
+  </div>
 
-  {% include '../components/organisms/info/info.html' %}
-  {% include '../components/organisms/staff/staff.html' %}
+  <div id="staff">
+    <div class="container">
+      <div class="row staff">
+        {% for staff in collections.staff %}
+          {% include "../components/molecules/bio/bio.html" %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
   {% include '../components/organisms/stats/stats.html' %}
   {% include '../components/organisms/sf/sf.html' %}
   {% include '../components/organisms/social/social.html' %}

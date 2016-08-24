@@ -3,15 +3,30 @@ title: Tandem
 description: The devops consultancy that works with you to develop, test, and deploy your application quickly and reliably.
 headerComponent: "../components/organisms/header/header.html"
 footerComponent: "../components/organisms/footer/footer.html"
-heroPri: "DevOps is hard."
-heroSec: "We make it easy using..."
-heroCta: "Find out how we connect the DevOps dots"
-positionPri: "Tandem helps your organization develop web applications faster, better, and more profitably."
-positionSec: "Tandem helps forward-looking businesses adopt cutting-edge DevOps tools like Docker, continuous integration, and automated testing. Using hard-won experience working with teams across a variety of industries, we know how to bring your projects alive with truly Agile workflows. Our iterative process starts with a short phone call..."
-tools:
-  - icon: "/images/front-icon/whale-icon.png"
-  - icon: "/images/front-icon/kalabox-icon.png"
-  - icon: "/images/front-icon/github-icon.png"
-  - icon: "/images/front-icon/jenkins-icon.png"
-  - icon: "/images/front-icon/agile-icon.png"
+features:
+  - anchor: first
+    first: true
+    linktext: 1. Discovery
+    title: Getting to know you.
+    content: "The goal of discovery is to find the most valuable areas to focus our work. Through a series of exercises, we establish KPIs, uncover risk vectors, and chart the cultural terrain of your team. Discovery not only establishes the priorities and scope of our engagement with you, but also provides an essential opportunity to start building a close working relationship."
+    image: http://placehold.it/500x325
+    imagefloat: right
+  - anchor: second
+    linktext: 2. Scaffolding
+    title: Establish new tooling and workflows.
+    content: "Guided by the results of discovery, we establish a new development workflow that can start producing value immediately. Here we also have an opportunity to address areas of technical debt by writting tests for legacy features and converting aging infrastructure to less costly, more developer-friendly alternatives."
+    image: http://placehold.it/500x325
+    imagefloat: left
+  - anchor: third
+    linktext: 3. Training
+    title: Knowledge is power; take control of your projects.
+    content: "New workflows require new mindsets. Not only will we help your team master their new tools, but we'll also suggest techniques to improve how you manage and plan projects."
+    image: http://placehold.it/500x325
+    imagefloat: right
+  - anchor: fourth
+    linktext: 4. Iteration
+    title: Continuously improve over time.
+    content: "As development continues, we establish key metrics to gauge the success of your team. You will use this metrics to steadily improve your process, continually accelerating web development projects."
+    image: http://placehold.it/500x325
+    imagefloat: left
 ---

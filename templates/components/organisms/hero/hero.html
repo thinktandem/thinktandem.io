@@ -2,20 +2,19 @@
   <div id="particles-js"></div>
   <div class="container">
     <div class="row">
-      <h1 class="hero-text animated fadeInDown text-center" data-text="{{title|safe}}">{{ config.heroPri }}</h1>
-      <h2 class="hero-text animated fadeInDown text-center" data-text="{{title|safe}}">{{ config.heroSec}}</h1>
+      <h1 class="hero-text animated fadeInDown text-center" data-text="{{title|safe}}">{{ heroPri }}</h1>
+      <h2 class="hero-text animated fadeInDown text-center" data-text="{{title|safe}}">{{ heroSec}}</h1>
       <div class="hero-service text-center">
-        {% for i in config.tools %}
+        {% for tool in heroIcons %}
           <div class="icon-wrapper">
             <span class="custom-icon">
-              <img src="{{ i.icon }}">
+              <img src="{{ tool.icon }}">
             </span>
           </div>
         {% endfor %}
-
       </div>
       <div class="hero-readmore text-center">
-        <a href="#features">{{ config.heroCta }}</a>
+        <a href="#features">{{ heroCta }}</a>
         <a href="#features"><i class="fa fa-sort-desc" aria-hidden="true"></i></a>
       </div>
     </div>

@@ -5,6 +5,14 @@
         "sortBy": "date",
         "reverse": true,
         "pattern": "content/articles/*.md"
+      },
+      "staff": {
+        "sortBy": "name",
+        "pattern": "content/staff/*.md"
+      },
+      "quotes": {
+        "sortBy": "name",
+        "pattern": "content/quotes/*.md"
       }
     },
     "metalsmith-metadata-convention": {},

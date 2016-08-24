@@ -4,22 +4,8 @@
       <h3>People need some reason to believe..<a href="https://youtu.be/oJYRtOPUonA?t=2m18s">.</a></h3>
     </div>
     <div class="row">
-      {% for t in testimonials.testimonials %}
-        <div class="col-sm-6">
-          <div class="testimonial pull-right">
-            <div class="quote">{{ t.quote }}
-              <div class="arrow-down">
-                        <div class="arrow"></div>
-                        <div class="arrow-border"></div>
-                    </div>
-            </div>
-            <div class="author">
-              <img src="{{ t.image }}" class="pic" alt="{{ t.company }}" />
-              <div class="name">{{ t.name }}</div>
-              <div class="company">{{ t.company }}</div>
-            </div>
-          </div>
-        </div>
+      {% for quote in collections.quotes %}
+        {% include "../../../components/molecules/quote/quote.html" %}
       {% endfor %}
     </div>
   </div>

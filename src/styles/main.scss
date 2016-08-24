@@ -3,7 +3,6 @@
 
 // Vendor stylesheets
 @import "bootstrap-sass-twbs/assets/stylesheets/bootstrap";
-@import "flexslider";
 
 // KalaStatic Extendables and Mixins
 @import "base/mixins";
@@ -18,25 +17,29 @@ Custom Components
 
 The following are components that are built specifically for the site.
 
-Styleguide custom
+Custom
 */
+@import "../../templates/components/molecules/bio/bio";
+@import "../../templates/components/molecules/modal/modal";
+@import "../../templates/components/molecules/quote/quote";
+@import "../../templates/components/molecules/teaser/teaser";
+
 @import "../../templates/components/organisms/footer/footer";
-@import "../../templates/components/organisms/features/features";
 @import "../../templates/components/organisms/hero/hero";
-@import "../../templates/components/organisms/info/info";
 @import "../../templates/components/organisms/sf/sf";
+@import "../../templates/components/organisms/slideshow/slideshow";
 @import "../../templates/components/organisms/social/social";
-@import "../../templates/components/organisms/staff/staff";
 @import "../../templates/components/organisms/stats/stats";
 @import "../../templates/components/organisms/testimonials/testimonials";
 
 /**
  * Pages
  */
-@import "pages/homepage";
-@import "pages/contact";
+@import "pages/about";
 @import "pages/article";
 @import "pages/blog";
+@import "pages/contact";
+@import "pages/homepage";
 
 body {
   font-size: $font-size-base;

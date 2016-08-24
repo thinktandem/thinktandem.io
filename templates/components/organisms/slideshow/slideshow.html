@@ -2,20 +2,20 @@
   <div id="tabs">
     <div class="container">
       <div class="row header">
-        <h3>{{ config.positionPri }}</h3>
-        <p>{{ config.positionSec }}</p>
+        <h3>{{ slideHeader }}</h3>
+        <p>{{ slideBy }}</p>
       </div>
       <div class="row">
         <div class="col-md-12 tabs-wrapper">
           <ul class="nav nav-tabs">
-            {% for f in features.features %}
+            {% for f in config.features %}
               <li {% if f.first %} class="active" {% endif %}>
                 <a href="#{{ f.anchor }}" data-toggle="tab">{{ f.linktext }}</a>
               </li>
             {% endfor %}
           </ul>
           <div class="tab-content">
-            {% for f in features.features %}
+            {% for f in config.features %}
               <div class="tab-pane fade in {% if f.first %} active {% endif %}" id="{{ f.anchor }}">
                 <div class="col-md-6 info pull-{{ f.imagefloat }}">
                   <h4>{{ f.title }}</h4>
