@@ -22,6 +22,7 @@ Custom
 @import "../../templates/components/molecules/bio/bio";
 @import "../../templates/components/molecules/modal/modal";
 @import "../../templates/components/molecules/quote/quote";
+@import "../../templates/components/molecules/service/service";
 @import "../../templates/components/molecules/teaser/teaser";
 
 @import "../../templates/components/organisms/footer/footer";
@@ -40,6 +41,7 @@ Custom
 @import "pages/blog";
 @import "pages/contact";
 @import "pages/homepage";
+@import "pages/services";
 
 body {
   font-size: $font-size-base;
@@ -53,6 +55,10 @@ a, button {
 
 canvas.particles-js-canvas-el {
   position: absolute;
+}
+
+.icon-wrapper {
+  display:inline-block;
 }
 
 .navbar {

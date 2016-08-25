@@ -1,0 +1,28 @@
+#services {
+
+  h3 {
+    font-family: $lato;
+    color: #333;
+    line-height: 25px;
+    padding-bottom: 30px;
+
+    a {
+      color: #FFFFFF;
+    }
+
+    @media(max-width: 991px) {
+      line-height: 50px;
+    }
+  }
+
+  .container {
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+
+  #service {
+    padding-bottom: 30px;
+  }
+
+}

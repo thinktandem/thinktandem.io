@@ -1,0 +1,17 @@
+<div class="row services service">
+  <div class="col-md-12">
+    <div id="service">
+      <h3>{{ service.title|safe }}</h3>
+      {{ service.contents|safe }}
+      <div class="icon-header">
+        {% for icon in service.icons %}
+          <div class="icon-wrapper">
+            <span class="custom-icon">
+              <i class="fa {{ icon }}"></i>
+            </span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

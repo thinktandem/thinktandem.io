@@ -1,7 +1,9 @@
 ---
 layout: pages/about.html
 title: Our Story
+byline: What does it mean to tandemize?
 pageSlug: about
+image: http://www.upsetmagazine.com/wp-content/uploads/2016/05/Weezer_feature_2.jpg
 ---
 <div class="row">
   <div class="col-md-6">

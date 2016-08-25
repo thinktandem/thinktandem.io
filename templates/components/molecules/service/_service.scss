@@ -1,0 +1,43 @@
+#service {
+
+  padding-top: 50px;
+  border-bottom: 1px solid #EFEFEF;
+
+  .icon-header {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 3em;
+  }
+  .custom-icon {
+    font-size: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: #72F0A1;
+    opacity: .88;
+    padding: 10px;
+    -webkit-border-radius: 1100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    border: 0;
+    color: #fff;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    width: 90px;
+    height: 90px;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+
+    @media (max-width: 767px) {
+      padding: 8px;
+      width: 45px;
+      height: 45px;
+    }
+    img {
+      height: 70px;
+    }
+  }
+}
