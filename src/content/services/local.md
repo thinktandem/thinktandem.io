@@ -1,5 +1,5 @@
 ---
-title: Local
+title: Local Development Optimization
 weight: 1
 icons:
   - fa-empire
@@ -9,4 +9,6 @@ icons:
   - fa-empire
   - fa-github
 ---
+Everything starts on a developer's computer. But every minute your team spends fixing their local development tools is a minute that could be spent creating software.
+
 Using our free, open source and Docker based local development environment, Kalabox; the fastest, easiest and most advanced local development environment we can standardize your entire team across operating systems. When everyone is using the same tools and environments with point and click ease you can save time to focus on the tough issues.

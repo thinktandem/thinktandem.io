@@ -1,5 +1,5 @@
 ---
-title: Hosting
+title: Docker Hosting Infrastructure
 weight: 4
 icons:
   - fa-empire
