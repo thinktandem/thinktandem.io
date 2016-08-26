@@ -20,9 +20,20 @@
       {{ contents|safe }}
     </div>
     <div class="container">
-      {% for service in collections.services %}
-        {% include "../components/molecules/service/service.html" %}
-      {% endfor %}
+      <div class="row">
+        <div class="col-md-4">
+          {% for service in collections.services %}
+            <div class="service-link">
+              <a href="services/#{{ service.slug }}">{{ service.title }}</a>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="col-md-8">
+          {% for service in collections.services %}
+            {% include "../components/molecules/service/service.html" %}
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
 

@@ -25,4 +25,21 @@
     padding-bottom: 30px;
   }
 
+  .service-link {
+
+    margin-right: 35px;
+    border-right: 1px solid #efefef;
+
+    a {
+      color: #459CE7;
+      font-weight: 300;
+      font-size: 1.5em;
+      line-height: 3;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
 }
