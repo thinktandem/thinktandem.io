@@ -3,7 +3,7 @@
   h3 {
     font-family: $lato;
     color: #333;
-    line-height: 25px;
+    line-height: 1em;
     padding-bottom: 30px;
 
     a {
@@ -29,12 +29,12 @@
 
     margin-right: 35px;
     border-right: 1px solid #efefef;
-
+    padding: .5em;
     a {
       color: #459CE7;
       font-weight: 300;
-      font-size: 1.5em;
-      line-height: 3;
+      font-size: 1em;
+      line-height: 1;
     }
 
     a:hover {
