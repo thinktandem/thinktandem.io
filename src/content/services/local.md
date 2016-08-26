@@ -1,13 +1,14 @@
 ---
 title: Local Development Optimization
+slug: local
 weight: 1
 icons:
-  - fa-empire
-  - fa-github
-  - fa-empire
-  - fa-github
-  - fa-empire
-  - fa-github
+  - icon: fa-empire
+    name: Empire
+    link: https://nodejs.org/en/
+  - icon: fa-empire
+    name: Empire
+    link: https://nodejs.org/en/
 ---
 Everything starts on a developer's computer. But every minute your team spends fixing their local development tools is a minute that could be spent creating software.
 

@@ -1,13 +1,14 @@
 ---
 title: Automated QA + Testing
+slug: testing
 weight: 2
 icons:
-  - fa-empire
-  - fa-github
-  - fa-empire
-  - fa-github
-  - fa-empire
-  - fa-github
+  - icon: fa-empire
+    name: Empire
+    link: https://nodejs.org/en/
+  - icon: fa-empire
+    name: Empire
+    link: https://nodejs.org/en/
 ---
 One bug is fixed, but another bug is introduced. It's called regression "whack-a-mole", and when your projects become complex, it can suck your team into endless cycles of revisions.
 
