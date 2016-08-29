@@ -12,11 +12,13 @@
       </div>
     </div>
     <div class="container">
+      {% if image %}
       <div class="row">
         <div class="col-md-12">
           <img src="{{ image }}" class="img-responsive" alt="office3" draggable="false">
         </div>
       </div>
+      {% endif %}
       {{ contents|safe }}
     </div>
     <div class="container">
