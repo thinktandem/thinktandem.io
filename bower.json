@@ -6,7 +6,7 @@
     "fontawesome": "~4.2.0",
     "matchHeight": "~0.5.2",
     "holderjs": "~2.4.0",
-    "flexslider": "~2.5.0",
-    "particles.js": "^2.0.0"
+    "particles.js": "^2.0.0",
+    "devicons": "https://github.com/pirog/devicons.git#dynamic-fontpath"
   }
 }

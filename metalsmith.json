@@ -81,6 +81,7 @@
       "includePaths": [
         "assets/vendor",
         "assets/vendor/bootstrap-sass-twbs/assets/stylesheets",
+        "assets/vendor/devicons/css/",
         "assets/vendor/fontawesome/scss/",
         "templates/components/**/*"
       ]
