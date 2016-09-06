@@ -43,7 +43,10 @@
         "perPage": 4,
         "layout": "pages/blog.html",
         "first": "blog/index.html",
-        "path": "blog/:num/index.html"
+        "path": "blog/:num/index.html",
+        "pageMetadata": {
+          "title": "Blog"
+        }
       }
     },
     "metalsmith-swig-helpers": {

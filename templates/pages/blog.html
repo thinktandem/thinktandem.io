@@ -1,10 +1,22 @@
 {% extends '../layouts/html.html' %}
 
 {% block contents %}
+
+  <div id="info">
+    <div class="container">
+      <div class="row header">
+        <div class="col-md-12 text-center">
+          <h1>{{ title|safe }}</h1>
+          <small>We've been revealing truth since the Permian extinction. <a href="http://eepurl.com/caz4hn">Sign up</a> to receieve an email whenever we post something in the blog and never miss an update.
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="posts">
     <div class="container">
       <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-10">
           {% for article in pagination.files %}
             {% include "../components/molecules/teaser/teaser.html" %}
           {% endfor %}
@@ -17,21 +29,13 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-3 sidebar">
-          <div class="updates">
-            <strong>
-              Free blog updates
-            </strong>
-            <p>
-              Never miss an update. 
-              <a href="http://eepurl.com/caz4hn">Sign up</a> to receieve an email whenever we post something in the blog.
-            </p>
-          </div>
-          <div class="follow-tw">
-            <a href="https://twitter.com/thinktandem" class="twitter-follow-button" data-show-count="false">Follow @ThinkTandem</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </div>
+        <div class="col-md-2 sidebar ">
+          TAGS AND OTHER THINGS
         </div>
       </div>
     </div>
   </div>
+
+  {% include '../components/organisms/social/social.html' %}
+
 {% endblock %}
