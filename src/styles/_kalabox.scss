@@ -1,0 +1,36 @@
+/*
+Kalaicons
+
+You know, dev icons and such
+*/
+
+@font-face {
+  font-family: 'kalabox';
+  src:  url('../fonts/kalabox.eot?6u56fg');
+  src:  url('../fonts/kalabox.eot?6u56fg#iefix') format('embedded-opentype'),
+    url('../fonts/kalabox.ttf?6u56fg') format('truetype'),
+    url('../fonts/kalabox.woff?6u56fg') format('woff'),
+    url('../fonts/kalabox.svg?6u56fg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="kalabox-"], [class*=" kalabox-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'kalabox' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.kalabox-kalabox:before {
+  content: "\e900";
+}
+
