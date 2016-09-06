@@ -10,10 +10,12 @@
       position: relative;
       top: 1px;
       margin-right: 5px;
+      display: block;
     }
     .col-sm-3 {
       border-bottom: 1px solid #efefef;
       padding-bottom: 25px;
+      text-align: center;
 
       @media(max-width: 767px) {
         padding-bottom: 10px;

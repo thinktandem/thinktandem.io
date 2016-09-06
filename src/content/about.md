@@ -8,15 +8,12 @@ image: /images/working.jpeg
 <div class="row">
   <div class="col-md-6">
     <p>
-      Tandem founders Alec Reynolds and Mike Pirog share a belief that software should be better: more profitable for businesses, easier for users to access, and more fun for developers to make.
-    </p>
-    <p>
-      As founders of a digital services firm called Kalamuna, Mike and Alec realized the immense gains possible by optimizing software development tooling and practices. This lead to the development of a range of open source projects, culiminating in the Kalabox project.
+      Tandem founders Alec Reynolds and Mike Pirog share a belief that software should be better: more profitable for businesses, easier for users to access, and more fun for developers to make. Prior to Tandem, Alec and Mike worked for 5 years as co-founders of a digital agency and saw the immense gains made possible by optimizing software development tooling and practices.
     </p>
   </div>
   <div class="col-md-6">
     <p>
-      Wanting to share this knowledge with the world, Mike and Alec formed Tandem. Now they focus full-time on helping organizations find their ideal toolset and shape their culture to make the best software possible. And they have fun doing it.
+      At Tandem, they use this experience to help organizations find their ideal toolset and discover better project management methodologies. From planning and staffing all the way to implementing projects, Tandem will show you better ways to create software projects while having fun doing it.
     </p>
   </div>
 </div>
