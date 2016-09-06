@@ -4,11 +4,11 @@ slug: local
 weight: 1
 icons:
   - icon: fa-empire
-    name: Empire
-    link: https://nodejs.org/en/
+    name: Docker
+    link: https://www.docker.com
   - icon: fa-empire
-    name: Empire
-    link: https://nodejs.org/en/
+    name: Kalabox
+    link: https://www.kalabox.io
 ---
 Everything starts on a developer's computer. But every minute your team spends fixing their local development tools is a minute that could be spent creating software.
 

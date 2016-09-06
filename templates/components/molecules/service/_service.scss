@@ -24,8 +24,7 @@
 
   .custom-icon {
     font-size: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: auto;
     background: #72F0A1;
     opacity: .88;
     padding: 10px;
@@ -36,7 +35,7 @@
     border: 0;
     color: #fff;
     text-align: center;
-    display: table-cell;
+    display: block;
     vertical-align: middle;
     width: 90px;
     height: 90px;
@@ -52,6 +51,10 @@
     }
     img {
       height: 70px;
+    }
+    .fa {
+      margin: 15px 10px;
+      display: block;
     }
   }
 }
