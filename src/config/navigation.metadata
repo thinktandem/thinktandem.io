@@ -18,6 +18,10 @@ primary:
 
 socialfooter:
 
+  - name: Newsletter
+    icon: fa-envelope
+    url: http://eepurl.com/caz4hn
+
   - name: Twitter
     icon: fa-twitter
     url: https://twitter.com/kalaboxme
