@@ -11,9 +11,6 @@ $(function () {
 
 	services.initialize();
 
-	contactForm.initialize();
-
-
 	// retina display
 	if(window.devicePixelRatio >= 1.2){
 	    $("[data-2x]").each(function(){
@@ -31,36 +28,6 @@ window.utils = {
 		return navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 	}
 };
-
-var contactForm = {
-	initialize: function () {
-		var $contactForm = $("#contact-form");
-		if (!$contactForm.length) {
-			return;
-		}
-		
-		$contactForm.validate({
-			rules: {
-				"name": {
-					required: true
-				},
-				"email": {
-					required: true,
-					email: true
-				},
-				"message": {
-					required: true
-				}
-			},
-			highlight: function (element) {
-				$(element).closest('.form-group').removeClass('success').addClass('error')
-			},
-			success: function (element) {
-				element.addClass('valid').closest('.form-group').removeClass('error').addClass('success')
-			}
-		});
-	}
-}
 
 var services = {
 	tabs: function () {

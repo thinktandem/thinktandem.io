@@ -1,5 +1,7 @@
 {% extends '../layouts/html.html' %}
 
+<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAnA4WkezM1GHAAaA2ZYWeayvh82vN9DwI&sensor=false&extension=.js'></script>
+
 {% block contents %}
   <div id="info">
     <div class="container">
@@ -33,7 +35,20 @@
         <div class="col-md-4 contact">
           <div class="address">
             <h3>Location</h3>
-            <img class="img-responsive img-rounded" src="images/bridgeoakland.jpg">
+            <div id='map'></div>
+            <script>
+              function initMap() {
+                var mapDiv = document.getElementById('map');
+                var map = new google.maps.Map(mapDiv, {
+                  center: {lat: 37.825243, lng: -122.383462},
+                  zoom: 11,
+                  styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}]
+                });
+              }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnA4WkezM1GHAAaA2ZYWeayvh82vN9DwI&callback=initMap"
+            async defer>
+            </script>
             <p>
               Tandem is based out of Oakland, CA, in the heart of the San Francisco Bay Area. If you're local or headed through town, we'd love to meet with you in-person!
             </p>
