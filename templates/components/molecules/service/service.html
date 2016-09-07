@@ -7,8 +7,8 @@
         {% for icon in service.icons %}
           <a href="{{ icon.link }}">
             <div class="icon-wrapper text-center">
-              <span class="custom-icon">
-                <i class="fa {{ icon.icon }}"></i>
+              <span class="custom-icon {{ service.color }}">
+                <i class="{{ icon.icon }}"></i>
               </span>
               <small>{{ icon.name }}</small>
             </div>

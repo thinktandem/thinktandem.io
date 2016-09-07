@@ -6,11 +6,11 @@ heroPri: "DevOps is hard."
 heroSec: "We make it easy using..."
 heroCta: "Find out how we connect the DevOps dots"
 heroIcons:
-  - icon: "/images/front-icon/whale-icon.png"
-  - icon: "/images/front-icon/kalabox-icon.png"
-  - icon: "/images/front-icon/github-icon.png"
-  - icon: "/images/front-icon/jenkins-icon.png"
-  - icon: "/images/front-icon/agile-icon.png"
+  - icon: devicons devicons-docker
+  - icon: kalabox-kalabox
+  - icon: devicons devicons-github_badge
+  - icon: devicons devicons-jenkins
+  - icon: devicons devicons-opensource
 slideHeader: "Tandem helps your organization develop web applications faster, better, and more profitably."
 slideBy: "Tandem helps forward-looking businesses adopt cutting-edge DevOps tools like Docker, continuous integration, and automated testing. Using hard-won experience working with teams across a variety of industries, we know how to bring your projects alive with truly Agile workflows. Our iterative process starts with a short phone call..."
 tools:

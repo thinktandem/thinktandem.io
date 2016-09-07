@@ -5,32 +5,43 @@
   <div id="services">
     <div class="container">
       <div class="row header">
-        <div class="col-md-12 text-center">
+        <div class="col-xs-12 text-center">
           <h1>{{ title|safe }}</h1>
           <small>{{ byline|safe }}</small>
         </div>
       </div>
     </div>
-    <div class="container">
-      {% if image %}
+    <div class="container equation">
       <div class="row">
-        <div class="col-md-12">
-          <img src="{{ image }}" class="img-responsive" alt="office3" draggable="false">
+        <div class="col-sm-1">
+        </div>
+        {% for service in collections.services %}
+          <div class="col-sm-2 {% if service.arrow %} services-plus {% endif %}">
+            <div class="service-category text-center">
+              <a class="hexagon-{{ service.color }} center-block" href="services/#{{ service.slug }}">
+                <i class="{{ service.icon }}"></i>
+              </a>
+              <small>{{ service.short }}</small>
+            </div>
+          </div>
+        {% endfor %}
+        <div class="col-sm-1">
         </div>
       </div>
-      {% endif %}
+    </div>
+    <div class="container">
       {{ contents|safe }}
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-sm-4">
           {% for service in collections.services %}
             <div class="service-link">
               <a href="services/#{{ service.slug }}">{{ service.title }}</a>
             </div>
           {% endfor %}
         </div>
-        <div class="col-md-8">
+        <div class="col-sm-8">
           {% for service in collections.services %}
             {% include "../components/molecules/service/service.html" %}
           {% endfor %}

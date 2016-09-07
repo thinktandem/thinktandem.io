@@ -11,9 +11,10 @@
     padding-left: 10px;
     padding-right: 10px;
     small {
-      font-size: 1em;
+      font-size: .8em;
       padding-top: 10px;
       color: #ccc;
+      display: block;
     }
   }
 
@@ -23,38 +24,62 @@
   }
 
   .custom-icon {
-    font-size: 40px;
-    margin: auto;
-    background: #72F0A1;
-    opacity: .88;
-    padding: 10px;
-    -webkit-border-radius: 1100%;
-    -moz-border-radius: 100%;
-    -o-border-radius: 100%;
-    border-radius: 100%;
-    border: 0;
-    color: #fff;
-    text-align: center;
-    display: block;
-    vertical-align: middle;
-    width: 90px;
-    height: 90px;
-    -moz-transition: .5s;
-    -webkit-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s;
 
-    @media (max-width: 767px) {
-      padding: 8px;
-      width: 45px;
-      height: 45px;
-    }
-    img {
-      height: 70px;
-    }
-    .fa {
-      margin: 15px 10px;
-      display: block;
+    i {
+      font-size: 3em;
+      margin: auto;
+      display: inline-block;
+      border-radius: 70px;
+      padding: 10px;
+      background: transparent;
+      padding: 10px;
+      -webkit-border-radius: 1100%;
+      -moz-border-radius: 100%;
+      -o-border-radius: 100%;
+      border-radius: 100%;
+      border: 0;
+      color: #fff;
+
+      @media (max-width: 767px) {
+        padding: 8px;
+        font-size: 45px;
+      }
     }
   }
+
+  .red {
+    @extend .custom-icon;
+    i {
+      background: #FF8E79;
+    }
+  }
+
+  .orange {
+    @extend .custom-icon;
+    i {
+      background: #FFD579;
+    }
+  }
+
+  .yellow {
+    @extend .custom-icon;
+    i {
+      background: #FFEC79;
+    }
+  }
+
+  .green {
+    @extend .custom-icon;
+    i {
+      background: #72F0A1;
+    }
+  }
+
+  .blue {
+    @extend .custom-icon;
+    i {
+      background: #75CAEB;
+    }
+  }
+
 }
