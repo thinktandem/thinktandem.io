@@ -1,20 +1,48 @@
 #recent-posts {
 
+  h3 {
+    margin-top: 0;
+    font-family: $lato;
+    color: #333;
+    line-height: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   .container {
     border-bottom: 1px solid #efefef;
     padding-bottom: 50px;
-    padding-top: 50px;
     margin-bottom: 25px;
   }
+   p {
+    font-size: .8em;
+   }
 
   .title {
-
+    a {
+      margin-top: 0;
+      font-family: $lato;
+      color: #459CE7;
+      line-height: 25px;
+      font-weight: 300;
+      font-size: 1.4em;
+    }
+    a:hover {
+      text-decoration: none;
+    }
   }
 
-  .avatar {
-    max-width: 25px;
-    border-radius: 100%;
-    border: 1px solid #e0e0e0;
+  .author {
+    font-size: .75em;
+    color: #777;
+    margin-top: 8px;
+    .avatar {
+      margin-right: 5px;
+      max-width: 25px;
+      border-radius: 100%;
+      border: 1px solid #e0e0e0;
+    }
   }
+
 
 }
