@@ -1,33 +1,50 @@
 {% extends '../layouts/html.html' %}
 
 {% block contents %}
-  <div id="info">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 message">
-          <h3>Thanks, we got your message and will be in-touch soon!</h3>
-        </div>
-        <div class="col-md-4 contact">
-          <div class="address">
-            <h3>Our Address</h3>
-            <p>
-              The Old Road Willington, <br />
-              7 Kings Road, <br />
-              Southshore, 64890
-            </p>
-          </div>
-          <div class="phone">
-            <h3>By Phone</h3>
-            <p>
-              1-800-346-3344
-            </p>
-          </div>
-          <div class="social">
-            <a href="#" class="fb"><img src="images/social/fb.png" alt="facebook" /></a>
-            <a href="#" class="tw"><img src="images/social/tw.png" alt="twitter" /></a>
+  <div id="contact-thanks">
+
+    <div id="header-title">
+      <div class="container">
+        <div class="row header">
+          <div class="col-sm-12 text-center">
+            <h1>Thanks!</h3>
+            <div><small>We got your message and will be in-touch soon</small></div>
+            <div><small>in the meantime... <strong>ROCK OUT!</strong></small></div>
           </div>
         </div>
       </div>
     </div>
+
+    <div id="rockout">
+      <div class="container">
+        <div class="row header">
+          <div class="col-sm-4 text-center">
+            <img src="images/carl.gif" class="img-responsive" alt="carlton" />
+          </div>
+          <div class="col-sm-4 text-center">
+            <img src="images/carl.gif" class="img-responsive" alt="carlton" />
+          </div>
+          <div class="col-sm-4 text-center">
+            <img src="images/carl.gif" class="img-responsive" alt="carlton" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="rockout">
+      <div class="container">
+        <div class="row header">
+          <div class="col-sm-12 text-center">
+            <small><strong>OR</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% include '../components/organisms/recent/recent.html' %}
+
   </div>
+
+  {% include '../components/organisms/social/social.html' %}
+
 {% endblock %}
