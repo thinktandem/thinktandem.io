@@ -1,38 +1,27 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#map {
+  height: 50vh;
+  min-height: 300px;
+  max-height: 500px;
+}
+
+.message {
+  form {
+    input.form-control {
+      color: #777;
+      font-weight: 300;
+    }
+  }
+}
+
 #contact-us {
   img {
     max-height: 350px;
     margin: auto;
-  }
-  #map {
-    -webkit-font-smoothing: antialiased;
-    position: relative;
-    top: -20px;
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.35);
-
-    #directions {
-      position: absolute;
-      top: 50px;
-      left: 13%;
-      text-align: center;
-      width: 270px;
-      background: rgba(255, 255, 255, 0.96);
-      border-radius: 5px;
-      box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.36);
-      padding: 25px 25px 20px 25px;
-
-      @media(max-width: 767px) {
-        display: none;
-      }
-
-      p {
-        font-family: $myriad;
-        font-size: 19px;
-        color: #333;
-      }
-      button {
-        margin-top: 12px;
-      }
-    }
   }
 
   #info {
@@ -43,6 +32,7 @@
     @media(max-width: 991px) {
 
     }
+
 
     .message {
       h3 {
@@ -59,6 +49,7 @@
       form {
         margin-top: 35px;
         width: 80%;
+        max-width: 600px;
 
         @media(max-width: 767px) {
           width: 100%;
