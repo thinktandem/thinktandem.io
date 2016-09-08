@@ -60,6 +60,32 @@ canvas.particles-js-canvas-el {
   position: absolute;
 }
 
+#header-title {
+
+  h1 {
+    font-family: inherit;
+    font-weight: 300;
+    line-height: 1.1;
+    color: #555555;
+    margin-top: 31px;
+    margin-bottom: 15.5px;
+
+    a {
+      color: #FFFFFF;
+    }
+
+    @media(max-width: 991px) {
+      line-height: 50px;
+    }
+  }
+
+  .container {
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+}
+
 .icon-wrapper {
   display:inline-block;
 }

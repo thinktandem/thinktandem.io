@@ -3,72 +3,77 @@
 <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAnA4WkezM1GHAAaA2ZYWeayvh82vN9DwI&sensor=false&extension=.js'></script>
 
 {% block contents %}
-  <div id="info">
-    <div class="container">
-      <div class="row header">
-        <div class="col-md-12 text-center">
-          <h1>{{ title|safe }}</h1>
-          <small>{{ byline|safe }}</small>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div id='map'></div>
-            <script>
-            function initMap() {
-              var mapDiv = document.getElementById('map');
-              var map = new google.maps.Map(mapDiv, {
-                center: {lat: 37.825243, lng: -122.383462},
-                zoom: 10,
-                disableDefaultUI: true,
-                disableDoubleClickZoom: true,
-                draggable: false,
-                zoomControl: false,
-                scrollwheel: false,
-                styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#72C8E9"}]},{"featureType":"administrative.neighborhood","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"all","elementType":"labels","stylers":[{"visibility":"off"}]}]
-              });
-            }
-            </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnA4WkezM1GHAAaA2ZYWeayvh82vN9DwI&callback=initMap"
-            async defer>
-            </script>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 message">
-          <div class="address">
-            <h3>Send Us a Message</h3>
-            <p>
-              Interested in working with us or just want to chat? Drop us a line and we'll get in touch with you as soon as possible.
-            </p>
-            <form role="form" id="contact-form" method="post" action="{{action}}">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input name="name" type="name" class="form-control" id="name" placeholder="Enter name" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email address</label>
-                <input name="_replyto" type="email" class="form-control" id="email" placeholder="Enter email" required>
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone</label>
-                <input name="phone" type="tel" class="form-control" id="phone" placeholder="Enter phone number">
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea name="message" class="form-control" rows="3" required></textarea>
-              </div>
-              <input type="hidden" name="_next" value="contact-thanks" />
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+  <div id="contact">
+
+    <div id="header-title">
+      <div class="container">
+        <div class="row header">
+          <div class="col-md-12 text-center">
+            <h1>{{ title|safe }}</h1>
+            <small>{{ byline|safe }}</small>
           </div>
         </div>
       </div>
     </div>
+
+    <div id="page-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 message">
+            <div class="address">
+              <h3>Send Us a Message</h3>
+              <p>
+                Interested in working with us or just want to chat? Drop us a line and we'll get in touch with you as soon as possible.
+              </p>
+              <form role="form" id="contact-form" method="post" action="{{action}}">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input name="name" type="name" class="form-control" id="name" placeholder="Enter name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input name="_replyto" type="email" class="form-control" id="email" placeholder="Enter email" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input name="phone" type="tel" class="form-control" id="phone" placeholder="Enter phone number">
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea name="message" class="form-control" rows="3" required></textarea>
+                </div>
+                <input type="hidden" name="_next" value="contact-thanks" />
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-4 map">
+            <div id='map'></div>
+              <script>
+              function initMap() {
+                var mapDiv = document.getElementById('map');
+                var map = new google.maps.Map(mapDiv, {
+                  center: {lat: 37.825243, lng: -122.383462},
+                  zoom: 10,
+                  disableDefaultUI: true,
+                  disableDoubleClickZoom: true,
+                  draggable: false,
+                  zoomControl: false,
+                  scrollwheel: false,
+                  styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#72C8E9"}]},{"featureType":"administrative.neighborhood","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"administrative.land_parcel","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"all","elementType":"labels","stylers":[{"visibility":"off"}]}]
+                });
+              }
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnA4WkezM1GHAAaA2ZYWeayvh82vN9DwI&callback=initMap"
+              async defer>
+              </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
+
   {% include '../components/organisms/social/social.html' %}
+
 {% endblock %}

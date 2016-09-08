@@ -1,7 +1,7 @@
 ---
 name: Alec Reynolds
 image: http://www.kalamuna.com/images/team/alec-sm.jpg
-hover: http://stream1.gifsoup.com/webroot/animatedgifs/167321_s.gif
+hover: http://i.imgur.com/BF1ybti.gif
 link: https://twitter.com/reynoldsalec
 layout: components/molecules/bio/bio.html
 ---

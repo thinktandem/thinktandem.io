@@ -3,28 +3,33 @@
 {% block contents %}
 
   <div id="info">
-    <div class="container">
-      <div class="row header">
-        <div class="col-md-12 text-center">
-          <h1>{{ title|safe }}</h1>
-          <small>{{ byline|safe }}</small>
+
+    <div id="header-title">
+      <div class="container">
+        <div class="row header">
+          <div class="col-md-12 text-center">
+            <h1>{{ title|safe }}</h1>
+            <small>{{ byline|safe }}</small>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        {{ contents|safe }}
+      </div>
+    </div>
+
+    <div id="staff">
+      <div class="container">
+        <div class="row staff">
+          {% for staff in collections.staff %}
+            {% include "../components/molecules/bio/bio.html" %}
+          {% endfor %}
         </div>
       </div>
     </div>
-    <div class="container">
-      {{ contents|safe }}
-    </div>
+
   </div>
 
-  <div id="staff">
-    <div class="container">
-      <div class="row staff">
-        {% for staff in collections.staff %}
-          {% include "../components/molecules/bio/bio.html" %}
-        {% endfor %}
-      </div>
-    </div>
-  </div>
 
   {% include '../components/organisms/stats/stats.html' %}
   {% include '../components/organisms/sf/sf.html' %}

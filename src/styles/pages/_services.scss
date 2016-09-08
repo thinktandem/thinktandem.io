@@ -1,20 +1,5 @@
 #services {
 
-  h3 {
-    font-family: $lato;
-    color: #333;
-    line-height: 1em;
-    padding-bottom: 30px;
-
-    a {
-      color: #FFFFFF;
-    }
-
-    @media(max-width: 991px) {
-      line-height: 50px;
-    }
-  }
-
   .hexagon {
     margin-top: 30px;
     width: 104px;

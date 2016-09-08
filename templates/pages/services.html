@@ -3,14 +3,18 @@
 {% block contents %}
 
   <div id="services">
-    <div class="container">
-      <div class="row header">
-        <div class="col-xs-12 text-center">
-          <h1>{{ title|safe }}</h1>
-          <small>{{ byline|safe }}</small>
+
+    <div id="header-title">
+      <div class="container">
+        <div class="row header">
+          <div class="col-xs-12 text-center">
+            <h1>{{ title|safe }}</h1>
+            <small>{{ byline|safe }}</small>
+          </div>
         </div>
       </div>
     </div>
+
     <div class="container equation">
       <div class="row">
         <div class="col-sm-1">
@@ -29,9 +33,11 @@
         </div>
       </div>
     </div>
+
     <div class="container">
       {{ contents|safe }}
     </div>
+
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
@@ -48,6 +54,7 @@
         </div>
       </div>
     </div>
+
   </div>
 
   {% include '../components/organisms/cta/cta.html' %}
