@@ -1,0 +1,41 @@
+{% extends '../layouts/html.html' %}
+
+{% block contents %}
+
+  <div id="info">
+    <div class="container">
+      <div class="row header">
+        <div class="col-md-12 text-center">
+          <h1>Posts about {{ tag|safe }}</h1>
+          <small>We've been revealing truth since the Permian extinction. <a href="http://eepurl.com/caz4hn">Sign up</a> to receieve an email whenever we post something in the blog and never miss an update.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include '../components/organisms/tags/tags.html' %}
+
+  <div id="posts">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {% for article in pagination.files %}
+            {% include "../components/molecules/teaser/teaser.html" %}
+          {% endfor %}
+          <div class="pages">
+            <ul class="pagination">
+              {% set pages = pagination.getPages(4) %}
+              {% for key, page in pages %}
+                <li class="{% if pagination.num == page.pagination.num %}active{% endif %}"><a href="{{ page.path }}">{{page.pagination.num}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include '../components/organisms/cta/cta.html' %}
+  {% include '../components/organisms/social/social.html' %}
+
+{% endblock %}

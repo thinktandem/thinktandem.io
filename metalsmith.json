@@ -54,7 +54,7 @@
       "path": "topics/:tag/index.html",
       "pathPage": "topics/:tag/:num/index.html",
       "perPage": 6,
-      "layout": "pages/blog.html",
+      "layout": "pages/tags.html",
       "sortBy": "date",
       "reverse": true,
       "skipMetadata": false,

@@ -8,12 +8,6 @@
     </div>
     <div class="col-md-10">
 
-      {% if article.mainImage %}
-        <a href="{{'blog/' + article.date|date('Y/m/d') + '/' + article.title|slug }}" class="pic">
-          <img src="{{article.mainImage}}" class="img-responsive" alt="blogpost" />
-        </a>
-      {% endif %}
-
       <div class="title">
         <a href="{{'blog/' + article.date|date('Y/m/d') + '/' + article.title|slug }}">{{article.title}}</a>
       </div>
@@ -27,6 +21,7 @@
       </p>
 
       <a href="{{'blog/' + article.date|date('Y/m/d') + '/' + article.title|slug }}" class="continue-reading">Continue reading this post</a>
+
     </div>
   </div>
 </div>

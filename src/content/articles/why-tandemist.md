@@ -5,7 +5,7 @@ tags: deployment, docker, hosting, localdev, misc, scaling, strategy, support, t
 permalink: true
 author: Alec Reynolds
 private: false
-mainImage: false
+mainImage: holder.js/1000x200/#222:#aaa/text:{{title|slug}}
 img-src: holder.js/200x200/#222:#aaa/text:{{title|slug}}
 teaser: An introduction to Tandem, who we are, what we do, and why you, a human being with places to go and people to see, should spend some time with us.
 date: 2016-08-03

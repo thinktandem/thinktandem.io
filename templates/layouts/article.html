@@ -6,32 +6,37 @@
 
 {% block contents %}
 
-  <article id="blogpost-wrapper">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          {% if mainImage %}
-            <div class="main-pic">
-              <img src="{{mainImage}}" class="img-responsive" alt="blogpost" />
-            </div>
-          {% endif %}
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-10 post">
-          <h1 class="title">
-            {{title|safe}}
-          </h1>
-          <div class="author">
-            <img src="images/authors/{{author|slug}}.jpg" class="avatar" alt="author" />
-            {{author|safe}}
-          </div>
-          <div class="content">
-            {{contents|safe}}
+  <article id="article">
+
+    <div id="header-title">
+      <div class="container">
+        <div class="row header">
+          <div class="col-md-12 text-center">
+            <h1>{{ title|safe }}</h1>
+            <small>by <img class="avatar" src="images/authors/{{author|slug}}.jpg" class="avatar" alt="author" /> {{author|safe}} on {{date|date('F jS Y')}}</small>
           </div>
         </div>
       </div>
     </div>
+
+    {% if mainImage %}
+      <div id="main-pic">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <img src="{{mainImage}}" class="img-responsive" alt="blogpost" />
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    <div id="page-content">
+      <div class="container">
+        {{ contents|safe }}
+      </div>
+    </div>
+
   </article>
 
   {% include '../components/organisms/cta/cta.html' %}
