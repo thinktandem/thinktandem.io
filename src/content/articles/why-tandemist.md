@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.html
 title: On evading death
-tags: tagged, page, metalsmith, plugin
+tags: deployment, docker, hosting, localdev, misc, scaling, strategy, support, training, testing
 permalink: true
 author: Alec Reynolds
 private: false

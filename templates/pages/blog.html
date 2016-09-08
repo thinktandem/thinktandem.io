@@ -11,16 +11,9 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          {% for service in collections.services %}
-            <span class="label label-{{ service.color }}">{{ service.short }}</span>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
   </div>
+
+  {% include '../components/organisms/tags/tags.html' %}
 
   <div id="posts">
     <div class="container">

@@ -1,0 +1,11 @@
+<div id="tags">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        {% for tag in tags.tags %}
+          <span class="label label-primary"><a href="/topics/{{ tag }}" title="{{ tag }}">{{ tag }}</a></span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
