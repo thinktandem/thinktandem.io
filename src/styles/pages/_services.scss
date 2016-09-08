@@ -71,17 +71,17 @@
 
   .hexagon-orange {
     @extend .hexagon;
-    background-color: #FFD579;
+    background-color: #FFCC4F;
   }
 
   .hexagon-orange:before {
     @extend .hexagon:before;
-    border-bottom: 30px solid #FFD579;
+    border-bottom: 30px solid #FFCC4F;
   }
 
   .hexagon-orange:after {
     @extend .hexagon:after;
-    border-top: 30px solid #FFD579;
+    border-top: 30px solid #FFCC4F;
   }
 
   .hexagon-yellow {
