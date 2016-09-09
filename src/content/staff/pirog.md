@@ -4,6 +4,7 @@ image: http://www.kalamuna.com/images/team/mike-sm.jpg
 hover: http://i.imgur.com/BF1ybti.gif
 link: https://twitter.com/pirogcommamike
 layout: components/molecules/bio/bio.html
+private: true
 ---
 Mike is a senior DevOps consultant with over a decade of experience finding better ways to make and deliver web applications. Unlike many engineers, Mike has the rare ability to recognize business value as the foremost concern in determining the solution to any software problem.
 

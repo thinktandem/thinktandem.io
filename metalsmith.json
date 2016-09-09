@@ -68,6 +68,28 @@
         "mode": "rfc3986"
       }
     },
+    "metalsmith-seo-checker": {
+      "trailingSlash": true,
+      "canonicalBase": "http://www.thinktandem.io",
+      "lengths": {
+        "title": 60,
+        "description": 160
+      },
+      "seo": {
+        "title": true,
+        "description": "Another great piece of content by Tandem.",
+        "robots": "index, follow"
+      },
+      "ogp": {
+        "defaultType": "website",
+        "defaultImage": "www.example.org/myImage.png",
+        "ignoreMissingImage": false
+      }
+    },
+    "metalsmith-sitemap": {
+      "hostname": "http://www.thinktandem.io",
+      "omitIndex": true
+    },
     "metalsmith-swig-helpers": {
       "filters": {
         "xorcrypt": "xor-crypt"

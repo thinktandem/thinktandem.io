@@ -22,6 +22,7 @@ icons:
   - icon: devicons devicons-linux
     name: Linux
     link: https://en.wikipedia.org/wiki/Linux
+private: true
 ---
 Everything starts on a developer's computer. But every minute your team spends fixing their local development tools is a minute that could be spent creating software.
 

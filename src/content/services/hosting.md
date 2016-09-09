@@ -22,7 +22,7 @@ icons:
   - icon: devicons devicons-google-cloud-platform
     name: Google
     link: https://cloud.google.com/compute/
-
+private: true
 ---
 Move off that crusty VM, or worse, that server in the basement to cutting edge and scalable docker containers complete with backups on every build. Have on call support to scale up when needed.
 

@@ -4,6 +4,7 @@ image: http://www.kalamuna.com/images/team/alec-sm.jpg
 hover: http://i.imgur.com/BF1ybti.gif
 link: https://twitter.com/reynoldsalec
 layout: components/molecules/bio/bio.html
+private: true
 ---
 Alec is a digital solutions consultant who helps organization get more value from their software projects. His digital agency background gave Alec the opportunity to experience a variety of strategies for managing web application projects and made him an ardent student of lean business development, agile project management, and continuous delivery methodologies.
 

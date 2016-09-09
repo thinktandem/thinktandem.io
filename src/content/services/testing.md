@@ -22,7 +22,7 @@ icons:
   - icon: fa fa-flask
     name: Func. Tests
     link: https://en.wikipedia.org/wiki/Functional_testing
-
+private: true
 ---
 One bug is fixed, but another bug is introduced. It's called regression "whack-a-mole", and when your projects become complex, it can suck your team into endless cycles of revisions.
 

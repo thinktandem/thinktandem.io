@@ -22,7 +22,7 @@ icons:
   - icon: fa fa-github
     name: Github
     link: https://github.com/
-
+private: true
 ---
 Your team is the best investment you can make. Get them up to speed on the latest and most cutting edge development practices. Learn about containers, Docker, development workflows, testing frameworks and continuous integration/delivery/deployment.
 

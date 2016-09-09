@@ -2,8 +2,10 @@
 layout: pages/about.html
 title: Our Story
 byline: What does it mean to tandemize?
+description: All about Tandem, your friendly digital strategy firm from San Francisco, and the story of its co-founders Alec Reynolds and Mike Pirog.
 pageSlug: about
 image: /images/working.jpeg
+lastmod: 2016-08-03
 ---
 <div class="row">
   <div class="col-md-6">
