@@ -5,3 +5,4 @@ npm-debug.log
 assets/vendor
 .DS_Store
 src/content/articles/dummy-content*
+*.log

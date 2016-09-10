@@ -1,0 +1,28 @@
+<div id="valuesec">
+  <div class="container">
+    <div class="col-sm-5 message">
+      <small>
+        Tandem levels-up forward-looking businesses with cutting-edge DevOps tools like Docker, continuous integration, and automated testing. Using hard-won experience working with teams across a variety of industries, we know how to bring your projects alive with truly Agile workflows.
+      </small>
+      <a href="/services" class="btn btn-primary">Learn More</a>
+    </div>
+    <div class="col-sm-7 graphix">
+      <div class="funcloud center-block">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            {% for service in services.services %}
+              <div class="item {% if service.first %} active {% endif %}">
+                <a href="{{ service.link }}" title="{{ service.name }}">
+                  <div class="funcloud-service text-center">
+                    <i class="{{ service.icon }}"></i>
+                    <small>{{ service.name }}</small>
+                  </div>
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

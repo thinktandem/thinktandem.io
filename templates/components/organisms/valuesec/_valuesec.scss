@@ -1,0 +1,60 @@
+#valuesec {
+
+  .container {
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+
+    .message {
+      padding: 50px;
+      padding-top: 80px;
+      padding-right: 10px;
+      color: #777777;
+      font-size: 1em;
+      line-height: 1.5em;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+
+      .btn-primary {
+        background: #72F0A1;
+        color: #333;
+        display: block;
+        margin-top: 30px;
+      }
+
+    }
+
+    .graphix {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .funcloud {
+      width: 425px;
+      height: 425px;
+      background-color: #4BB5DD;
+      border: 18px solid #ACE2F7;
+      border-radius: 50%;
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      i {
+        font-size: 300px;
+        color: #FFFFFF;
+        position: relative;
+        top: 25px;
+        display: block;
+      }
+
+      small {
+        color: #FFFFFF;
+        text-transform: uppercase;
+      }
+
+    }
+
+  }
+
+}
