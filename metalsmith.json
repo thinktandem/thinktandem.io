@@ -68,6 +68,57 @@
         "mode": "rfc3986"
       }
     },
+    "metalsmith-jsonld": {
+      "defaults": [
+        {
+          "@context": "http://schema.org",
+          "@type": "WebSite",
+          "name": "Tandem",
+          "alternateName": "The site for Tandem, a software strategy firm.",
+          "url": "http://www.thinktandem.io"
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "url": "http://www.thinktandem.io",
+          "logo": "http://www.thinktandem.io/images/favicon.png",
+          "sameAs": [
+            "https://www.linkedin.com/company/think-tandem",
+            "https://twitter.com/thinktandem"
+          ]
+        }
+      ],
+      "collections": {
+        "articles": [
+          {
+            "@context": "http://schema.org", 
+            "@type": "BlogPosting",
+            "headline": "title",
+            "alternativeHeadline": "teaser",
+            "image": "mainImage",
+            "keywords": "tags", 
+            "publisher": {
+              "@context": "http://schema.org",
+              "@type": "Organization",
+              "name": "Kalabox Inc. DBA Tandem",
+              "url": "http://www.thinktandem.io",
+              "logo": "http://www.thinktandem.io/images/favicon.png",
+              "sameAs": [
+                "https://www.linkedin.com/company/think-tandem",
+                "https://twitter.com/thinktandem"
+              ]
+            },
+            "datePublished": "date",
+            "dateCreated": "date",
+            "description": "teaser",
+            "author": {
+              "@type": "Person",
+              "name": "author"
+            }
+          }
+        ]
+      }
+    },
     "metalsmith-seo-checker": {
       "trailingSlash": true,
       "canonicalBase": "http://www.thinktandem.io",
