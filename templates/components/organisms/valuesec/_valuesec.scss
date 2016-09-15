@@ -1,14 +1,9 @@
 #valuesec {
 
   .container {
-    border-bottom: 1px solid #efefef;
-    margin-bottom: 25px;
-    padding-bottom: 25px;
 
     .message {
-      padding: 50px;
-      padding-top: 80px;
-      padding-right: 10px;
+      padding: 3em 1em;
       color: #777777;
       font-size: 1em;
       line-height: 1.5em;
@@ -25,11 +20,15 @@
     }
 
     .graphix {
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding: 2em 0em;
     }
 
     .funcloud {
+      @media (max-width: 767px) {
+        width: 250px;
+        height: 250px;
+        line-height: 3em;
+      }
       width: 425px;
       height: 425px;
       background-color: #4BB5DD;
@@ -41,6 +40,9 @@
       }
 
       i {
+        @media (max-width: 767px) {
+          font-size: 6em;
+        }
         font-size: 300px;
         color: #FFFFFF;
         position: relative;

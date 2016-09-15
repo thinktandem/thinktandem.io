@@ -37,7 +37,6 @@ Custom
 @import "../../templates/components/organisms/stats/stats";
 @import "../../templates/components/organisms/tags/tags";
 @import "../../templates/components/organisms/testimonials/testimonials";
-@import "../../templates/components/organisms/value/value";
 @import "../../templates/components/organisms/valuesec/valuesec";
 
 /**
@@ -362,10 +361,14 @@ canvas.particles-js-canvas-el {
           }
         }
         &.contact {
+
+          @media (max-width: 767px) {
+            margin: 0;
+            border-radius: 0;
+          }
           background-color: #FFCC4F;
           border-radius: 5px;
           font-weight: 500;
-          margin-top: 8px;
           margin-right: 10px;
           text-transform: uppercase;
           > a {
@@ -551,4 +554,22 @@ canvas.particles-js-canvas-el {
       }
     }
   }
+}
+
+.row.header {
+  h3 {
+    @media (max-width: 767px) {
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+    margin: 0;
+    font-family: $lato;
+    color: #333;
+    line-height: 1.5em;
+    padding: 1em 0em;
+  }
+}
+
+.container.border-bottom {
+  border-bottom: 1px solid #efefef;
 }

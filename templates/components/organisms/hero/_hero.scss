@@ -13,13 +13,12 @@
 
   background-position: center 16%;
   height: 90vh;
-  min-height: 28em;
+  min-height: 33em;
   max-height: 40em;
   position: relative;
 
   @media (max-width: 767px) {
-    min-height: 10em;
-    max-height: 20em;
+    min-height: 35em;
   }
 
   &:before {

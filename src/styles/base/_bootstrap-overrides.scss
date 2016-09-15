@@ -70,3 +70,11 @@ p {
 .navbar.hero .navbar-nav > li > a:hover {
   background: none;
 }
+
+@media (min-width: 768px) {
+  .navbar-nav > li {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+  }
+}
