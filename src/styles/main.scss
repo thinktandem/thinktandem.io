@@ -361,6 +361,18 @@ canvas.particles-js-canvas-el {
             color: #fff;
           }
         }
+        &.contact {
+          background-color: #FFCC4F;
+          border-radius: 5px;
+          font-weight: 500;
+          margin-top: 8px;
+          margin-right: 10px;
+          text-transform: uppercase;
+          > a {
+            padding: 5px 10px;
+            color: #333;
+          }
+        }
         &.open {
           > a {
             color: #fff !important;
@@ -535,6 +547,7 @@ canvas.particles-js-canvas-el {
             }
           }
         }
+
       }
     }
   }
