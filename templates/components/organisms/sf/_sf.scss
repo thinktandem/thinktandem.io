@@ -1,20 +1,16 @@
 #sf {
 
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 2em;
+  padding-bottom: 2em;
 
   h3 {
     font-family: $lato;
     color: #333;
-    line-height: 25px;
-    margin-top: 90px;
+    line-height: 1.25em;
+    margin-top: 1em;
 
     a {
       color: #FFFFFF;
-    }
-
-    @media(max-width: 991px) {
-      line-height: 50px;
     }
   }
 

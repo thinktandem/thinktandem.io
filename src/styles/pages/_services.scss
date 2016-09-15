@@ -55,6 +55,9 @@
 
     margin-right: 35px;
     border-right: 1px solid #efefef;
+    @media (max-width: 768px) {
+      border-right: none;
+    }
     padding: .5em;
     a {
       color: #459CE7;
@@ -69,3 +72,12 @@
   }
 
 }
+
+  .icon-header {
+    a {
+      width: 130px;
+      display: inline-block;
+      text-align: center;
+      margin-bottom: .5em;
+    }
+  }
