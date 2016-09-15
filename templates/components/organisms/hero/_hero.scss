@@ -41,8 +41,8 @@
   }
 
   i {
-    color: #FFFFFF;
-    font-size: 2.5em;
+    color: #FFCC4F;
+    font-size: 5.5em;
     margin: 10px;
   }
 
@@ -141,11 +141,11 @@
   }
 
   .hero-readmore {
-    position: absolute;
+    /*position: absolute; */
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    bottom: 2em;
+    margin-top: 20px;
     a {
       display: block;
       text-decoration: none;
