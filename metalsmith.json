@@ -141,6 +141,11 @@
       "hostname": "http://www.thinktandem.io",
       "omitIndex": true
     },
+    "metalsmith-robots": {
+      "useragent": "googlebot",
+      "disallow": ["404.html"],
+      "sitemap": "http://www.thinktandem.io/sitemap.xml"
+    },
     "metalsmith-swig-helpers": {
       "filters": {
         "xorcrypt": "xor-crypt"
