@@ -23,6 +23,28 @@
     }
   }
 
+  #email-subscribe {
+    .container {
+      border-bottom: 1px solid #efefef;
+      padding-bottom: 25px;
+      padding-top: 25px;
+    }
+
+    a {
+      font-weight: 300;
+      color: #459CE7;
+      i {
+        color: #FFCC4F;
+        margin-right: 25px;
+        margin-left: 25px;
+      }
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
   #main-pic {
     .container {
       border-bottom: 1px solid #efefef;
