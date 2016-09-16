@@ -1,5 +1,5 @@
 ---
-image: images/joshkoenig.jpg
+image: images/testimonials/joshkoenig.jpg
 name: Josh Koenig
 company: Pantheon Website Management Platform
 private: true

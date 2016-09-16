@@ -1,5 +1,5 @@
 ---
-image: images/bradchesney.jpg
+image: images/testimonials/bradchesney.jpg
 name: Brad Chesney
 company: Rust Belt Rebellion
 private: true
