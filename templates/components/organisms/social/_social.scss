@@ -29,6 +29,11 @@
 
       a {
         text-decoration: none;
+        display: inline-block;
+        margin-bottom: 1em;
+        @media (max-width: 320px) {
+          width: 65px;
+        }
       }
 
       i {
