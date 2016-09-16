@@ -38,16 +38,31 @@
     <meta property="og:description" content="{{description}}" />
 
   {% endblock %}
-
-  {% block styles %}
-
-    <link rel="stylesheet" type="text/css" href="{{'styles/main.css'|bustcache}}">
-  {% endblock %}
+  <style>
+    {% include '../../src/styles/critical.css' %}
+  </style>
 
 </head>
 
 <body class="{% if pageSlug %}{{pageSlug}}{% else %}{{title|slug}}{% endif %}">
-
+  <noscript id="deferred-styles">
+    {% block styles %}
+      <link rel="stylesheet" type="text/css" href="{{'styles/main.css'|bustcache}}">
+    {% endblock %}
+  </noscript>
+  <script>
+    var loadDeferredStyles = function() {
+      var addStylesNode = document.getElementById("deferred-styles");
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement)
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+  </script>
   <main role="main" class="main">
     {% block header %}
     <header id="header" class="navbar hero" role="banner">

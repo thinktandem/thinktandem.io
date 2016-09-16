@@ -54,6 +54,7 @@
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-exec": "^0.4.6",
+    "grunt-penthouse": "^0.3.0",
     "metalsmith-in-place": "^1.4.4",
     "metalsmith-layouts": "^1.6.5",
     "pa11y": "^3.2.0",

@@ -59,6 +59,16 @@ module.exports = function(grunt) {
         }]
       }
     },
+    penthouse: {
+      extract : {
+        outfile : 'src/styles/critical.css',
+        css : './build/styles/main.css',
+        url : 'http://localhost:8000',
+        width : 1300,
+        height : 900,
+        skipErrors : false // this is the default
+      },
+    },
     // Watch files and run tasks when changed
     watch: {
       all: {
@@ -123,8 +133,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-penthouse');
 
   grunt.registerTask('build', ['exec:build']);
   grunt.registerTask('deploy', ['uglify:deploy', 'cssmin:deploy', 'buildcontrol:deploy']);
-  grunt.registerTask('default', ['build', 'browserSync', 'watch']);
+  grunt.registerTask('default', ['build', 'browserSync', 'penthouse:extract', 'watch']);
 };
