@@ -16,14 +16,18 @@
   #page-content {
     .container {
       .address {
+        @media (max-width: 768px) {
+          padding-right: 0;
+          border: none;
+        }
         padding-right: 100px;
         border-right: 1px solid #efefef;
-        padding-bottom: 40px;
+        padding-bottom: 2em;
       }
       .map {
         padding-left: 40px;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 2em;
+        padding-bottom: 2em;
       }
     }
   }
