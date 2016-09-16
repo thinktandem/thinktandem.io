@@ -17,7 +17,6 @@ module.exports = function(grunt) {
         cmd: 'npm run build'
       },
     },
-
     // BrowserSync Task
     browserSync: {
       bsFiles: {
@@ -32,6 +31,32 @@ module.exports = function(grunt) {
         },
         watchTask: true,
         port: 8000
+      }
+    },
+    uglify: {
+      options: {
+        compress: {
+          global_defs: {
+            'DEBUG': false
+          },
+          dead_code: true
+        }
+      },
+      deploy: {
+        files: {
+          'build/js/scripts.js': ['build/js/scripts.js']
+        }
+      }
+    },
+    cssmin: {
+      deploy: {
+        files: [{
+          expand: true,
+          cwd: 'build/styles',
+          src: ['main.css'],
+          dest: 'build/styles',
+          ext: '.css'
+        }]
       }
     },
     // Watch files and run tasks when changed
@@ -96,8 +121,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   grunt.registerTask('build', ['exec:build']);
-  grunt.registerTask('deploy', ['buildcontrol:deploy']);
+  grunt.registerTask('deploy', ['uglify:deploy', 'cssmin:deploy', 'buildcontrol:deploy']);
   grunt.registerTask('default', ['build', 'browserSync', 'watch']);
 };
