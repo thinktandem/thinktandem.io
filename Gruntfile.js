@@ -60,14 +60,46 @@ module.exports = function(grunt) {
       }
     },
     penthouse: {
-      extract : {
-        outfile : 'src/styles/critical.css',
+      homepage: {
+        outfile : 'src/styles/homepage.critical.css',
         css : './build/styles/main.css',
         url : 'http://localhost:8000',
         width : 1300,
         height : 900,
         skipErrors : false // this is the default
       },
+      about: {
+        outfile : 'src/styles/about.critical.css',
+        css : './build/styles/main.css',
+        url : 'http://localhost:8000/about',
+        width : 1300,
+        height : 900,
+        skipErrors : false // this is the default
+      },
+      services: {
+        outfile : 'src/styles/services.critical.css',
+        css : './build/styles/main.css',
+        url : 'http://localhost:8000/services',
+        width : 1300,
+        height : 900,
+        skipErrors : false // this is the default
+      },
+      blog: {
+        outfile : 'src/styles/blog.critical.css',
+        css : './build/styles/main.css',
+        url : 'http://localhost:8000/blog',
+        width : 1300,
+        height : 900,
+        skipErrors : false // this is the default
+      },
+      contact: {
+        outfile : 'src/styles/contact.critical.css',
+        css : './build/styles/main.css',
+        url : 'http://localhost:8000/contact',
+        width : 1300,
+        height : 900,
+        skipErrors : false // this is the default
+      }
     },
     // Watch files and run tasks when changed
     watch: {
@@ -75,7 +107,8 @@ module.exports = function(grunt) {
         files: [
           'src/**/*',
           'assets/**/*',
-          'templates/**/*'
+          'templates/**/*',
+          '!src/styles/*.critical.css'
         ],
         tasks: ['build'],
         options: {
@@ -137,5 +170,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', ['exec:build']);
   grunt.registerTask('deploy', ['uglify:deploy', 'cssmin:deploy', 'buildcontrol:deploy']);
-  grunt.registerTask('default', ['build', 'browserSync', 'penthouse:extract', 'watch']);
+  grunt.registerTask('default', ['build', 'browserSync', 'penthouse', 'watch']);
 };

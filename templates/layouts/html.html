@@ -38,9 +38,20 @@
     <meta property="og:description" content="{{description}}" />
 
   {% endblock %}
-  <style>
-    {% include '../../src/styles/critical.css' %}
-  </style>
+
+  {% if pageSlug %}
+    {% set filePath = 'src/styles/' + pageSlug + '.critical.css' %}
+    {% if filePath|isFile %}
+      {% set relativeFilePath = '../../src/styles/' + pageSlug + '.critical.css' %}
+      <style>
+        {% include relativeFilePath %}
+      </style>
+    {% else %}
+      <style>
+        {% include '../../src/styles/blog.critical.css' %}
+      </style>
+    {% endif %}
+  {% endif %}
 
 </head>
 
