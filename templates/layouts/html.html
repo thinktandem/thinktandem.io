@@ -46,11 +46,11 @@
       <style>
         {% include relativeFilePath %}
       </style>
-    {% else %}
-      <style>
-        {% include '../../src/styles/blog.critical.css' %}
-      </style>
     {% endif %}
+  {% else %}
+    <style>
+      {% include '../../src/styles/blog.critical.css' %}
+    </style>
   {% endif %}
 
 </head>
