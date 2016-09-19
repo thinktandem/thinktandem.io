@@ -28,7 +28,7 @@
     "metalsmith-sass": "^1.3.0",
     "metalsmith-seo-checker": "^0.0.3",
     "metalsmith-sitemap": "^1.1.0",
-    "metalsmith-swig-helpers": "^1.3.0",
+    "metalsmith-swig-helpers": "git://github.com/kalabox/metalsmith-swig-helpers",
     "metalsmith-tags": "^1.2.0",
     "swig": "^1.4.2",
     "xor-crypt": "~1.0.0"
