@@ -2,15 +2,32 @@
 
   p {
     color: #5d6d77;
-    font-size: 1.1em;
+    font-size: .95em;
     margin: 1em 0;
-    line-height: 1.6;
-    font-weight: 300;
+    line-height: 1.8;
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
   }
 
   pre {
     font-size: .8em;
+  }
+
+  h2, h3, h4 {
+    font-family: $lato;
+    color: #34495e;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  h4 {
+    font-size: 1.2em;
   }
 
   .avatar {
