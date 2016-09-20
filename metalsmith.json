@@ -34,7 +34,10 @@
         "basePath": "/"
       }
     },
-    "metalsmith-markdown": {},
+    "metalsmith-markdown": {
+      "langPrefix": "language-"
+    },
+    "metalsmith-prism": true,
     "metalsmith-include": {},
     "metalsmith-permalinks": {
       "pattern": ":url",
@@ -91,12 +94,12 @@
       "collections": {
         "articles": [
           {
-            "@context": "http://schema.org", 
+            "@context": "http://schema.org",
             "@type": "BlogPosting",
             "headline": "title",
             "alternativeHeadline": "teaser",
             "image": "mainImage",
-            "keywords": "tags", 
+            "keywords": "tags",
             "publisher": {
               "@context": "http://schema.org",
               "@type": "Organization",

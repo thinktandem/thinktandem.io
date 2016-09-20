@@ -1,12 +1,16 @@
 #article {
 
   p {
-    color: #777777;
-    font-size: 1em;
-    margin-top: 1em;
-    line-height: 1.3em;
+    color: #5d6d77;
+    font-size: 1.1em;
+    margin: 1em 0;
+    line-height: 1.6;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
+  }
+
+  pre {
+    font-size: .8em;
   }
 
   .avatar {

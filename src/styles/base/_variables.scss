@@ -1,19 +1,18 @@
 /* site specific */
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-base:              #000 !default;
-$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:              lighten($gray-base, 20%) !default;   // #333
-$gray:                   lighten($gray-base, 33.5%) !default; // #555
-$gray-light:             lighten($gray-base, 46.7%) !default; // #777
-$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+$gray-base:               #000 !default;
+$gray-darker:             lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:               lighten($gray-base, 20%) !default;   // #333
+$gray:                    lighten($gray-base, 33.5%) !default; // #555
+$gray-light:              lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:            lighten($gray-base, 93.5%) !default; // #eee
 
-
-$brand-primary:         #4BB5DD !default;
-$brand-success:         #3FD8DF !default;
-$brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
+$brand-primary:           #4BB5DD !default;
+$brand-success:           #3FD8DF !default;
+$brand-info:              #5bc0de !default;
+$brand-warning:           #f0ad4e !default;
+$brand-danger:            #d9534f !default;
 
 $font-size-base:          22px !default;
 $text-color:              #6C7279 !default;
@@ -28,3 +27,9 @@ $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
 $headings-font-family:    inherit !default;
 $headings-font-weight:    300 !default;
 $headings-color:          $gray !default;
+
+$code-color:              inherit;
+$code-bg:                 #232323;
+$pre-color:               inherit;
+$pre-bg:                  #232323;
+$pre-border-color:        slategray;
