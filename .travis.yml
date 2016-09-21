@@ -16,6 +16,7 @@ after_success:
 cache:
   directories:
   - node_modules
+  - assets/vendor
 notifications:
   email: false
 env:
