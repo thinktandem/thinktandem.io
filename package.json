@@ -15,7 +15,9 @@
     "metalsmith-collections-convention": "^1.0.0",
     "metalsmith-env": "^2.0.0",
     "metalsmith-include": "git://github.com/madeofpeople/metalsmith-include#includeWholeObject",
+    "metalsmith-in-place": "^1.4.4",
     "metalsmith-jsonld": "~0.0",
+    "metalsmith-layouts": "^1.6.5",
     "metalsmith-markdown": "~0.2.1",
     "metalsmith-metadata-convention": "0.1.0",
     "metalsmith-move-up": "^1.0.0",
@@ -34,12 +36,9 @@
   "scripts": {
     "build": "metalsmith build",
     "test": "npm run build",
-    "posttest": "npm run a11y",
     "start": "grunt",
     "postinstall": "bower install && find node_modules/ -name '*.info' -type f -delete",
-    "deploy": "grunt deploy",
-    "prea11y": "mkdir -p build/a11y",
-    "a11y": "./bin/kalastatic-pa11y.js"
+    "deploy": "grunt deploy"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -51,9 +50,6 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-exec": "^0.4.6",
     "grunt-penthouse": "^0.3.0",
-    "metalsmith-in-place": "^1.4.4",
-    "metalsmith-layouts": "^1.6.5",
-    "pa11y": "^3.2.0",
     "phantomjs-prebuilt": "^2.1.4",
     "shell-escape": "^0.2.0"
   },
