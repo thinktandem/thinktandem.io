@@ -1,0 +1,30 @@
+language: node_js
+node_js:
+- '4'
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+sudo: false
+after_success:
+- echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- git config --global user.name $GIT_NAME
+- git config --global user.email $GIT_EMAIL
+- if [[ $TRAVIS_PULL_REQUEST == 'false' ]] && [ ! -z "$TRAVIS_TAG" ] && [ $TRAVIS_REPO_SLUG == $GH_REPO ]; then grunt deploy; fi
+cache:
+  directories:
+  - node_modules
+  - assets/vendor
+notifications:
+  email: false
+env:
+  global:
+  - GIT_NAME: Dot Tandematrix
+  - GIT_EMAIL: herald@thinktandem.io
+  - GH_REPO: thinktandem/tandem
+  - CXX: g++-4.8
+before_install:
+- openssl aes-256-cbc -K $encrypted_af5914b1ceab_key -iv $encrypted_af5914b1ceab_iv -in dot.id_rsa.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa

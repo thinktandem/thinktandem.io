@@ -24,11 +24,11 @@ socialfooter:
 
   - name: Twitter
     icon: fa-twitter
-    url: https://twitter.com/kalaboxme
+    url: https://twitter.com/thinktandem
 
   - name: Github
     icon: fa-github
-    url: https://github.com/kalabox
+    url: https://github.com/thinktandem
 
   - name: LinkedIn
     icon: fa-linkedin

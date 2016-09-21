@@ -145,11 +145,14 @@ module.exports = function(grunt) {
     }
   };
 
+  // @TODO: We only want to deploy to master right now. TRAVIS_BRANCH=TRAVIS_TAG if TRAVIS_TAG exists. This is not
+  // what we want
+  //
   // Deploy all branches to the same branch name. Pull Requests are already handled by this.
-  if (process.env.TRAVIS_PULL_REQUEST == 'false' && process.env.TRAVIS_BRANCH) {
+  //if (process.env.TRAVIS_PULL_REQUEST == 'false' && process.env.TRAVIS_BRANCH) {
     // Branch switching is commented out until this is deployed.
-    config.buildcontrol.deploy.options.branch = process.env.TRAVIS_BRANCH;
-  }
+  //  config.buildcontrol.deploy.options.branch = process.env.TRAVIS_BRANCH;
+  //}
 
   // Extract any keys from the environmental variables.
   if (process.env.GH_TOKEN) {
