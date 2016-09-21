@@ -8,9 +8,6 @@
     "browserify-shim": "^3.8.8",
     "holderjs": "^2.8.0",
     "jquery": "^2.1.4",
-    "kss": "^2.4.0",
-    "kss-bootstrap": "^0.6.0",
-    "kss-font-awesome": "0.0.2",
     "metalsmith": "~1.7.0",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-browserify": "RobLoach/metalsmith-browserify#update",
@@ -36,13 +33,11 @@
   },
   "scripts": {
     "build": "metalsmith build",
-    "postbuild": "npm run kss",
     "test": "npm run build",
     "posttest": "npm run a11y",
     "start": "grunt",
     "postinstall": "bower install && find node_modules/ -name '*.info' -type f -delete",
     "deploy": "grunt deploy",
-    "kss": "kss-node --config='kss-node.json'",
     "prea11y": "mkdir -p build/a11y",
     "a11y": "./bin/kalastatic-pa11y.js"
   },

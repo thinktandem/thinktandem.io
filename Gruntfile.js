@@ -126,7 +126,7 @@ module.exports = function(grunt) {
         dir: 'build', // Which directory to deploy
         commit: true, // Only commit if code has changed
         push: true, // Push to remote
-        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+        message: 'Built %sourceName% from commit %sourceCommit% on branch master'
       },
       // GitHub Pages target: https://pages.github.com
       github: {
