@@ -11,6 +11,10 @@ teaser: How to run small NodeJS in an efficient, inexpensive, and scalable manne
 date: 2016-09-10
 ---
 
+If you're read my previous article introducing the idea of microservices and discussing why NodeJS and Docker are ideal tools to implement microservices with, then you're probably hungry for some action!
+
+The following instructions take you through the basic steps necessary to create your first NodeJS app and host it on Docker Cloud.
+
 ## 1. Setup
 
 In 2016, setting up your local computer to create apps with NodeJS and Docker is easier than ever before. Simply...
