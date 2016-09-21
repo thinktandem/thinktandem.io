@@ -6,6 +6,14 @@
  */
 
 module.exports = function(grunt) {
+
+  // Get any options
+  // type takes 'prerelease', 'patch', 'minor', 'major'
+  var type = grunt.option('type') || 'patch';
+
+  // Load all grunt plugins
+  require('matchdep').filterAll('grunt-*').forEach(grunt.loadNpmTasks);
+
   // Create the Grunt configuration
   var config = {
     // Load data from package.json
@@ -119,6 +127,7 @@ module.exports = function(grunt) {
       },
     },
 
+
     // The Build Control plugin:
     // https://www.npmjs.com/package/grunt-build-control
     buildcontrol: {
@@ -139,10 +148,33 @@ module.exports = function(grunt) {
       deploy: {
         options: {
           remote: '<%= pkg.config.deploy %>',
-          branch: '<%= pkg.config.branch %>'
+          branch: '<%= pkg.config.branch %>',
+          tag: 'v' + '<%= pkg.version %>'
         }
       }
+    },
+
+    // Grunt bump
+    bump: {
+      options: {
+        files: ['package.json', 'bower.json'],
+        updateConfigs: [],
+        commit: true,
+        commitMessage: 'Release v%VERSION%',
+        commitFiles: ['package.json', 'bower.json'],
+        createTag: true,
+        tagName: 'v%VERSION%',
+        tagMessage: 'Version %VERSION%',
+        push: true,
+        pushTo: 'origin',
+        gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
+        globalReplace: false,
+        prereleaseName: 'beta',
+        metadata: '',
+        regExp: false
+      }
     }
+
   };
 
   // @TODO: We only want to deploy to master right now. TRAVIS_BRANCH=TRAVIS_TAG if TRAVIS_TAG exists. This is not
@@ -163,15 +195,10 @@ module.exports = function(grunt) {
   // Initialize the configuration.
   grunt.initConfig(config);
 
-  grunt.loadNpmTasks('grunt-build-control');
-  grunt.loadNpmTasks('grunt-exec');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-browser-sync');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-penthouse');
-
+  // Register tasks
   grunt.registerTask('build', ['exec:build']);
   grunt.registerTask('deploy', ['uglify:deploy', 'cssmin:deploy', 'buildcontrol:deploy']);
   grunt.registerTask('default', ['build', 'browserSync', 'penthouse', 'watch']);
+  grunt.registerTask('release', ['bump:' + type]);
+
 };
