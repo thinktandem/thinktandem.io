@@ -10,7 +10,7 @@
         <a class="close" data-dismiss="modal" aria-label="Close">
           <span class="sr-only">Close</span>
         </a>
-        <h2 class="modal-title fn" id="modal-{{id|slug}}">{% if modalTitle %}{{modalTitle}}{% else %}modalTitle{% endif %}</h2>
+        <h2 class="modal-title fn" id="modal-{{id|slug}}-title">{% if modalTitle %}{{modalTitle}}{% else %}modalTitle{% endif %}</h2>
       </header>
       <section class="modal-body">
         {% if modalContent %}{{modalContent|safe}}{% else %}modalContent{% endif %}

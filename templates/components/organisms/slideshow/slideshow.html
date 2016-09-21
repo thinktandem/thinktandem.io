@@ -9,14 +9,14 @@
         <div class="col-md-12 tabs-wrapper">
           <ul class="nav nav-tabs">
             {% for f in config.features %}
-              <li {% if f.first %} class="active" {% endif %}>
+              <li class="{{ f.first }}">
                 <a href="#{{ f.anchor }}" data-toggle="tab">{{ f.linktext }}</a>
               </li>
             {% endfor %}
           </ul>
           <div class="tab-content">
             {% for f in config.features %}
-              <div class="tab-pane fade in {% if f.first %} active {% endif %}" id="{{ f.anchor }}">
+              <div class="tab-pane fade in {{ f.first }}" id="{{ f.anchor }}">
                 <div class="col-md-6 info pull-{{ f.imagefloat }}">
                   <h4>{{ f.title }}</h4>
                   <p>{{ f.content }}</p>

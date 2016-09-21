@@ -12,7 +12,7 @@
           <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               {% for service in services.services %}
-                <div class="item {% if service.first %} active {% endif %}">
+                <div class="item {{ service.first }}">
                   <a href="{{ service.link }}" title="{{ service.name }}">
                     <div class="funcloud-service text-center">
                       <i class="{{ service.icon }}"></i>

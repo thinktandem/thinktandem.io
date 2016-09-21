@@ -26,7 +26,19 @@
             <ul class="pagination">
               {% set pages = pagination.getPages(4) %}
               {% for key, page in pages %}
-                <li class="{% if pagination.num == page.pagination.num %}active{% endif %}"><a href="{{ page.path }}">{{page.pagination.num}}</a></li>
+                {% if pagination.num == page.pagination.num %}
+                  <li class="active">
+                    <a href="{{ page.path }}">
+                      {{page.pagination.num}}
+                    </a>
+                  </li>
+                {% else %}
+                  <li>
+                    <a href="{{ page.path }}">
+                      {{page.pagination.num}}
+                    </a>
+                  </li>
+                {% endif %}
               {% endfor %}
             </ul>
           </div>

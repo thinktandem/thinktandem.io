@@ -16,8 +16,24 @@ module.exports = function(grunt) {
 
   // Create the Grunt configuration
   var config = {
+
     // Load data from package.json
     pkg: grunt.file.readJSON('package.json'),
+
+    // Code compliance
+    htmllint: {
+      tandem: {
+        options: {
+          force: true,
+          htmllintrc: true,
+        },
+        src: [
+          'templates/**/*.html',
+          'templates/**/**/*.html',
+          '!templates/components/organisms/sf/*.html' // @todo: remove SVG in here?
+        ]
+      }
+    },
 
     // Execute Metalsmith
     exec: {
@@ -25,6 +41,7 @@ module.exports = function(grunt) {
         cmd: 'npm run build'
       },
     },
+
     // BrowserSync Task
     browserSync: {
       bsFiles: {
@@ -41,6 +58,8 @@ module.exports = function(grunt) {
         port: 8000
       }
     },
+
+    // Production performance helpers
     uglify: {
       options: {
         compress: {
@@ -109,6 +128,7 @@ module.exports = function(grunt) {
         skipErrors : false // this is the default
       }
     },
+
     // Watch files and run tasks when changed
     watch: {
       all: {
@@ -126,7 +146,6 @@ module.exports = function(grunt) {
         },
       },
     },
-
 
     // The Build Control plugin:
     // https://www.npmjs.com/package/grunt-build-control
@@ -198,7 +217,8 @@ module.exports = function(grunt) {
   // Register tasks
   grunt.registerTask('build', ['exec:build']);
   grunt.registerTask('deploy', ['uglify:deploy', 'cssmin:deploy', 'buildcontrol:deploy']);
-  grunt.registerTask('default', ['build', 'browserSync', 'penthouse', 'watch']);
+  grunt.registerTask('default', ['test', 'build', 'browserSync', 'penthouse', 'watch']);
   grunt.registerTask('release', ['bump:' + type]);
+  grunt.registerTask('test', ['htmllint']);
 
 };

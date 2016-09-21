@@ -2,7 +2,7 @@
 services:
 
   - name: Docker
-    first: true
+    first: active
     icon: devicons devicons-docker
     link: http://www.docker.com
 
@@ -89,6 +89,5 @@ services:
   - icon: devicons devicons-linux
     name: Linux
     link: https://en.wikipedia.org/wiki/Linux
-
 
 ---

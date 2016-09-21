@@ -1,0 +1,10 @@
+{
+  "attr-bans": [],
+  "attr-name-ignore-regex": "({{.*?}}|{%.*?%})",
+  "attr-name-style": "dash",
+  "id-class-ignore-regex": "({{.*?}}|{%.*?%})",
+  "id-class-style": "dash",
+  "indent-style": "spaces",
+  "indent-width": 2,
+  "tag-bans": ["b"]
+}

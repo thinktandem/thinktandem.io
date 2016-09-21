@@ -20,14 +20,25 @@
         <div class="col-sm-1">
         </div>
         {% for service in collections.services %}
-          <div class="col-sm-2 {% if service.arrow %} services-plus {% endif %}">
-            <div class="service-category text-center">
-              <a class="hexagon-{{ service.color }} center-block" href="services/#{{ service.slug }}">
-                <i class="{{ service.icon }}"></i>
-              </a>
-              <small>{{ service.short }}</small>
+          {% if service.arrow %}
+            <div class="col-sm-2 services-plus">
+              <div class="service-category text-center">
+                <a class="hexagon-{{ service.color }} center-block" href="services/#{{ service.slug }}">
+                  <i class="{{ service.icon }}"></i>
+                </a>
+                <small>{{ service.short }}</small>
+              </div>
             </div>
-          </div>
+          {% else %}
+            <div class="col-sm-2">
+              <div class="service-category text-center">
+                <a class="hexagon-{{ service.color }} center-block" href="services/#{{ service.slug }}">
+                  <i class="{{ service.icon }}"></i>
+                </a>
+                <small>{{ service.short }}</small>
+              </div>
+            </div>
+          {% endif }
         {% endfor %}
         <div class="col-sm-1">
         </div>
