@@ -43,6 +43,14 @@ module.exports = function(grunt) {
         'templates/**/*.scss'
       ]
     },
+    a11y: {
+      dev: {
+        options: {
+          urls: ['build/**/*.html'],
+          failOnError: false, // @todo: set this to true when we are ready for MAXAUDIT
+        }
+      }
+    },
 
     // Execute Metalsmith
     exec: {
@@ -228,6 +236,6 @@ module.exports = function(grunt) {
   grunt.registerTask('deploy', ['uglify:deploy', 'cssmin:deploy', 'buildcontrol:deploy']);
   grunt.registerTask('default', ['test', 'build', 'browserSync', 'penthouse', 'watch']);
   grunt.registerTask('release', ['bump:' + type]);
-  grunt.registerTask('test', ['htmllint', 'sasslint']);
+  grunt.registerTask('test', ['htmllint', 'sasslint', 'build', 'a11y']);
 
 };
