@@ -1,7 +1,7 @@
 ---
 name: Mike Pirog
-image: http://www.kalamuna.com/images/team/mike-sm.jpg
-hover: http://67.media.tumblr.com/199c5d1a4a7a58155ffa7d22afdac43b/tumblr_nxr5bjxByi1tiy7mzo4_r1_250.gif
+image: images/mike-sm.jpg
+hover: images/mike_hover.gif
 link: https://twitter.com/pirogcommamike
 layout: components/molecules/bio/bio.html
 private: true

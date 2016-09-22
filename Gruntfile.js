@@ -234,7 +234,7 @@ module.exports = function(grunt) {
   // Register tasks
   grunt.registerTask('build', ['exec:build']);
   grunt.registerTask('deploy', ['uglify:deploy', 'cssmin:deploy', 'buildcontrol:deploy']);
-  grunt.registerTask('default', ['test', 'build', 'browserSync', 'penthouse', 'watch']);
+  grunt.registerTask('default', ['htmllint', 'sasslint', 'build', 'browserSync', 'penthouse', 'watch']);
   grunt.registerTask('release', ['bump:' + type]);
   grunt.registerTask('test', ['htmllint', 'sasslint', 'build', 'a11y']);
 
