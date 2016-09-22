@@ -34,6 +34,15 @@ module.exports = function(grunt) {
         ]
       }
     },
+    sasslint: {
+      options: {
+        configFile: '.sass-lint.yml',
+      },
+      target: [
+        'src/**/*.scss',
+        'templates/**/*.scss'
+      ]
+    },
 
     // Execute Metalsmith
     exec: {
@@ -219,6 +228,6 @@ module.exports = function(grunt) {
   grunt.registerTask('deploy', ['uglify:deploy', 'cssmin:deploy', 'buildcontrol:deploy']);
   grunt.registerTask('default', ['test', 'build', 'browserSync', 'penthouse', 'watch']);
   grunt.registerTask('release', ['bump:' + type]);
-  grunt.registerTask('test', ['htmllint']);
+  grunt.registerTask('test', ['htmllint', 'sasslint']);
 
 };
