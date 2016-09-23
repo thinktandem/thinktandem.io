@@ -77,4 +77,23 @@
     }
   }
 
+  ol,
+  ul {
+    margin-left: 0.5em;
+    font-size: 0.95em;
+    font-family: $lato;
+  }
+
+  li {
+    line-height: 3em;
+  }
+
+  blockquote {
+    margin: 40px 0px 31px;
+    border-left: 5px solid #FFCC4F;
+    p {
+      color: #4BB5DD;
+    }
+  }
+
 }
