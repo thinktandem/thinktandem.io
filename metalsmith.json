@@ -149,6 +149,9 @@
       "disallow": ["404.html", "contact-thanks.html"],
       "sitemap": "http://www.thinktandem.io/sitemap.xml"
     },
+    "metalsmith-redirect": {
+      "/blog/2016/09/20/from-kalabox-with-love": "/blog/2016/09/20/rejoice-kalabox-2-0-released"
+    },
     "metalsmith-swig-helpers": {
       "filters": {
         "xorcrypt": "xor-crypt"
