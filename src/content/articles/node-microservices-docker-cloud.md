@@ -8,7 +8,7 @@ private: true
 mainImage: images/articles/node-microservices-docker-cloud/node-microservices-docker-cloud.png
 img-src: images/articles/node-microservices-docker-cloud/node-microservices-docker-cloud.png
 teaser: How to run small NodeJS in an efficient, inexpensive, and scalable manner using Docker Cloud.
-date: 2016-09-22
+date: 2016-09-23
 ---
 
 If you're read my [previous article](/blog/2016/09/10/let-s-get-small-introduction-to-microservices) introducing the idea of microservices and discussing why NodeJS and Docker are ideal tools to implement microservices with, then you're probably hungry for some action!
