@@ -11,6 +11,8 @@ teaser: Onboarding new team members to your web project can be complicated with 
 date: 2016-09-26
 ---
 
+## Standardizing local web development
+
 There's a common phrase heard throughout the web development community and feared by all in our office here at [PAIRODIME](http://www.pairodime.com):
 
 > Well...it worked on my machine.
@@ -23,7 +25,7 @@ Don't celebrate just yet; that was just for one team member. Everybody has their
 
 ## Say hello to Kalabox
 
-[Kalabox](http://www.kalabox.io/) standardizes and optmizes local development for Drupal, WordPress, and web apps. It is easy to install, works on Mac, Windows and Linux. It is easy to use for developers who love GUI apps (looking at you [Devsigners](https://www.devsignercon.com)!), and powerful enough for even the most seasoned command line veterans. It is epsecially awesome when we pair Kalabox with the Pantheon plugin which allows us to spin up identical clones of our entire Pantheon hosting site environments (including MultiDev environments). Being a Pantheon partner agency this has become especially helpful as we now use Kalabox to create localized replication of our Redis, Varnish, MySQL, terminus CLI and Drush for each Pantheon environment that come built into our web hosting serives.
+[Kalabox](http://www.kalabox.io/) standardizes and optmizes local development for Drupal, WordPress, and web apps. It is easy to install, works on Mac, Windows and Linux. It is easy to use for developers who love GUI apps (looking at you [Devsigners](https://www.devsignercon.com)!), and powerful enough for even the most seasoned command line veterans. It is epsecially awesome when we pair Kalabox with the Pantheon plugin which allows us to create identical clones of our entire Pantheon hosting site environments (including MultiDev environments). Being a Pantheon partner agency this has become especially helpful as we can now use Kalabox to create localized replication of our Nginx, Redis, Varnish, SOLR, PHP, MySQL, terminus CLI and Drush for each Pantheon environment that come built into our web hosting serives.
 
 ## Understanding how Kalabox works
 
@@ -33,9 +35,9 @@ Kalabox basically works like this:
 - Download the Kalabox Application from [GitHub](https://github.com/kalabox/kalabox/releases)
 - Install as normal
 - Installer creates a virtual machine on your computer using [Virtual Box](https://www.virtualbox.org/) (which comes pre bundled with the application)
-- Use Kalabox from the GUI or CLI to create a new app from scratch or pull directly from Pantheon
-- If you create a new app from Pantheon, you have the option of pulling database and files as well as code
-- Kalabox uses a .yml file in the newly created app to describe the virtualized machine and local computer data sharing
+- Use Kalabox from the GUI or CLI to create a new app from scratch or pull directly from an exisiting app on Pantheon
+- If you create a pull an app from Pantheon, you have the option of pulling database and files as well as code
+- Kalabox uses a series of .yml files in the newly created app to describe the virtualized machine and local computer data sharing as well as other plugins and development tools
 - The virtual machine uses [Docker](https://www.docker.com/) for awesome container stacking of things like Redis, MySQL, Drupal, [etc.](https://hub.docker.com/explore/)
 - Kalabox (along side virtual Box) creates a shared folder for you to interact with the virtual machine
 - On a Mac, the default shared folder is located:
@@ -43,10 +45,44 @@ Kalabox basically works like this:
 /Users/yournamehere/.kalabox/apps/
 </pre></code>
 - You can now edit files in your apps /code/ directory
-- Kalabox utilizes [Unison](https://www.cis.upenn.edu/~bcpierce/unison/) in combination with Virtual Box shared file system to synchronize the files between the virtual machine and your local machine (at a rate of about 1 second)
-- Once your changes are made to your code or files, you can use Kalabox to push your changes to your web host (for us that is Pantheon)
+- Kalabox utilizes [Unison](https://www.cis.upenn.edu/~bcpierce/unison/) in combination with Virtual Box shared file system to synchronize the file changes between the virtual machine and your local machine (at a rate of about 1 second)
+- Once your changes are made to your code or files, you can use Kalabox to push your changes to your web host (for us that is Pantheon), this includes database and files!
+- Rejoice!
 
- 
+## Reality Check: Creating large apps
+
+We build a lot of sites using Drupal (there I said it). Although we use many technologies to power our web products we are primarily a Drupal shop. Using Kalabox, I love being able to clone my Pantheon website to my local machine, make some code changes, add new image files and update site config using the Drupal GUI (okay maybe not so much love for Drupal config using admin but you ge the idea) and then push all my changes (including database and files) back up to Pantheon in one simple action. This works well for your average brochure website, but many of our brand websites are Drupal Commerce, they have high quality photo assets, extensive contributed and custom modules, and databases that are often over 100mb compressed. Kalabox would be able to push and pull these assets without fail, but the process can seem to take a lifetime (in reality about 30+ minutes - often times much longer). 
+
+Advice
+======
+- If you are creating or working on an app with >5 MB Database >70 MB in files => Push and Pull with Kalabox all day long.
+- Your site will be created in less than 5 minutes and push to the web in less than 5 minutes.
+- Many of our fresh install apps with a handul of updates take less than 1 minute to push code, database and files back up to Pantheon.
+- If you have a larger website on Pantheon and want to get working right away - you should take advantage of Pantheon's built in Backup system and download your Database and Files as individual downloads and them place them in your app manually
+<pre><code class="language-bash">
+/Users/yournamehere/.kalabox/apps/files/...
+</pre></code>
+- After you download your large database from Pantheon, you will need to manually upload into your Kalabox virtual database
+- You can easily get all your Kalabox database connection information from the Kalabox GUI or use the Kalabox CLI
+<pre><code class="language-bash">
+$ kbox services
+</pre></code>
+- Pay close attention to the database port number as this changes everytime you start your app
+- You can now use this information in a thrid party Database Client like [Sequal Pro](https://www.sequelpro.com/) -> Import DB 
+
+## Reality Check: Too many files for our virtual machine to keep track of
+
+The Drupal community has contributed so many awesome modules to enhanace our websites, but with great power comes great responsibility. By default, Kalabox will synchronize all files from your virtual machine to your local machine (one spledning file at a time). Let me repeat that... by default, each file in your virtual machine will be replicated into your shared local folder (/Users/yournamehere/.kalabox/apps/code/...each-file-here)
+
+Every time a change is made to 1 of those files, Unison, Virtual Box and Kalabox play fun little game called "WTF just changed" and then begins to scan each file in our repo. For anyone else using Drupal Commerce that can mean over 15 modules alone with a vanilla install, not to mention the other 20 contributed modules and the handul of custom modules you created. This can lead to hundreds if not thousands of files for our app to keep track of. At one point in time, I made a change to code on my local machine and waited over 3 minutes for the change to appear in my local Kalabox app web browser (this included multiple refreshes and cach clearing from GUI and Drush). Turns out I was not alone and Kalabox team has taken careful consideration to eleviate these pain points that will come from any virtualized development enviroment.  
+
+Advice
+======
+
+- Fortunately Kalabox 
+
+
+
 
 
 
