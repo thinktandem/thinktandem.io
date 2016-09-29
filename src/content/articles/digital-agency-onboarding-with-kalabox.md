@@ -83,7 +83,59 @@ kbox create pantheon -- -v --site=big-brand-here --env=dev --nodb --nofiles --na
 * You can easily get all your Kalabox database connection information from the Kalabox GUI or use the Kalabox CLI
 
 <pre><code class="language-bash">
+// Change directory into your app
+$ cd /Users/yournamehere/.kalabox/apps/big-brand-here/
+
+// Get a list of services and connection information for your app
 $ kbox services
+
+// ex:
+[
+  {
+    "name": "appserver",
+    "project": "big-brand-here"
+  },
+  {
+    "name": "edge",
+    "project": "big-brand-here",
+    "url": [
+      "http://edge.big-brand-here.kbox",
+      "https://edge.big-brand-here.kbox"
+    ]
+  },
+  {
+    "name": "db",
+    "project": "big-brand-here",
+    "external_connection_info": {
+      "database": "pantheon",
+      "user": "pantheon",
+      "password": "pantheon",
+      "host": "big-brand-here.kbox",
+      **"port": "32810"**
+    }
+  },
+  {
+    "name": "unison",
+    "project": "big-brand-here"
+  },
+  {
+    "name": "web",
+    "project": "big-brand-here",
+    "url": [
+      "http://big-brand-here.kbox",
+      "https://big-brand-here.kbox"
+    ]
+  },
+  {
+    "name": "solr",
+    "project": "big-brand-here"
+  },
+  {
+    "name": "redis",
+    "project": "big-brand-here"
+  }
+]
+
 </pre></code>
 
 * Pay close attention to the database port number as this changes everytime you start your app
