@@ -23,15 +23,15 @@ After exchanging 'my.conf' and 'php.ini' files over slack (yes - that just happe
 
 Don't celebrate just yet; that was just for one team member. Everybody has their own stack preference, so be prepared to know that you will never be fully prepared to handle every computer setup that hits the sprint conference table.
 
-## Say hello to Kalabox
+## Say Hello to Kalabox
 
 [Kalabox](http://www.kalabox.io/) standardizes and optmizes local development for Drupal, WordPress, and web apps. It is easy to install, works on Mac, Windows and Linux. It is easy to use for developers who love GUI apps (looking at you [Devsigners](https://www.devsignercon.com)!), and powerful enough for even the most seasoned command line veterans. It is epsecially awesome when we pair Kalabox with the Pantheon plugin which allows us to create identical clones of our entire Pantheon hosting site environments (including MultiDev environments). Being a Pantheon partner agency this has become especially helpful as we can now use Kalabox to create localized replication of our Nginx, Redis, Varnish, SOLR, PHP, MySQL, terminus CLI and Drush for each Pantheon environment that come built into our web hosting serives.
 
-## Understanding how Kalabox works
+## Understanding How Kalabox Works
 
 First let me say, I do not claim to be an expert on how Kalabox works. Although Kalabox is open source, I have never forked the repo, commited a patch, or added to the [documentation](http://docs.kalabox.io/). I have however, read all the documentation (at least a couple of times), posted questions on the github issue que, posted replies in the issue queue, posted a thread or two on the Pantheon Power User Group thread, and have experimented relentlessly trying to vet Kalabox as a drop in replacement for our team's preferred localized development tool. 
 
-Kalabox basically works like this:
+### Kalabox basically works like this:
 * Download the Kalabox Application from [GitHub](https://github.com/kalabox/kalabox/releases)
 * Install as you would any native app
 * Installer creates a virtual machine on your computer using [Virtual Box](https://www.virtualbox.org/) (which comes pre bundled with the application)
@@ -52,7 +52,7 @@ Kalabox basically works like this:
 * Once your changes are made to your code or files, you can use Kalabox to push your changes to your web host (for us that is Pantheon), this includes database and files!
 * Rejoice!
 
-## Reality Check: Creating large apps
+## Reality Check: Create / Push / Pull Large Apps
 
 We build a lot of sites using Drupal (there I said it). Although we use many technologies to power our digital products we are primarily a Drupal shop. Using Kalabox, I love being able to clone my Pantheon website to my local machine, make some code changes, add new image files and update site config using the Drupal GUI (okay maybe not so much love for Drupal config using admin but you ge the idea) and then push all my changes (including database and files) back up to Pantheon in one simple action. This works well for your average brochure website, but many of our brand websites are Drupal Commerce, they have high quality photo assets, extensive contributed and custom modules, and databases that are often over 100mb compressed. Kalabox would be able to push and pull these assets without fail, but the process can seem to take a lifetime (in reality about 20+ minutes or so). 
 
