@@ -92,51 +92,17 @@ $ cd /Users/yournamehere/.kalabox/apps/big-brand-here/
 $ kbox services
 
 // ex:
-[
-  {
-    "name": "appserver",
-    "project": "big-brand-here"
-  },
-  {
-    "name": "edge",
-    "project": "big-brand-here",
-    "url": [
-      "http://edge.big-brand-here.kbox",
-      "https://edge.big-brand-here.kbox"
-    ]
-  },
-  {
-    "name": "db",
-    "project": "big-brand-here",
-    "external_connection_info": {
-      "database": "pantheon",
-      "user": "pantheon",
-      "password": "pantheon",
-      "host": "big-brand-here.kbox",
-      **"port": "32810"**
-    }
-  },
-  {
-    "name": "unison",
-    "project": "big-brand-here"
-  },
-  {
-    "name": "web",
-    "project": "big-brand-here",
-    "url": [
-      "http://big-brand-here.kbox",
-      "https://big-brand-here.kbox"
-    ]
-  },
-  {
-    "name": "solr",
-    "project": "big-brand-here"
-  },
-  {
-    "name": "redis",
-    "project": "big-brand-here"
-  }
-]
+{
+	"name": "db",
+	"project": "big-brand-here",
+	"external_connection_info": {
+	  "database": "pantheon",
+	  "user": "pantheon",
+	  "password": "pantheon",
+	  "host": "big-brand-here.kbox",
+	  **"port": "32810"**
+	}
+},
 
 </pre></code>
 
@@ -265,4 +231,4 @@ This post originally came about as a form of onboarding, to help reduce the time
 
 ## Live Long and Kalabox
 
-We are super excited for the latest realease of Kalabox. If you are new to Kalabox - go download it now! Trust me. Thank me later. If you ever tried Kalabox 1 or Kalabox 2 while in Beta - go dowload the latest version now! That's it for now - say "hi" to your Mom for me.
+We are super excited for the latest realease of Kalabox. If you are new to Kalabox - go download it now! Trust me. If you ever tried Kalabox 1 or Kalabox 2 while in Beta - go dowload the latest version now! The bugs are gone and it's blazing fast! You're welcome.
