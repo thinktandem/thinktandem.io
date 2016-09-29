@@ -54,22 +54,37 @@ Kalabox basically works like this:
 
 ## Reality Check: Creating large apps
 
-We build a lot of sites using Drupal (there I said it). Although we use many technologies to power our digital products we are primarily a Drupal shop. Using Kalabox, I love being able to clone my Pantheon website to my local machine, make some code changes, add new image files and update site config using the Drupal GUI (okay maybe not so much love for Drupal config using admin but you ge the idea) and then push all my changes (including database and files) back up to Pantheon in one simple action. This works well for your average brochure website, but many of our brand websites are Drupal Commerce, they have high quality photo assets, extensive contributed and custom modules, and databases that are often over 100mb compressed. Kalabox would be able to push and pull these assets without fail, but the process can seem to take a lifetime (in reality about 30+ minutes - often times much longer). 
+We build a lot of sites using Drupal (there I said it). Although we use many technologies to power our digital products we are primarily a Drupal shop. Using Kalabox, I love being able to clone my Pantheon website to my local machine, make some code changes, add new image files and update site config using the Drupal GUI (okay maybe not so much love for Drupal config using admin but you ge the idea) and then push all my changes (including database and files) back up to Pantheon in one simple action. This works well for your average brochure website, but many of our brand websites are Drupal Commerce, they have high quality photo assets, extensive contributed and custom modules, and databases that are often over 100mb compressed. Kalabox would be able to push and pull these assets without fail, but the process can seem to take a lifetime (in reality about 20+ minutes or so). 
 
 ### Pro Tip
 
-* If you are creating or working on an app with <5 MB Database <70 MB in files => Create, Push and Pull with Kalabox GUI or CLI all day long.
+* If you are creating or working on an app with <5 MB Database <70 MB in files => Create, Push and Pull with Kalabox GUI or CLI all day long and enjoy the simple freedom of deploying your app with ease.
 * Your site will be created in less than 5 minutes and push to the web in less than 5 minutes.
 * Many of our fresh install apps with a handul of updates take less than 1 minute to push code, database and files back up to Pantheon.
-* If you have a larger website on Pantheon and want to get working right away - you should take advantage of Pantheon's built in Backup system and download your Database and Files as individual downloads and them place them in your app manually
+* If you are going to be pulling a larger website on Pantheon and want to get working right away - choose NOT to download database and files
+
+``
+// If using Kalabox CLI
+kbox create pantheon -- -v --site=big-brand-here --env=dev --nodb --nofiles --name=big-brand-here --dir=/Users/yournamehere/.kalabox/apps
+
+// Or to use place the App in your Mac OS Sierra 'Documents' Cloud Storage
+kbox create pantheon -- -v --site=big-brand-here --env=dev --nodb --nofiles --name=big-brand-here --dir=/Users/yournamehere/Documents/Sites
+``
+
+
+* Instead you should take advantage of Pantheon's built in Backup system and download your Database and Files as individual downloads and them place them in your app manually
+
 <pre><code class="language-bash">
 /Users/yournamehere/.kalabox/apps/files/...
 </pre></code>
+
 * After you download your large database from Pantheon, you will need to manually upload into your Kalabox virtual database
 * You can easily get all your Kalabox database connection information from the Kalabox GUI or use the Kalabox CLI
+
 <pre><code class="language-bash">
 $ kbox services
 </pre></code>
+
 * Pay close attention to the database port number as this changes everytime you start your app
 * You can now use this information in a thrid party Database Client like [Sequal Pro](https://www.sequelpro.com/) -> Import DB 
 
