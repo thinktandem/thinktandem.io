@@ -232,3 +232,5 @@ This post originally came about as a form of onboarding, to help reduce the time
 ## Live Long and Kalabox
 
 We are super excited for the latest realease of Kalabox. If you are new to Kalabox - go download it now! Trust me. If you ever tried Kalabox 1 or Kalabox 2 while in Beta - go dowload the latest version now! The bugs are gone and it's blazing fast! You're welcome.
+
+- Love Gonz.
