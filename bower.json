@@ -1,6 +1,6 @@
 {
   "name": "tandem",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "dependencies": {
     "bootstrap-sass-twbs": "~3.3.5",
     "fontawesome": "~4.6.0",
