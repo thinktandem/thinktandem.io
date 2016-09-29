@@ -63,13 +63,13 @@ We build a lot of sites using Drupal (there I said it). Although we use many tec
 * Many of our fresh install apps with a handul of updates take less than 1 minute to push code, database and files back up to Pantheon.
 * If you are going to be pulling a larger website on Pantheon and want to get working right away - choose NOT to download database and files
 
-``
+<pre><code class="language-bash">
 // If using Kalabox CLI
 kbox create pantheon -- -v --site=big-brand-here --env=dev --nodb --nofiles --name=big-brand-here --dir=/Users/yournamehere/.kalabox/apps
 
 // Or to use place the App in your Mac OS Sierra 'Documents' Cloud Storage
 kbox create pantheon -- -v --site=big-brand-here --env=dev --nodb --nofiles --name=big-brand-here --dir=/Users/yournamehere/Documents/Sites
-``
+</pre></code>
 
 
 * Instead you should take advantage of Pantheon's built in Backup system and download your Database and Files as individual downloads and them place them in your app manually
