@@ -5,10 +5,10 @@ tags: deployment, localdev, strategy, support, testing
 permalink: true
 author: GNZTRN5K
 private: false
-mainImage: images/articles/digital-agency-onboarding-with-kalabox/kalabox-released.png
-img-src: images/articles/digital-agency-onboarding-with-kalabox/kalabox-released.png
+mainImage: images/articles/digital-agency-onboarding-with-kalabox/pairodime_x_kalabox.png
+img-src: images/articles/digital-agency-onboarding-with-kalabox/pairodime_x_kalabox.png
 teaser: Onboarding new team members to your web project can be complicated with even the most integrated DevOps team. Say hello to Kalabox.
-date: 2016-09-26
+date: 2016-09-29
 ---
 
 ## The Woes of Local Web Development
