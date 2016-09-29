@@ -54,7 +54,7 @@ First let me say, I do not claim to be an expert on how Kalabox works. Although 
 * Once your changes are made to your code or files, you can use Kalabox to push your changes to your web host (for us that is Pantheon), this includes database and files!
 * Rejoice!
 
-## Reality Check: Create / Push / Pull Large Apps
+## Reality Check: Create / Push / Pulling Large Apps
 
 We build a lot of sites using Drupal (there I said it). Although we use many technologies to power our digital products we are primarily a Drupal shop. Using Kalabox, I love being able to clone my Pantheon website to my local machine, make some code changes, add new image files and update site config using the Drupal GUI (okay maybe not so much love for Drupal config using admin but you ge the idea) and then push all my changes (including database and files) back up to Pantheon in one simple action. This works well for your average brochure website, but many of our brand websites are Drupal Commerce, they have high quality photo assets, extensive contributed and custom modules, and databases that are often over 100mb compressed. Kalabox would be able to push and pull these assets without fail, but the process can seem to take a lifetime (in reality about 20+ minutes or so). 
 
@@ -82,7 +82,7 @@ kbox create pantheon -- -v --site=big-brand-here --env=dev --nodb --nofiles --na
 </pre></code>
 
 * After you download your large database from Pantheon, you will need to manually upload into your Kalabox virtual database
-* You can easily get all your Kalabox database connection information from the Kalabox GUI or use the Kalabox CLI
+* You can easily get all your Kalabox database connection information from the Kalabox GUI by clicking 'connection info' or use the Kalabox CLI
 
 <pre><code class="language-bash">
 // Change directory into your app
@@ -200,7 +200,7 @@ $ kbox drush en -y admin_menu
 
 At this point your kalabox app will have downloaded and installed the 'admin_module' directly to your /sites/all/modules/contrib/ folder on your virtual machine. The best part is we don't need to wait to have those files to be scynchronized to our local shared files directory before they will work in our app because we explicitly told kalabox ONLY to synch files as described in our 'kalabox.yml' file.
 
-## Pro Tip
+### Pro Tip
 
 * If your did in fact need to patch that contrib module, you have a few more options:
 
@@ -218,4 +218,45 @@ $ kbox restart
 $ kbox git pull
 </pre></code>
 
+* Most of the time we don't ever change the code of these type of files so we found that it was easier to by-pass file synchronization and just let the virtual machine handel those files
 
+
+## Reality Check: Pantheon MultiDev and Git Branches
+
+Pantheon's MultiDev environments are awesome for isolating development features, testing out global site changes and working with a team of developers. In reality they are isolated site environments for git branches. If you wanted the true Pantheon MultiDev experience you would create a new Kalabox app for each Pantheon MultiDev. We personally think this is overkill for our agency and team work flow. If we have a new team member added to the project, we recommend they clone their app from a MultiDev that we have set up for them. This keeps their work isolated and can push upstream only with proper credenctials. Most of the time we just create the app from a clone of DEV enviroment and use git to switch to MultiDev branches. Most of time we are mainly working on code changes so database and files rarely need to be the most current for us to be able to develop with confidence.
+
+### Pro Tip
+
+* If you are mainly working with code changes - keep it simple and just create 1 single app to rule them all
+* Use 'kbox git' to swicth between branches
+
+## Reality Check: Front End Web Development with Kalabox
+
+As mentioned before, Kalabox has some great front end dev tools built into the app so that we can take advantage of things like Gulp Sass to be applied directly on the virtual machine. What we came to discover is that there are many factors that will determine the overall performance of your development. Computer age, speed, RAM, RAM Cache, web browsers, gulp procecedures, gulp commands and syncronized 'kalabox.yml' file paths will all greatly effect the performance of your development.
+
+### Pro Tip
+
+* Keep the Gulp procedures to a minimum - if you don't need Babel or Uglify on this project - don't use it
+* Gulp 'watch' is FASTER in the long run than single gulp commands such as 'kbox gulp sass'
+* The first time you run 'kbox gulp watch' -> it will take a while (close to 30 seconds depending on your gulp procedures)
+* After the first Gulp has completed they will dramatically reduce in latency
+* We found it was best to onboard new Devs to Kalabox by having them download the app, install it, open up the GUI for the first time -> create new app from Pantheon MultiDev without downloading Files and Database -> once it was done -> Turn off the app -> tune the 'kalabox.yml' -> continue app management using the CLI using the manual import of Database and files as described above.
+
+## Reality Check: Oboard New Devs to Your Project and Kalabox
+
+This post originally came about as a form of onboarding, to help reduce the time it took to get new team developers up to speed on what Kalabox was and how to best confure it so we can set up quickly and expect consistent results. Here are a few takeaways to help your team get up to speed quickly. 
+
+### Pro Tip
+
+* Have new Devs download Kalabox before they come in
+* Setup their Pantheon acccount before sprint and add them to the project with appropriate organizational role
+* Have your team turn off their computers before they walk into the sprint
+* This eleviates all the extra background processes that might be lurking in the background wasting ram
+* Chrome tabs are a RAM killer, have your team be aware of their RAM usage and availability
+* We highly recommend ['Memory Clean'](https://itunes.apple.com/us/app/memory-clean-monitor-free/id451444120?mt=12) for Mac - it's free and amazing
+* Tune your 'kalabox.yml' only specific folders are being watched
+* If they are a themer - expose the theme path, if they custom coding a feature or extending a module, expose the /custom/ module path only
+
+## Live Long and Kalabox
+
+We are super excited for the latest realease of Kalabox. If you are new to Kalabox - go download it now! Trust me. Thank me later. If you ever tried Kalabox 1 or Kalabox 2 while in Beta - go dowload the latest version now! Tell your Mom we said 'hi'.
