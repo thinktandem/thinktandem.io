@@ -202,14 +202,14 @@ $ kbox drush en -y admin_menu
 * At this point your kalabox app will have downloaded and installed the 'admin_module' directly to your /sites/all/modules/contrib/ folder on your virtual machine
 * The best part is we don't need to wait to have those files to be scynchronized to our local shared files directory before they will work in our app because we explicitly told kalabox ONLY to synch files as described in our 'kalabox.yml'
 * Now if your did in fact need to patch that contrib module - you have a few more options
-	* Update your 'kalabox.yml' to include the exact path to your module -> then restart your app
+* Update your 'kalabox.yml' to include the exact path to your module -> then restart your app
 
 <pre><code class="language-bash">
 // From the Kalabox CLI
 $ kbox restart
 </pre></code>
 
-	* You can also choose to use Pantheon's built in SFTP connection and upload files like contrib modules and libraries directly to the server then do a quick pull of those changes back into your local app
+* You can also choose to use Pantheon's built in SFTP connection and upload files like contrib modules and libraries directly to the server then do a quick pull of those changes back into your local app
 
 <pre><code class="language-bash">
 // From the Kalabox CLI
