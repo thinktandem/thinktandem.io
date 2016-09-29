@@ -53,8 +53,8 @@ Kalabox basically works like this:
 
 We build a lot of sites using Drupal (there I said it). Although we use many technologies to power our web products we are primarily a Drupal shop. Using Kalabox, I love being able to clone my Pantheon website to my local machine, make some code changes, add new image files and update site config using the Drupal GUI (okay maybe not so much love for Drupal config using admin but you ge the idea) and then push all my changes (including database and files) back up to Pantheon in one simple action. This works well for your average brochure website, but many of our brand websites are Drupal Commerce, they have high quality photo assets, extensive contributed and custom modules, and databases that are often over 100mb compressed. Kalabox would be able to push and pull these assets without fail, but the process can seem to take a lifetime (in reality about 30+ minutes - often times much longer). 
 
-Advice
-======
+Pro Tip
+-------
 - If you are creating or working on an app with >5 MB Database >70 MB in files => Push and Pull with Kalabox all day long.
 - Your site will be created in less than 5 minutes and push to the web in less than 5 minutes.
 - Many of our fresh install apps with a handul of updates take less than 1 minute to push code, database and files back up to Pantheon.
@@ -76,8 +76,8 @@ The Drupal community has contributed so many awesome modules to enhanace our web
 
 Every time a change is made to 1 of those files, Unison, Virtual Box and Kalabox play fun little game called "WTF just changed" and then begins to scan each file in our repo. For anyone else using Drupal Commerce that can mean over 15 modules alone with a vanilla install, not to mention the other 20 contributed modules and the handul of custom modules you created. This can lead to hundreds if not thousands of files for our app to keep track of. At one point in time, I made a change to code on my local machine and waited over 3 minutes for the change to appear in my local Kalabox app web browser (this included multiple refreshes and cach clearing from GUI and Drush). Turns out I was not alone and Kalabox team has taken careful consideration to eleviate these pain points that will come from any virtualized development enviroment.  
 
-Advice
-======
+Pro Tip
+-------
 
 - Fortunately Kalabox 
 
