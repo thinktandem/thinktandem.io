@@ -11,6 +11,8 @@ teaser: Onboarding new team members to your web project can be complicated with 
 date: 2016-09-29
 ---
 
+![alt text](../../../assets/images/articles/digital-agency-onboarding-with-kalabox/pairodime_x_kalabox.png "PAIRODIME X KALABOX")
+
 ## The Woes of Local Web Development
 
 There's a common phrase heard throughout the web development community and feared by all in our office here at [PAIRODIME](http://www.pairodime.com):
