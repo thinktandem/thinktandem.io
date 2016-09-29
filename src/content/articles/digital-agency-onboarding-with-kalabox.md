@@ -17,7 +17,7 @@ There's a common phrase heard throughout the web development community and feare
 
 > Well...it worked on my machine.
 
-Over the years my team and I have tried to settle on common web development tools that would allow us all to collaborate on digital products and minimize our headaches and redundant speach patterns. Local web development envirnoments were especially difficult to master. Even if we all installed MAMP, XAMP, Virtual Box, or installed native web server stacks, we could not gurantee we would were all working under the same development conditions and eventually one of us would wind up with the colloquial WSOD. Maybe it was RAM allocation, maybe it was MySQL tuning for large databases, maybe it was my version of SASS was not the same as my co-workers. Then there was the dreaded moment of truth when pushing changes to our web hosting service. Or on the flip side of that coin; we download all the website code, assets and database from our web host only to spend the next half a day trying to get our website to load in our local web browser.
+Over the years my team and I have tried to settle on common web development tools that would allow us all to collaborate on digital products and minimize our headaches and redundant speach patterns. Local web development envirnoments were especially difficult to master. Even if we all installed MAMP, XAMP, Virtual Box, or installed native web server stacks, we could not gurantee we were all working under the same development conditions and eventually one of us would wind up with the colloquial WSOD. Maybe it was RAM allocation, maybe it was MySQL tuning for large databases, maybe it was my version of SASS that was not the same as my co-workers. Then there was the dreaded moment of truth when pushing changes to our web hosting service. Or on the flip side of that coin; we download all the website code, assets and database from our web host only to spend the next half a day trying to get our website to load in our local web browser.
 
 After exchanging 'my.conf' and 'php.ini' files over slack (yes - that just happended), we finally find solace. No more WSOD. We can finally begin slaying code like galdiators. All shall rejoice!
 
@@ -29,7 +29,7 @@ Don't celebrate just yet; that was just for one team member. Everybody has their
 
 ## Understanding How Kalabox Works
 
-First let me say, I do not claim to be an expert on how Kalabox works. Although Kalabox is open source, I have never forked the repo, commited a patch, or added to the [documentation](http://docs.kalabox.io/). I have however, read all the documentation (at least a couple of times), posted questions on the github issue que, posted replies in the issue queue, posted a thread or two on the Pantheon Power User Group thread, and have experimented relentlessly trying to vet Kalabox as a drop in replacement for our team's preferred localized development tool. 
+First let me say, I do not claim to be an expert on how Kalabox works. Although Kalabox is open source, I have never forked the repo, commited a patch, or added to the [documentation](http://docs.kalabox.io/) (yet!). I have, however, read all the documentation (at least a couple of times), posted questions on the github issue que, posted replies in the issue queue, posted a message or two on the Pantheon Power User Group thread, and have experimented relentlessly trying to vet Kalabox as a drop in replacement for our team's preferred localized development tool. 
 
 ### Kalabox basically works like this:
 * Download the Kalabox Application from [GitHub](https://github.com/kalabox/kalabox/releases)
@@ -56,7 +56,7 @@ First let me say, I do not claim to be an expert on how Kalabox works. Although 
 
 ## Reality Check: Create / Push / Pulling Large Apps
 
-We build a lot of sites using Drupal (there I said it). Although we use many technologies to power our digital products we are primarily a Drupal shop. Using Kalabox, I love being able to clone my Pantheon website to my local machine, make some code changes, add new image files and update site config using the Drupal GUI (okay maybe not so much love for Drupal config using admin but you ge the idea) and then push all my changes (including database and files) back up to Pantheon in one simple action. This works well for your average brochure website, but many of our brand websites are Drupal Commerce, they have high quality photo assets, extensive contributed and custom modules, and databases that are often over 100mb compressed. Kalabox would be able to push and pull these assets without fail, but the process can seem to take a lifetime (in reality about 20+ minutes or so). 
+We build a lot of sites using Drupal (there I said it). Although we use many technologies to power our digital products we are primarily a Drupal shop. Using Kalabox, I love being able to clone my Pantheon website to my local machine, make some code changes, add new image files and update site config using the Drupal GUI (okay maybe not so much love for Drupal config using admin but you get the idea) and then push all my changes (including database and files) back up to Pantheon in one simple action. This works well for your average brochure website, but many of our brand websites are Drupal Commerce, they have high quality photo assets, fancy-shmancy JavaScripts, extensive contributed and custom modules, and databases that are often over 100mb compressed. Kalabox would be able to push and pull these assets without fail, but the process can seem to take a lifetime (in reality about 20+ minutes or so). 
 
 ### Pro Tip
 
@@ -145,14 +145,20 @@ $ kbox services
 
 ## Reality Check: Too many files for our virtual machine to keep track of
 
-The Drupal community has contributed so many awesome modules to enhanace our websites, but with great power comes great responsibility. By default, Kalabox will synchronize all code files from your virtual machine to your local shared files directory (one splendid file at a time). Let me repeat that... by default, each file in your virtual machine will be replicated into your local shared files directory.
+The Drupal community has contributed so many awesome modules to enhanace our websites, but like Uncle Ben said 
 
-Every time a change is made to 1 of those files, Unison, Virtual Box and Kalabox play fun little game called "WTF just changed" and then begins to scan each file in our repo to account for all possible changes. For anyone else using Drupal Commerce that can mean over 15 modules alone with a vanilla install, not to mention the other 20 contributed modules and the handful of custom modules you created. You also have all of Drupal Core, Librararies, etc. This can lead to hundreds if not thousands of files for our app to keep track of. At one point in time, I made a change to code on my local machine and waited over 3 minutes for the change to appear in my local Kalabox app web browser (this included multiple refreshes and cach clearing from GUI and Drush). Turns out I was not alone and Kalabox team has taken careful consideration to eleviate these pain points that will come from any virtualized development enviroment.  
+> "with great power comes great responsibility." 
+
+By default, Kalabox will synchronize all code files from your virtual machine to your local shared files directory (one splendid file at a time). Let me repeat that... by default, each file in your virtual machine will be replicated into your local shared files directory.
+
+[add picture of retro hypnosis art here]
+
+Every time a change is made to 1 of those files, Unison, Virtual Box and Kalabox play fun little game called "WTF just happned" and then begins to scan each file in our repo to account for all possible changes. For anyone else using Drupal Commerce that can mean over 15 modules alone with a vanilla install, not to mention the other 20 contributed modules and the handful of custom modules you created. You also have all of Drupal Core, Librararies, etc. This can lead to hundreds if not thousands of files for our app to keep track of. At one point in time, I made a change to code on my local machine and waited over 3 minutes for the change to appear in my local Kalabox app web browser (this included multiple refreshes and cach clearing from GUI and Drush). Turns out I was not alone and Kalabox team has taken careful consideration to eleviate these pain points that will come from any virtualized development enviroment.  
 
 ### Pro Tip
 
 * Fortunately we can tune Kalabox to not only look for changes in certain file paths, but also exclude certain files such as those used by front end development tools such as /node_modules/ in our theme directory
-* Simply edit your app's 'kalabox.yml' - lookk for the 'sharing' section and edit these lines
+* Simply edit your app's 'kalabox.yml' - look for the 'sharing' section and edit these lines
 
 <pre><code class="language-bash">
 sharing:
@@ -175,7 +181,7 @@ sharing:
 $ kbox stop
 </pre></code>
 
-* This will in effect stop Kalabox from trying to sync all your files from virtual machine to your local shared files directpry
+* This will in effect stop Kalabox from trying to sync all your files from virtual machine to your local shared files directory
 * Make sure you tune your app's 'kalabox.yml' as described above
 * Turn your Kalabox app back on using the power button on the GUI or
 
@@ -198,11 +204,11 @@ Kalabox has some awesome built-in Dev tools that work directly on the virtual ma
 $ kbox drush en -y admin_menu
 </pre></code>
 
-At this point your kalabox app will have downloaded and installed the 'admin_module' directly to your /sites/all/modules/contrib/ folder on your virtual machine. The best part is we don't need to wait to have those files to be scynchronized to our local shared files directory before they will work in our app because we explicitly told kalabox ONLY to synch files as described in our 'kalabox.yml' file.
+At this point your kalabox app will have downloaded and installed the 'admin_module' directly to your /sites/all/modules/contrib/ folder on your virtual machine. The best part is we don't need to wait to have those files to be scynchronized to our local shared files directory before they will work in our app because we explicitly told kalabox ONLY to synch files as described in our 'kalabox.yml' file. Drush is amazingly fast, so just wait till it's done and refresh your app int he browser. BoOm! It just works.
 
 ### Pro Tip
 
-* If your did in fact need to patch that contrib module, you have a few more options:
+* If you do in fact need to patch that contrib module, you have a few more options:
 
 * Update your 'kalabox.yml' to include the exact path to your module -> then restart your app
 
@@ -218,7 +224,7 @@ $ kbox restart
 $ kbox git pull
 </pre></code>
 
-* Most of the time we don't ever change the code of these type of files so we found that it was easier to by-pass file synchronization and just let the virtual machine handel those files
+* Most of the time we don't ever change the code of these type of files so we found that it was easier to by-pass file synchronization and just let the virtual machine handle those files
 
 
 ## Reality Check: Pantheon MultiDev and Git Branches
@@ -228,7 +234,7 @@ Pantheon's MultiDev environments are awesome for isolating development features,
 ### Pro Tip
 
 * If you are mainly working with code changes - keep it simple and just create 1 single app to rule them all
-* Use 'kbox git' to swicth between branches
+* Use 'kbox git checkout' to swicth between branches
 
 ## Reality Check: Front End Web Development with Kalabox
 
@@ -240,23 +246,23 @@ As mentioned before, Kalabox has some great front end dev tools built into the a
 * Gulp 'watch' is FASTER in the long run than single gulp commands such as 'kbox gulp sass'
 * The first time you run 'kbox gulp watch' -> it will take a while (close to 30 seconds depending on your gulp procedures)
 * After the first Gulp has completed they will dramatically reduce in latency
-* We found it was best to onboard new Devs to Kalabox by having them download the app, install it, open up the GUI for the first time -> create new app from Pantheon MultiDev without downloading Files and Database -> once it was done -> Turn off the app -> tune the 'kalabox.yml' -> continue app management using the CLI using the manual import of Database and files as described above.
+* We found it was best to onboard new Devs to Kalabox by having them download the app, install it, open up the GUI for the first time (this helps them associate our project to Kalabox from a visual queue) -> create new app from Pantheon MultiDev without downloading files and database -> once it is done -> turn off the app -> tune the 'kalabox.yml' -> continue app management using the CLI using the manual import of Database and files as described above.
 
-## Reality Check: Oboard New Devs to Your Project and Kalabox
+## Reality Check: Onboarding New Devs to Your Project and Kalabox
 
 This post originally came about as a form of onboarding, to help reduce the time it took to get new team developers up to speed on what Kalabox was and how to best confure it so we can set up quickly and expect consistent results. Here are a few takeaways to help your team get up to speed quickly. 
 
 ### Pro Tip
 
 * Have new Devs download Kalabox before they come in
-* Setup their Pantheon acccount before sprint and add them to the project with appropriate organizational role
+* Setup their Pantheon acccount before the sprint and add them to the project with appropriate organizational role
 * Have your team turn off their computers before they walk into the sprint
-* This eleviates all the extra background processes that might be lurking in the background wasting ram
+* This eleviates all the extra background processes that might be lurking in the background wasting ram (we like to call them gremlins)
 * Chrome tabs are a RAM killer, have your team be aware of their RAM usage and availability
 * We highly recommend ['Memory Clean'](https://itunes.apple.com/us/app/memory-clean-monitor-free/id451444120?mt=12) for Mac - it's free and amazing
-* Tune your 'kalabox.yml' only specific folders are being watched
-* If they are a themer - expose the theme path, if they custom coding a feature or extending a module, expose the /custom/ module path only
+* Tune your 'kalabox.yml' so that only specific folders are being watched
+* If they are a themer - expose the theme path, if they are custom coding a feature or extending a module, expose the /custom/ module path only
 
 ## Live Long and Kalabox
 
-We are super excited for the latest realease of Kalabox. If you are new to Kalabox - go download it now! Trust me. Thank me later. If you ever tried Kalabox 1 or Kalabox 2 while in Beta - go dowload the latest version now! Tell your Mom we said 'hi'.
+We are super excited for the latest realease of Kalabox. If you are new to Kalabox - go download it now! Trust me. Thank me later. If you ever tried Kalabox 1 or Kalabox 2 while in Beta - go dowload the latest version now! That's it for now - say "hi" to your Mom for me.
