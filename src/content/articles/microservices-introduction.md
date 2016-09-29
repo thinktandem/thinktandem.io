@@ -35,3 +35,5 @@ Everything that a microservice needs to run is described within a single Dockerf
 Even if the process of creating single microservices may seem clear, the idea of networking, deploying, and scaling dozens of microservices may seem daunting. Fortunately, there are many good Docker "orchestration" tools that provide ways to perform these tasks. A great one to start with is Docker Cloud.
 
 Docker Cloud gives even novice programmers a simple interface to host Docker-powered applications. Tasks that were formerly complex, like connecting networks of microservices together properly or scaling services, are made trivial by Docker Cloud. For a small monthly fee, it gives you a powerful set of tools and the option to host your apps on AWS, Microsoft Azure, Digital Ocean, and more. We'll be showing you the ropes with Docker Cloud in a future post, so stay tuned for that!
+
+UPDATE: My follow-up post is [now available](/blog/2016/09/22/node-microservices-on-docker-cloud), so you can continue with some hands-on fun.
