@@ -61,7 +61,7 @@ We build a lot of sites using Drupal (there I said it). Although we use many tec
 * If you are creating or working on an app with <5 MB Database <70 MB in files => Create, Push and Pull with Kalabox GUI or CLI all day long and enjoy the simple freedom of deploying your app with ease.
 * Your site will be created in less than 5 minutes and push to the web in less than 5 minutes.
 * Many of our fresh install apps with a handul of updates take less than 1 minute to push code, database and files back up to Pantheon.
-* If you are going to be pulling a larger website on Pantheon and want to get working right away - choose NOT to download database and files
+* If you are going to be pulling a larger website on Pantheon and want to get working right away - choose NOT to download database and files when using the GUI or
 
 <pre><code class="language-bash">
 // If using Kalabox CLI
@@ -75,6 +75,7 @@ kbox create pantheon -- -v --site=big-brand-here --env=dev --nodb --nofiles --na
 * Instead you should take advantage of Pantheon's built in Backup system and download your Database and Files as individual downloads and them place them in your app manually
 
 <pre><code class="language-bash">
+// By default here
 /Users/yournamehere/.kalabox/apps/files/...
 </pre></code>
 
