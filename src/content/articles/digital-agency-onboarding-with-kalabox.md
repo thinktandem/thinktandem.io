@@ -11,7 +11,7 @@ teaser: Onboarding new team members to your web project can be complicated with 
 date: 2016-09-26
 ---
 
-## Standardizing local web development
+## The Woes of Local Web Development
 
 There's a common phrase heard throughout the web development community and feared by all in our office here at [PAIRODIME](http://www.pairodime.com):
 
