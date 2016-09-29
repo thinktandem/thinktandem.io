@@ -37,7 +37,7 @@ Kalabox basically works like this:
 * Installer creates a virtual machine on your computer using [Virtual Box](https://www.virtualbox.org/) (which comes pre bundled with the application)
 * Use Kalabox from the GUI or CLI to create a new app from scratch or pull directly from an exisiting app on Pantheon
 
-![alt text](../../../assets/images/articles/digital-agency-onboarding-with-kalabox/ "Logo Title Text 1")
+![alt text](assets/images/articles/digital-agency-onboarding-with-kalabox/ "Kalabox GUI Pantheon Plugin")
 
 * If you create a pull an app from Pantheon, you have the option of pulling database and files as well as code
 * Kalabox uses a series of .yml files in the newly created app to describe the virtualized machine and local computer data sharing as well as other plugins and development tools
