@@ -5,7 +5,7 @@ tags: deployment, localdev, strategy, support, testing
 permalink: true
 author: GNZTRN5K
 private: false
-mainImage: images/articles/kalabox-released.png
+mainImage: images/articles/digital-agency-onboarding-with-kalabox/kalabox-released.png
 img-src: images/articles/kalabox-released.png
 teaser: Onboarding new team members to your web project can be complicated with even the most integrated DevOps team. Say hello to Kalabox.
 date: 2016-09-26
@@ -33,9 +33,12 @@ First let me say, I do not claim to be an expert on how Kalabox works. Although 
 
 Kalabox basically works like this:
 - Download the Kalabox Application from [GitHub](https://github.com/kalabox/kalabox/releases)
-- Install as normal
+- Install as you would any native app
 - Installer creates a virtual machine on your computer using [Virtual Box](https://www.virtualbox.org/) (which comes pre bundled with the application)
 - Use Kalabox from the GUI or CLI to create a new app from scratch or pull directly from an exisiting app on Pantheon
+
+![alt text](../../../assets/images/articles/digital-agency-onboarding-with-kalabox/ "Logo Title Text 1")
+
 - If you create a pull an app from Pantheon, you have the option of pulling database and files as well as code
 - Kalabox uses a series of .yml files in the newly created app to describe the virtualized machine and local computer data sharing as well as other plugins and development tools
 - The virtual machine uses [Docker](https://www.docker.com/) for awesome container stacking of things like Redis, MySQL, Drupal, [etc.](https://hub.docker.com/explore/)
