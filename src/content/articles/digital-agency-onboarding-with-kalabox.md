@@ -189,19 +189,21 @@ $ kbox start
 
 ## Reality Check: What About The Files That Are NOT Synchrozed?
 
-There is a bit of gingerly dance at play here. We are tuning our 'kalabox.yml' so that we are developing, making code changes, and seeing the results of those changes in our virtual machine in near real time, but often times we discover we need to add another contributed module or library that is outsode of our designated 'kalabox.yml' paths. Trust me - this happens all too often. We have a few options here:
+There is a bit of gingerly dance at play here. We are tuning our 'kalabox.yml' so that we are developing, making code changes, and seeing the results of those changes in our virtual machine in near real time, but often times we discover we need to add another contributed module or library that is outsode of our designated 'kalabox.yml' paths. Trust me - this happens all too often. 
 
-* Kalabox has some awesome built-in Dev tools that work directly on the virtual machine such as: git, bower, gulp and drush ([full list of Pantheon Dev tools here](http://pantheon.kalabox.io/en/stable/users/tooling/))
-* Lets say you wanted to use drush to download and install the 'admin_menu' module
+Kalabox has some awesome built-in Dev tools that work directly on the virtual machine such as: git, bower, gulp and drush ([full list of Pantheon Dev tools here](http://pantheon.kalabox.io/en/stable/users/tooling/)). Lets say you wanted to use drush to download and install the 'admin_menu' module:
 
 <pre><code class="language-bash">
 // From the Kalabox CLI
 $ kbox drush en -y admin_menu
 </pre></code>
 
-* At this point your kalabox app will have downloaded and installed the 'admin_module' directly to your /sites/all/modules/contrib/ folder on your virtual machine
-* The best part is we don't need to wait to have those files to be scynchronized to our local shared files directory before they will work in our app because we explicitly told kalabox ONLY to synch files as described in our 'kalabox.yml'
-* Now if your did in fact need to patch that contrib module - you have a few more options
+At this point your kalabox app will have downloaded and installed the 'admin_module' directly to your /sites/all/modules/contrib/ folder on your virtual machine. The best part is we don't need to wait to have those files to be scynchronized to our local shared files directory before they will work in our app because we explicitly told kalabox ONLY to synch files as described in our 'kalabox.yml' file.
+
+## Pro Tip
+
+* If your did in fact need to patch that contrib module, you have a few more options:
+
 * Update your 'kalabox.yml' to include the exact path to your module -> then restart your app
 
 <pre><code class="language-bash">
@@ -209,7 +211,7 @@ $ kbox drush en -y admin_menu
 $ kbox restart
 </pre></code>
 
-* You can also choose to use Pantheon's built in SFTP connection and upload files like contrib modules and libraries directly to the server then do a quick pull of those changes back into your local app
+* You can also choose to use Pantheon's built in SFTP connection and upload files like settings files, contrib modules and libraries directly to the server then do a quick pull of those changes back into your local kalabox app
 
 <pre><code class="language-bash">
 // From the Kalabox CLI
