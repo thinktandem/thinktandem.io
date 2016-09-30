@@ -1,8 +1,8 @@
 ---
 title: App Modernization
 slug: modernize
-short: modernize
-icon: fa fa-fire-extinguisher
+short: Modernize
+icon: fa fa-rocket
 color: blue
 weight: 5
 icons:
