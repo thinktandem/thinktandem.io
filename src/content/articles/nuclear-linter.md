@@ -8,7 +8,7 @@ private: false
 mainImage: images/articles/linter-is-coming/linteriscoming.jpeg
 img-src: images/articles/linter-is-coming/linteriscoming.jpeg
 teaser: Don't be the person that breaks production because of a typo or searches endlessly for that missing closing bracket. Level up with Travis, grunt and node.
-date: 2016-09-13
+date: 2016-09-25
 ---
 
 A Variation on a Theme
