@@ -1,7 +1,7 @@
 ---
-title: App Support + Strategy
-slug: support
-short: Support
+title: App Modernization
+slug: modernize
+short: modernize
 icon: fa fa-fire-extinguisher
 color: blue
 weight: 5
@@ -23,6 +23,6 @@ icons:
     link: https://wordpress.com/
 private: true
 ---
-Leverage years of professional Drupal, WordPress and Node service experience to make sure your app is getting the new features, security updates and bug fixes it needs to stay lean and mean.
+Leverage years of professional Drupal, WordPress, PHP and Node experience and transition your app from monolithic framework to the burgeoning world of hyper lean and hyper performant microservices.
 
 [Get peace of mind.](/contact)
