@@ -236,6 +236,6 @@ module.exports = function(grunt) {
   grunt.registerTask('deploy', ['uglify:deploy', 'cssmin:deploy', 'buildcontrol:deploy']);
   grunt.registerTask('default', ['htmllint', 'sasslint', 'build', 'browserSync', 'penthouse', 'watch']);
   grunt.registerTask('release', ['test', 'bump:' + type]);
-  grunt.registerTask('test', ['htmllint', 'sasslint', 'build'/*,'a11y'*/]);
+  grunt.registerTask('test', ['htmllint', 'sasslint', 'build', 'a11y']);
 
 };

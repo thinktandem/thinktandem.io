@@ -20,13 +20,13 @@ You're on the final stretch. The code is done. You commit to the repo. You lay o
 
 <div class="row">
   <div class="col-md-4">
-    ![data-winning](http://gifrific.com/wp-content/uploads/2012/08/Data-Star-Trek-Fist-Pump.gif "I AM ALL THAT IS ANDROID")
+    ![data-winning](images/articles/linter-is-coming/data.gif "I AM ALL THAT IS ANDROID")
   </div>
   <div class="col-md-4">
-    ![data-winning](http://gifrific.com/wp-content/uploads/2012/08/Data-Star-Trek-Fist-Pump.gif "I AM ALL THAT IS ANDROID")
+    ![data-winning](images/articles/linter-is-coming/data.gif "I AM ALL THAT IS ANDROID")
   </div>
   <div class="col-md-4">
-    ![data-winning](http://gifrific.com/wp-content/uploads/2012/08/Data-Star-Trek-Fist-Pump.gif "I AM ALL THAT IS ANDROID")
+    ![data-winning](images/articles/linter-is-coming/data.gif "I AM ALL THAT IS ANDROID")
   </div>
 </div>
 
@@ -50,7 +50,7 @@ Of course this is not the only reason to set up basic automatic code quality pro
 Interested in going from CodeZero to CodeHero in less than 30 minutes? Yes, you say? Then please read on.
 
 <div class="text-center">
-  ![anakin-wants-to-know](https://1.bp.blogspot.com/-yPa_khaHGvk/U1LzyAShLTI/AAAAAAAA8Rw/SCmAhpUWx40/s1600/tumblr_mzmv9u7iQr1qdku5lo2_500.gif "NOT FOR A JEDI!")
+  ![anakin-wants-to-know](images/articles/linter-is-coming/anakin.gif "NOT FOR A JEDI!")
 </div>
 
 Yes! Now that we are in 2016 it's relatively easy and straightforward to set up basic automated testing both to cover code-based nuclear meltdowns and to ensure your entire team is writing high quality code. If you are familiar with the basics of [Github](http://github.com), [Travis](http://travis-ci.org), [NodeJS](http://nodejs.org) and [Grunt](http://gruntjs.com) you can probably skip ahead to the next section. If not here are the essentials you need to get started:
