@@ -139,10 +139,10 @@ Here is a `Gruntfile.js` task that checks your code for syntax errors. Please re
 jshint: {
   options: {
 
-    // Use a config file for our linting rules
+    # Use a config file for our linting rules
     jshintrc: '.jshintrc',
 
-    // Use a custom reporter so we get pretty output for lint reports
+    # Use a custom reporter so we get pretty output for lint reports
     reporter: require('jshint-stylish')
   },
 
@@ -159,12 +159,12 @@ Here is a `Gruntfile.js` task that makes sure we are following NodeJS coding sta
 <div><pre><code class="language-yaml">
 jscs: {
 
-  // Use a config file for our code standards config
+  # Use a config file for our code standards config
   options: {
     config: '.jscsrc'
   },
 
-  // This uses normal GLOB syntax. In this case scanning all JS files in ./ and lib/
+  # This uses normal GLOB syntax. In this case scanning all JS files in ./ and lib/
   files: [
     '\*.js',
     'lib/\*.js'

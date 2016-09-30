@@ -7,10 +7,24 @@
     font-family: $lato;
     color: #333;
     line-height: 1.25em;
-    margin-top: 1em;
+  }
 
-    a {
-      color: #FFFFFF;
+  @media (max-width: 768px) {
+    svg {
+      width: 400px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h3 {
+      margin-top: 0.4em;
+      text-align: right;
+    }
+  }
+
+  @media (min-width: 992px) {
+    h3 {
+      margin-top: 1em;
     }
   }
 
