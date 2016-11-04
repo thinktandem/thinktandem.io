@@ -3,6 +3,7 @@ bower_components
 build
 npm-debug.log
 assets/vendor
+assets/public
 .DS_Store
 src/content/articles/dummy-content*
 *.log

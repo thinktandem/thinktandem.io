@@ -6,8 +6,6 @@
 
 // Dependencies
 var $ = require('jquery');
-var matchHeight = require("matchheight");
-var holderjs = require("holderjs");
 
 /**
  * Document Ready

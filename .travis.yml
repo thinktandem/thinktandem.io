@@ -21,7 +21,6 @@ sudo: false
 before_install:
 - openssl aes-256-cbc -K $encrypted_af5914b1ceab_key -iv $encrypted_af5914b1ceab_iv -in dot.id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
-- npm install -g grunt-cli bower
 after_success:
 - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - git config --global user.name $GIT_NAME
