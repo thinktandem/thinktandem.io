@@ -169,7 +169,7 @@
       "files": [
         "js/entry.js",
         "js/theme.js",
-        "../assets/vendor/particles.js/particles.min.js"
+        "../assets/public/particles.js/particles.min.js"
       ],
       "dest": "js/scripts.js"
     },
@@ -182,10 +182,10 @@
       "sourceComments": false,
       "sourceMap": true,
       "includePaths": [
-        "assets/vendor",
-        "assets/vendor/bootstrap-sass-twbs/assets/stylesheets",
-        "assets/vendor/devicons/css/",
-        "assets/vendor/fontawesome/scss/",
+        "assets/public",
+        "assets/public/bootstrap-sass-twbs/assets/stylesheets",
+        "assets/public/devicons/css/",
+        "assets/public/fontawesome/scss/",
         "templates/components/**/*"
       ]
     }

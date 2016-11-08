@@ -394,8 +394,8 @@ a {
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../vendor/fontawesome/fonts/fontawesome-webfont.eot?v=4.6.3");
-  src: url("../vendor/fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("../vendor/fontawesome/fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("../vendor/fontawesome/fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("../vendor/fontawesome/fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("../vendor/fontawesome/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
+  src: url("../public/fontawesome/fonts/fontawesome-webfont.eot?v=4.6.3");
+  src: url("../public/fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("../public/fontawesome/fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("../public/fontawesome/fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("../public/fontawesome/fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("../public/fontawesome/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -431,8 +431,8 @@ a {
 
 @font-face {
   font-family: 'devicons';
-  src: url("../vendor/devicons/fonts/devicons.eot?xqxft6");
-  src: url("../vendor/devicons/fonts/devicons.eot?#iefixxqxft6") format("embedded-opentype"), url("../vendor/devicons/fonts/devicons.woff?xqxft6") format("woff"), url("../vendor/devicons/fonts/devicons.ttf?xqxft6") format("truetype"), url("../vendor/devicons/fonts/devicons.svg?xqxft6#devicons") format("svg");
+  src: url("../public/devicons/fonts/devicons.eot?xqxft6");
+  src: url("../public/devicons/fonts/devicons.eot?#iefixxqxft6") format("embedded-opentype"), url("../public/devicons/fonts/devicons.woff?xqxft6") format("woff"), url("../public/devicons/fonts/devicons.ttf?xqxft6") format("truetype"), url("../public/devicons/fonts/devicons.svg?xqxft6#devicons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
