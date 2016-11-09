@@ -40,7 +40,7 @@ We even wrote up some docs about how to [work offline](http://docs.kalabox.io/en
 
 ## Caveats
 
-While these changes put Kalabox on a much more tenable foundation they also have introduced their own set of (albeit much more manageable) issues. Here are a couple of things worth mentioning to intrepid local dev pioneers across the interwebs.
+While these changes put Kalabox on a much more tenable foundation they also introduce their own set of (much more manageable) issues. Here are a couple of things worth mentioning to intrepid local dev pioneers across the interwebs.
 
   1. Docker for Mac/Windows are still **BETA PRODUCTS**.
 
