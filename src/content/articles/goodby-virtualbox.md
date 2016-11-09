@@ -1,43 +1,85 @@
 ---
 layout: layouts/article.html
-title: "Goodbye Virtualbox: Kalabox 2.1.1"
+title: "Goodbye VirtualBox: Kalabox 2.1.1"
 tags: localdev, strategy, support, testing
 permalink: true
 author: Mike Pirog
 private: false
-mainImage: images/articles/digital-agency-onboarding-with-kalabox/pairodime_x_kalabox.png
-img-src: images/articles/digital-agency-onboarding-with-kalabox/pairodime_x_kalabox.png
-teaser: With our newest version of Kalabox, we say goodbye to Virtualbox and hello to better performance and stability with Docker for Mac and Windows.
+mainImage: images/articles/dockerTNG.png
+img-src: images/articles/dockerTNG.png
+teaser: With our newest version of Kalabox, we say goodbye to VirtualBox and hello to better performance and stability with Docker for Mac and Windows.
 date: 2016-11-08
 ---
 
-Oh Virtualbox, we knew you well.
+It's appropriate that today is Election Day in the US because after a few months of shakedown on Kalabox 2.0.x we feel like the **PEOPLE HAVE SPOKEN**:
 
-At first you were a friend: you gave us the ability to install a standardized Linux environment on any type of machine. You made Kalabox a cross-platform solution when other local development tools stood stodigly by their OS of choice.
+> FREE US FROM THE SHACKLES OF VIRTUALBOX & SLOW FILE SHARING
+  <small>Vox Populi</small>
 
-But at the end, things got tough. Your age was starting to show. We never could optimize your filesharing scheme satisfactorily, and the extra layer of complexity you introduced drove us mad.
+Until recently, this populist upheavel would have been met with elitist consensus **"IT CAN'T BE DONE! YOU ASK THE IMPOSSIBLE!"** The times, however, are a changing and with some great new beta tech from the Docker folks we can now **GIVE THE PEOPLE WHAT THEY WANT**.
 
-It was time to say goodbye.
+So, without further ado, here's what's new in Kalabox 2(.1.x).
 
-## What's new in Kalabox 2.1.x?
+## 1. Backend Swap
 
-Kalabox 2.1.x marks our transition from using Virtualbox on Mac and Windows to run Docker containers (Linux Kalabox has run Docker natively for some time). This upgrade has vastly reduced the amount of system resources Kalabox requires (my computer went from 40%+ to ~5% CPU usage) and increased the filesharing performance dramatically. If you ever felt like your computer was going to take off while using Kalabox or were getting tired of refreshing your browser to see a change propagate, then you should love this new version.
+We've removed VirtualBox on Mac and Windows as our backend in favor of the new [Docker for Mac](https://docs.docker.com/docker-for-mac/) and [Docker for Windows](https://docs.docker.com/docker-for-windows/) projects. These allow us to run Docker containers "natively" using low level tech bundled into each OS. Specifically what this means is that on macOS (10.10+) you are now running everything inside of a super lightweight [xhyve](https://github.com/mist64/xhyve) VM and on Windows (Windows 10 Pro+) you are using its [Hyper-V](https://en.wikipedia.org/wiki/Hyper-V) engine. Kalabox on Linux is unaffected since we've been running Docker natively for awhile now.
 
-## But isn't Docker for Mac/Windows REALLY slow?
+This change has vastly reduced the amount of system resources Kalabox requires. For example my computer went from 40%+ to ~5% CPU usage. If you ever felt like your computer was about to rocket launch to Mars then this update is for you!
 
-Filesharing has been a HUGE problem on Docker for Mac and Windows. Despite the hype of these tools being "native" Docker solutions, both Docker for Mac and Windows are essentially wrapping Docker in a tiny virtual machine. Just search "Docker for Mac filesharing speed" on Google and you'll see many reports of developers trying to run large applications (like stock Drupal or Wordpress) with great frustration on Docker for Mac.
+## 2. File sharing
 
-Fortunately, we bring more than two years of experience tackling virtual filesharing problems to the table.
+If you have used either of the above Docker for Mac/Windows products in the past then your next question is likely: **Aha! But what about file sharing?** Good news here is we have 2+ years of expertise working on this exact problem. Taking advantage of some of the new features inherent to Docker for Mac/Windows and using some tips we've picked up along the way we now can provide almost instantaneous file sync. You will find file sharing and syncing on Kalabox 2.1.x to be **RIDICULOUSLY** better than it was on 2.0.x.
 
-On Mac, we're using Unison to receive filesharing events from Docker for Mac. This has lead to near-native filesyncing speeds.
+If you were getting tired of refreshing your browser to see a change propagate, then you should love this new version.
 
-On Windows, we're 
+## 3. DNS Handling
+
+While macOS and Linux provided some nice ways for us to handle `*.kbox` domains it was just too unreliable on Windows. As a result we've completely ripped out our DNS implementation and are now **LETTING THE INTERNET** do the work with our new `*.kbox.site` and `*.kbox.host` addresses. This should provide improved response times and should **DRASTICALLY** improve reliability for Windows users.
+
+We even wrote up some docs about how to [work offline](http://docs.kalabox.io/en/v2.1/troubleshooting/#common-issues).
+
+## Caveats
+
+While these changes put Kalabox on a much more tenable foundation they also have introduced their own set of (albeit much more manageable) issues. Here are a couple of things worth mentioning to intrepid local dev pioneers across the interwebs.
+
+  1. Docker for Mac/Windows are still **BETA PRODUCTS**.
+
+  While Docker for Mac/Windows seems to work pretty good for most users, most of the time, you may find yourself [restarting the Docker engine](http://docs.kalabox.io/en/v2.1/general/engine/) often. You may also find it neccessary to upgrade to their [latest Beta](https://docs.docker.com/docker-for-mac/) so that everything works right. We are going to be releasing new versions of Kalabox every time Docker releases a new Stable version so we can be pulling in all their awesome work and bugfixes.
+
+  2. You will need to make sure it plays nice with other things like MAMP, WAMP, etc
+
+  Because of the way Docker for Mac/Windows works you are going to need to make sure you have ports `80`, `443`, and `8160` free. If you don't, then Kalabox is likely not going to work for you. As soon as Docker provides more customization options we are hoping to isolate these.
+
+  3. On Windows you will still need to manually set up file sharing.
+
+  Luckily this is fairly [straightforward](https://docs.docker.com/docker-for-windows/#/shared-drives).
+
+## Roadmap
+
+You might also be wondering what our medium (read 6 month-ish) term development roadmap looks like. If you were wondering that then you are in luck because here are our top priorities:
+
+  1. Introduction of another major platform provider (or two!) to complement our Pantheon integration.
+  2. Establishment of a suite of easy-to-install plugins so users can add functionality like `wraith` or `drupal-console`.
+  3. Overhaul of the GUI
+
+## Conclusion
+
+With the introduction of the Kalabox 2.1.x series we can finally say that this is **PRETTY DARN CLOSE** to the product that we wanted to build from the beginning. We encourage you all to try it and give us your feedback!
+
+However, we also realize that words are sometimes not the ideal form of communication so I'll close with:
+
+<div class="row">
+  <div class="col-md-6">
+    ![teddy-with-rifle](images/articles/teddy200.jpg "You'll shoot your eye out!")
+  </div>
+  <div class="col-md-6">
+    ![teddy-with-machinegun](images/articles/teddy210.jpg "I AM ALL THAT IS PRESIDENT")
+  </div>
+</div>
+
+**ARE YOU A YETI SLAYER?**
 
 
 
-Before we go too far: if you use Kalabox and have no idea what Virtualbox is, good. We made Kalabox to allow you to ignore these technical details and focus on your job/passion/divine mission: making awesome websites. Just download the newest Kalabox version and follow the updating instructions.
 
-Don't even know what Kalabox is? Checkout the [project page](http://www.kalabox.io).
-
-## 
 
