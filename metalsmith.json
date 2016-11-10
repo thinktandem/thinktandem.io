@@ -6,6 +6,10 @@
         "reverse": true,
         "pattern": "content/articles/*.md"
       },
+      "careers": {
+        "sortBy": "weight",
+        "pattern": "content/careers/*.md"
+      },
       "lastestArticles": {
         "sortBy": "date",
         "limit": 3,
@@ -16,13 +20,13 @@
         "sortBy": "name",
         "pattern": "content/quotes/*.md"
       },
-      "staff": {
-        "sortBy": "name",
-        "pattern": "content/staff/*.md"
-      },
       "services": {
         "sortBy": "weight",
         "pattern": "content/services/*.md"
+      },
+      "staff": {
+        "sortBy": "name",
+        "pattern": "content/staff/*.md"
       }
     },
     "metalsmith-metadata-convention": {},
