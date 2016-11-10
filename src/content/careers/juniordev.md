@@ -51,3 +51,5 @@ Please send a resume and/or relevant experience/projects to <mailto:jobs@thinkta
 * Do you use Git for version control?
 * Are you comfortable on the command line?
 * Have you ever tried setting up your own Linux server? How’d it go?
+
+**Please do not apply if you are an oursourcing agency! We are looking for individual applicants only.**
