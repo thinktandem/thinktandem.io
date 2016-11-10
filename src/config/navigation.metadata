@@ -12,6 +12,10 @@ primary:
     title: Our thoughts
     url: blog
 
+  - name: Careers
+    title: Work with us!
+    url: careers
+
   - name: Contact
     title: Get in touch
     url: contact

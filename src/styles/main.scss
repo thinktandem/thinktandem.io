@@ -23,6 +23,7 @@ The following are components that are built specifically for the site.
 Custom
 */
 @import "../../templates/components/molecules/bio/bio";
+@import "../../templates/components/molecules/career/career";
 @import "../../templates/components/molecules/modal/modal";
 @import "../../templates/components/molecules/quote/quote";
 @import "../../templates/components/molecules/service/service";
@@ -46,6 +47,7 @@ Custom
 @import "pages/about";
 @import "pages/article";
 @import "pages/blog";
+@import "pages/careers";
 @import "pages/contact";
 @import "pages/homepage";
 @import "pages/services";

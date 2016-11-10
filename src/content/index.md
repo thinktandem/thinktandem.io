@@ -2,10 +2,10 @@
 layout: pages/home.html
 title: Tandem
 pageSlug: homepage
-heroPri: "DevOps is hard."
-heroSec: "We make it easy using..."
-heroCta: "Find out how we connect the DevOps dots"
-description: "Tandem modernizes with advanced DevOps tools like Docker to help your organization develop web applications faster, better, and more profitably."
+heroPri: "Modernize your app and workflow"
+heroSec: "Using next generation tech and process"
+heroCta: "Find out how we connect the dots"
+description: "Tandem modernizes your app and workflow with powerful new tools like Docker and Kalabox while streamlining your process with agile methodolofies. Future-proof your biz and develop faster, better, and more profitably."
 heroIcons:
   - icon: devicons devicons-docker
     name: Docker
