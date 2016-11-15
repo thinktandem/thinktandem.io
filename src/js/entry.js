@@ -6,6 +6,7 @@
 
 // Dependencies
 var $ = require('jquery');
+var bootstrap = require('bootstrap');
 
 /**
  * Document Ready

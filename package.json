@@ -6,7 +6,6 @@
     "bower": "~1.4.1",
     "browserify": "^11.0.1",
     "browserify-shim": "^3.8.8",
-    "holderjs": "^2.8.0",
     "jquery": "^2.1.4",
     "metalsmith": "~1.7.0",
     "metalsmith-assets": "^0.1.0",
@@ -60,8 +59,7 @@
     "shell-escape": "^0.2.0"
   },
   "browser": {
-    "bootstrap": "./assets/vendor/bootstrap-sass-twbs/assets/javascripts/bootstrap.js",
-    "matchheight": "./assets/vendor/matchHeight/jquery.matchHeight.js"
+    "bootstrap": "./assets/public/bootstrap-sass-twbs/assets/javascripts/bootstrap.min.js"
   },
   "browserify": {
     "transform": [
@@ -70,11 +68,6 @@
   },
   "browserify-shim": {
     "bootstrap": {
-      "depends": [
-        "jquery:jQuery"
-      ]
-    },
-    "matchheight": {
       "depends": [
         "jquery:jQuery"
       ]

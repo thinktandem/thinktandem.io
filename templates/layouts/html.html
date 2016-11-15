@@ -110,7 +110,6 @@
 
   {% block scripts %}
     <script src="{{'js/scripts.js'|bustcache}}"></script>
-    <script src="{{'public/bootstrap-sass-twbs/assets/javascripts/bootstrap.min.js'|bustcache}}"></script>
     {% if jsonld %}
     <script type="application/ld+json">
       {{ jsonld|raw|json_encode }}
