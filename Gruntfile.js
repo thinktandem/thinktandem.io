@@ -108,41 +108,45 @@ module.exports = function(grunt) {
         outfile : 'src/styles/homepage.critical.css',
         css : './build/styles/main.css',
         url : 'http://localhost:8000',
+        renderWaitTime: 100,
+        blockJSRequests: false,
         width : 1300,
-        height : 900,
-        skipErrors : false // this is the default
+        height : 900
       },
       about: {
         outfile : 'src/styles/about.critical.css',
         css : './build/styles/main.css',
         url : 'http://localhost:8000/about',
         width : 1300,
-        height : 900,
-        skipErrors : false // this is the default
+        height : 900
       },
       services: {
         outfile : 'src/styles/services.critical.css',
         css : './build/styles/main.css',
         url : 'http://localhost:8000/services',
         width : 1300,
-        height : 900,
-        skipErrors : false // this is the default
+        height : 900
       },
       blog: {
         outfile : 'src/styles/blog.critical.css',
         css : './build/styles/main.css',
         url : 'http://localhost:8000/blog',
         width : 1300,
-        height : 900,
-        skipErrors : false // this is the default
+        height : 900
       },
       contact: {
         outfile : 'src/styles/contact.critical.css',
         css : './build/styles/main.css',
         url : 'http://localhost:8000/contact',
         width : 1300,
-        height : 900,
-        skipErrors : false // this is the default
+        height : 900
+      },
+      careers: {
+        outfile : 'src/styles/careers.critical.css',
+        css : './build/styles/main.css',
+        url : 'http://localhost:8000/careers',
+        width : 1300,
+        height : 900
       }
     },
 

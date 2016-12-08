@@ -255,6 +255,11 @@ label {
   color: #999;
 }
 
+.form-control::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+
 textarea.form-control {
   height: auto;
 }
