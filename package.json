@@ -31,7 +31,8 @@
     "metalsmith-swig-helpers": "git://github.com/thinktandem/metalsmith-swig-helpers",
     "metalsmith-tags": "^1.2.0",
     "swig": "^1.4.2",
-    "xor-crypt": "~1.0.0"
+    "xor-crypt": "~1.0.0",
+    "swig-extras": "git@github.com:reynoldsalec/swig-extras.git"
   },
   "scripts": {
     "build": "metalsmith build",
