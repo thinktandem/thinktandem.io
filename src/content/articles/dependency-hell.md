@@ -11,8 +11,6 @@ teaser: A brief vacation to one of software development's notorious infernos rem
 date: 2016-12-31
 ---
 
-# Visiting Dependency Hell
-
 Last night I was (trying) to install a Laravel project (DreamFactory) for evaluation. Normally I'm using Kalabox, a Docker-based project we created to help people quickly start developing and evaluating software. However, we didn't have an app configuration for Laravel. In my haste to "get things moving," I threw caution to the wind and began installing dependencies to run the project locally.
 
 Big mistake.
