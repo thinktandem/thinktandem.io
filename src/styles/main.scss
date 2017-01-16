@@ -52,6 +52,11 @@ Custom
 @import "pages/homepage";
 @import "pages/services";
 
+/**
+ * Snippets
+ */
+@import "snippets/mailchimp";
+
 body {
   font-size: $font-size-base;
 }
@@ -575,4 +580,8 @@ canvas.particles-js-canvas-el {
 
 .container.border-bottom {
   border-bottom: 1px solid #efefef;
+}
+
+.training-cta .btn {
+  margin-bottom: 2em;
 }

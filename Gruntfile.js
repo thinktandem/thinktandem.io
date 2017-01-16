@@ -127,6 +127,13 @@ module.exports = function(grunt) {
         width : 1300,
         height : 900
       },
+      trainings: {
+        outfile : 'src/styles/trainings.critical.css',
+        css : './build/styles/main.css',
+        url : 'http://localhost:8000/trainings',
+        width : 1300,
+        height : 900
+      },
       blog: {
         outfile : 'src/styles/blog.critical.css',
         css : './build/styles/main.css',
@@ -145,6 +152,13 @@ module.exports = function(grunt) {
         outfile : 'src/styles/careers.critical.css',
         css : './build/styles/main.css',
         url : 'http://localhost:8000/careers',
+        width : 1300,
+        height : 900
+      },
+      article: {
+        outfile : 'src/styles/article.critical.css',
+        css : './build/styles/main.css',
+        url : 'http://localhost:8000/blog/2016/11/08/goodbye-virtualbox-kalabox-2-1-1',
         width : 1300,
         height : 900
       }
