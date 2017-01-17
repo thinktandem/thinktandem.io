@@ -5,7 +5,7 @@ short: Continuous Integration
 slug: continuousdev
 date: 2017-02-15
 location: San Diego, CA
-cost: $50
+cost: $99
 private: true
 ---
 
