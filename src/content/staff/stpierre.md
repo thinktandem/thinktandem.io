@@ -1,6 +1,7 @@
 ---
 name: Geoff St. Pierre
 weight: 10
+title: Senior Developer
 image: images/gff-sm.jpg
 hover: images/gff_hover.jpg
 link: https://twitter.com/serundeputy

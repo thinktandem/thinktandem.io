@@ -1,6 +1,7 @@
 ---
 name: Alec Reynolds
 weight: 0
+title: CEO & Senior Developer
 image: images/alec-sm.jpg
 hover: images/alec_hover.gif
 link: https://twitter.com/reynoldsalec
