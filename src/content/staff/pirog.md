@@ -1,12 +1,14 @@
 ---
 name: Mike Pirog
+weight: 1
+title: Senior Engineer
 image: images/mike-sm.jpg
 hover: images/mike_hover.gif
 link: https://twitter.com/pirogcommamike
 layout: components/molecules/bio/bio.html
 private: true
 ---
-Mike is a senior DevOps consultant with over a decade of experience finding better ways to make and deliver web applications. Unlike many engineers, Mike has the rare ability to recognize business value as the foremost concern in determining the solution to any software problem.
+Mike is an architect, developer, devops expert and tech DOES ALL THE THINGS with over a decade of experience finding better ways to make and deliver web applications. Unlike many engineers, Mike has the rare ability to recognize business value as the foremost concern in determining the solution to any software problem.
 
 A prolific open source contributor, Mike is the architect behind Kalabox, a Docker-powered tool for local development and continuous integration.
 

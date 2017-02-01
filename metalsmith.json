@@ -30,7 +30,7 @@
         "pattern": "content/services/*.md"
       },
       "staff": {
-        "sortBy": "name",
+        "sortBy": "weight",
         "pattern": "content/staff/*.md"
       }
     },
