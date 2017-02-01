@@ -1,5 +1,6 @@
 ---
 name: Mike Pirog
+weight: 1
 image: images/mike-sm.jpg
 hover: images/mike_hover.gif
 link: https://twitter.com/pirogcommamike
