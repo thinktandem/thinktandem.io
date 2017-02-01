@@ -1,6 +1,6 @@
 {
   "name": "tandem",
-  "version": "0.3.14",
+  "version": "0.3.15",
   "private": true,
   "dependencies": {
     "bower": "~1.4.1",
