@@ -7,11 +7,11 @@ link: https://twitter.com/serundeputy
 layout: components/molecules/bio/bio.html
 private: true
 ---
-Geoff is a senior developer with over 20 years programming experience.
-This allows him the perspective of how things were, are, and the
-foundation to chase the latest technology.
+Geoff is a senior developer with over 20 years of programming experience.
+This gives him perspective on both how things were and how things are and more importantly gives him the
+foundation to chase the latest and greatest technology.
 
-Open source contributor to Backdrop CMS, Backdrop Drush
+Geoff is an open source contributor to Backdrop CMS, Backdrop Drush
 extension, Drupal, Kalabox and others.
 
 Away from the monitor, Geoff can be found playing video games, running, and playing in
