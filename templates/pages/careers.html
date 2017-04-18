@@ -16,8 +16,8 @@
     </div>
 
     <div class="container">
+      <div class="text-center"><strong>The following positions are currently open:</strong></div>
       {% for career in collections.careers %}
-        <div class="text-center"><strong>The following positions are currently open:</strong></div>
         <div class="career-link text-center">
           <a href="careers/#{{ career.slug }}">{{ career.short }}</a>
         </div>
