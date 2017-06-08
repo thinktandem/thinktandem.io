@@ -7,7 +7,7 @@ author: Geoff St. Pierre
 private: false
 mainImage: images/articles/postgres-platform.png
 img-src: images/articles/postgres-platform.png
-teaser: How to work with Postgres Databases on Platorm.sh
+teaser: How to work with Postgres Databases on Platform.sh
 date: 2017-05-10
 ---
 
