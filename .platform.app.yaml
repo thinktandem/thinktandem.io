@@ -42,4 +42,3 @@ hooks:
     npm install
     bower install
     grunt build
-    cp docs/images/favicon.ico _book/gitbook/images/favicon.ico
