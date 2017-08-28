@@ -85,8 +85,7 @@ module.exports = function(grunt) {
         files: [
           'src/**/*',
           'assets/**/*',
-          'templates/**/*',
-          '!src/styles/*.critical.css'
+          'templates/**/*'
         ],
         tasks: ['build'],
         options: {

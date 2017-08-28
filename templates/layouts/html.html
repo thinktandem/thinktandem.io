@@ -39,29 +39,14 @@
 
   {% endblock %}
 
-  {% if pageSlug %}
-    {% set filePath = 'src/styles/' + pageSlug + '.critical.css' %}
-    {% if filePath|isFile %}
-      {% set relativeFilePath = '../../src/styles/' + pageSlug + '.critical.css' %}
-      <style>
-        {% include relativeFilePath %}
-      </style>
-    {% endif %}
-  {% else %}
-    <style>
-      {% include '../../src/styles/article.critical.css' %}
-    </style>
-  {% endif %}
+  {% block styles %}
+    <link rel="stylesheet" type="text/css" href="{{'styles/main.css'|bustcache}}">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic">
+  {% endblock %}
 
 </head>
 
 <body class="{{ pageSlug }}">
-  <noscript id="deferred-styles">
-    {% block styles %}
-      <link rel="stylesheet" type="text/css" href="{{'styles/main.css'|bustcache}}">
-      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic">
-    {% endblock %}
-  </noscript>
   <script>
     var loadDeferredStyles = function() {
       var addStylesNode = document.getElementById("deferred-styles");
