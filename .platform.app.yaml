@@ -34,6 +34,7 @@ disk: 2048
 dependencies:
   nodejs:
     grunt-cli: "*"
+    bower: "*"
 
 # The hooks that will be performed when the package is deployed.
 hooks:
