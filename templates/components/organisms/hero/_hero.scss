@@ -1,6 +1,5 @@
 #hero {
   overflow: hidden;
-  background: #4BB5DD;
   background-size: cover;
 
 
@@ -85,13 +84,6 @@
   }
 
   h1.hero-text {
-    font-family: $lato;
-    line-height: 1.1em;
-    text-align: center;
-    font-size: 4em;
-    font-weight: 300;
-    letter-spacing: .3px;
-    color: #FFF;
     margin: 2em 1em 1em 1em;
     margin-top: 10vh;
 
@@ -105,8 +97,6 @@
   }
 
   h2.hero-text {
-    font-size: 2em;
-    color: #ACE2F7;
     margin-bottom: 1em;
     @media (max-width: 767px) {
       font-size: 1em;
@@ -119,8 +109,7 @@
     -webkit-font-smoothing: antialiased;
     width: 50%;
     margin-top: 25px;
-    font-family: $lato;
-    color: #fff;
+    font-family: $montserrat;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
@@ -207,13 +196,7 @@
     }
     h3 {
       @extend h2;
-      text-transform: uppercase;
-      text-align: center;
-      color: #fff;
-      font-size: 1.2em;
       margin-top: 1.2em;
-      font-weight: 300;
-      font-family: Lato;
       @media(max-width: 767px) {
         font-size: .7em;
       }

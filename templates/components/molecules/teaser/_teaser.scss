@@ -44,10 +44,10 @@
     }
     .title {
 
-      font-family: $lato;
+      font-family: $montserrat;
       font-size: 2em;
       font-weight: 300;
-      color: #333;
+      color: $gray-dark;
       line-height: 50px;
 
       @media(max-width: 991px) {
@@ -60,16 +60,16 @@
       }
 
       a {
-        color: #111;
+        color: $gray-darker;
         @include transition(color 0.15s linear);
         &:hover {
           text-decoration: none;
-          color: #428bca;
+          color: $brand-primary;
         }
       }
     }
     .author {
-      color: #888;
+      color: $gray-light;
       margin-top: 4px;
       position: relative;
       @media(max-width: 991px) {
@@ -87,18 +87,18 @@
       }
     }
     .intro {
-      font-family: $helvetica;
+      font-family: $montserrat;
       margin-top: 18px;
       font-size: 20px;
       line-height: 27px;
-      color: #4d4d4d;
+      color: $gray-base;
 
       @media(min-width: 992px) {
         width: 90%;
       }
     }
     .continue-reading {
-      font-family: $helvetica;
+      font-family: $montserrat;
       font-size: 15px;
       display: inline-block;
       margin-top: 8px;
@@ -107,4 +107,3 @@
   }
 
 }
-

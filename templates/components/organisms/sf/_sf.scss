@@ -4,9 +4,7 @@
   padding-bottom: 2em;
 
   h3 {
-    font-family: $lato;
-    color: #333;
-    line-height: 1.25em;
+    font-family: $montserrat;
   }
 
   @media (max-width: 768px) {
@@ -30,7 +28,7 @@
 
   .sf {
     path.color {
-      fill: #FF4F00;
+      fill: $brand-primary;
     }
   }
 }
