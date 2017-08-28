@@ -1,26 +1,19 @@
 language: node_js
 node_js:
-- '4'
-env:
-  global:
-  - GIT_NAME: Dot Tandematrix
-  - GIT_EMAIL: herald@thinktandem.io
-  - GH_REPO: thinktandem/tandem
-  - CXX: g++-4.8
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    packages:
-    - g++-4.8
-sudo: false
+  - '6'
+services:
+  - docker
+
 before_install:
-- openssl aes-256-cbc -K $encrypted_af5914b1ceab_key -iv $encrypted_af5914b1ceab_iv -in dot.id_rsa.enc -out ~/.ssh/id_rsa -d
-- chmod 600 ~/.ssh/id_rsa
-after_success:
-- echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-- git config --global user.name $GIT_NAME
-- git config --global user.email $GIT_EMAIL
-- if [[ $TRAVIS_PULL_REQUEST == 'false' ]] && [ ! -z "$TRAVIS_TAG" ] && [ $TRAVIS_REPO_SLUG == $GH_REPO ]; then grunt deploy; fi
-notifications:
-  email: false
+  - sudo apt-get -y update
+  - sudo apt-get -y install cgroup-bin curl
+  - curl -fsSL -o /tmp/lando-latest.deb http://installer.kalabox.io/lando-latest-dev.deb
+  - sudo dpkg -i /tmp/lando-latest.deb
+  - lando version
+
+script:
+  - lando npm install
+  - lando bower install -y
+  - lando grunt build
+  - lando start -- -v
+  - lando grunt test

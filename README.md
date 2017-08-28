@@ -1,69 +1,54 @@
 Tandem Website
 ==============
 
-All the hacked up Kalastatic magic that builds and deploys [http://www.thinktandem.io](http://www.thinktandem.io).
+All the hacked up Kalastatic magic for [http://www.thinktandem.io](http://www.thinktandem.io). This is currently a stop-gap website to bridge the gap between the old and new brand identities.
 
-Getting Started
----------------
+Workflow
+--------
 
-### Install
+The Tandem [dev workflow](https://docs.thinktandem.io/coding/dev-workflow.html) is dogfooded for this repository as well. No sense in repeating it here!
 
-```bash
-git clone https://github.com/thinktandem/tandem.git
-cd tandem
-npm install
-```
+Development
+-----------
 
-### Serve the site
+Always good to dev locally before submitting a pull request. To do so, we recommend that you are equipped with:
 
-```bash
-grunt
-```
+1.  [SSH keys - to access this Github repo](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+2.  [Lando - localhost development environment](http://docs.lndo.io)
 
-### Watch all the files
+### Get This Site Running Locally
 
 ```bash
-grunt watch
+git clone https://github.com/thinktandem/thinktandem.io.git
+cd thinktandem.io
+
+# Install dependencies
+lando npm install
+lando bower install
+
+# Build site
+lando grunt build
+
+# Start up the site
+lando start
 ```
 
-### Run tests
+### Watching
 
 ```bash
-grunt test
+# Watch for file changes and then rebuild
+lando grunt watch
 ```
 
-Deploying
----------
+### Running Tests
 
-It is best to bump the version and tag a commit to build an official release. This can be done in the following ways depending on your desired bump.
+Make sure your `*.md` files COMPLY with our standards.
 
 ```bash
-# Bump to a new prelease version ie 0.2.0-beta.1
-grunt release --type=prerelease
-
-# Bump to a new patch version ie 0.2.1, this is the default
-grunt release
-
-# Bump to a new minor version ie 0.3.0
-grunt release --type=minor
-
-# Bump to a new major version ie 1.0.0
-grunt release --type=major
+lando grunt test
 ```
 
-That said you can also deploy straight up at any time using. Great for ye olde tyme hotfix!
+Inspiration
+-----------
 
-```bash
-grunt deploy
-```
-
-It is also an **EXCELLENT** idea to test out the release cycle first
-
-```bash
-grunt release --type=minor --dry-run=true
-```
-
-Other Resources
----------------
-
-* [Mountain climbing advice](https://www.youtube.com/watch?v=tkBVDh7my9Q)
+[Click here](https://www.youtube.com/watch?v=gqwuYX3fZZc) for some inspiration on how to slay tasks like a pro.
