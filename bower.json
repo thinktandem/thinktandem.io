@@ -4,7 +4,6 @@
   "dependencies": {
     "bootstrap-sass-twbs": "~3.3.5",
     "fontawesome": "~4.6.0",
-    "particles.js": "^2.0.0",
     "devicons": "https://github.com/thinktandem/devicons.git#dynamic-fontpath"
   }
 }
