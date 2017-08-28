@@ -23,7 +23,6 @@ The following are components that are built specifically for the site.
 Custom
 */
 @import "../../templates/components/molecules/bio/bio";
-@import "../../templates/components/molecules/career/career";
 @import "../../templates/components/molecules/modal/modal";
 @import "../../templates/components/molecules/quote/quote";
 @import "../../templates/components/molecules/service/service";
@@ -47,7 +46,6 @@ Custom
 @import "pages/about";
 @import "pages/article";
 @import "pages/blog";
-@import "pages/careers";
 @import "pages/contact";
 @import "pages/homepage";
 @import "pages/services";
@@ -231,12 +229,6 @@ a, button {
     -webkit-font-smoothing: antialiased;
 
     .navbar-header {
-      .navbar-brand {
-        color: #fff;
-        padding: 25px 15px;
-        font-weight: 500;
-        font-size: 23px;
-      }
       .navbar-toggle {
         margin-top: 17px;
       }
@@ -327,7 +319,7 @@ a, button {
     border-radius: 0px;
     border: 0px;
     z-index: 999;
-    background-color: #72C8E9;
+    background-color: #47474A;
     padding: .5em 0em;
     padding-bottom: 0px;
     -webkit-font-smoothing: antialiased;
@@ -340,10 +332,8 @@ a, button {
     }
 
     .navbar-brand {
-      color: #fff;
-      font-weight: 500;
-      font-size: 1.5em;
-      font-family: $lato;
+      padding: 0px 15px;
+      height: 70px;
     }
 
     .navbar-nav {
@@ -438,11 +428,6 @@ a, button {
 
     .navbar-header {
       .navbar-brand {
-        color: #333;
-        font-weight: bold;
-        font-size: 30px;
-        font-family: $lato;
-        padding-top: 24px;
 
         @media (max-width: 767px) {
           color: #fff;

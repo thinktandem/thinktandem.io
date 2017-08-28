@@ -6,15 +6,6 @@
         "reverse": true,
         "pattern": "content/articles/*.md"
       },
-      "careers": {
-        "sortBy": "weight",
-        "pattern": "content/careers/*.md"
-      },
-      "trainings": {
-        "sortBy": "date",
-        "reverse": true,
-        "pattern": "content/trainings/*.md"
-      },
       "lastestArticles": {
         "sortBy": "date",
         "limit": 3,

@@ -8,17 +8,9 @@ primary:
     title: Services
     url: services
 
-  - name: Training
-    title: Training
-    url: trainings
-
   - name: Blog
     title: Our thoughts
     url: blog
-
-  - name: Careers
-    title: Work with us!
-    url: careers
 
   - name: Contact
     title: Get in touch
