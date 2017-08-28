@@ -178,8 +178,7 @@
     "metalsmith-browserify": {
       "files": [
         "js/entry.js",
-        "js/theme.js",
-        "../assets/public/particles.js/particles.min.js"
+        "js/theme.js"
       ],
       "dest": "js/scripts.js"
     },
