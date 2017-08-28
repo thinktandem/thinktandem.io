@@ -1,3 +1,4 @@
 {
-  "directory": "assets/public"
+  "directory": "assets/public",
+  "interactive": false
 }
