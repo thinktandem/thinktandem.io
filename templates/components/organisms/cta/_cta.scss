@@ -1,6 +1,6 @@
 #cta {
   -webkit-font-smoothing: antialiased;
-  background-color: #4BB5DD;
+  background-color: $miami;
 
   .container {
     border-top: 1px solid #ACE2F7;
@@ -10,25 +10,22 @@
   .header {
 
     a {
-      color: #333333;
+      color: $gray-base;
       white-space: normal;
     }
 
     h3 {
       margin-top: 0;
-      font-family: $montserrat;
-      color: #FFFFFF;
       line-height: 1em;
     }
   }
 
   .btn {
-    background-color: #FFCC4F;
-    border-radius: 5px;
+    border-radius: 1px;
     font-weight: 500;
     text-transform: uppercase;
     padding: 1em;
-    margin: 2em 1em
+    margin-top: 2em;
   }
 
 }

@@ -31,20 +31,19 @@ p {
 }
 
 .btn-primary {
-  background: $brand-primary;
-  color: #FFF;
+  border: 5px solid $brand-primary;
+  color: $brand-primary;
   letter-spacing: 0.7px;
   @include transition(all .2s linear);
+  background-color: inherit;
   &:hover {
     text-decoration: none;
     background: $brand-success;
-    border: none;
   }
-  border: none;
 }
 
 .btn {
-  border-radius: 5px;
+  border-radius: 1px;
   font-weight: 300;
   text-transform: uppercase;
   padding: .5em 1em;
@@ -78,12 +77,19 @@ p {
 h1 {
   text-transform: uppercase;
   color: $brand-primary;
-  font-size: 4.5em;
   font-weight: 800;
   line-height: .85em;
   letter-spacing: .01em;
 }
 
 h2 {
-  color: $brand-info;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $gray-base;
+}
+
+h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $gray-base;
 }

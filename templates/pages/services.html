@@ -7,40 +7,10 @@
     <div id="header-title">
       <div class="container">
         <div class="row header">
-          <div class="col-xs-12 text-center">
+          <div class="col-xs-12 ">
             <h1>{{ title|safe }}</h1>
             <small>{{ byline|safe }}</small>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container equation">
-      <div class="row">
-        <div class="col-sm-1">
-        </div>
-        {% for service in collections.services %}
-          {% if service.arrow %}
-            <div class="col-sm-2 services-plus">
-              <div class="service-category text-center">
-                <a class="hexagon-{{ service.color }} center-block" href="services/#{{ service.slug }}">
-                  <i class="{{ service.icon }}"></i>
-                </a>
-                <small>{{ service.short }}</small>
-              </div>
-            </div>
-          {% else %}
-            <div class="col-sm-2">
-              <div class="service-category text-center">
-                <a class="hexagon-{{ service.color }} center-block" href="services/#{{ service.slug }}">
-                  <i class="{{ service.icon }}"></i>
-                </a>
-                <small>{{ service.short }}</small>
-              </div>
-            </div>
-          {% endif %}
-        {% endfor %}
-        <div class="col-sm-1">
         </div>
       </div>
     </div>
@@ -69,6 +39,5 @@
   </div>
 
   {% include '../components/organisms/cta/cta.html' %}
-  {% include '../components/organisms/social/social.html' %}
 
 {% endblock %}
