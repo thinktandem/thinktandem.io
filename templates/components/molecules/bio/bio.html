@@ -1,9 +1,11 @@
 <div class="col-md-3">
-  <div class="bio-img">
+  <div class="bio-img bio-img-{{ staff.color|safe }}">
     <a href="{{ staff.link }}">
-      <img class="center-block img-responsive img-circle img-staff" alt="bio-portrait" src="{{ staff.image }}" onmouseover="this.src='{{ staff.hover }}'" onmouseout="this.src='{{ staff.image }}'">
+      <img class="center-block img-responsive img-circle img-staff" alt="bio-portrait" src="{{ staff.image }}" data-toggle="tooltip" data-placement="top" title="{{ staff.quote|safe }}">
     </a>
   </div>
-  <h3 class="text-center">{{ staff.name|safe }}</h3>
-  <h5 class="text-center">{{ staff.title|safe }}</h5>
+  <div class="bio-first text-center">{{ staff.first|safe }}</div>
+  <h3 class="bio-last text-center">{{ staff.last|safe }}</h3>
+  <div class="bio-role text-center">{{ staff.role|safe }}</div>
+  <div class="bio-dev text-center">{{ staff.dev|safe }}</div>
 </div>

@@ -16,4 +16,7 @@ $(function() {
   // Initiate all pages
   require("./pages/contact")();
 
+  // Activate all the tooltipz
+  $('[data-toggle="tooltip"]').tooltip();
+
 });
