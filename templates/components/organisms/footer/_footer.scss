@@ -1,5 +1,17 @@
-#footer {
-  background: #4BB5DD;
+footer {
+  background: $brand-info;
+  font-size: .8em;
+  color: #fff;
+  h3 {
+    color: #fff;
+    font-size: 1em;
+  }
+  a {
+    color: $miami;
+  }
+  a:hover {
+    text-decoration: none;
+  }
   -webkit-font-smoothing: antialiased;
 
   @media(max-width: 991px) {
@@ -11,5 +23,14 @@
     font-size: 13px;
     text-align: center;
     padding: 20px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0em;
+  }
+
+  .social {
+    font-size: 2em;
   }
 }

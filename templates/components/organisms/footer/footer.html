@@ -1,10 +1,49 @@
-<footer class="footer">
-  <div id="footer">
-    <div class="credits">
-      <div class="row">
-        <div class="col-md-12">
-          Copyright © 2016 by Kalabox, Inc. DBA Tandem.
+<footer class="footer1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3">
+        <h3 class="title-widget">Technology</h3>
+        <ul>
+          <li><a href="#">Drupal</a></li>
+          <li><a href="#">Laravel</a></li>
+          <li><a href="#">WordPress</a></li>
+          <li><a href="#">Node.js</a></li>
+          <li><a href="#">Docker</a></li>
+          <li><a href="#">DevOps</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <h3 class="title-widget">Industries</h3>
+        <ul>
+          <li><a href="#">Agencies</a></li>
+          <li><a href="#">Corporate</a></li>
+          <li><a href="#">Health</a></li>
+          <li><a href="#">Higher Education</a></li>
+          <li><a href="#">Startups</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3">
+        <h3 class="title-widget">Connect</h3>
+        <ul>
+          <li><a href="/careers">Jobs</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="/about">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="copyright">
+          Copyright © 2017 by Kalabox, Inc. DBA Tandem.
         </div>
+      </div>
+      <div class="col-lg-3 col-md-3 icons social">
+
+        {% for navItem in navigation.socialfooter %}
+          <a href="{{ navItem.url }}" title="{{ navItem.name }}">
+            <i class="fa {{ navItem.icon }}" aria-hidden="true"></i>
+          </a>
+        {% endfor %}
       </div>
     </div>
   </div>
