@@ -192,12 +192,12 @@ a, button {
     font-family: inherit;
     font-weight: 300;
     line-height: 1.1;
-    color: #555555;
+    color: $brand-primary;
     margin-top: 31px;
     margin-bottom: 15.5px;
 
     a {
-      color: #FFFFFF;
+      color: $brand-primary;
     }
 
     @media(max-width: 991px) {
@@ -322,7 +322,7 @@ a, button {
     border-radius: 0px;
     border: 0px;
     z-index: 999;
-    background-color: #47474A;
+    background-color: $gray-base;
     padding: .5em 0em;
     padding-bottom: 0px;
     -webkit-font-smoothing: antialiased;
@@ -355,22 +355,6 @@ a, button {
 
           &:hover {
             color: #fff;
-          }
-        }
-        &.contact {
-
-          @media (max-width: 767px) {
-            margin: 0;
-            border-radius: 0;
-          }
-          background-color: #FFCC4F;
-          border-radius: 5px;
-          font-weight: 500;
-          margin-right: 10px;
-          text-transform: uppercase;
-          > a {
-            padding: 5px 10px;
-            color: #333;
           }
         }
         &.open {
@@ -555,7 +539,6 @@ a, button {
       line-height: 1.5em;
     }
     margin: 0;
-    font-family: $montserrat;
     text-transform: uppercase;
     padding: 1em 0em;
   }

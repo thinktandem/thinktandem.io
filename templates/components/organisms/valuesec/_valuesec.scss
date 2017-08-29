@@ -4,15 +4,11 @@
 
     .message {
       padding: 3em 1em;
-      color: #222222;
-      font-size: 1em;
-      line-height: 1.5em;
       font-weight: 300;
       -webkit-font-smoothing: antialiased;
 
       .btn-primary {
-        background: #72F0A1;
-        color: #333;
+        background: $brand-success;
         display: block;
         margin-top: 30px;
       }

@@ -9,11 +9,8 @@ a {
 }
 
 p {
-  color: $gray-light;
-  font-size: 1em;
   margin-top: 1em;
   line-height: 1.3em;
-  font-weight: 300;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -36,7 +33,6 @@ p {
 .btn-primary {
   background: $brand-primary;
   color: #FFF;
-  font-family: Lato;
   letter-spacing: 0.7px;
   @include transition(all .2s linear);
   &:hover {

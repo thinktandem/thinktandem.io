@@ -2,13 +2,12 @@
   padding-top: 40px;
   padding-bottom: 40px;
   -webkit-font-smoothing: antialiased;
-  background-color: #4BB5DD;
+  background-color: $brand-info;
 
   .header {
     text-align: center;
 
     h3 {
-      font-family: $montserrat;
       color: #FFFFFF;
       line-height: 25px;
       margin-bottom: 45px;
