@@ -1,4 +1,4 @@
-<div class="col-md-6">
+<div class="col-md-3">
   <div class="bio-img">
     <a href="{{ staff.link }}">
       <img class="center-block img-responsive img-circle img-staff" alt="bio-portrait" src="{{ staff.image }}" onmouseover="this.src='{{ staff.hover }}'" onmouseout="this.src='{{ staff.image }}'">
@@ -6,5 +6,4 @@
   </div>
   <h3 class="text-center">{{ staff.name|safe }}</h3>
   <h5 class="text-center">{{ staff.title|safe }}</h5>
-  <div class="text-justify bio-content">{{ staff.contents|safe }}</div>
 </div>
