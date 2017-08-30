@@ -1,9 +1,19 @@
 #info {
 
+  #header-byline {
+    color: $brand-success;
+    font-size: 1.8em;
+  }
+
   .container {
     border-bottom: 1px solid #efefef;
     padding-bottom: 50px;
     padding-top: 50px;
+
+    small {
+      font-size: 1.1em;
+      font-weight: bold;
+    }
   }
 }
 

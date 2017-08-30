@@ -1,7 +1,7 @@
 ---
 layout: pages/about.html
 title: About Tandem
-byline: Who we are // What we can do
+byline: Who we are  //  What we can do
 description: All about Tandem, your friendly digital strategy firm from San Francisco, and the story of its co-founders Alec Reynolds and Mike Pirog.
 pageSlug: about
 image: /images/working.jpeg
@@ -31,3 +31,4 @@ jsonld:
       - https://github.com/pirog
 lastmod: 2016-08-03
 ---
+Our experienced and elite team has seen it all; wrangled projects big and small
