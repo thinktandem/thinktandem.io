@@ -1,11 +1,51 @@
 .bio-img {
   img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
+  }
+  .tooltip {
+    .tooltip-inner {
+      color: $gray-lighter;
+      font-family: $montserrat;
+      font-weight: 300;
+      font-size: 0.7em;
+      line-height: 1.6em;
+      padding: 15px;
+    }
   }
 }
 
-.bio-content {
-  padding-left: 15px;
-  padding-right: 15px;
+@each $quote-color in $quote-colors-list {
+  $key: nth($quote-color, 1);
+  $value: nth($quote-color, 2);
+  .bio-img-#{$key} {
+    .tooltip {
+      .tooltip-inner {
+        background-color: $value;
+      }
+      &.top {
+        .tooltip-arrow {
+          border-top-color: $value;
+        }
+      }
+    }
+  }
+}
+
+.bio-first {
+  font-family: $montserrat;
+  font-weight: 300;
+  color: $gray;
+  margin-top: 1em;
+  margin-bottom: 0em;
+  font-size: 1.6em;
+}
+
+.bio-role {
+  font-size: 0.8em;
+}
+
+.bio-dev {
+  font-size: 0.8em;
+  color: $gray;
 }

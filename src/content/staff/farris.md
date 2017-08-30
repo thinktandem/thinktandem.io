@@ -1,11 +1,11 @@
 ---
-name: Geoff St. Pierre
-first: Geoff
-last: St. Pierre
-color: uniform
-weight: 10
-role: Lead Developer
-dev: Senior Engineer
+name: Joel Farris
+first: Joel
+last: Farris
+color: habenero
+weight: 5
+role: Technical PM
+dev: Senior Front End Developer
 image: images/gff-sm.jpg
 hover: images/gff_hover.jpg
 link: https://twitter.com/serundeputy
