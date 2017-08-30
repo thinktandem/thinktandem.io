@@ -90,6 +90,17 @@ a, button {
   }
 }
 
+#header-byline {
+  color: $brand-success;
+  font-size: 1.8em;
+}
+
+small.subtitle {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+
 .icon-wrapper {
   display:inline-block;
 }

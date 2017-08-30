@@ -9,14 +9,15 @@
         <div class="row header">
           <div class="col-xs-12 ">
             <h1>{{ title|safe }}</h1>
-            <small>{{ byline|safe }}</small>
+            <small class="subtitle">{{ byline|safe }}</small>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="container">
-      {{ contents|safe }}
+    <div id="header-byline">
+      <div class="container">
+        {{ contents|safe }}
+      </div>
     </div>
 
     <div class="container">
