@@ -2,10 +2,10 @@
 layout: pages/home.html
 title: Tandem
 pageSlug: homepage
-heroPri: "Modernize your app and workflow"
-heroSec: "Using next generation tech and process"
+heroPri: "Relax. <br> We’ve got this."
+heroSec: "Tandem transforms complex workflows into elegant web applications that solve your organization’s biggest problems."
 heroCta: "Find out how we connect the dots"
-description: "Tandem modernizes your app and workflow with powerful new tools like Docker and Kalabox while streamlining your process with agile methodolofies. Future-proof your biz and develop faster, better, and more profitably."
+description: "Tandem modernizes your app and workflow with powerful new tools like Docker and Kalabox while streamlining your process with agile methodologies. Future-proof your biz and develop faster, better, and more profitably."
 heroIcons:
   - icon: devicons devicons-docker
     name: Docker

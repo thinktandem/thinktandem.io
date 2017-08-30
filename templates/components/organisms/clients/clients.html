@@ -1,0 +1,12 @@
+<div id="clients">
+  <div class="container">
+    <div class="row">
+      <h2>Clients</h2>
+      {% for client in clients.clients %}
+        <a href="{{ client.url }}" title="{{ client.name }}">
+          <img class="client-logo" aria-hidden="true" src="images/clients/{{ client.logo }}">
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
