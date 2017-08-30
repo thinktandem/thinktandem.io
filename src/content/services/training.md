@@ -5,7 +5,7 @@ short: Train
 icon: fa fa-graduation-cap
 color: red
 arrow: true
-weight: 1
+weight: 12
 icons:
   - icon: devicons devicons-git_branch
     name: Gitflow

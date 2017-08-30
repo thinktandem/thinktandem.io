@@ -50,35 +50,28 @@
   .red {
     @extend .custom-icon;
     i {
-      background: #FF8E79;
+      background: $hibiscus;
     }
   }
 
   .orange {
     @extend .custom-icon;
     i {
-      background: #FFCC4F;
-    }
-  }
-
-  .yellow {
-    @extend .custom-icon;
-    i {
-      background: #FFEC79;
+      background: $habanero;
     }
   }
 
   .green {
     @extend .custom-icon;
     i {
-      background: #72F0A1;
+      background: $miami;
     }
   }
 
   .blue {
     @extend .custom-icon;
     i {
-      background: #75CAEB;
+      background: $blueState;
     }
   }
 
