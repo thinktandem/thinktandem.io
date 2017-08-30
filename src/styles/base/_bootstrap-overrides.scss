@@ -38,7 +38,9 @@ p {
   background-color: inherit;
   &:hover {
     text-decoration: none;
-    background: $brand-success;
+    background-color: inherit;
+    font-weight: 800;
+    color: $brand-primary;
   }
 }
 
@@ -50,14 +52,12 @@ p {
 }
 
 .btn-secondary {
-  background: $brand-success;
-  color: #FFF;
-  font-family: Lato;
+  border: 5px solid $brand-info;
+  color: $brand-info;
   text-transform: uppercase;
   @include transition(all .2s linear);
   &:hover {
     text-decoration: none;
-    background: #C2EFEB;
   }
 }
 

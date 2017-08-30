@@ -1,8 +1,9 @@
 <div id="hero">
   <div class="container">
     <div class="row">
-      <h1 class="hero-text animated" data-text="{{title|safe}}">{{ heroPri }}</h1>
-      <h2 class="hero-text animated " data-text="{{title|safe}}">{{ heroSec}}</h1>
+      <h1 class="hero-text animated" data-text="{{title|raw}}">{{ heroPri|raw }}</h1>
+      <p class="hero-text animated " data-text="{{title|safe}}">{{ heroSec}}</p>
+      <a href="/services" class="btn btn-primary">Learn More</a>
     </div>
   </div>
 </div>
