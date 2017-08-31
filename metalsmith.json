@@ -42,10 +42,16 @@
     "metalsmith-permalinks": {
       "pattern": ":url",
       "relative": false,
-      "linksets": [{
-        "match": {"collection": "articles"},
-        "pattern": "blog/:date/:title"
-      }]
+      "linksets": [
+        {
+          "match": {"collection": "articles"},
+          "pattern": "blog/:date/:title"
+        },
+        {
+          "match": {"collection": "services"},
+          "pattern": "services/:slug"
+        }
+      ]
     },
     "metalsmith-pagination": {
       "collections.articles": {

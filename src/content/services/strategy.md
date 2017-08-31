@@ -1,5 +1,9 @@
 ---
+layout: layouts/service.html
 title: Strategy
+byline: Greater understanding of your users and stakeholders. Building the right thing, the best way possible.
+cta: Start Strategizing
+link: /services/strategy
 short: Strategy
 icon: fa fa-cloud
 color: orange
@@ -27,7 +31,3 @@ icons:
     link:
 private: true
 ---
-
-Better workflows for developers. Greater understanding of your users and stakeholders. Building the right thing, the best way possible.
-
-[See Strategy Services.](/services/strategy)

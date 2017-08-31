@@ -1,5 +1,9 @@
 ---
+layout: layouts/service.html
 title: DevOps
+byline: We establish best-practices development workflow using Github, CircleCI, automated testing, and other tools to ensure your most critical features deliver consistent business value and your code does not introduce regressions.
+cta: Automate all the things.
+link: /services/devops
 slug: devops
 short: DevOps
 icon: fa fa-flask
@@ -21,8 +25,3 @@ icons:
     link: https://www.docker.com
 private: true
 ---
-Better workflows mean more productive developers and happier stakeholders.
-
-We can quickly set up a best-practices development workflow using Github, CircleCI, automated testing, and other tools to ensure your most critical features deliver consistent business value and your code does not introduce regressions.
-
-[Automate all the things.](/contact)

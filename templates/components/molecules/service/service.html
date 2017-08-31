@@ -2,7 +2,9 @@
   <div class="col-md-12">
     <div id="{{ service.slug }}" class="service">
       <h3>{{ service.title|safe }}</h3>
-      {{ service.contents|safe }}
+      {{ service.byline|safe }}
+      <br>
+      <a href="{{ service.link }}"> {{ service.cta }}</a>
       <div class="icon-header">
         {% for icon in service.icons %}
           <a href="{{ icon.link }}">

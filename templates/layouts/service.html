@@ -1,0 +1,31 @@
+{% extends 'html.html' %}
+
+{% block contents %}
+
+  <div id="services">
+
+    <div id="header-title">
+      <div class="container">
+        <div class="row header">
+          <div class="col-xs-12 ">
+            <h1>{{ title|safe }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="header-byline">
+      <div class="container">
+        {{ byline|safe }}
+      </div>
+    </div>
+
+    <div id="page-content">
+      <div class="container">
+        {{ contents|safe }}
+      </div>
+    </div>
+  </div>
+
+  {% include '../components/organisms/cta/cta.html' %}
+
+{% endblock %}

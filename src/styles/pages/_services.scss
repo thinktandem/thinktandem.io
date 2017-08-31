@@ -44,8 +44,12 @@
 
   .container {
     border-bottom: 1px solid #efefef;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    padding-bottom: 2em;
+    padding-top: 2em;
+  }
+
+  .container:last-child {
+    border-bottom: none;
   }
 
   #service {
