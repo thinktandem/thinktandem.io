@@ -3,7 +3,7 @@ layout: pages/home.html
 title: Tandem
 pageSlug: homepage
 heroPri: "Relax. <br> We’ve got this."
-heroSec: "Tandem transforms complex workflows into elegant web applications that solve your organization’s biggest problems."
+heroSec: "Tandem transforms complex workflows and technical debt into elegant web applications that solve your organization’s biggest problems."
 heroCta: "Find out how we connect the dots"
 description: "Tandem modernizes your app and workflow with powerful new tools like Docker and Kalabox while streamlining your process with agile methodologies. Future-proof your biz and develop faster, better, and more profitably."
 heroIcons:

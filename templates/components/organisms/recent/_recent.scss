@@ -1,17 +1,19 @@
 #recent-posts {
 
   padding-bottom: 3em;
+  margin: 7em 0em;
 
   p {
     font-size: .8em;
+    line-height: 1.7em;
   }
 
   .title {
     a {
       margin-top: 0;
-      line-height: 25px;
+      line-height: 1.4em;
       font-weight: 300;
-      font-size: 1.4em;
+      font-size: 1.2em;
     }
     a:hover {
       text-decoration: none;
@@ -21,6 +23,7 @@
   .author {
     font-size: .75em;
     margin-top: 8px;
+    color: $gray;
     .avatar {
       margin-right: 5px;
       max-width: 25px;

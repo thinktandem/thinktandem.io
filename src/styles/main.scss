@@ -26,7 +26,6 @@ Custom
 */
 @import "../../templates/components/molecules/bio/bio";
 @import "../../templates/components/molecules/modal/modal";
-@import "../../templates/components/molecules/quote/quote";
 @import "../../templates/components/molecules/service/service";
 @import "../../templates/components/molecules/teaser/teaser";
 
@@ -35,7 +34,6 @@ Custom
 @import "../../templates/components/organisms/hero/hero";
 @import "../../templates/components/organisms/recent/recent";
 @import "../../templates/components/organisms/sf/sf";
-@import "../../templates/components/organisms/slideshow/slideshow";
 @import "../../templates/components/organisms/social/social";
 @import "../../templates/components/organisms/stats/stats";
 @import "../../templates/components/organisms/experts/experts";
@@ -429,7 +427,7 @@ small.subtitle {
     }
     margin: 0;
     text-transform: uppercase;
-    padding: 1em 0em;
+    padding: 0.5em 0em;
   }
 }
 

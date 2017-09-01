@@ -1,2 +1,19 @@
-#home {
+.homepage {
+  .header {
+    h2 {
+      line-height: 25px;
+      margin-bottom: 45px;
+
+      @media(max-width: 991px) {
+        line-height: 50px;
+      }
+    }
+  }
+  h2 {
+    text-transform: none;
+    font-weight: 300;
+  }
+  h3 {
+    font-size: 1.4em;
+  }
 }

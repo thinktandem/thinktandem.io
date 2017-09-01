@@ -1,27 +1,26 @@
 <div id="recent-posts">
   <div class="container">
-    <div class="row header ">
-      <h2>Read some other awesome Tandem adventures</h2>
-    </div>
-    {% for article in lastestArticles %}
-      <div class="col-md-4">
-        <div class="recent">
+    <div class="row header">
+      <h2 class="text-center">And this is what we've been up to lately...</h2>
+      {% for article in lastestArticles %}
+        <div class="col-md-4">
+          <div class="recent">
 
-          <div class="title">
-            <a href="{{ 'blog/' + article.date | date('Y/m/d') + '/' + article.title | slug }}">{{ article.title }}</a>
+            <div class="title">
+              <a href="{{ 'blog/' + article.date | date('Y/m/d') + '/' + article.title | slug }}">{{ article.title }}</a>
+            </div>
+
+            <div class="author">
+              <img src="images/authors/teaser/{{ article.author|slug }}.jpg" class="avatar" alt="author" />{{ article.author }}, {{ article.date | date('F jS Y') }}
+            </div>
+
+            <p class="intro">
+              {{ article.teaser }}
+            </p>
+
           </div>
-
-          <div class="author">
-            <img src="images/authors/teaser/{{ article.author|slug }}.jpg" class="avatar" alt="author" />{{ article.author }}, {{ article.date | date('F jS Y') }}
-          </div>
-
-          <p class="intro">
-            {{ article.teaser }}
-          </p>
-
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
     </div>
   </div>
 </div>
