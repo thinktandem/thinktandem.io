@@ -16,10 +16,6 @@
         "sortBy": "weight",
         "pattern": "content/services/*.md"
       },
-      "sections": {
-        "sortBy": "weight",
-        "pattern": "content/sections/*.md"
-      },
       "staff": {
         "sortBy": "weight",
         "pattern": "content/staff/*.md"
