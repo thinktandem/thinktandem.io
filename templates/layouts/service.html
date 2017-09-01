@@ -22,13 +22,6 @@
     <div id="page-content">
       <div class="container">
         {{ contents|safe }}
-        {% for section in collections.sections %}
-          {% if section.type === slug %}
-            {% include "../components/molecules/service-section/service-section.html" %}
-          {% endif %}
-        {% endfor %}
-
-
       </div>
     </div>
   </div>
