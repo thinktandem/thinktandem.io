@@ -1,28 +1,41 @@
 footer {
-  background: $brand-info;
+
+  background: linear-gradient(to right, $brand-info 57%, $blueState 57%);
   font-size: .8em;
   color: #fff;
-  h3 {
-    color: #fff;
-    font-size: 1em;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .footer-right {
+    background-color: $blueState;
+    h2 {
+      font-size: 1.3em;
+    }
+    a {
+      font-size: 3.0em;
+    }
   }
+
+  h2 {
+    color: $gray-light;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
   a {
-    color: $miami;
+    color: $gray-lighter;
+    font-size: 0.8em;
   }
   a:hover {
-    text-decoration: none;
+    text-decoration: underline;
+    color: $gray-lighter;
   }
   -webkit-font-smoothing: antialiased;
 
   @media(max-width: 991px) {
     padding-top: 30px;
-  }
-
-  .credits {
-    color: #FFFFFF;
-    font-size: 13px;
-    text-align: center;
-    padding: 20px;
   }
 
   ul {
@@ -32,5 +45,15 @@ footer {
 
   .social {
     font-size: 2em;
+  }
+}
+
+.theend {
+  background-color: $gray-base;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  .copyright {
+    font-size: 0.5em;
+    color: $gray-light;
   }
 }

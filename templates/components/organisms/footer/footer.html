@@ -1,50 +1,69 @@
-<footer class="footer1">
-  <div class="container">
+<footer class="footer">
+  <div class="container footer1">
     <div class="row">
-      <div class="col-lg-3 col-md-3">
-        <h3 class="title-widget">Technology</h3>
-        <ul>
-          <li><a href="#">Drupal</a></li>
-          <li><a href="#">Laravel</a></li>
-          <li><a href="#">WordPress</a></li>
-          <li><a href="#">Node.js</a></li>
-          <li><a href="#">Docker</a></li>
-          <li><a href="#">DevOps</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-3">
-        <h3 class="title-widget">Industries</h3>
-        <ul>
-          <li><a href="#">Agencies</a></li>
-          <li><a href="#">Corporate</a></li>
-          <li><a href="#">Health</a></li>
-          <li><a href="#">Higher Education</a></li>
-          <li><a href="#">Startups</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-3">
-        <h3 class="title-widget">Connect</h3>
-        <ul>
-          <li><a href="/careers">Jobs</a></li>
-          <li><a href="/contact">Contact Us</a></li>
-          <li><a href="/about">About Us</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-9">
-        <div class="copyright">
-          Copyright © 2017 by Kalabox, Inc. DBA Tandem.
+      <div class="col-lg-8 col-md-8 footer-left">
+        <div class="col-lg-3 col-md-3">
+          <h2 class="title-widget">Technologies</h2>
+          <ul>
+            <li><a href="#">Drupal</a></li>
+            <li><a href="#">Laravel</a></li>
+            <li><a href="#">WordPress</a></li>
+            <li><a href="#">Node.js</a></li>
+            <li><a href="#">Docker</a></li>
+            <li><a href="#">DevOps</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <h2 class="title-widget">Industries</h2>
+          <ul>
+            <li><a href="#">Agencies</a></li>
+            <li><a href="#">Corporate</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Higher Education</a></li>
+            <li><a href="#">Startups</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <h2 class="title-widget">Connect</h2>
+          <ul>
+            <li><a href="/careers">Jobs</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/about">About Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <h2 class="title-widget">Process</h2>
+          <ul>
+            <li><a href="/careers">Docs 1</a></li>
+            <li><a href="/contact">Docs 2</a></li>
+            <li><a href="/about">Docs 3</a></li>
+          </ul>
         </div>
       </div>
-      <div class="col-lg-3 col-md-3 icons social">
+      <div class="col-lg-4 col-md-4 footer-right">
+        <div id="social">
+          <h2 class="text-center">Engage with all the socials.</h2>
+          <div class="col-sm-12 icons text-center">
+            {% for navItem in navigation.socialfooter %}
+              <a href="{{ navItem.url }}" title="{{ navItem.name }}">
+                <i class="fa {{ navItem.icon }}" aria-hidden="true"></i>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
 
-        {% for navItem in navigation.socialfooter %}
-          <a href="{{ navItem.url }}" title="{{ navItem.name }}">
-            <i class="fa {{ navItem.icon }}" aria-hidden="true"></i>
-          </a>
-        {% endfor %}
       </div>
     </div>
   </div>
 </footer>
+<div class="theend">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="copyright">
+          © 2017 by Kalabox Inc. DBA Tandem.  |  San Francisco, CA  |  Made With Love
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
