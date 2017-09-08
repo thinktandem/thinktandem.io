@@ -23,7 +23,7 @@ icons:
   - icon: devicons devicons-trello
     name: Agile
     link: https://en.wikipedia.org/wiki/Agile_software_development
-  - icon: fa fa-github
+  - icon: devicon-github-plain
     name: Github
     link: https://github.com/
 private: true
