@@ -35,7 +35,7 @@ Whether it's creating your newest marketing site with an easy-to-use CMS (conten
 
 <div class="row">
   <div class="col-sm-3">
-    <h2>Drupal</h2>
+    <h2 id="drupal">Drupal</h2>
   </div>
   <div class="col-sm-9">
     <p>Tandem's team has decades of collective Drupal experience. If you have enterprise-grade needs, Drupal is our top choice for an open source content management system.</p>
@@ -58,7 +58,7 @@ Whether it's creating your newest marketing site with an easy-to-use CMS (conten
 </div>
 <div class="row">
   <div class="col-sm-3">
-    <h2>Laravel</h2>
+    <h2 id="laravel">Laravel</h2>
   </div>
   <div class="col-sm-9">
     <p>Laravel provides a strong framework for creating custom web applications at any scale.</p>
@@ -82,7 +82,23 @@ Whether it's creating your newest marketing site with an easy-to-use CMS (conten
 </div>
 <div class="row">
   <div class="col-sm-3">
-    <h2>NodeJS</h2>
+    <h2 id="wordpress">WordPress</h2>
+  </div>
+  <div class="col-sm-9">
+    <p>As the simplest open source content management system available, it's no surprise that WordPress powers over 30% of the Internet!</p>
+    <div class="row">
+      <div class="col-sm-6">
+        <ul>
+          <li>Custom WordPress Plugin Development</li>
+          <li>Advanced + Enterprise WordPress</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-3">
+    <h2 id="nodejs">NodeJS</h2>
   </div>
   <div class="col-sm-9">
     <p>For high-concurrency and performance demanding applications, Tandem often turns to Node.JS. We even built the entirety of our popular <a href="https://www.github.com/kalabox/lando">Lando</a> project using Node.</p>
