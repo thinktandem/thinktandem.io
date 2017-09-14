@@ -10,6 +10,6 @@ image: images/gff-sm.jpg
 hover: images/gff_hover.jpg
 link: https://twitter.com/serundeputy
 layout: components/molecules/bio/bio.html
-quote: I believe in a thing called love!
+quote: I make things!
 private: true
 ---
