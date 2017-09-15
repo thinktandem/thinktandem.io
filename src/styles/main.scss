@@ -84,6 +84,18 @@ a, button {
     border-bottom: 1px solid #efefef;
     padding-bottom: 50px;
     padding-top: 50px;
+    .row.header {
+      @media (min-width:320px) {
+        h1 {
+          font-size: 2.0em;
+        }
+      }
+      @media (min-width:768px) {
+        h1 {
+          font-size: 4.5em;
+        }
+      }
+    }
   }
 }
 
