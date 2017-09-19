@@ -83,7 +83,6 @@ a, button {
   }
 
   .container {
-    border-bottom: 1px solid #efefef;
     padding-bottom: 50px;
     padding-top: 50px;
     .row.header {
@@ -448,10 +447,6 @@ small.subtitle {
     text-transform: uppercase;
     padding: 0.5em 0em;
   }
-}
-
-.container.border-bottom {
-  border-bottom: 1px solid #efefef;
 }
 
 .training-cta .btn {

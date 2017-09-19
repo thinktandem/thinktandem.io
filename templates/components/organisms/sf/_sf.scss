@@ -5,6 +5,7 @@
 
   h3 {
     font-family: $montserrat;
+    font-size: 3em;
   }
   @media (min-width:320px) {
     svg {
@@ -25,6 +26,7 @@
   @media (min-width: 992px) {
     h3 {
       margin-top: 1em;
+      margin-left: 1em;
     }
   }
 
