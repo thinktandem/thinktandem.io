@@ -9,6 +9,6 @@ dev: Senior Architect
 image: images/alec-sm.jpg
 link: https://twitter.com/reynoldsalec
 layout: components/molecules/bio/bio.html
-quote: I believe in a thing called love!
+quote: Measure twice, cut once! I'll use my knowledge of user-centered design and next-generation technology to make your organization more successful.
 private: true
 ---
