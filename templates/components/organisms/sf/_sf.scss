@@ -6,10 +6,9 @@
   h3 {
     font-family: $montserrat;
   }
-
-  @media (max-width: 768px) {
+  @media (min-width:320px) {
     svg {
-      width: 400px;
+      width: 299px;
     }
   }
 
@@ -17,6 +16,9 @@
     h3 {
       margin-top: 0.4em;
       text-align: right;
+    }
+    svg {
+      width: 400px;
     }
   }
 

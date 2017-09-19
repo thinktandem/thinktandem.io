@@ -16,6 +16,11 @@
       font-size: 8em;
       color: $brand-info;
     }
+    @media (min-width:320px) {
+      i.devicons {
+        display: block;
+      }
+    }
     &.experts-2 {
       i {
         color: $brand-primary;
