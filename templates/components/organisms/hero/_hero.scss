@@ -12,12 +12,12 @@
 
   background-position: center 16%;
   height: 90vh;
-  min-height: 33em;
+  min-height: 34em;
   max-height: 40em;
   position: relative;
 
   @media (max-width: 767px) {
-    min-height: 35em;
+    margin-left: 1em;
   }
 
   &:before {
@@ -91,7 +91,7 @@
 
     @media (max-width: 767px) {
       font-size: 2em;
-      margin: 0;
+      margin: 0em 0em 1em 0em;
     }
   }
 
@@ -100,7 +100,7 @@
     margin-bottom: 1em;
     @media (max-width: 767px) {
       font-size: 1em;
-      margin: 0;
+      margin: 1em 1em 1em 0em;
     }
   }
 
