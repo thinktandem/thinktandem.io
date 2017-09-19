@@ -6,10 +6,9 @@ color: habenero
 weight: 5
 role: Technical PM
 dev: Senior Front End Developer
-image: images/gff-sm.jpg
-hover: images/gff_hover.jpg
-link: https://twitter.com/serundeputy
+image: images/joel-sm.jpg
+link: https://twitter.com/joelfarris
 layout: components/molecules/bio/bio.html
-quote: I believe in a thing called love!
+quote: Humans adore elegantly simple software.
 private: true
 ---
