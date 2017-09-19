@@ -8,9 +8,15 @@
       text-decoration: none;
     }
     .client-logo {
-      max-width: 300px;
+      max-width: 240px;
       max-height: 100px;
-      margin: 1em;
+      margin: 1em auto;
+    }
+    @media (min-width: 425px) {
+      .client-logo {
+        max-width: 300px;
+        margin: 1em;
+      }
     }
   }
 }

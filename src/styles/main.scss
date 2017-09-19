@@ -104,6 +104,12 @@ a, button {
   font-size: 1.8em;
 }
 
+@media (max-width: 425px) {
+  #header-byline {
+    font-size: 1em;
+  }
+}
+
 small.subtitle {
   font-size: 1.1em;
   font-weight: bold;
