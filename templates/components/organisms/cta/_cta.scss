@@ -1,27 +1,28 @@
 #cta {
   -webkit-font-smoothing: antialiased;
-  background-color: $miami;
+  background-color: $brand-primary;
 
   .container {
-    border-top: 1px solid #ACE2F7;
     padding: 4em 1em;
   }
 
   .header {
 
     a {
-      color: $gray-base;
+      color: $gray-lighter;
       white-space: normal;
     }
 
     h3 {
       margin-top: 0;
       line-height: 1em;
+      color: $gray-lighter;
     }
   }
 
   .btn {
     border-radius: 1px;
+    border-color: $gray-lighter;
     font-weight: 500;
     text-transform: uppercase;
     padding: 1em;

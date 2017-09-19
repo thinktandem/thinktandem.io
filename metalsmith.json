@@ -12,6 +12,12 @@
         "reverse": true,
         "pattern": "content/articles/*.md"
       },
+      "featuredArticles": {
+        "sortBy": "date",
+        "limit": 2,
+        "reverse": true,
+        "pattern": "content/articles/*.md"
+      },
       "services": {
         "sortBy": "weight",
         "pattern": "content/services/*.md"
