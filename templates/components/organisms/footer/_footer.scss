@@ -1,11 +1,30 @@
 footer {
 
-  background: linear-gradient(to right, $brand-info 57%, $blueState 57%);
+  background: linear-gradient(to right, $brand-info 65%, $blueState 57%);
   font-size: .8em;
   color: #fff;
+  padding-bottom: 3em;
+  padding-top: 3em;
 
-  padding-top: 50px;
-  padding-bottom: 50px;
+  @media(max-width: 768px) {
+    background: $brand-info;
+    .footer-right {
+      padding-bottom: 3em;
+    }
+    padding-bottom: 0em;
+  }
+
+  @media(min-width: 768px) {
+    .container.footer1 {
+      width: 100%;
+    }
+  }
+
+  .footer-left {
+    .col-xs-6 {
+      height: 12em;
+    }
+  }
 
   .footer-right {
     background-color: $blueState;

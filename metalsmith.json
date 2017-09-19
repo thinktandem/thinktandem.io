@@ -6,6 +6,10 @@
         "reverse": true,
         "pattern": "content/articles/*.md"
       },
+      "careers": {
+        "sortBy": "weight",
+        "pattern": "content/careers/*.md"
+      },
       "lastestArticles": {
         "sortBy": "date",
         "limit": 3,
