@@ -1,7 +1,7 @@
 ---
 layout: layouts/service.html
 title: Development
-byline: Whether it’s Drupal, Laravel, Node, or the next big thing, our developers create simple solutions that are built to last.
+byline: Using Drupal, Laravel, Node, or the next big thing, our devs create simple solutions that are built to last.
 cta: See Development Services.
 link: /services/development
 short: Development

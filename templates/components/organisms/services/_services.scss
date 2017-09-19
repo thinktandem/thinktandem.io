@@ -4,45 +4,30 @@
     margin-top: 25px;
     padding: 25px;
     height: 17em;
+    color: #efefef;
     a.btn {
       position: absolute;
       bottom: 20px;
       width: 72%;
       text-align: center;
       font-size: 0.8em;
+      border: 5px solid $gray-lighter;
+      color: $gray-lighter;
+    }
+    h3 {
+      color: $gray-lighter;
     }
     &.service-dev {
       border: 5px solid $brand-info;
-      h3 {
-        color: $brand-info;
-      }
-      a.btn {
-        border: 5px solid $brand-info;
-        background-color: $brand-info;
-        color: $gray-lighter;
-      }
+      background-color: $brand-info;
     }
     &.service-strategy {
       border: 5px solid $brand-success;
-      h3 {
-        color: $brand-success;
-      }
-      a.btn {
-        border: 5px solid $brand-success;
-        background-color: $brand-success;
-        color: $gray-lighter;
-      }
+      background-color: $brand-success;
     }
     &.service-rescue {
       border: 5px solid $brand-warning;
-      h3 {
-        color: $brand-warning;
-      }
-      a.btn {
-        border: 5px solid $brand-warning;
-        background-color: $brand-warning;
-        color: $gray-lighter;
-      }
+      background-color: $brand-warning
     }
   }
 
