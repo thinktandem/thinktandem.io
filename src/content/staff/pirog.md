@@ -9,6 +9,6 @@ dev: Senior DevOps Engineer
 image: images/mike-sm.jpg
 link: https://twitter.com/pirogcommamike
 layout: components/molecules/bio/bio.html
-quote: I believe in a thing called lovewegewg
+quote: Keep it simple stupid!
 private: true
 ---

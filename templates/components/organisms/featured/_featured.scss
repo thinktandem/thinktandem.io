@@ -1,0 +1,44 @@
+
+.featured-post {
+
+  &:first-child {
+    border-right: 1px solid $brand-primary;
+  }
+
+  padding: 11% 9% 16% 9%;
+  border-top: 1px solid #ED3F7A;
+  margin-bottom: -4%;
+
+  .tags {
+    margin-bottom: 1.2em;
+    a {
+      color: $gray;
+      font-weight: 200;
+      font-size: 0.7em;
+    }
+  }
+
+  .title {
+    margin-bottom: 1.5em;
+    a {
+      margin-top: 0;
+      font-weight: 400;
+      font-size: 1.4em;
+      text-transform: uppercase;
+      color: $gray-base;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  .author {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: .75em;
+    text-transform: uppercase;
+    color: $gray-base;
+  }
+
+
+}

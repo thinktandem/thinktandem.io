@@ -1,0 +1,25 @@
+<div id="featured-posts">
+  <div class="container">
+    <div class="row header">
+      {% for article in featuredArticles %}
+        <div class="col-md-6 featured-post">
+
+          <div class="tags">
+          {% for tag in article.tags %}
+            <a href="topics/{{ tag  }}">{{ tag }}</a>
+          {% endfor %}
+          </div>
+
+          <div class="title">
+            <a href="{{ 'blog/' + article.date | date('Y/m/d') + '/' + article.title | slug }}">{{ article.title }}</a>
+          </div>
+
+          <div class="author">
+            By {{ article.author }}
+          </div>
+
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
