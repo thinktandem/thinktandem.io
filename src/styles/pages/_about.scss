@@ -1,13 +1,18 @@
 #info {
   .container {
-    padding-bottom: 50px;
-    padding-top: 50px;
+    padding-bottom: 1em;
+    padding-top: 1em;
   }
 }
 
 #staff {
 
   padding-top: 50px;
+
+  .container {
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
 
   h3 {
     font-family: $montserrat;

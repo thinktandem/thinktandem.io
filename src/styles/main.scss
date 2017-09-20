@@ -71,9 +71,11 @@ a, button {
 
 #header-title {
 
+  margin-top: 3.7em;
+
   h1 {
     color: $brand-primary;
-    margin-top: 31px;
+    margin-top: 0px;
     margin-bottom: 15.5px;
 
     a {
@@ -112,8 +114,11 @@ a, button {
 }
 
 small.subtitle {
-  font-size: 1.1em;
-  font-weight: bold;
+  font-size: 1.3em;
+  color: $gray-base;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-style: italic;
 }
 
 
