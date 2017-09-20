@@ -13,19 +13,19 @@ weight: 1
 icons:
   - icon: devicons devicons-drupal
     name: Drupal
-    link: /services/development/drupal
+    link: /services/development#drupal
   - icon: devicons devicons-laravel
     name: Laravel
-    link: /services/development/laravel
+    link: /services/development#laravel
   - icon: devicons devicons-wordpress
     name: WordPress
-    link:
+    link: /services/development#wordpress
   - icon: devicons devicons-nodejs_small
     name: Node.js
-    link:
+    link: /services/development#nodejs
   - icon: devicons devicons-angular
     name: Angular
-    link:
+    link: /services/development
 private: true
 ---
 

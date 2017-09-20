@@ -13,22 +13,22 @@ weight: 3
 icons:
   - icon: fa fa-comments-o
     name: Stakeholder Interviews
-    link: /services/development/drupal
+    link: /services/strategy
   - icon: fa fa-address-card-o
     name: User Personas
-    link: /services/development/laravel
+    link: /services/strategy
   - icon: fa fa-th-large
     name: Information Architecture
-    link:
+    link: /services/strategy
   - icon: fa fa-window-maximize
     name: In-browser Prototypes
-    link:
+    link: /services/strategy
   - icon: fa fa-map-o
     name: Journey Maps
-    link:
+    link: /services/strategy
   - icon: fa fa-user-circle-o
     name: User Testing
-    link:
+    link: /services/strategy
 private: true
 ---
 
