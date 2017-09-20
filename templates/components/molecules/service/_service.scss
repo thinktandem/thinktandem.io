@@ -5,73 +5,88 @@
   a:hover {
     text-decoration: none;
   }
+}
+
+
+.icon-wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+  small {
+    font-size: .8em;
+    padding-top: 10px;
+    color: $gray;
+    display: block;
+  }
+}
+
+.icon-header {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.custom-icon {
+
+  i {
+    font-size: 3em;
+    margin: auto;
+    display: inline-block;
+    border-radius: 70px;
+    padding: 10px;
+    background: transparent;
+    padding: 10px;
+    -webkit-border-radius: 1100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    border: 0;
+    color: #fff;
+
+    @media (max-width: 767px) {
+      padding: 8px;
+      font-size: 45px;
+    }
+  }
+}
+
+#service {
+  .custom-icon i {
+    font-size: 6em;
+  }
 
   .icon-wrapper {
-    padding-left: 10px;
-    padding-right: 10px;
-    small {
-      font-size: .8em;
-      padding-top: 10px;
-      color: $gray;
-      display: block;
+    display: block;
+  }
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.5em;
     }
   }
+}
 
-  .icon-header {
-    padding-top: 50px;
-    padding-bottom: 50px;
+.red {
+  @extend .custom-icon;
+  i {
+    background: $hibiscus;
   }
+}
 
-  .custom-icon {
-
-    i {
-      font-size: 3em;
-      margin: auto;
-      display: inline-block;
-      border-radius: 70px;
-      padding: 10px;
-      background: transparent;
-      padding: 10px;
-      -webkit-border-radius: 1100%;
-      -moz-border-radius: 100%;
-      -o-border-radius: 100%;
-      border-radius: 100%;
-      border: 0;
-      color: #fff;
-
-      @media (max-width: 767px) {
-        padding: 8px;
-        font-size: 45px;
-      }
-    }
+.orange {
+  @extend .custom-icon;
+  i {
+    background: $habanero;
   }
+}
 
-  .red {
-    @extend .custom-icon;
-    i {
-      background: $hibiscus;
-    }
+.green {
+  @extend .custom-icon;
+  i {
+    background: $miami;
   }
+}
 
-  .orange {
-    @extend .custom-icon;
-    i {
-      background: $habanero;
-    }
+.blue {
+  @extend .custom-icon;
+  i {
+    background: $blueState;
   }
-
-  .green {
-    @extend .custom-icon;
-    i {
-      background: $miami;
-    }
-  }
-
-  .blue {
-    @extend .custom-icon;
-    i {
-      background: $blueState;
-    }
-  }
-
 }

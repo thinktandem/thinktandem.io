@@ -38,10 +38,10 @@ Tandem believes that better solutions are created when we take down the walls se
 
 
 <div class="row">
-  <div class="col-sm-3">
+  <div class="col-sm-4">
     <h2>Digital Strategy</h2>
   </div>
-  <div class="col-sm-9">
+  <div class="col-sm-8">
     <p>For Tandem, digital strategy is the process of crafting a plan that will help you reach your goals. We work with you and your team to not only develop a shared understanding, but to challenge assumptions and bring fresh eyes to your organization’s problems.</p>
     <div class="row">
       <div class="col-sm-6">
@@ -62,16 +62,20 @@ Tandem believes that better solutions are created when we take down the walls se
   </div>
 </div>
 <div class="row">
-  <div class="col-sm-3">
-    <h2>Development Strategy</h2>
+  <div class="col-sm-4">
+    <h2>Developer Strategy</h2>
   </div>
-  <div class="col-sm-9">
+  <div class="col-sm-8">
     <p>Tandem uses agile processes to bring stakeholders closer to the development process and coders closer to the business problems they’re solving.</p>
     <div class="row">
       <div class="col-sm-6">
         <ul>
           <li>Agile, Sprint-Based Management</li>
           <li>Automated Testing + Continuous Integration</li>
+        </ul>
+      </div>
+      <div class="col-sm-6">
+        <ul>
           <li>Frequent, Reliable Deployments</li>
         </ul>
       </div>
