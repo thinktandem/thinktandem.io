@@ -4,13 +4,35 @@
     max-height: 1000px;
   }
 
-  .message {
-    form {
-      input.form-control {
-        color: #777;
-        font-weight: 300;
-      }
-    }
+  .container {
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+
+  .form-control {
+    font-size: 1.2em;
+    font-weight: 300;
+    padding: 1.7em 1em;
+  }
+
+  textarea::-webkit-input-placeholder {
+    font-size: 1.1em;
+    font-weight: 300;
+  }
+
+  textarea:-moz-placeholder { /* Firefox 18- */
+    font-size: 1.1em;
+    font-weight: 300;
+  }
+
+  textarea::-moz-placeholder {  /* Firefox 19+ */
+    font-size: 1.1em;
+    font-weight: 300;
+  }
+
+  textarea:-ms-input-placeholder {
+    font-size: 1.1em;
+    font-weight: 300;
   }
 
   #page-content {
@@ -21,12 +43,10 @@
           border: none;
         }
         padding-right: 100px;
-        border-right: 1px solid #efefef;
         padding-bottom: 2em;
       }
       .map {
         padding-left: 40px;
-        padding-top: 2em;
         padding-bottom: 2em;
       }
     }

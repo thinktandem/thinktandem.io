@@ -10,3 +10,4 @@ pageSlug: contact
 # FormSpree: http://formspree.io
 action: //formspree.io/inquiries@kalabox.io
 ---
+Interested in working with us or just want to chat? Drop us a line and we'll get in touch with you as soon as possible.
