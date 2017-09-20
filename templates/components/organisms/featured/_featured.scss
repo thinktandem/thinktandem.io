@@ -1,8 +1,15 @@
 
 .featured-post {
 
-  &:first-child {
-    border-right: 1px solid $brand-primary;
+  @media(max-width: 991px) {
+    margin: 0em 2em;
+    padding: 11% 0% 16% 0%;
+  }
+
+  @media(min-width: 992px) {
+    &:first-child {
+      border-right: 1px solid $brand-primary;
+    }
   }
 
   padding: 11% 9% 16% 9%;
