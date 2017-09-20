@@ -57,12 +57,22 @@
     letter-spacing: -0.01em;
   }
 
+  .language {
+    border-radius: 0;
+  }
+
   pre {
     font-size: 0.8em;
     padding-top: 0;
     margin-top: 0;
+    border-radius: 0;
+    background-color: $uniform;
+    border: 0;
     code {
-      background-color: #272822;
+      background-color: $uniform;
+    }
+    .token.comment, .token.prolog, .token.doctype, .token.cdata {
+      color: $gray-light;
     }
   }
 
