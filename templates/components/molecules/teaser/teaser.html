@@ -1,26 +1,11 @@
-<div class="teaser">
-  <div class="row post">
-    <div class="col-md-2">
-      <div class="author">
-        <img src="images/authors/teaser/{{article.author|slug}}.jpg" class="avatar" alt="author" />
-      </div>
-    </div>
-    <div class="col-md-10">
+<div class="col-sm-4 featured-post">
 
-      <div class="title">
-        <a href="{{'blog/' + article.date|date('Y/m/d') + '/' + article.title|slug }}">{{article.title}}</a>
-      </div>
-
-      <div class="author">
-        {{article.author}}, {{article.date|date('F jS Y')}}
-      </div>
-
-      <p class="intro">
-        {{article.teaser}}
-      </p>
-
-      <a href="{{'blog/' + article.date|date('Y/m/d') + '/' + article.title|slug }}" class="continue-reading">Continue reading this post</a>
-
-    </div>
+  <div class="title">
+    <a href="{{ 'blog/' + article.date | date('Y/m/d') + '/' + article.title | slug }}">{{ article.title }}</a>
   </div>
+
+  <div class="author">
+    By {{ article.author }}
+  </div>
+
 </div>

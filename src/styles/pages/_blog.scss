@@ -2,17 +2,21 @@
   -webkit-font-smoothing: antialiased;
   margin-top: 55px;
 
+  .container {
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+
   .pages {
-    border-top: 1px solid #efefef;
-    padding-top: 25px;
-    padding-bottom: 25px;
     @media(max-width: 991px) {
       text-align: center;
     }
 
     .pagination > li > a, .pagination > li > span {
       margin-right: 10px;
-      border-radius: 100%;
+      border-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
       padding: 4px 12px;
       font-family: courier;
     }
@@ -22,7 +26,6 @@
   }
 
   .sidebar {
-    border-left: 1px solid #efefef;
     @media(max-width: 991px) {
       margin-top: 70px;
       text-align: center;

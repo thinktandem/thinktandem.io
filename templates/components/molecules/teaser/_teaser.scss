@@ -1,109 +1,20 @@
-.teasers {
-  @extend .col-sm-12;
-}
+#posts {
 
-.teaser {
-  .post {
-    margin-bottom: 90px;
-    .pic {
-      border: 0px;
-      &:hover {
-        img {
-          opacity: 0.9;
-          filter: alpha(opacity=90);
-        }
-      }
-      img {
-        opacity: 1;
-        filter: alpha(opacity=100);
-        @include transition(all 0.25s linear);
+  .teasers {
+    padding-top: 7em;
+    padding-bottom: 7em;
+  }
 
-        @media(max-width: 991px) {
-          margin: 0 auto;
-        }
-      }
+  .featured-post {
+
+    border-top: 0;
+    border-right: 1px solid $brand-primary;
+    padding: 8% 4% 8% 4%;
+
+    &:last-child {
+      border: 0;
     }
-    .video {
-      @media(min-width: 992px) {
-        max-width: 635px;
-      }
 
-      /* make video fluid for responsiveness */
-      .iframe-wrapper {
-        position: relative;
-        padding-bottom: 56%;
-        height: 0;
-        iframe {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-    .title {
-
-      font-family: $montserrat;
-      font-size: 2em;
-      font-weight: 300;
-      color: $gray-dark;
-      line-height: 50px;
-
-      @media(max-width: 991px) {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      @media(max-width: 767px) {
-        font-size: 1.4em;
-      }
-
-      a {
-        color: $gray-darker;
-        @include transition(color 0.15s linear);
-        &:hover {
-          text-decoration: none;
-          color: $brand-primary;
-        }
-      }
-    }
-    .author {
-      color: $gray-light;
-      margin-top: 4px;
-      position: relative;
-      @media(max-width: 991px) {
-        text-align: center;
-      }
-      .avatar {
-        max-width: 100%;
-        border-radius: 100%;
-        border: 1px solid #e0e0e0;
-        @media(max-width: 991px) {
-          margin-bottom: 50px;
-          line-height: 50px;
-          max-width: 50%;
-        }
-      }
-    }
-    .intro {
-      font-family: $montserrat;
-      margin-top: 18px;
-      font-size: 20px;
-      line-height: 27px;
-      color: $gray-base;
-
-      @media(min-width: 992px) {
-        width: 90%;
-      }
-    }
-    .continue-reading {
-      font-family: $montserrat;
-      font-size: 15px;
-      display: inline-block;
-      margin-top: 8px;
-      @include transition(color 0.25s linear);
-    }
   }
 
 }

@@ -61,7 +61,7 @@
     },
     "metalsmith-pagination": {
       "collections.articles": {
-        "perPage": 4,
+        "perPage": 3,
         "layout": "pages/blog.html",
         "first": "blog/index.html",
         "path": "blog/:num/index.html",
@@ -74,7 +74,7 @@
       "handle": "tags",
       "path": "topics/:tag/index.html",
       "pathPage": "topics/:tag/:num/index.html",
-      "perPage": 6,
+      "perPage": 3,
       "layout": "pages/tags.html",
       "sortBy": "date",
       "reverse": true,
