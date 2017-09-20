@@ -1,6 +1,6 @@
 footer {
 
-  background: linear-gradient(to right, $brand-info 65%, $blueState 57%);
+  background: linear-gradient(to right, $brand-info 60%, $blueState 57%);
   font-size: .8em;
   color: #fff;
   padding-bottom: 3em;
@@ -10,15 +10,36 @@ footer {
     background: $brand-info;
     .footer-right {
       padding-bottom: 3em;
+      background: $blueState;
     }
     padding-bottom: 0em;
   }
 
-  @media(min-width: 768px) {
+  @media(min-width: 769px) {
+    .footer-left{
+      width: 57.26509%;
+    }
+    .footer-right {
+      width: 42.62414%;
+      padding-left: 5em;
+    }
+    background: linear-gradient(to right, #035785 60%, #035F91 57%);
+  }
+
+  @media(max-width: 1000px) {
     .container.footer1 {
       width: 100%;
     }
   }
+
+  @media(min-width: 1600px) {
+    background: linear-gradient(to right, $brand-info 57%, $blueState 54%);
+  }
+
+  @media(min-width: 2000px) {
+    background: linear-gradient(to right, $brand-info 55%, $blueState 54%);
+  }
+
 
   .footer-left {
     .col-xs-6 {
@@ -27,7 +48,6 @@ footer {
   }
 
   .footer-right {
-    background-color: $blueState;
     h2 {
       font-size: 1.3em;
     }
