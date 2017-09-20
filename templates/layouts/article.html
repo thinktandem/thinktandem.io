@@ -13,7 +13,10 @@
         <div class="row header">
           <div class="col-md-12 ">
             <h1>{{ title|safe }}</h1>
-            <small>by <img class="avatar" src="images/authors/teaser/{{author|slug}}.jpg" alt="author" /> {{author|safe}} on {{date|date('F jS Y')}}</small>
+            <small>By {{author|safe}}</small>
+            <div class="linerule">
+              <hr>
+            </div>
           </div>
         </div>
       </div>
@@ -27,6 +30,14 @@
               <img src="{{mainImage}}" class="img-responsive blog-main-image" alt="blogpost" />
             </div>
           </div>
+        </div>
+      </div>
+    {% endif %}
+
+    {% if byline %}
+      <div class="byline">
+        <div class="container">
+          {{ byline|safe }}
         </div>
       </div>
     {% endif %}

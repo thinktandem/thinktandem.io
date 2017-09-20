@@ -7,7 +7,7 @@ author: Alec Reynolds
 private: true
 mainImage: images/articles/node-microservices-docker-cloud/node-microservices-docker-cloud.png
 img-src: images/articles/node-microservices-docker-cloud/node-microservices-docker-cloud.png
-teaser: How to run small NodeJS in an efficient, inexpensive, and scalable manner using Docker Cloud.
+byline: How to run small NodeJS in an efficient, inexpensive, and scalable manner using Docker Cloud.
 date: 2016-09-23
 ---
 

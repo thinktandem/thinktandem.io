@@ -7,7 +7,7 @@ author: Mike Pirog
 private: false
 mainImage: images/articles/pantheon-nested-doc.png
 img-src: images/articles/pantheon-nested-doc.png
-teaser: Learn how to use composer-based workflows with your Pantheon site on Kalabox so you can
+byline: Learn how to use composer-based workflows with your Pantheon site on Kalabox so you can
   dev like it's 2017.
 date: 2017-05-20
 ---

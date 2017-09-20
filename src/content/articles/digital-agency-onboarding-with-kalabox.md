@@ -7,7 +7,7 @@ author: Brian Gonzales
 private: false
 mainImage: images/articles/digital-agency-onboarding-with-kalabox/pairodime_x_kalabox.png
 img-src: images/articles/digital-agency-onboarding-with-kalabox/pairodime_x_kalabox.png
-teaser: Onboarding new team members to your web project can be complicated with even the most integrated DevOps team. Say hello to Kalabox.
+byline: Onboarding new team members to your web project can be complicated with even the most integrated DevOps team. Say hello to Kalabox.
 date: 2016-09-29
 ---
 

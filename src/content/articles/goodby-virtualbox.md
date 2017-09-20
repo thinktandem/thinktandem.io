@@ -7,7 +7,7 @@ author: Mike Pirog
 private: false
 mainImage: images/articles/dockerTNG.png
 img-src: images/articles/dockerTNG.png
-teaser: With our newest version of Kalabox, we say goodbye to VirtualBox and hello to better performance and stability with Docker for Mac and Windows.
+byline: With our newest version of Kalabox, we say goodbye to VirtualBox and hello to better performance and stability with Docker for Mac and Windows.
 date: 2016-11-08
 ---
 
@@ -78,8 +78,3 @@ However, we also realize that words are sometimes not the ideal form of communic
 </div>
 
 **ARE YOU A YETI SLAYER?**
-
-
-
-
-

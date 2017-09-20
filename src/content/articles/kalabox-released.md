@@ -7,7 +7,7 @@ author: Alec Reynolds
 private: false
 mainImage: images/articles/kalabox-released.png
 img-src: images/articles/kalabox-released.png
-teaser: Proudly announcing the release of Kalabox 2.0, our open-source Docker-powered local development tool that provides the fastest way to develop WordPress and Drupal applications.
+byline: Proudly announcing the release of Kalabox 2.0, our open-source Docker-powered local development tool that provides the fastest way to develop WordPress and Drupal applications.
 date: 2016-09-20
 ---
 

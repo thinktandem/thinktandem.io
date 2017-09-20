@@ -7,7 +7,7 @@ author: Geoff St. Pierre
 private: false
 mainImage: images/articles/connect-to-sequel-pro.png
 img-src: images/articles/connect-to-sequel-pro.png
-teaser: Connecting to a remote Database on platform.sh is simple (when you know
+byline: Connecting to a remote Database on platform.sh is simple (when you know
   how)!
 date: 2017-03-03
 ---

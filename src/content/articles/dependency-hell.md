@@ -7,7 +7,7 @@ author: Alec Reynolds
 private: false
 mainImage: images/articles/dependency-hell/inferno.jpg
 img-src: images/articles/dependency-hell/inferno.jpg
-teaser: A brief vacation to one of software development's notorious infernos reminded me why containers, Docker, and Kalabox are the way to manage development dependencies.
+byline: A brief vacation to one of software development's notorious infernos reminded me why containers, Docker, and Kalabox are the way to manage development dependencies.
 date: 2016-12-31
 ---
 
