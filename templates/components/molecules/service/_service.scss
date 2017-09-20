@@ -61,6 +61,15 @@
       font-size: 1.5em;
     }
   }
+
+  #header-title .container .row.header h1 {
+    @media (min-width:320px) {
+      font-size: 1.7em;
+    }
+    @media (min-width:768px) {
+        font-size: 4em;
+    }
+  }
 }
 
 .red {
