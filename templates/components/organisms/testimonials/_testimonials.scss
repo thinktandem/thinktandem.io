@@ -4,7 +4,6 @@
   -webkit-font-smoothing: antialiased;
 
   .testimonial {
-    width: 90%;
 
     @media (max-width: 767px) {
       float: none !important;
@@ -15,13 +14,12 @@
 
   .quote {
 
-    padding: 12px 22px;
+    padding: 5% 5%;
     border-radius: 6px;
-    width: 90%;
     position: relative;
     margin: 1em 0em;
     color: $gray-lighter;
-    line-height: 1.7em;
+    line-height: 1.9em;
     font-size: 0.8em;
 
     &.quote-hibiscus {

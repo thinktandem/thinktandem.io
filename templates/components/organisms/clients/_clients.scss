@@ -1,21 +1,19 @@
 #clients {
   margin: 7em 0em;
   .logos {
-    width: 80%;
-    text-align: center;
-    margin: auto;
-    a:hover {
-      text-decoration: none;
-    }
-    .client-logo {
-      max-width: 240px;
-      max-height: 100px;
-      margin: 1em auto;
-    }
-    @media (min-width: 425px) {
-      .client-logo {
-        max-width: 300px;
-        margin: 1em;
+    .logo {
+      background-color: $gray-base;
+      height: 10em;
+      img {
+        width: 80%;
+        @media (min-width: 997px) {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          padding-top: 2em;
+          padding-bottom: 2em;
+        }
       }
     }
   }
