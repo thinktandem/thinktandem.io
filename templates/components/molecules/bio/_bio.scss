@@ -39,6 +39,9 @@
   margin-top: 1em;
   margin-bottom: 0em;
   font-size: 1.6em;
+  @media (max-width: 997px) {
+    margin-top: 0;
+  }
 }
 
 .bio-role {
@@ -48,4 +51,7 @@
 .bio-dev {
   font-size: 0.8em;
   color: $gray;
+  @media (max-width: 997px) {
+    margin-bottom: 66px;
+  }
 }

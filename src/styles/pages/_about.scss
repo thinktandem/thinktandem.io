@@ -20,6 +20,9 @@
     margin-top: 0;
     font-size: 1.6em;
     margin-bottom: 1em;
+    @media (max-width: 997px) {
+      margin-bottom: 0;
+    }
 
     a {
       color: #FFFFFF;
