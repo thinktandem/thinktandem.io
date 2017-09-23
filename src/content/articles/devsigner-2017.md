@@ -59,6 +59,10 @@ Getting a project started with Lando is a simple process:
 3. Lando will install all dependencies and launch your site.
 4. Run `lando` to see available tooling commands.
 
+### Quick Setup w/ `lando init`
+
+If you want to quickly get started with lando, running `lando init` in an existing project will give you options for using pre-made Lando recipes to spin up your project infrastructure.
+
 ### Defining Infrastructure with .lando.yml
 
 Lando spins up local development environments using Docker. Mike showed what a typical .lando.yml file looks like, defining the various pieces of your local infrastructure.
@@ -86,3 +90,46 @@ There are many more options available to customize available tooling, infrastruc
 ### Tools Available on Lando
 
 Upon installing a recipe, Lando can make common tools like composer, grunt, gulp, drush, and many more available. If you run `lando` within your project directory, it'll show all the available commands.
+
+## Aesthetics: The Hidden Force That Rules Your World
+
+Sedona Rigsby works in the Design Services Department at Phase2, where everyday she is applying aesthetics. After finishing her degree at the Art Institute, she says if she had a thesis, it'd be on aesthetics.
+
+### Aesthetics is a sensory language.
+
+Aesthetics is a tool of design, but it itself is _not_ design. Design solves a problem. Aesthetics is part of the solution.
+
+**Exercise:** looking at different images and decoding how they make use feel.
+
+Survival dictates us recognizing certain images as harmful, helpful, or eliciting other emotions that help us appraise the situation. Looking at rotting flesh gives us a much different feeling than looking at a ripe peach. We evolved to appreciate environments conducive to our survival.
+
+### Beauty is instinctual.
+
+Public parks, our ideas of "paradise"; most of these center around lush, varied landscapes with water and territory for game animals.
+
+A sensitivity to aesthetics in humans, displayed by capacity to create art (and perhaps to appreciate it), demonstrates a greater level of fitness. This is a popular theory on how art (and aesthetics) plays a role in sexual selection.
+
+**Exercise:**
+
+1. Pick a cell on the [spreadsheet](https://docs.google.com/document/d/1NQGw_f8kxmawUhsBcpeJO6XL_AAqc5GkRqWrdpaPMRs/edit)
+2. Fill in an image you feel is appropriate.
+
+Group analysis of the images and why they were chosen.
+
+### Aesthetics communicates meaning through visual cues.
+
+A horizontal line may be stabilizing and serene, while diagonal lines may introduce more dynamism.
+
+Colors are a great example of this as well.
+
+**Exercise:**
+
+1. Look at a color collage for one minute.
+2. Write down 3-5 words to describe it.
+3. Choose a single word you like the best for the color
+
+Collect all the words associated with each color and arrange in a color wheel. Quickly we'll see common associations with these images and their dominate colors.
+
+> Design is a strategy, and aesthetics are the players.
+
+All of our design work is viewed through different aesthetics heavily influenced by culture. We have to respect the aesthetics of our intended audience and incorporate it into our design strategy.
