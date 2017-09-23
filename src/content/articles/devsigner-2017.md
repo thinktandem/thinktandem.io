@@ -132,4 +132,57 @@ Collect all the words associated with each color and arrange in a color wheel. Q
 
 > Design is a strategy, and aesthetics are the players.
 
-All of our design work is viewed through different aesthetics heavily influenced by culture. We have to respect the aesthetics of our intended audience and incorporate it into our design strategy.
+All of our design work is viewed through different aesthetics heavily influenced by culture. We have to respect the aesthetics of our intended audience and incorporate that understanding into our design strategy.
+
+## Engineering Experience: Coding Magical Moments in Virtual Reality
+
+Gabe Paez from WILD explained his vision for the new frontiers of our digital world, where the pioneers will be design-thinking developers who can bridge the gaps between highly technical subjects and the emotive.
+
+Spatial designers: people who design things that will be built. Landscape architects, building architects, installation artists; all of these are spatial designers. Gabe wants to empower these people with VR tools so they can show their ideas earlier in the process to prevent late-in-the-game client surprises and denials.
+
+### Introducing Wildspace
+
+Ability to share a virtual reality experience online. Allows multiple people to collaborate around a massing study (architectural mockup). You can see the other person, hear them talking...the ultimate Google Hangout.
+
+You can create shapes interactively to modify and create massing studies. Teleport down to the scale of the study. Take images at different scales and arrange them in the virtual space. Take a "portal" between various workspaces.
+
+> There is no barrier between "creative" and "production".
+
+Creative decisions are made throughout the pipeline. We should encourage that.
+
+### Tips for Coders
+
+- Intelligently compartmentalize your code
+- Don't be afraid to refactor
+- Use events
+- Simplify everything (goes hand-in-hand with refactoring)
+- For Unity people: coroutines != threads
+- Make it stable
+- Make it pretty (maybe the most important thing!)
+
+Taking pride in your work is the essential thread. Your code is a piece of artwork. Respect your craft!
+
+The current challenge of VR: show that it can solve REAL WORLD problems, not VR-exclusive curiosities ("wouldn't it be cool if we could do X in VR?").
+
+## Creating Digital Products for Passive Income
+
+Dustin Lee, founder of Retro Supply Co., shared how creating digital products helped change his life for the better. Starting with $50K of personal debt and with a child on the way, Dustin committed himself to passive recurring revenue. Now he grosses nearly a quarter million dollars per year, happily running his business from his house and enjoying watching his daughter grow up.
+
+### Finding a problem
+
+- What stuff annoys you and other people you work with?
+- What are common obstacles in your project?
+
+Example of Dustin's friend, who noticed that people making "retro" logo styles had difficulties creating the small text around the main logo. He built a font that was well-suited for that use case, and made more than $20K off selling that font alone.
+
+> Don't feel like you need to develop a new skillset!
+
+Think about the thing people refer work to you for. Capitalize on those valuable skills you currently have.
+
+Checkout existing platforms for selling products/classes. Places like Creative Market, Gumroad, Skillshare, Patreon, and Product Hunt are wonderful resources.
+
+### Marketing
+
+> The most powerful concept in marketing is owning a word in the prospect's mind.
+
+Two companies can't own the same word in the prospect's mind. You need to either own a different word or have a distinct audience for that same word than your competitors.
