@@ -6,6 +6,11 @@
         "reverse": true,
         "pattern": "content/articles/*.md"
       },
+      "caseStudies": {
+        "sortBy": "date",
+        "reverse": true,
+        "pattern": "content/case-studies/*.md"
+      },
       "careers": {
         "sortBy": "weight",
         "pattern": "content/careers/*.md"
@@ -52,6 +57,10 @@
         {
           "match": {"collection": "articles"},
           "pattern": "blog/:date/:title"
+        },
+        {
+          "match": {"collection": "caseStudies"},
+          "pattern": "work/:slug"
         },
         {
           "match": {"collection": "services"},
