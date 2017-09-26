@@ -3,17 +3,21 @@ clients:
 
   - name: Pantheon Systems
     logo: pantheon/pantheon.png
-    link: http://www.docker.com
+    website: http://pantheon.io
+    caseStudy: /work/pantheon
 
   - name: Outsell Inc.
     logo: outsell/outsell.png
-    link: http://www.docker.com
+    website: http://www.outsellinc.com
+    caseStudy: /work/outsell
 
   - name: California's Valued Trust
     logo: cvt/cvt.png
-    link: http://www.docker.com
+    website: http://www.mycvt.org
+    caseStudy: /work/cvt
 
   - name: Arizona State University
     logo: asu/asu.png
-    link: http://www.docker.com
+    website: http://asu.edu
+
 ---

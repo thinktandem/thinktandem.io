@@ -6,9 +6,9 @@
         {% for client in clients.clients %}
           <div class="col-md-3 col-xs-12">
             <div class="logo">
-              <a href="{{ client.url }}" title="{{ client.name }}">
+              {% if client.caseStudy %}<a href="{{ client.caseStudy }}" title="{{ client.name }}">{% endif %}
                 <img class="client-logo" aria-hidden="true" src="images/clients/{{ client.logo }}">
-              </a>
+              {% if client.caseStudy %}</a>{% endif %}
             </div>
           </div>
         {% endfor %}
