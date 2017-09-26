@@ -1,0 +1,67 @@
+{% extends './html.html' %}
+
+{% block title %}
+  {%parent%} | {{title}} | {{pageSlogan}}
+{% endblock %}
+
+{% block contents %}
+
+  <div id="hero">
+    <div class="container">
+      <div class="row">
+        <h1 class="hero-text animated" data-text="{{title|raw}}">{{ title|safe }}</h1>
+        <p class="hero-text animated " data-text="{{title|safe}}">{{ byline|safe }}</p>
+        <a href="/services" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+  <article id="case-study">
+
+    <div id="page-content">
+      <div class="container">
+        {{ contents|safe }}
+      </div>
+    </div>
+
+  </article>
+
+  <div id="prev-next-posts">
+    <div class="container">
+      <div class="row header">
+
+        <div class="col-md-6 featured-post previous-post">
+          {% if previous %}
+            <div class="tags">
+              <a href="{{ previous.path }}">previous case study</a>
+            </div>
+            <div class="title">
+              <a href="{{ previous.path }}">{{ previous.title }}</a>
+            </div>
+            <div class="author">
+              For {{ previous.org }}
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="col-md-6 featured-post next-post">
+          {% if next %}
+            <div class="tags">
+              <a href="{{ next.path }}">next case study</a>
+            </div>
+            <div class="title">
+              <a href="{{ next.path }}">{{ next.title }}</a>
+            </div>
+            <div class="author">
+              For {{ next.org }}
+            </div>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  {% include '../components/organisms/cta/cta.html' %}
+
+{% endblock %}

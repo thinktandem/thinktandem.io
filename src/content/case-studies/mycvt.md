@@ -1,12 +1,10 @@
 ---
-layout: layouts/article.html
+layout: layouts/case-study.html
 title: "Making the MyCVT Enrollment Portal"
+org: California's Valued Trust
 tags: drupal, strategy, support, angular
 permalink: true
-author: Alec Reynolds
 private: false
-mainImage: images/case-studies/CVTCaseStudyLogo.png
-img-src: images/case-studies/CVTCaseStudyLogo.png
 byline: How we helped power a shift from paper to digital by building a secure insurance enrollent portal in Drupal.
 slug: cvt
 date: 2017-09-23
