@@ -1,16 +1,31 @@
 ---
 tags:
+  - conferences
   - deployment
-  - docker
-  - hosting
+  - development
+  - devops
   - localdev
   - misc
-  - scaling
-  - strategy
   - support
-  - training
   - testing
-  - conferences
+  - training
+  - ux
+industries:
+  - agencies
+  - corporate
+  - health
+  - higher education
+  - startups
+tech:
+  - docker
   - drupal
-  - angular
+  - laravel
+  - wordpress
+  - nodejs
+services:
+  - development
+  - devops
+  - rescue
+  - strategy
+  - training
 ---

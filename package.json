@@ -29,7 +29,7 @@
     "metalsmith-seo-checker": "^0.0.3",
     "metalsmith-sitemap": "^1.1.0",
     "metalsmith-swig-helpers": "https://github.com/thinktandem/metalsmith-swig-helpers",
-    "metalsmith-tags": "^1.2.0",
+    "metalsmith-tags": "https://github.com/thinktandem/metalsmith-tags",
     "swig": "^1.4.2",
     "xor-crypt": "~1.0.0",
     "swig-extras": "https://github.com/reynoldsalec/swig-extras.git"

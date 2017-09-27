@@ -79,19 +79,44 @@
         }
       }
     },
-    "metalsmith-tags": {
-      "handle": "tags",
-      "path": "topics/:tag/index.html",
-      "pathPage": "topics/:tag/:num/index.html",
-      "perPage": 3,
-      "layout": "pages/tags.html",
-      "sortBy": "date",
-      "reverse": true,
-      "skipMetadata": false,
-      "slug": {
-        "mode": "rfc3986"
+    "metalsmith-tags": [
+      {
+        "handle": "tags",
+        "path": "topics/:tag/index.html",
+        "pathPage": "topics/:tag/:num/index.html",
+        "perPage": 3,
+        "layout": "pages/tags.html",
+        "sortBy": "date",
+        "reverse": true
+      },
+      {
+        "handle": "industries",
+        "path": "industry/:tag/index.html",
+        "pathPage": "industry/:tag/:num/index.html",
+        "perPage": 3,
+        "layout": "pages/industries.html",
+        "sortBy": "date",
+        "reverse": true
+      },
+      {
+        "handle": "tech",
+        "path": "technology/:tag/index.html",
+        "pathPage": "technology/:tag/:num/index.html",
+        "perPage": 3,
+        "layout": "pages/tech.html",
+        "sortBy": "date",
+        "reverse": true
+      },
+      {
+        "handle": "services",
+        "path": "service/:tag/index.html",
+        "pathPage": "service/:tag/:num/index.html",
+        "perPage": 3,
+        "layout": "pages/service.html",
+        "sortBy": "date",
+        "reverse": true
       }
-    },
+    ],
     "metalsmith-jsonld": {
       "defaults": [
         {
