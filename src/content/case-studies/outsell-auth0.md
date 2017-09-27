@@ -1,12 +1,14 @@
 ---
+title: "Auth0 SSO FTW"
 layout: layouts/case-study.html
-title: "Outsell Something"
+logo: images/clients/outsell/outsell.png
 org: Outsell Inc
-tags: drupal, strategy, support, angular
 permalink: true
 private: false
-byline: Some byline thing
-slug: outsell
+byline: We helped <strong>Outsell Inc.</strong> migrate from a legacy SSO provider to Auth0 while reducing the complexity of their authentication logic and providing tight <strong>(and well tested)</strong> Salesforce integration
+slug: outsell-auth0
+dark: false
+background: 8CC63E
 date: 2017-09-23
 ---
 

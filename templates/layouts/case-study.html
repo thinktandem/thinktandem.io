@@ -6,12 +6,41 @@
 
 {% block contents %}
 
-  <div id="hero">
+  <style>
+    .navbar.hero, .hero-case-study {
+      background-color: #{{ background }};
+    }
+  </style>
+
+  {% if dark %}
+    <style>
+      .navbar.hero .navbar-nav > li > a {
+        color: #47474A;
+      }
+      .navbar .navbar-header .navbar-brand .tandem-logo {
+        background-image: url('/images/tandem-logo-dark.png');
+      }
+      .hero-case-study h1 {
+        color: #47474A;
+      }
+      #hero p.hero-text {
+        color: #47474A;
+      }
+    </style>
+  {% endif %}
+
+  <div id="hero" class="hero-case-study">
     <div class="container">
       <div class="row">
-        <h1 class="hero-text animated" data-text="{{title|raw}}">{{ title|safe }}</h1>
-        <p class="hero-text animated " data-text="{{title|safe}}">{{ byline|safe }}</p>
-        <a href="/services" class="btn btn-primary">Learn More</a>
+        <h1 data-text="{{title|raw}}">{{ title|safe }}</h1>
+        <p class="hero-text" data-text="{{title|safe}}">{{ byline|raw }}</p>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+        </div>
+        <div class="col-md-6">
+
+        </div>
       </div>
     </div>
   </div>

@@ -1,12 +1,14 @@
 ---
-layout: layouts/case-study.html
 title: "Pantheon Title"
+layout: layouts/case-study.html
+logo: images/clients/pantheon/pantheon.png
 org: Pantheon Systems
-tags: drupal, strategy, support, angular
 permalink: true
 private: false
-byline: How we blah blah blah
+byline: How we helped <strong>California's Valued Trust</strong> power a shift from paper to digital by building a secure insurance enrollent portal in Drupal.
 slug: pantheon
+dark: true
+background: EFD01B
 date: 2017-09-23
 ---
 

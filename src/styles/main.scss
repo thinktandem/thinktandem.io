@@ -47,6 +47,7 @@ Custom
 @import "pages/about";
 @import "pages/article";
 @import "pages/blog";
+@import "pages/case-study";
 @import "pages/careers";
 @import "pages/contact";
 @import "pages/homepage";
@@ -126,6 +127,15 @@ small.subtitle {
 }
 
 .navbar {
+  .navbar-header {
+    .navbar-brand {
+      .tandem-logo {
+        background-image: url('/images/tandem-logo.png');
+        width: 201px;
+        height: 57px;
+      }
+    }
+  }
   .icon-bar {
     width: 33px;
     height: 4px;

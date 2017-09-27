@@ -1,14 +1,13 @@
 ---
-layout: layouts/case-study.html
-logo: images/clients/cvt/cvt.png
-title: "Enrollment Portal"
-org: California's Valued Trust
+layout: layouts/article.html
+title: "Making the MyCVT Enrollment Portal"
+logo: images/clients/cvt/cvt3.png
+author: Alec Reynolds
 permalink: true
 private: false
-byline: How we helped <strong>California's Valued Trust</strong> power a shift from paper to digital by building a secure insurance enrollent portal in Drupal.
-slug: cvt
-background: BD587A
-dark: false
+mainImage: images/articles/dependency-hell/inferno.jpg
+img-src: images/articles/dependency-hell/inferno.jpg
+byline: How we helped power a shift from paper to digital by building a secure insurance enrollent portal in Drupal.
 date: 2017-09-23
 ---
 
