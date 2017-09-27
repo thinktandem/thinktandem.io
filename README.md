@@ -48,6 +48,51 @@ Make sure your `*.md` files COMPLY with our standards.
 lando grunt test
 ```
 
+Tagging
+-------
+
+We do not free tag. Check [here](https://github.com/thinktandem/thinktandem.io/blob/master/src/config/tags.metadata) for a list of vocabularies and their tags.
+
+`blog` content uses the `tags` vocab. Here is some example front matter:
+
+```yaml
+---
+layout: layouts/article.html
+title: "Devsigner 2017 Takeaways"
+tags: conferences
+permalink: true
+author: Alec Reynolds
+private: false
+mainImage: images/articles/devsigner-2017.jpg
+img-src: images/articles/devsigner-2017.jpg
+byline: Highlights from Portland's Devsigner Conference.
+date: 2017-09-22
+---
+```
+
+`case-studies` content uses the `services`, `tech`, and `industries` vocabs. Here is some example front matter:
+
+```yaml
+---
+title: "Case Study 1"
+layout: layouts/case-study.html
+logo: images/clients/client/client.png
+org: Acme Inc
+permalink: true
+private: false
+byline: We fixed the things
+slug: acme-bugs
+dark: false
+background: 8CC63E
+date: 2017-09-23
+industries: higher education
+tech: drupal, laravel
+services: rescue, development
+---
+```
+
+Other content does not currently support tagging of any kind.
+
 Inspiration
 -----------
 
