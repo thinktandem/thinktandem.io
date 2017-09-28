@@ -1,5 +1,9 @@
 {% extends '../layouts/html.html' %}
 
+{% block title %}
+  {%parent%} {{tag|capitalize}}
+{% endblock %}
+
 {% block contents %}
 
 <div id="posts">

@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.html
 title: "Connecting to a Remote Platform.sh Database"
-tags: localdev, hosting
+tags: localdev, devops
 permalink: true
 author: Geoff St. Pierre
 private: false

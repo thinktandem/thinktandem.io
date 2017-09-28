@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.html
 title: "How My Agency uses Kalabox to Win all the Local"
-tags: deployment, localdev, strategy, support, testing
+tags: deployment, localdev, testing
 permalink: true
 author: Brian Gonzales
 private: false

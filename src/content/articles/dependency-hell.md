@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.html
 title: "Visiting Dependency Hell"
-tags: deployment, localdev, strategy
+tags: deployment, localdev
 permalink: true
 author: Alec Reynolds
 private: false

@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.html
 title: "Rejoice: Kalabox 2.0 Released"
-tags: deployment, docker, hosting, localdev, misc, scaling, strategy, support, training, testing
+tags: deployment, localdev, misc, support, training, testing, devops
 permalink: true
 author: Alec Reynolds
 private: false

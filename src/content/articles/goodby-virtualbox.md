@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.html
 title: "Goodbye VirtualBox: Kalabox 2.1.1"
-tags: localdev, strategy, support, testing
+tags: localdev, support, testing
 permalink: true
 author: Mike Pirog
 private: false

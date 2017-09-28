@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.html
 title: "Node Microservices on Docker Cloud"
-tags: docker, scaling, strategy, hosting
+tags: devops
 permalink: true
 author: Alec Reynolds
 private: true

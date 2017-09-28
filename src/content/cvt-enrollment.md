@@ -4,7 +4,7 @@ title: "Making the MyCVT Enrollment Portal"
 logo: images/clients/cvt/cvt3.png
 author: Alec Reynolds
 permalink: true
-private: false
+private: true
 mainImage: images/articles/dependency-hell/inferno.jpg
 img-src: images/articles/dependency-hell/inferno.jpg
 byline: How we helped power a shift from paper to digital by building a secure insurance enrollent portal in Drupal.

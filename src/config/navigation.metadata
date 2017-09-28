@@ -4,6 +4,10 @@ primary:
     title: About Us
     url: about
 
+  - name: Work
+    title: Work
+    url: work
+
   - name: Services
     title: Services
     url: services

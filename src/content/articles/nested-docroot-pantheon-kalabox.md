@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.html
 title: "Using Pantheon's Nested Docroot with Kalabox"
-tags: localdev, hosting, support
+tags: localdev, support
 permalink: true
 author: Mike Pirog
 private: false

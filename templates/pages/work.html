@@ -2,12 +2,12 @@
 
 {% block contents %}
 
-  <div id="info">
+  <div id="work">
 
     <div id="header-title">
       <div class="container">
         <div class="row header">
-          <div class="col-md-12 ">
+          <div class="col-xs-12 ">
             <small class="subtitle">{{ byline|safe }}</small>
             <h1>{{ title|safe }}</h1>
           </div>
@@ -20,11 +20,18 @@
       </div>
     </div>
 
-    <div id="staff">
-      <div class="container">
-        <div class="row staff">
-          {% for staff in collections.staff %}
-            {% include "../components/molecules/bio/bio.html" %}
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          {% for service in collections.services %}
+            <div class="service-link">
+              <a href="services/#{{ service.slug }}">{{ service.title }}</a>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="col-sm-8">
+          {% for service in collections.services %}
+            {% include "../components/molecules/service/service.html" %}
           {% endfor %}
         </div>
       </div>
@@ -32,9 +39,6 @@
 
   </div>
 
-  {% include '../components/organisms/stats/stats.html' %}
-  {% include '../components/organisms/experts/experts.html' %}
-  {% include '../components/organisms/sf/sf.html' %}
   {% include '../components/organisms/cta/cta.html' %}
 
 {% endblock %}
