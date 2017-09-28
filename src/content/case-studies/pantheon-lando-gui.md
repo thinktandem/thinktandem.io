@@ -1,18 +1,18 @@
 ---
-title: "Auth0 SSO FTW"
+title: "Pantheon Local Dev Gui"
 layout: layouts/case-study.html
-logo: images/clients/outsell/outsell.png
-org: Outsell Inc
+logo: images/clients/pantheon/pantheon.png
+org: Pantheon Systems
 permalink: true
 private: false
-byline: We helped <strong>Outsell Inc.</strong> migrate from a legacy SSO provider to Auth0 while reducing the complexity of their authentication logic and providing tight <strong>(and well tested)</strong> Salesforce integration
-slug: outsell-auth0
-dark: false
-background: 8CC63E
-date: 2017-03-24
-industries: higher education
-tech: drupal, laravel
-services: rescue
+byline: How we helped <strong>California's Valued Trust</strong> power a shift from paper to digital by building a secure insurance enrollent portal in Drupal.
+slug: pantheon-lando-gui
+dark: true
+background: EFD01B
+date: 2018-01-23
+industries: startups
+tech: docker, nodejs, drupal, wordpress
+services: development
 ---
 
 We're proud of all the projects we work on, but among all of our clients, California's Valued Trust (CVT) stands out. By developing the MyCVT enrollment portal, we helped tens of thousands of CVT subscribers (primarily teachers and school staff in K-12 education) find an easier way to enroll in their insurance.

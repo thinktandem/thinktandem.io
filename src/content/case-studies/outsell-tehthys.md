@@ -1,15 +1,15 @@
 ---
-title: "Auth0 SSO FTW"
+title: "Tethys"
 layout: layouts/case-study.html
 logo: images/clients/outsell/outsell.png
 org: Outsell Inc
 permalink: true
 private: false
 byline: We helped <strong>Outsell Inc.</strong> migrate from a legacy SSO provider to Auth0 while reducing the complexity of their authentication logic and providing tight <strong>(and well tested)</strong> Salesforce integration
-slug: outsell-auth0
+slug: outsell-tethys
 dark: false
 background: 8CC63E
-date: 2017-03-24
+date: 2016-09-23
 industries: higher education
 tech: drupal, laravel
 services: rescue
