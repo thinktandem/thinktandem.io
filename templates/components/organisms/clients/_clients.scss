@@ -4,6 +4,9 @@
     .logo {
       background-color: $gray-base;
       height: 10em;
+      @media (max-width: 997px) {
+        height: auto;
+      }
       img {
         width: 80%;
         @media (min-width: 997px) {

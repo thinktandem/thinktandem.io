@@ -65,7 +65,7 @@ Whether it's creating your newest marketing site with an easy-to-use CMS (conten
     </div>
   </div>
   <div class="col-sm-8">
-    <p>Laravel provclass="text-center" ides a strong framework for creating custom web applications at any scale.</p>
+    <p>Laravel provides a strong framework for creating custom web applications at any scale.</p>
     <div class="row">
       <div class="col-sm-6">
         <ul>
