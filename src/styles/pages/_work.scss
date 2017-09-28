@@ -5,4 +5,64 @@
     padding-top: 1em;
   }
 
+  .tag-link {
+
+    text-transform: capitalize;
+    margin-right: 35px;
+    padding: .3em;
+    a {
+      line-height: 0.8em;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  .linerule {
+    width: 1.5em;
+    margin-left: 0.5em;
+    border-top: 2px solid $gray-light;
+  }
+
+  .case-study {
+    height: 12em;
+    .case-study-back {
+      display: none;
+      font-size: 1em;
+      width: 75%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+    .case-study-front {
+      .title {
+        h2 {
+          position: absolute;
+          font-size: 1.9em;
+          padding: 15px;
+        }
+      }
+
+      .logo {
+        background-color: transparent;
+        height: 10em;
+        img {
+          width: 50%;
+          position: absolute;
+          left: 50%;
+          top: 80%;
+          transform: translate(-50%, -50%);
+          padding-top: 2em;
+          padding-bottom: 2em;
+        }
+      }
+    }
+  }
+
+
+
 }

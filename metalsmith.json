@@ -91,27 +91,27 @@
       },
       {
         "handle": "industries",
+        "metadataKey": "industries",
         "path": "work/industry/:tag/index.html",
         "pathPage": "work/industry/:tag/:num/index.html",
-        "perPage": 3,
         "layout": "pages/industries.html",
         "sortBy": "date",
         "reverse": true
       },
       {
         "handle": "tech",
+        "metadataKey": "tech",
         "path": "work/technology/:tag/index.html",
         "pathPage": "work/technology/:tag/:num/index.html",
-        "perPage": 3,
         "layout": "pages/tech.html",
         "sortBy": "date",
         "reverse": true
       },
       {
         "handle": "services",
+        "metadataKey": "services",
         "path": "work/service/:tag/index.html",
         "pathPage": "work/service/:tag/:num/index.html",
-        "perPage": 3,
         "layout": "pages/service.html",
         "sortBy": "date",
         "reverse": true

@@ -32,13 +32,13 @@
             <a href="/work/industry/{{ industry }}">{{ industry }}</a>
           </div>
         {% endfor %}
-        <hr>
+        <hr class="linerule">
         {% for service in tags.services %}
           <div class="tag-link">
             <a href="/work/service/{{ service }}">{{ service }}</a>
           </div>
         {% endfor %}
-        <hr>
+        <hr class="linerule">
         {% for technology in tags.tech %}
           <div class="tag-link">
             <a href="/work/technology/{{ technology }}">{{ technology }}</a>
@@ -46,9 +46,11 @@
         {% endfor %}
       </div>
       <div class="col-sm-8">
-        {% for service in collections.services %}
-          {% include "../components/molecules/service/service.html" %}
-        {% endfor %}
+        <div class="row">
+          {% for study in pagination.files %}
+            {% include "../components/molecules/case-study/case-study.html" %}
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,15 @@
+<a href="/work/{{ study.slug }}" title="{{ study.org }}">
+  <div class="col-md-6 col-xs-12 case-study case-study-{{ study.slug }}" style="background-color: #{{ study.background }};">
+    <div class="case-study-front">
+      <div class="title">
+        <h2 style="{% if study.dark %} color: #47474A; {% else %} color: #FFFFFF; {% endif %}">{{ study.title }}</h2>
+      </div>
+      <div class="logo">
+        <img class="client-logo" aria-hidden="true" src="{{ study.logo }}">
+      </div>
+    </div>
+    <div class="case-study-back" style="{% if study.dark %} color: #47474A; {% else %} color: #FFFFFF; {% endif %}">
+      {{ study.byline|raw }}
+    </div>
+  </div>
+</a>
