@@ -10,6 +10,11 @@
     }
   }
 
+  .container {
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+
   .service-category {
 
     @media(max-width: 768px) {
@@ -69,12 +74,39 @@
 
 }
 
-  .icon-header {
-    a {
-      width: 130px;
-      display: inline-block;
-      text-align: center;
-      margin-bottom: .5em;
-      vertical-align: top;
+.icon-header {
+  a {
+    width: 130px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: .5em;
+    vertical-align: top;
+  }
+}
+
+#service {
+  .service-item {
+    .container {
+      @media (min-width: 800px) {
+        width: 867px;
+      }
     }
   }
+
+  #page-content {
+    p {
+      font-weight: 300;
+      line-height: 1.6em;
+    }
+    h2 {
+      font-size: 1.7em;
+    }
+  }
+
+  .container {
+    padding-bottom: 1em;
+    padding-top: 1em;
+
+  }
+
+}
