@@ -1,18 +1,38 @@
 ---
 title: "Pantheon Local Dev Gui"
-layout: layouts/case-study.html
 logo: images/clients/pantheon/pantheon.png
 org: Pantheon Systems
+byline: How we helped <strong>California's Valued Trust</strong> power a shift from paper to digital by building a secure insurance enrollent portal in Drupal.
+image:
+  src: /images/case-studies/mycvt1.png
+  title: MyCVT Enrollment Page Screenshot
+challenge: Build a secure online portal to help tens of thousands of California teachers and school staff enroll for insurance.
+solution: Use Drupal and Angular to quickly develop a user-friendly enrollment experience.
+impact: Nearly 30K users. Empowering more than 240 districts. New digital cornerstone of the CVT experience
+quote:
+  content: Trust is earned when actions meet words.
+  author: Test
+metrics:
+  - key: stuff
+    value: thing
+  - key: stuff2
+    value: thing2
+  - key: stuff3
+    value: thig
+  - key: stuff4
+    value: =w=
+
+tech: docker, nodejs, drupal, wordpress
+industries: startups, corporate
+services: development
+
+background: EFD01B
+layout: layouts/case-study.html
+dark: true
 permalink: true
 private: false
-byline: How we helped <strong>California's Valued Trust</strong> power a shift from paper to digital by building a secure insurance enrollent portal in Drupal.
-slug: pantheon-lando-gui
-dark: true
-background: EFD01B
 date: 2018-01-23
-industries: startups, corporate
-tech: docker, nodejs, drupal, wordpress
-services: development
+slug: pantheon-lando-gui
 ---
 
 We're proud of all the projects we work on, but among all of our clients, California's Valued Trust (CVT) stands out. By developing the MyCVT enrollment portal, we helped tens of thousands of CVT subscribers (primarily teachers and school staff in K-12 education) find an easier way to enroll in their insurance.
