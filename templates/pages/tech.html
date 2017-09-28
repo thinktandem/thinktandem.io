@@ -6,61 +6,53 @@
 
 {% block contents %}
 
-<div id="posts">
+<div id="work">
+
   <div id="header-title">
     <div class="container">
       <div class="row header">
-        <div class="col-md-12 ">
+        <div class="col-xs-12 ">
           <small class="subtitle">{{ tag|safe }}</small>
-          <h1>Blog</h1>
+          <h1>Work</h1>
         </div>
       </div>
     </div>
   </div>
   <div id="header-byline">
     <div class="container">
-      <p>We've been revealing truth since the Permian extinction. <a href="http://eepurl.com/caz4hn">Sign up</a> to receive an email whenever we post something in the blog and never miss an update.</p>
+      <p>Check out some of the great solutions we've build using {{ tag }}.</p>
     </div>
   </div>
 
   <div class="container">
     <div class="row">
-      <div class="col-sm-12">
-        <div class="service-link">
-          {% for tag in tags.tags %}
-            <a href="/topics/{{ tag }}" title="{{ tag }}">{{ tag }}</a> |
-          {% endfor %}
-        </div>
+      <div class="col-sm-4">
+        {% for industry in tags.industries %}
+          <div class="tag-link">
+            <a href="/work/industry/{{ industry }}">{{ industry }}</a>
+          </div>
+        {% endfor %}
+        <hr>
+        {% for service in tags.services %}
+          <div class="tag-link">
+            <a href="/work/service/{{ service }}">{{ service }}</a>
+          </div>
+        {% endfor %}
+        <hr>
+        {% for technology in tags.tech %}
+          <div class="tag-link">
+            <a href="/work/technology/{{ technology }}">{{ technology }}</a>
+          </div>
+        {% endfor %}
       </div>
-    </div>
-    <div class="row teasers">
-      {% for article in pagination.files %}
-        {% include "../components/molecules/teaser/teaser.html" %}
-      {% endfor %}
-    </div>
-    <div class="row">
-      <div class="pages">
-        <ul class="pagination">
-          {% set pages = pagination.getPages(4) %}
-          {% for key, page in pages %}
-            {% if pagination.num == page.pagination.num %}
-              <li class="active">
-                <a href="{{ page.path }}">
-                  {{ page.pagination.num }}
-                </a>
-              </li>
-            {% else %}
-              <li>
-                <a href="{{ page.path }}">
-                  {{ page.pagination.num }}
-                </a>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
+      <div class="col-sm-8">
+        {% for service in collections.services %}
+          {% include "../components/molecules/service/service.html" %}
+        {% endfor %}
       </div>
     </div>
   </div>
+
 </div>
 
   {% include '../components/organisms/cta/cta.html' %}

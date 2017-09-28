@@ -82,8 +82,8 @@
     "metalsmith-tags": [
       {
         "handle": "tags",
-        "path": "topics/:tag/index.html",
-        "pathPage": "topics/:tag/:num/index.html",
+        "path": "blog/:tag/index.html",
+        "pathPage": "blog/:tag/:num/index.html",
         "perPage": 3,
         "layout": "pages/tags.html",
         "sortBy": "date",
@@ -91,8 +91,8 @@
       },
       {
         "handle": "industries",
-        "path": "industry/:tag/index.html",
-        "pathPage": "industry/:tag/:num/index.html",
+        "path": "work/industry/:tag/index.html",
+        "pathPage": "work/industry/:tag/:num/index.html",
         "perPage": 3,
         "layout": "pages/industries.html",
         "sortBy": "date",
@@ -100,8 +100,8 @@
       },
       {
         "handle": "tech",
-        "path": "technology/:tag/index.html",
-        "pathPage": "technology/:tag/:num/index.html",
+        "path": "work/technology/:tag/index.html",
+        "pathPage": "work/technology/:tag/:num/index.html",
         "perPage": 3,
         "layout": "pages/tech.html",
         "sortBy": "date",
@@ -109,8 +109,8 @@
       },
       {
         "handle": "services",
-        "path": "service/:tag/index.html",
-        "pathPage": "service/:tag/:num/index.html",
+        "path": "work/service/:tag/index.html",
+        "pathPage": "work/service/:tag/:num/index.html",
         "perPage": 3,
         "layout": "pages/service.html",
         "sortBy": "date",

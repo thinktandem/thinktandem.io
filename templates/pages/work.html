@@ -23,9 +23,21 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
-          {% for service in collections.services %}
-            <div class="service-link">
-              <a href="services/#{{ service.slug }}">{{ service.title }}</a>
+          {% for industry in tags.industries %}
+            <div class="tag-link">
+              <a href="/work/industry/{{ industry }}">{{ industry }}</a>
+            </div>
+          {% endfor %}
+          <hr>
+          {% for service in tags.services %}
+            <div class="tag-link">
+              <a href="/work/service/{{ service }}">{{ service }}</a>
+            </div>
+          {% endfor %}
+          <hr>
+          {% for technology in tags.tech %}
+            <div class="tag-link">
+              <a href="/work/technology/{{ technology }}">{{ technology }}</a>
             </div>
           {% endfor %}
         </div>

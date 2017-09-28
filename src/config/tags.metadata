@@ -14,7 +14,7 @@ industries:
   - agencies
   - corporate
   - health
-  - higher education
+  - higher-education
   - startups
 tech:
   - docker
