@@ -4,12 +4,7 @@ title: Development
 byline: Using Drupal, Laravel, Node, or the next big thing, our devs create simple solutions that are built to last.
 cta: See Development Services.
 link: /services/development
-short: Development
-icon: fa fa-cloud
 color: green
-slug: development
-arrow: true
-weight: 1
 icons:
   - icon: devicons devicons-drupal
     name: Drupal
@@ -26,7 +21,6 @@ icons:
   - icon: devicons devicons-angular
     name: Angular
     link: /services/development
-private: true
 ---
 
 Developing web applications doesn't need to be hard. Tandem believes in a transparent development process that simplifies difficult decisions by selecting from best-in-breed technologies.

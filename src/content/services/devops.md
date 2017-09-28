@@ -4,12 +4,7 @@ title: DevOps
 byline: We establish best-practices development workflow using Github, CircleCI, automated testing, and other tools to ensure your most critical features deliver consistent business value and your code does not introduce regressions.
 cta: Automate all the things.
 link: /services/devops
-slug: devops
-short: DevOps
-icon: fa fa-flask
 color: blue
-arrow: true
-weight: 10
 icons:
   - icon: devicons devicons-git_branch
     name: Gitflow
@@ -23,5 +18,4 @@ icons:
   - icon: devicons devicons-docker
     name: Docker
     link: https://www.docker.com
-private: true
 ---
