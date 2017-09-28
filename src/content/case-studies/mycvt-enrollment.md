@@ -1,37 +1,39 @@
 ---
-layout: layouts/case-study.html
-logo: images/clients/cvt/cvt.png
 title: "Insurance Enrollment Portal"
+logo: images/clients/cvt/cvt.png
 org: California's Valued Trust
-permalink: true
-private: false
-byline: How we helped <strong>California's Valued Trust</strong> power a shift from paper to digital by building a secure insurance enrollment portal in Drupal.
-slug: cvt-enrollment
-background: BD587A
-dark: false
-date: 2015-01-23
+byline: We helped <strong>California's Valued Trust</strong> power a shift from paper to digital by building a secure insurance enrollment portal in Drupal.
+image:
+  src: /images/case-studies/mycvt1.png
+  title: MyCVT Enrollment Page Screenshot
+challenge: Build a secure online portal to help tens of thousands of California teachers and school staff enroll for insurance.
+solution: Use Drupal and Angular to quickly develop a user-friendly enrollment experience.
+impact: Nearly 30K users. Empowering more than 240 districts. New digital cornerstone of the CVT experience
+quote:
+  content: Trust is earned when actions meet words.
+  author: Test
+metrics:
+  - key: stuff
+    value: thing
+  - key: stuff2
+    value: thing2
+  - key: stuff3
+    value: thig
+  - key: stuff4
+    value: =w=
+
 tech: drupal
 industries: health
 services: strategy, rescue, development
+
+background: BD587A
+layout: layouts/case-study.html
+dark: false
+permalink: true
+private: false
+date: 2015-01-23
+slug: cvt-enrollment
 ---
-
-![mycvt-screenshot](/images/case-studies/mycvt1.png "MyCVT Enrollment Page Screenshot")
-
-## Challenge
-
-Build a secure online portal to help tens of thousands of California teachers and school staff enroll for insurance.
-
-## Solution
-
-Use Drupal and Angular to quickly develop a user-friendly enrollment experience.
-
-## Impact
-
-Nearly 30K users
-Empowering more than 240 districts
-New digital cornerstone of the CVT experience
-
-> Trust is earned when actions meet words.
 
 We're proud of all the projects we work on, but among all of our clients, California's Valued Trust (CVT) stands out. By developing the MyCVT enrollment portal, we helped tens of thousands of CVT subscribers (primarily teachers and school staff in K-12 education) find an easier way to enroll in their insurance.
 

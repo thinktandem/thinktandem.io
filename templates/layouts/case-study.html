@@ -10,6 +10,19 @@
     .navbar.hero, .hero-case-study {
       background-color: #{{ background }};
     }
+    #case-study .case-study-summary-item {
+      color: #FFFFFF;
+      background-color: #{{ background }};
+    }
+    #case-study .case-study-summary-item h3 {
+      color: #FFFFFF;
+    }
+    #case-study .case-study-quote blockquote {
+      color: #{{ background }};
+    }
+    #case-study .case-study-metric {
+      border-color: #{{ background }};
+    }
   </style>
 
   {% if dark %}
@@ -35,22 +48,90 @@
         <h1 data-text="{{title|raw}}">{{ title|safe }}</h1>
         <p class="hero-text" data-text="{{title|safe}}">{{ byline|raw }}</p>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-        </div>
-        <div class="col-md-6">
-
-        </div>
-      </div>
     </div>
   </div>
 
   <article id="case-study">
 
     <div id="page-content">
-      <div class="container">
-        {{ contents|safe }}
+
+      <div class="case-study-img">
+        <div class="container">
+          <img src="{{ image.src }}" class="img-responsive" title="{{ image.title }}">
+        </div>
       </div>
+
+      <div class="case-study-summary">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="case-study-summary-item">
+                <h3>Challenge</h3>
+                <div class="case-study-summary-challenge">
+                  {{ challenge|raw }}
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="case-study-summary-item">
+                <h3>Solution</h3>
+                <div class="case-study-summary-solution">
+                  {{ solution|raw }}
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="case-study-summary-item">
+                <h3>Impact</h3>
+                <div class="case-study-summary-impact">
+                  {{ impact|raw }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-study-quote">
+        <div class="container">
+          <div class="row">
+            <blockquote>
+              {{ quote.content|safe }}
+              <small>
+                {{ quote.author|safe }}
+              </small>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="case-study-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="row">
+                {% for metric in metrics %}
+                  <div class="col-md-12">
+                    <div class="case-study-metric">
+                      <div class="case-study-metric-key text-center">
+                        {{ metric.key }}
+                      </div>
+                      <div class="case-study-metric-value text-center">
+                        {{ metric.value }}
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="col-md-8">
+              {{ contents|safe }}
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </article>

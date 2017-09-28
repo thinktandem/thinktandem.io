@@ -11,3 +11,64 @@
     color: $gray-lighter;
   }
 }
+
+#case-study {
+  blockquote {
+    margin: 0;
+    padding: 2.17em;
+    font-size: 1.9em;
+    small {
+      color: $gray;
+      font-size: .5em;
+    }
+  }
+  .case-study-img {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  .case-study-quote {
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px;
+      }
+    }
+  }
+  .case-study-summary {
+    padding-top: 1em;
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px;
+      }
+    }
+  }
+  .case-study-summary-item {
+    height: 12em;
+    padding: 1.4em;
+    font-size: 0.9em;
+    font-weight: 200;
+    line-height: 1.6em;
+    h3 {
+      color: blue;
+      margin-top: 0.1em;
+      margin-bottom: 0.6em;
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+  }
+  .case-study-metric {
+    border-bottom: 1px solid $brand-primary;
+    padding: 1em;
+    margin: 2em;
+    .case-study-metric-key {
+      color: $gray-base;
+      font-weight: 700;
+      font-size: 1.4em;
+      margin-bottom: 0.5em;
+      text-transform: uppercase;
+    }
+    .case-study-metric-value {
+      color: $gray;
+      font-weight: 200;
+    }
+  }
+}
