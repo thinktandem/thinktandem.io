@@ -1,5 +1,5 @@
 ---
-title: "Pantheon Trainings"
+title: "Pantheon Training"
 layout: layouts/case-study.html
 logo: images/clients/pantheon/pantheon.png
 org: Pantheon Systems
@@ -10,9 +10,9 @@ slug: pantheon-fasttracks
 dark: true
 background: EFD01B
 date: 2017-01-28
-industries: startups
-tech: docker, nodejs, drupal, wordpress
-services: development
+industries: startups, agencies
+tech: drupal, wordpress
+services: training, devops
 ---
 
 We're proud of all the projects we work on, but among all of our clients, California's Valued Trust (CVT) stands out. By developing the MyCVT enrollment portal, we helped tens of thousands of CVT subscribers (primarily teachers and school staff in K-12 education) find an easier way to enroll in their insurance.

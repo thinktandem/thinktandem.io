@@ -1,5 +1,5 @@
 ---
-title: "OSDATA"
+title: "Database Frontend"
 layout: layouts/case-study.html
 logo: images/clients/outsell/outsell.png
 org: Outsell Inc
@@ -10,9 +10,9 @@ slug: outsell-osdata
 dark: false
 background: 8CC63E
 date: 2017-04-23
-industries: higher education
-tech: drupal, laravel
-services: rescue
+industries: startups, corporate
+tech: laravel
+services: development
 ---
 
 We're proud of all the projects we work on, but among all of our clients, California's Valued Trust (CVT) stands out. By developing the MyCVT enrollment portal, we helped tens of thousands of CVT subscribers (primarily teachers and school staff in K-12 education) find an easier way to enroll in their insurance.

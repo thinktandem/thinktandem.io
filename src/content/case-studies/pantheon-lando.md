@@ -10,8 +10,8 @@ slug: pantheon-lando
 dark: true
 background: EFD01B
 date: 2017-08-16
-industries: startups
-tech: docker, nodejs, drupal, wordpress
+industries: startups, corporate, agencies
+tech: docker, drupal, wordpress
 services: development
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: "USF Rescue"
+title: "USF Performance Rescue"
 layout: layouts/case-study.html
-logo: images/clients/pantheon/pantheon.png
+logo: images/clients/usf/usf.png
 org: Pantheon Systems
 permalink: true
 private: false
@@ -10,9 +10,9 @@ slug: usf-redirect-rescue
 dark: false
 background: 00574D
 date: 2017-09-25
-industries: startups
-tech: docker, nodejs, drupal, wordpress
-services: development
+industries: higher education
+tech: drupal
+services: rescue
 ---
 
 We're proud of all the projects we work on, but among all of our clients, California's Valued Trust (CVT) stands out. By developing the MyCVT enrollment portal, we helped tens of thousands of CVT subscribers (primarily teachers and school staff in K-12 education) find an easier way to enroll in their insurance.

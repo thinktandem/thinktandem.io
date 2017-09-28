@@ -6,7 +6,7 @@ org: Pantheon Systems
 permalink: true
 private: false
 byline: How we helped <strong>California's Valued Trust</strong> power a shift from paper to digital by building a secure insurance enrollent portal in Drupal.
-slug: pantheon
+slug: pantheon-kalabox
 dark: true
 background: EFD01B
 date: 2013-09-22

@@ -10,9 +10,9 @@ slug: cvt-subscriber
 background: BD587A
 dark: false
 date: 2017-09-23
-tech: nodejs
+tech: laravel
 industries: health
-services: strategy
+services: development
 ---
 
 ![mycvt-screenshot](/images/case-studies/mycvt1.png "MyCVT Enrollment Page Screenshot")

@@ -10,9 +10,9 @@ slug: cvt-secure-files
 background: BD587A
 dark: false
 date: 2017-03-23
-tech: nodejs
+tech: drupal
 industries: health
-services: strategy
+services: development
 ---
 
 ![mycvt-screenshot](/images/case-studies/mycvt1.png "MyCVT Enrollment Page Screenshot")

@@ -1,18 +1,18 @@
 ---
-title: "Lando"
+title: "Better Local Dev"
 layout: layouts/case-study.html
-logo: images/clients/pantheon/pantheon.png
+logo: images/tandem-logo.png
 org: Pantheon Systems
 permalink: true
 private: false
 byline: How we helped <strong>California's Valued Trust</strong> power a shift from paper to digital by building a secure insurance enrollent portal in Drupal.
-slug: usf-redirect-rescue
+slug: tandem-local-lando
 dark: false
 background: ED3F7A
 date: 2017-07-07
 industries: startups
-tech: docker, nodejs, drupal, wordpress
-services: development
+tech: docker, nodejs, drupal, wordpress, laravel
+services: development, devops
 ---
 
 We're proud of all the projects we work on, but among all of our clients, California's Valued Trust (CVT) stands out. By developing the MyCVT enrollment portal, we helped tens of thousands of CVT subscribers (primarily teachers and school staff in K-12 education) find an easier way to enroll in their insurance.

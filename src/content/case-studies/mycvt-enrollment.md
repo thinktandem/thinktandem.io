@@ -1,7 +1,7 @@
 ---
 layout: layouts/case-study.html
 logo: images/clients/cvt/cvt.png
-title: "Enrollment Portal"
+title: "Insurance Enrollment Portal"
 org: California's Valued Trust
 permalink: true
 private: false
@@ -10,9 +10,9 @@ slug: cvt-enrollment
 background: BD587A
 dark: false
 date: 2015-01-23
-tech: nodejs
+tech: drupal
 industries: health
-services: strategy
+services: strategy, rescue, development
 ---
 
 ![mycvt-screenshot](/images/case-studies/mycvt1.png "MyCVT Enrollment Page Screenshot")
