@@ -1,18 +1,35 @@
 ---
 layout: layouts/case-study.html
 logo: images/clients/cvt/cvt.png
-title: "Subscriber Homepage"
 org: California's Valued Trust
-permalink: true
-private: false
-byline: How we helped <strong>California's Valued Trust</strong> power a shift from paper to digital by building a secure insurance enrollment portal in Drupal.
+byline: We made a better subscriber experience for <strong>California's Valued Trust</strong> through user-centric design.
+image:
+  src: /images/case-studies/mycvt1.png
+  title: MyCVT Enrollment Page Screenshot
+challenge: Help CVT subscribers get quicker access to important information and thus reduce support call time.
+solution: Create user personas from stakeholder interviews to guide building an in-browser prototype in Laravel. Iterate with user testing.
+impact: Introduced user-centric design principles to CVT while building an essential product.
+quote:
+  content: Leadership has recognized the value of this type of research...it is a process that we can adapt to other projects internally to help us navigate through other member focused decisions.
+  author: Brook Paulsen, IT Manager
+metrics:
+  - key: API's
+    value: ~30K
+  - key: Districts Using MyCVT
+    value: 240+
+  - key: Forms Submitted
+    value: 60K+
+
+tech: laravel
+industries: health
+services: strategy, development
+
 slug: cvt-subscriber
 background: BD587A
 dark: false
 date: 2017-09-23
-tech: laravel
-industries: health
-services: development
+permalink: true
+private: false
 ---
 
 ![mycvt-screenshot](/images/case-studies/mycvt1.png "MyCVT Enrollment Page Screenshot")

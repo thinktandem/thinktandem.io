@@ -10,21 +10,19 @@ challenge: Build a secure online portal to help tens of thousands of California 
 solution: Use Drupal and Angular to quickly develop a user-friendly enrollment experience.
 impact: Nearly 30K users. Empowering more than 240 districts. New digital cornerstone of the CVT experience
 quote:
-  content: Trust is earned when actions meet words.
-  author: Test
+  content: Tandem provided a cost-conscious solution with a very beneficial result.
+  author: Brook Paulsen, IT Manager
 metrics:
-  - key: stuff
-    value: thing
-  - key: stuff2
-    value: thing2
-  - key: stuff3
-    value: thig
-  - key: stuff4
-    value: =w=
+  - key: Enrollees Served
+    value: ~30K
+  - key: Districts Using MyCVT
+    value: 240+
+  - key: Forms Submitted
+    value: 60K+
 
 tech: drupal
 industries: health
-services: strategy, rescue, development
+services: strategy, development
 
 background: BD587A
 layout: layouts/case-study.html
