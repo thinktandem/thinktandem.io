@@ -28,11 +28,11 @@ services: strategy, rescue, development
 
 background: BD587A
 layout: layouts/case-study.html
+slug: cvt-enrollments
 dark: false
 permalink: true
 private: false
 date: 2015-01-23
-slug: cvt-enrollment
 ---
 
 We're proud of all the projects we work on, but among all of our clients, California's Valued Trust (CVT) stands out. By developing the MyCVT enrollment portal, we helped tens of thousands of CVT subscribers (primarily teachers and school staff in K-12 education) find an easier way to enroll in their insurance.
