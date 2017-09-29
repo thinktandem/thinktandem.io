@@ -2,23 +2,26 @@
 layout: layouts/case-study.html
 logo: images/clients/cvt/cvt.png
 org: California's Valued Trust
+title: Redesigned Subscriber Homepage
 byline: We made a better subscriber experience for <strong>California's Valued Trust</strong> through user-centric design.
 image:
-  src: /images/case-studies/mycvt1.png
+  src: /images/case-studies/subscriber-home.png
   title: MyCVT Enrollment Page Screenshot
-challenge: Help CVT subscribers get quicker access to important information and thus reduce support call time.
-solution: Create user personas from stakeholder interviews to guide building an in-browser prototype in Laravel. Iterate with user testing.
+challenge: Reduce support time by getting CVT subscribers quicker access to important information.
+solution: Use stakeholder interviews and personas to guide building an in-browser prototype in Laravel. Iterate with user testing.
 impact: Introduced user-centric design principles to CVT while building an essential product.
 quote:
   content: Leadership has recognized the value of this type of research...it is a process that we can adapt to other projects internally to help us navigate through other member focused decisions.
   author: Brook Paulsen, IT Manager
 metrics:
-  - key: API's
+  - key: Users Migrated to Auth0
     value: ~30K
-  - key: Districts Using MyCVT
-    value: 240+
-  - key: Forms Submitted
-    value: 60K+
+  - key: Hrs of Support Call Time
+    value: 500+
+  - key: Support Emails
+    value: 515
+  - key: In-Browser Prototype/MVP
+    value: Laravel
 
 tech: laravel
 industries: health
@@ -32,30 +35,12 @@ permalink: true
 private: false
 ---
 
-![mycvt-screenshot](/images/case-studies/mycvt1.png "MyCVT Enrollment Page Screenshot")
+After 5 years maintaining MyCVT, the primary insurance portal for California's Valued Trust, we knew a better user experience was possible. An audit of CVT's support logs confirmed our suspicions: subscribers were having trouble accessing basic information about their benefits. CVT was losing valuable support staff time and its subscribers weren't getting the most out of their insurance benefits.
 
-## Challenge
+But we couldn't just jump into development. Creating a better solution for CVT's subscribers required understanding their needs. Tandem proposed a discovery project.
 
-Build a secure online portal to help tens of thousands of California teachers and school staff enroll for insurance.
+First, we helped create user personas that represented different types of CVT users. From these we created journey maps showing how those users interacted with CVT's services, identifying different blockers they experienced. Finally, we held a collaborative sketching session to draft new user interfaces to help resolve these problems. These would be translated into an in-browser prototype that could be presented to real CVT users and tested as development progressed.
 
-## Solution
+The CVT IT team was initially dubious, but quickly realized the value of direct user interaction. Each conversation with CVT subscribers lead to new insights and a deeper commitment to subscriber success.
 
-Use Drupal and Angular to quickly develop a user-friendly enrollment experience.
-
-## Impact
-
-Nearly 30K users
-Empowering more than 240 districts
-New digital cornerstone of the CVT experience
-
-> Trust is earned when actions meet words.
-
-We're proud of all the projects we work on, but among all of our clients, California's Valued Trust (CVT) stands out. By developing the MyCVT enrollment portal, we helped tens of thousands of CVT subscribers (primarily teachers and school staff in K-12 education) find an easier way to enroll in their insurance.
-
-CVT was already in the process of modernizing its technology stack and was fortunate to have a team that included programmers familiar with PHP. Although most of CVT's infrastructure to date had been written in COBOL, they were very receptive when we proposed adoption of a modern PHP framework to provide...
-
-- a standardized data model
-- an easy way to generate and consume APIs
-- automated report and simple interface generation.
-
-We selected Drupal as a way to prototype the MyCVT system. With roots as a popular CMS, Drupal could easily reproduce the data model of CVT's paper enrollment forms. The powerful suite of API and report construction tools included with Drupal allowed the construction and deployment of the initial version of MyCVT within months.
+Ultimately we made a much more informative and usable home page for MyCVT users, but our greatest achievement was introducing a series of user-centric design tools to CVT. We trained CVT's staff to conduct interviews and create the assets necessary to run this process themselves, and indeed they did much of the work throughout the project.
