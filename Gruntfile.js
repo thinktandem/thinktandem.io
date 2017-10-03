@@ -63,7 +63,7 @@ module.exports = function(grunt) {
       },
       deploy: {
         files: {
-          'build/js/scripts.js': ['build/js/scripts.js']
+          'build/js/scripts.min.js': ['build/js/scripts.js']
         }
       }
     },
@@ -102,7 +102,7 @@ module.exports = function(grunt) {
   grunt.initConfig(config);
 
   // Register tasks
-  grunt.registerTask('build', ['exec:build']);
+  grunt.registerTask('build', ['exec:build', 'cssmin', 'uglify']);
   grunt.registerTask('default', ['build', 'watch']);
   grunt.registerTask('test', ['htmllint', 'sasslint', 'build']);
 
