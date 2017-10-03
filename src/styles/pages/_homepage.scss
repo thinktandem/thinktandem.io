@@ -15,4 +15,10 @@
   h3 {
     font-size: 1.4em;
   }
+
+  #hero {
+    @media (max-width: 767px) {
+      min-height: 17em;
+    }
+  }
 }

@@ -1,12 +1,12 @@
 
 .featured-post, .prev-next-posts {
 
-  @media(max-width: 991px) {
+  @media (max-width: 991px) {
     margin: 0em 2em;
     padding: 11% 0% 16% 0%;
   }
 
-  @media(min-width: 992px) {
+  @media (min-width: 992px) {
     &:first-child {
       border-right: 1px solid $brand-primary;
     }

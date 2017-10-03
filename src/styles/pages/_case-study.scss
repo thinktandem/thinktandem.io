@@ -6,6 +6,15 @@
     margin: 0;
     margin-top: 22%;
     color: $gray-lighter;
+
+    @media (max-width: 776px) {
+      font-size: 3em;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2em;
+    }
+
   }
   p {
     color: $gray-lighter;
@@ -17,6 +26,12 @@
     margin: 0;
     padding: 2.17em;
     font-size: 1.9em;
+
+    @media (max-width: 767px) {
+      padding: 1em;
+      font-size: 1.7em;
+    }
+
     small {
       color: $gray;
       font-size: .5em;
@@ -38,6 +53,12 @@
     @media (min-width: 1200px) {
       .container {
         width: 1170px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .col {
+        margin-bottom: 5px;
       }
     }
   }

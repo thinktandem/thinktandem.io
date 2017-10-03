@@ -55,6 +55,10 @@
     font-weight: 300;
     margin-bottom: 1.8em;
     letter-spacing: -0.01em;
+
+    @media (max-width: 767px) {
+      padding: 0 2em;
+    }
   }
 
   .language {
