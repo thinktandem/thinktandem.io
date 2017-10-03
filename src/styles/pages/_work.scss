@@ -37,6 +37,11 @@
 
   .case-study {
     height: 12em;
+
+    @media (max-width: 767px) {
+      margin-bottom: 5px;
+    }
+
     .case-study-back {
       display: none;
       font-size: 1em;
