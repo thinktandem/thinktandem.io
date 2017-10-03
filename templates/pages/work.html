@@ -22,7 +22,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-4 tags">
           <div class="tag-link">
             <a href="/work">All</a>
           </div>
@@ -45,7 +45,7 @@
             </div>
           {% endfor %}
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-8 case-studies">
           <div class="row">
             {% for study in collections.caseStudies %}
               {% include "../components/molecules/case-study/case-study.html" %}
