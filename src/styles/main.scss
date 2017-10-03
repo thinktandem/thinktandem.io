@@ -274,6 +274,10 @@ small.subtitle {
           font-weight: 300;
           @include transition(color 0.2s linear);
 
+          @media (min-width: 768px) and (max-width: 991px) {
+            padding: 15px;
+          }
+
           &:hover {
             color: #fff;
           }
