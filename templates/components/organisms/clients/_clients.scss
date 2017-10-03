@@ -1,14 +1,21 @@
 #clients {
   margin: 7em 0em;
+
   .logos {
+    margin-top: 35px;
+
     .logo {
       background-color: $gray-base;
       height: 10em;
+
       @media (max-width: 997px) {
         height: auto;
+        margin-bottom: 5px;
       }
+
       img {
         width: 80%;
+
         @media (min-width: 997px) {
           position: absolute;
           left: 50%;

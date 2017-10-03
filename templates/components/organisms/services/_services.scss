@@ -13,6 +13,14 @@
       font-size: 0.8em;
       border: 5px solid $gray-lighter;
       color: $gray-lighter;
+
+      @media (max-width: 991px) {
+        width: 87%;
+      }
+
+      @media (max-width: 480px) {
+        width: 77%;
+      }
     }
     h3 {
       color: $gray-lighter;

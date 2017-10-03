@@ -18,6 +18,11 @@
 
   @media (max-width: 767px) {
     margin-left: 1em;
+    min-height: 17em;
+  }
+
+  @media (max-width: 480px) {
+    min-height: 0;
   }
 
   &:before {
@@ -86,18 +91,19 @@
   h1.hero-text {
     margin: 2em 0em 1em 0em;
     margin-top: 10vh;
-
     -webkit-animation-duration: 1s;
 
     @media (max-width: 767px) {
       font-size: 2em;
-      margin: 0em 0em 1em 0em;
+      margin: 0em 0em 0.75em 0em;
+      line-height: 1em;
     }
   }
 
   p.hero-text {
     font-size: 1.5em;
     margin-bottom: 1em;
+
     @media (max-width: 767px) {
       font-size: 1em;
       margin: 1em 1em 1em 0em;
