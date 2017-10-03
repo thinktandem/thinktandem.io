@@ -3,11 +3,18 @@
   .teasers {
     padding-top: 7em;
     padding-bottom: 7em;
+
+    @media (max-width: 767px) {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
   }
 
   .featured-post {
     border-top: 0;
     border-bottom: 1px solid $brand-primary;
+    padding: 20px 15px;
+    margin: 0;
 
     @media (min-width: 992px) {
       border-right: 1px solid $brand-primary;
