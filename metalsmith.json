@@ -214,6 +214,7 @@
     },
     "metalsmith-browserify": {
       "files": [
+        "./../assets/public/matchheight/dist/jquery.matchHeight-min.js",
         "js/entry.js",
         "js/theme.js"
       ],

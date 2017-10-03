@@ -53,7 +53,8 @@
     "shell-escape": "^0.2.0"
   },
   "browser": {
-    "bootstrap": "./assets/public/bootstrap-sass-twbs/assets/javascripts/bootstrap.min.js"
+    "bootstrap": "./assets/public/bootstrap-sass-twbs/assets/javascripts/bootstrap.min.js",
+    "matchheight": "./assets/public/matchheight/dist/jquery.matchHeight-min.js"
   },
   "browserify": {
     "transform": [
@@ -62,6 +63,11 @@
   },
   "browserify-shim": {
     "bootstrap": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    },
+    "matchheight": {
       "depends": [
         "jquery:jQuery"
       ]
