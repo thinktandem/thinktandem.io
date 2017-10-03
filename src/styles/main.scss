@@ -72,8 +72,11 @@ a, button {
 }
 
 #header-title {
-
   margin-top: 3.7em;
+
+  @media (max-width: 767px) {
+    margin-top: 0.5em;
+  }
 
   h1 {
     color: $brand-primary;

@@ -3,6 +3,11 @@
   .container {
     padding-bottom: 1em;
     padding-top: 1em;
+
+    @media (max-width: 767px) {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
   }
 
   .tag-link {
