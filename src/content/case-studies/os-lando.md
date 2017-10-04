@@ -1,79 +1,92 @@
 ---
 title: "Better Local Dev"
-layout: layouts/case-study.html
 logo: images/tandem-logo.png
-org: Pantheon Systems
-permalink: true
-private: false
-byline: How we helped <strong>California's Valued Trust</strong> power a shift from paper to digital by building a secure insurance enrollent portal in Drupal.
+org: Tandem
+byline: How we built <strong>Lando</strong>, a free and open source local development and DevOps tool to empower developers and bring more value to clients by saving their time.
+image:
+  src: /images/case-studies/lando-screenshot.png
+  title: Lando CLI
+challenge: Build a tool that allows developers to easily and quickly spin up the dev requirements needed for each of their projects.
+solution: Leverage our work and experience on the Kalabox project to build a config-file driven and Docker based *TOTAL DEV* tool.
+impact: Massive developer time savings in onboarding, production parity issues, testing and writing code that can all be passed on to the client.
+quote:
+  content: "In real open source, you have the right to control your own destiny."
+  author: Linus Torvalds
+metrics:
+  - key: Languages Supported
+    value: 6
+  - key: Prebaked Recipes
+    value: 13
+  - key: Auxiliary Services
+    value: 15
+
+tech: docker, nodejs, drupal, wordpress, laravel
+industries: startups
+services: development, devops
+
+background: ED3F7A
+layout: layouts/case-study.html
 slug: tandem-local-lando
 dark: false
-background: ED3F7A
+permalink: true
+private: false
 date: 2017-07-07
-industries: startups
-tech: docker, nodejs, drupal, wordpress, laravel
-services: development, devops
 ---
 
-We're proud of all the projects we work on, but among all of our clients, California's Valued Trust (CVT) stands out. By developing the MyCVT enrollment portal, we helped tens of thousands of CVT subscribers (primarily teachers and school staff in K-12 education) find an easier way to enroll in their insurance.
+[Lando](http://github.com/lando/lando) is the culmination of many years of work trying to create an easy, powerful and comprehensive local development and DevOps tool. It is designed to work with most major languages, frameworks and services and to provide an easy way for users to specify simple or complex development requirements for their projects. This means that Lando can be used to specify things like `apache` or `memcache` but also things like `drush` or `pip`.
 
-However, while our work on the MyCVT application was vital, ultimately the most important contribution we have made at CVT is assisting in its transformation into a technology-focused organization.
-Standardizing on a PHP Framework
+In that way it can be thought of as a development dependency management tool.
 
-CVT was already in the process of modernizing its technology stack and was fortunate to have a team that included programmers familiar with PHP. Although most of CVT's infrastructure to date had been written in COBOL, they were very receptive when we proposed adoption of a modern PHP framework to provide...
+**With Lando you can...**
 
-- a standardized data model
-- an easy way to generate and consume APIs
-- automated report and simple interface generation.
+*   Easily mimic your production environment locally.
+*   Standardize your teams dev environments and tooling on OSX, Windows and Linux.
+*   Integrate with hosting providers like [Pantheon](https://pantheon.io)
+*   Store all of the above in a version controlled config file called `.lando.yml`
+*   Easily customize or extend tooling, deployment options and basically any other functionality.
+*   Free yourself from the tyranny of inferior local development products.
 
-We selected Drupal as a way to prototype the MyCVT system. With roots as a popular CMS, Drupal could easily reproduce the data model of CVT's paper enrollment forms. The powerful suite of API and report construction tools included with Drupal allowed the construction and deployment of the initial version of MyCVT within months.
+A developer should be able to get a running site and the tools needed to develop that site with a single, short config file called `.lando.yml` that lives in the root directory of your project and a few `lando` commands.
 
-## Decoupling the Application Architecture
+**Lando supports these core languages:**
 
-While Drupal was the perfect tool to quickly get MyCVT into production, we wanted to allow CVT greater flexibility in maintaining and developing the application in the future. Drupal's idiosyncratic approach to application design was difficult for CVT's existing development team to adopt and the challenge of performing a large migration from Drupal to another application framework was dauntingly expensive. Clearly MyCVT needed room to grow.
+*   [dotnet](http://docs.devwithlando.io/services/dotnet.html)
+*   [go](http://docs.devwithlando.io/services/go.html)
+*   [node](http://docs.devwithlando.io/services/node.html)
+*   [php](http://docs.devwithlando.io/services/php.html)
+*   [python](http://docs.devwithlando.io/services/python.html)
+*   [ruby](http://docs.devwithlando.io/services/ruby.html)
 
-To solve this problem we introduced a decoupled architecture to MyCVT, building a front-end application in Angular for enrollment creation. This front-end interacted with Drupal via a series of APIs, but was built as a proof-of-concept for switching back-end systems at a later time.
+**and these prebaked recipes:**
 
-Working with CVT, we've designed a project roadmap that increasingly takes advantage of this decoupled architecture. As CVT makes progress in upgrading their internal infrastructure, we can incrementally move MyCVT away from its reliance on Drupal and redefine it as a purely front-end application. A series of API endpoints will power MyCVT and also allow development of mobile apps and other applications.
+*   [Backdrop](http://docs.devwithlando.io/tutorials/backdrop.html)
+*   [Drupal 6](http://docs.devwithlando.io/tutorials/drupal6.html)
+*   [Drupal 7](http://docs.devwithlando.io/tutorials/drupal7.html)
+*   [Drupal 8](http://docs.devwithlando.io/tutorials/drupal8.html)
+*   [Joomla](http://docs.devwithlando.io/tutorials/joomla.html)
+*   [Laravel](http://docs.devwithlando.io/tutorials/laravel.html)
+*   [MEAN](http://docs.devwithlando.io/tutorials/mean.html)
+*   [LAMP](http://docs.devwithlando.io/tutorials/lamp.html)
+*   [LEMP](http://docs.devwithlando.io/tutorials/lemp.html)
+*   [Pantheon](http://docs.devwithlando.io/tutorials/pantheon.html)
+*   [WordPress](http://docs.devwithlando.io/tutorials/wordpress.html)
+*   [Custom](http://docs.devwithlando.io/tutorials/custom.html)
 
-## Creating Continuous Delivery
+**and these auxiliary services:**
 
-Once the first version of MyCVT was deployed, it became important to keep providing value via new features while handling support requests. To do this, we introduced a modern development workflow featuring Gitflow and Agile methodology, using the Pantheon hosting system as a vital piece of infrastructural support.
+*   [apache](http://docs.devwithlando.io/services/apache.html)
+*   [elasticsearch](http://docs.devwithlando.io/services/elasticsearch.html)
+*   [mailhog](http://docs.devwithlando.io/services/mailhog.html)
+*   [mariadb](http://docs.devwithlando.io/services/mariadb.html)
+*   [memcached](http://docs.devwithlando.io/services/memcached.html)
+*   [mongo](http://docs.devwithlando.io/services/mongo.html)
+*   [mssql](http://docs.devwithlando.io/services/mssql.html)
+*   [mysql](http://docs.devwithlando.io/services/mysql.html)
+*   [nginx](http://docs.devwithlando.io/services/nginx.html)
+*   [phpmyadmin](http://docs.devwithlando.io/services/phpmyadmin.html)
+*   [postgres](http://docs.devwithlando.io/services/postgres.html)
+*   [redis](http://docs.devwithlando.io/services/redis.html)
+*   [solr](http://docs.devwithlando.io/services/solr.html)
+*   [varnish](http://docs.devwithlando.io/services/varnish.html)
 
-If you're not familiar with Gitflow, MyCVT is a perfect case study of how it can help organizations develop new features while simultaneously addressing bugs in production without creating a chaotic deployment pipeline.
-
-Traditionally, testing and production environments share the same git repository. That means if you deploy a new feature to the testing environment for your team to review, but before they can, you need to create and deploy a vital hot fix to production, you'll need to remove your new feature from the deployment pipeline, deploy your hot fix, and then re-insert your new feature. Each step in this process introduces the possibility of error, and we've seen teams accidentally deploying new features before review because they didn't properly execute their hot fix.
-
-Gitflow fixes this by commanding you to do all development in separate Git branches. Only once the work is fully vetted can it be put into the "production pipeline", ready for a final round of QA and deployment immediately.
-
-With Gitflow, we were able to work on multiple features simultaneously. Reviewers can perform quality assurance on separate test environments (what Pantheon calls "multidev" environments), while the primary deployment pipeline remains clear for any hotfixes that might be necessary as bugs are reported.
-
-## Introducing an Agile Flow
-
-Unlike many of our projects, where we start with Agile training or are already working with an Agile-trained team, at CVT we introduced Agile concepts iteratively.
-
-First, we started using the Kanban project management tool Trello. CVT found Trello to be an easy way to clearly see project priorities and communicate with us on project requirements. They liked it so much, that eventually our contacts in CVT's tech team introduced Trello to the rest of the organization, where it is growing in adoption.
-
-However, better project management software can only facilitate better communication, it can't create it. Starting weekly standups with the entire CVT tech team helped improve the quality of Trello issues being created, lead to more effective problem solving, and ensured that task scoping was accurate from planning to implementation and deployment.
-
-## The Future
-
-Our relationship with CVT stretches over more than 5 years, and we're constantly thinking about what the next 5 years of development will lead to.
-
-As consultants, we invest in the "teach a man to fish" strategy. A great deal of our long-term strategy with CVT is based around training and investing in technologies that CVT's growing team can manage. We're currently investigating how Docker can help modernize CVT's infrastructure, how more pieces of QA and compliance monitoring can be automated, and how CVT can get better data on all their software projects to help improve their growth into a technology-focused organization.
-
-We're lucky to work with organizations like CVT that are helping our fellow Californians lead healthier, better lives. If you're interested in hearing more about our work with CVT and other organizations, let us know.
-
-
-## Organization Snapshot
-
-Company: California’s Value Trust
-Location: Fresno, California
-Number of Portal Users Served: Over 30,000
-Challenge: Create secure applications without sacrificing development speed
-Solution:
-Impact:
-Over 30K enrollments submitted
-Faster updates of new features
-QA environments for every update
-Automated testing of code
+As well as a [whole lot more](https://docs.devwithlando.io).
