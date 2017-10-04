@@ -5,9 +5,9 @@ org: Pantheon Systems
 byline: We built <strong>Pantheon Systems</strong> an integration for our Kalabox GUI that allows their users to easily clone their sites onto their computer.
 image:
   src: /images/case-studies/kalabox.png
-  title: USF Website
+  title: Kalabox GUI
 challenge: Provide a one-click, push button solution that gets a user developing their Pantheon site locally in a matter of minutes.
-solution: Use Kalabox & Docker technology to replicate the Pantheon development environment and toolchain and Terminus to clone a site.
+solution: Use Kalabox and Docker technology to replicate the Pantheon development environment and toolchain and Terminus to clone a site.
 impact: Users can get a full Pantheon-specific dev environment running in minutes. Pantheon has a great any easy way to onboard users of all skill levels.
 quote:
   content: "A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools."

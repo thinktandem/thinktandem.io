@@ -50,7 +50,52 @@
 
   </article>
 
-  {% include '../components/organisms/featured/featured.html' %}
+
+  <div id="prev-next-posts">
+    <div class="container">
+      <div class="row header">
+
+        <div class="col-md-6 featured-post previous-post">
+          {% if previous %}
+            <div class="tags">
+              <a href="{{ previous.path }}">previous article</a>
+            </div>
+            <div class="title">
+              <a href="{{ previous.path }}">{{ previous.title }}</a>
+            </div>
+            <div class="author">
+              By {{ previous.author }}
+            </div>
+            <div class="tags">
+            {% for tag in previous.tags %}
+              <a href="blog/{{ tag.name  }}">{{ tag.name }}</a>
+            {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="col-md-6 featured-post next-post">
+          {% if next %}
+            <div class="tags">
+              <a href="{{ next.path }}">next article</a>
+            </div>
+            <div class="title">
+              <a href="{{ next.path }}">{{ next.title }}</a>
+            </div>
+            <div class="author">
+              By {{ next.author }}
+            </div>
+            <div class="tags">
+            {% for tag in next.tags %}
+              <a href="blog/{{ tag.name  }}">{{ tag.name }}</a>
+            {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+  </div>
   {% include '../components/organisms/cta/cta.html' %}
 
 {% endblock %}
