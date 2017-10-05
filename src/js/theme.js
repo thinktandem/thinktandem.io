@@ -27,6 +27,9 @@ $(function () {
     $(this).find('.case-study-front').show();
   });
 
+  var cw = $('.case-study-home').width();
+  $('.case-study-home').css({'height':cw+'px'});
+
 });
 
 window.utils = {

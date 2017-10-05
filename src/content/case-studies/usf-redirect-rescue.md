@@ -25,6 +25,7 @@ metrics:
 tech: drupal
 industries: higher education
 services: rescue
+tags: whatever, stuff
 
 background: 00574D
 layout: layouts/case-study.html
