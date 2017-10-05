@@ -3,13 +3,22 @@
   .teasers {
     padding-top: 7em;
     padding-bottom: 7em;
+
+    @media (max-width: 767px) {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
   }
 
   .featured-post {
-
     border-top: 0;
-    border-right: 1px solid $brand-primary;
-    padding: 8% 4% 8% 4%;
+    border-bottom: 1px solid $brand-primary;
+
+    @media (min-width: 992px) {
+      border-right: 1px solid $brand-primary;
+      border-bottom: none;
+      padding: 8% 4% 8% 4%;
+    }
 
     &:last-child {
       border: 0;

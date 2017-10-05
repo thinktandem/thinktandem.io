@@ -38,16 +38,22 @@
   #page-content {
     .container {
       .address {
-        @media (max-width: 768px) {
+        padding-right: 100px;
+        padding-bottom: 2em;
+
+        @media (max-width: 767px) {
           padding-right: 0;
           border: none;
         }
-        padding-right: 100px;
-        padding-bottom: 2em;
       }
+
       .map {
         padding-left: 40px;
         padding-bottom: 2em;
+
+        @media (max-width: 767px) {
+          padding-left: 15px;
+        }
       }
     }
   }

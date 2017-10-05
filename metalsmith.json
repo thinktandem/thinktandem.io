@@ -6,6 +6,11 @@
         "reverse": true,
         "pattern": "content/articles/*.md"
       },
+      "caseStudies": {
+        "sortBy": "date",
+        "reverse": true,
+        "pattern": "content/case-studies/*.md"
+      },
       "careers": {
         "sortBy": "weight",
         "pattern": "content/careers/*.md"
@@ -15,6 +20,12 @@
         "limit": 3,
         "reverse": true,
         "pattern": "content/articles/*.md"
+      },
+      "recentWork": {
+        "sortBy": "date",
+        "limit": 4,
+        "reverse": true,
+        "pattern": "content/case-studies/*.md"
       },
       "featuredArticles": {
         "sortBy": "date",
@@ -54,6 +65,10 @@
           "pattern": "blog/:date/:title"
         },
         {
+          "match": {"collection": "caseStudies"},
+          "pattern": "work/:slug"
+        },
+        {
           "match": {"collection": "services"},
           "pattern": "services/:slug"
         }
@@ -70,19 +85,46 @@
         }
       }
     },
-    "metalsmith-tags": {
-      "handle": "tags",
-      "path": "topics/:tag/index.html",
-      "pathPage": "topics/:tag/:num/index.html",
-      "perPage": 3,
-      "layout": "pages/tags.html",
-      "sortBy": "date",
-      "reverse": true,
-      "skipMetadata": false,
-      "slug": {
-        "mode": "rfc3986"
+    "metalsmith-tags": [
+      {
+        "handle": "tags",
+        "metadataKey": "tags",
+        "path": "blog/:tag/index.html",
+        "pathPage": "blog/:tag/:num/index.html",
+        "perPage": 3,
+        "layout": "pages/tags.html",
+        "sortBy": "date",
+        "reverse": true
+      },
+      {
+        "handle": "industries",
+        "metadataKey": "industries",
+        "path": "work/industry/:tag/index.html",
+        "pathPage": "work/industry/:tag/:num/index.html",
+        "layout": "pages/industries.html",
+        "sortBy": "date",
+        "reverse": true,
+        "skipMetadata": true
+      },
+      {
+        "handle": "tech",
+        "metadataKey": "tech",
+        "path": "work/technology/:tag/index.html",
+        "pathPage": "work/technology/:tag/:num/index.html",
+        "layout": "pages/tech.html",
+        "sortBy": "date",
+        "reverse": true
+      },
+      {
+        "handle": "services",
+        "metadataKey": "services",
+        "path": "work/service/:tag/index.html",
+        "pathPage": "work/service/:tag/:num/index.html",
+        "layout": "pages/service.html",
+        "sortBy": "date",
+        "reverse": true
       }
-    },
+    ],
     "metalsmith-jsonld": {
       "defaults": [
         {
@@ -180,6 +222,7 @@
     },
     "metalsmith-browserify": {
       "files": [
+        "./../assets/public/matchheight/dist/jquery.matchHeight-min.js",
         "js/entry.js",
         "js/theme.js"
       ],

@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.html
 title: "Let's Get Small: Introduction to Microservices"
-tags: docker, scaling, strategy, hosting
+tags: devops
 permalink: true
 author: Alec Reynolds
 private: true

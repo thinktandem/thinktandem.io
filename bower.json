@@ -4,6 +4,7 @@
   "dependencies": {
     "bootstrap-sass-twbs": "~3.3.5",
     "fontawesome": "~4.7.0",
-    "devicons": "https://github.com/thinktandem/devicons.git#dynamic-fontpath"
+    "devicons": "https://github.com/thinktandem/devicons.git#dynamic-fontpath",
+    "matchheight": "~0.7.2"
   }
 }

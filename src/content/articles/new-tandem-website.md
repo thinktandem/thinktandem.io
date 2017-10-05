@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.html
 title: "Launching the New ThinkTandem.io"
-tags: misc
+tags: misc, ux
 permalink: true
 author: Alec Reynolds
 private: false

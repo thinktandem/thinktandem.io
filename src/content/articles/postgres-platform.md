@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.html
 title: "Working with Postgres Databases and Platform.sh"
-tags: localdev, hosting, postgres, platform.sh
+tags: localdev, devops
 permalink: true
 author: Geoff St. Pierre
 private: false

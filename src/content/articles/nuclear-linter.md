@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.html
 title: "Save Prod & Peers: Linting and Styles for Node on Travis"
-tags: deployment, localdev, strategy, support, testing
+tags: deployment, development, localdev, support, testing
 permalink: true
 author: Mike Pirog
 private: false

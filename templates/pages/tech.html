@@ -1,0 +1,66 @@
+{% extends '../layouts/html.html' %}
+
+{% block title %}
+  {%parent%} {{tag|capitalize}}
+{% endblock %}
+
+{% block contents %}
+
+<div id="work">
+
+  <div id="header-title">
+    <div class="container">
+      <div class="row header">
+        <div class="col-xs-12 ">
+          <small class="subtitle">{{ tag|safe }}</small>
+          <h1>Work</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="header-byline">
+    <div class="container">
+      <p>Check out some of the great solutions we've build using {{ tag }}.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 tags">
+        <div class="tag-link">
+          <a href="/work">All</a>
+        </div>
+        <hr class="linerule">
+        {% for industry in tags.industries %}
+          <div class="tag-link">
+            <a href="/work/industry/{{ industry }}">{{ industry }}</a>
+          </div>
+        {% endfor %}
+        <hr class="linerule">
+        {% for service in tags.services %}
+          <div class="tag-link">
+            <a href="/work/service/{{ service }}">{{ service }}</a>
+          </div>
+        {% endfor %}
+        <hr class="linerule">
+        {% for technology in tags.tech %}
+          <div class="tag-link">
+            <a href="/work/technology/{{ technology }}">{{ technology }}</a>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="col-sm-8">
+        <div class="row">
+          {% for study in pagination.files %}
+            {% include "../components/molecules/case-study/case-study.html" %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  {% include '../components/organisms/cta/cta.html' %}
+
+{% endblock %}

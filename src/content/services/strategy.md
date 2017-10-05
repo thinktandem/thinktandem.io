@@ -4,12 +4,7 @@ title: Strategy
 byline: Greater understanding of your users and stakeholders. Building the right thing, the best way possible.
 cta: Start Strategizing
 link: /services/strategy
-short: Strategy
-icon: fa fa-cloud
 color: orange
-slug: strategy
-arrow: true
-weight: 3
 icons:
   - icon: fa fa-comments-o
     name: Stakeholder Interviews
@@ -29,7 +24,6 @@ icons:
   - icon: fa fa-user-circle-o
     name: User Testing
     link: /services/strategy
-private: true
 ---
 
 “Take down this wall!”

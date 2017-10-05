@@ -12,11 +12,24 @@ $(function () {
     $("[data-2x]").each(function(){
       if(this.tagName == "IMG"){
         $(this).attr("src",$(this).attr("data-2x"));
-      } else {
+      }
+      else {
         $(this).css({"background-image":"url("+$(this).attr("data-2x")+")"});
       }
+    });
+  }
+
+  $('.case-study').hover(function() {
+    $(this).find('.case-study-front').hide();
+    $(this).find('.case-study-back').show();
+  }, function() {
+    $(this).find('.case-study-back').hide();
+    $(this).find('.case-study-front').show();
   });
-}
+
+  var cw = $('.case-study-home').width();
+  $('.case-study-home').css({'height':cw+'px'});
+
 });
 
 window.utils = {

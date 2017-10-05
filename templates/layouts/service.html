@@ -3,11 +3,11 @@
 {% block contents %}
 
   <div id="service">
-
     <div id="header-title">
       <div class="container">
         <div class="row header">
-          <div class="col-xs-12 ">
+          <div class="col-md-12 ">
+            <small class="subtitle">We do</small>
             <h1>{{ title|safe }}</h1>
           </div>
         </div>
@@ -15,17 +15,18 @@
     </div>
     <div id="header-byline">
       <div class="container">
-        {{ byline|safe }}
+        <p>{{ byline|safe }}</p>
       </div>
     </div>
 
-    <div id="page-content">
+    <div id="page-content" class="service-item">
       <div class="container">
         {{ contents|safe }}
       </div>
     </div>
   </div>
 
+  {% include '../components/organisms/featured/featured.html' %}
   {% include '../components/organisms/cta/cta.html' %}
 
 {% endblock %}

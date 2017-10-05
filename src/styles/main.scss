@@ -37,9 +37,8 @@ Custom
 @import "../../templates/components/organisms/sf/sf";
 @import "../../templates/components/organisms/stats/stats";
 @import "../../templates/components/organisms/experts/experts";
-@import "../../templates/components/organisms/testimonials/testimonials";
+@import "../../templates/components/organisms/recentwork/recentwork";
 @import "../../templates/components/organisms/services/services";
-@import "../../templates/components/organisms/clients/clients";
 
 /**
  * Pages
@@ -47,10 +46,13 @@ Custom
 @import "pages/about";
 @import "pages/article";
 @import "pages/blog";
+@import "pages/case-study";
 @import "pages/careers";
 @import "pages/contact";
 @import "pages/homepage";
 @import "pages/services";
+@import "pages/work";
+
 
 /**
  * Snippets
@@ -69,8 +71,11 @@ a, button {
 }
 
 #header-title {
-
   margin-top: 3.7em;
+
+  @media (max-width: 767px) {
+    margin-top: 0.5em;
+  }
 
   h1 {
     color: $brand-primary;
@@ -126,6 +131,15 @@ small.subtitle {
 }
 
 .navbar {
+  .navbar-header {
+    .navbar-brand {
+      .tandem-logo {
+        background-image: url('/images/tandem-logo.png');
+        width: 201px;
+        height: 57px;
+      }
+    }
+  }
   .icon-bar {
     width: 33px;
     height: 4px;
@@ -261,6 +275,10 @@ small.subtitle {
           padding: 15px 20px;
           font-weight: 300;
           @include transition(color 0.2s linear);
+
+          @media (min-width: 768px) and (max-width: 991px) {
+            padding: 15px;
+          }
 
           &:hover {
             color: #fff;

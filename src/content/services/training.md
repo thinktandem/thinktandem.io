@@ -4,12 +4,7 @@ title: Training
 byline: Your team is the best investment you can make. Get them up to speed on the latest and most cutting edge development practices.
 cta: Move your team into the 21st century.
 link: /services/training
-slug: training
-short: Train
-icon: fa fa-graduation-cap
 color: red
-arrow: true
-weight: 12
 icons:
   - icon: devicons devicons-git_branch
     name: Gitflow
@@ -26,7 +21,6 @@ icons:
   - icon: devicon-github-plain
     name: Github
     link: https://github.com/
-private: true
 ---
 
 Tandem believes strongly in a “teach a developer to fish” philosophy. Where many consultancies make themselves a long-term dependency, we want your organization to succeed on its own terms. Often, that means helping to train your team to support new technologies and learn better ways of developing software.
