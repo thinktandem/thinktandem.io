@@ -102,6 +102,7 @@ module.exports = function(grunt) {
   grunt.initConfig(config);
 
   // Register tasks
+  // grunt.registerTask('build', ['exec:build']);
   grunt.registerTask('build', ['exec:build', 'cssmin', 'uglify']);
   grunt.registerTask('default', ['build', 'watch']);
   grunt.registerTask('test', ['htmllint', 'sasslint', 'build']);

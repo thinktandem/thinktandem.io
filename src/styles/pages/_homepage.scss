@@ -18,7 +18,14 @@
 
   #hero {
     @media (max-width: 767px) {
-      min-height: 17em;
+      min-height: 20em;
+    }
+  }
+
+  #featured-posts {
+    @media (max-width: 767px) {
+      position: relative;
+      top: -7em;
     }
   }
 }
