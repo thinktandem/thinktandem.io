@@ -41,9 +41,6 @@
   {% endblock %}
 
   {% block styles %}
-    <noscript>
-      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500">
-    </noscript>
     <link rel="stylesheet" type="text/css" href="{{'styles/main.css'|bustcache}}">
   {% endblock %}
 
@@ -84,19 +81,6 @@
   {% endblock %}
 
   {% block scripts %}
-    <script type="text/javascript">
-      WebFontConfig = {
-        google: { families: [ 'Montserrat:300,400,500' ] }
-      };
-      (function() {
-        var wf = document.createElement('script');
-        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-      })();
-    </script>
     <script src="{{'js/scripts.min.js'|bustcache}}"></script>
     {% if jsonld %}
     <script type="application/ld+json">
