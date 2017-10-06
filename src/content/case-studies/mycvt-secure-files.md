@@ -33,8 +33,8 @@ private: false
 date: 2017-03-23
 ---
 
-After establishing MyCVT as a successful portal for insurance enrollments, California's Valued Trust (CVT) wanted to allow users to do more than just enter in basic text information. They needed a system for their tens of thousands of subscribers to submit required documents to substantiate enrollment details. These documents would include birth certificates, marriage certificates, and other highly sensitive pieces of information.
+California's Valued Trust (CVT) needed a way for their thousands of subscribers to submit documents as part of their insurance enrollment. These documents would include birth certificates, marriage certificates, and other highly sensitive pieces of information.
 
-While Drupal, the content management system powering MyCVT, didn't provide an out-of-the-box encrypted file solution, Tandem had a plan. Using the AES encryption, we wrote a Drupal module extending Drupal's file system to encrypt all private documentation in MyCVT. This way even if the file system were compromised, attackers would need to decrypt the documents in order to gain access to them.
+While Drupal, the content management system powering MyCVT, didn't provide an out-of-the-box encrypted file solution, Tandem had a plan. Using AES encryption, we wrote a Drupal module extending Drupal's file system to encrypt all private documentation in MyCVT. Even if the file system were compromised, attackers would need to decrypt the documents in order to gain access to them.
 
 Security didn't come at the price of usability. Tandem was able to create an easy interface for uploading the documents, as well as a system for administrative users to review and approve the documents. This allowed much more efficient processing of enrollment applications, replacing an onerous system of receiving paper copies of documents and physically filing them.

@@ -36,11 +36,11 @@ private: false
 date: 2017-09-25
 ---
 
-For months the University of San Francisco was consistently, but seemingly randomly experiencing major downtime on their main [marketing site](http://usfca.edu). After some unfruitful efforts by USF staff and their hosting provider to isolate and resolve the underlying issue they called on us to help.
+For months the University of San Francisco was consistently, but seemingly randomly experiencing major downtime on their main [marketing site](http://usfca.edu). After many frustrating days of troubleshooting, they called on Tandem to isolate and resolve the underlying issue.
 
-Using a custom debugging module, significant load testing via [BlazeMeter](https://www.blazemeter.com/) and monitoring via [NewRelic](https://newrelic.com/) we were able to cut through a complex stack and Drupal 7 application with a myriad of modules to identify the bug and provide a quick 72 hour turnaround.
+Using a custom debugging module, significant load testing via [BlazeMeter](https://www.blazemeter.com/) and monitoring via [NewRelic](https://newrelic.com/) we were able to analyze a complicated Drupal 7 application with a myriad of modules to identify the bug and provide a quick 72 hour turnaround.
 
-We learned that sites using Varnish edge caching (provided via [Pantheon](http://pantheon.io)), Amazon's [CloudFront CDN](https://aws.amazon.com/cloudfront/) and the Drupal [CDN module's](https://www.drupal.org/project/cdn) duplicate content protection sometimes cache in a way that result in an infinite redirect loop, effectively crashing the site.
+We learned that sites using Varnish edge caching (provided via [Pantheon](http://pantheon.io)), Amazon's [CloudFront CDN](https://aws.amazon.com/cloudfront/) and the Drupal [CDN module's](https://www.drupal.org/project/cdn) duplicate content protection sometimes cache pages in a way that results in an infinite redirect loop, effectively crashing the site.
 
 To provide resolution we switched from CloudFront to Pantheon's own [global CDN](https://pantheon.io/global-cdn). As a consequence we were also able to eliminate the offending CDN module.
 
