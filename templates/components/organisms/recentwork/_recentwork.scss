@@ -9,6 +9,11 @@
 
       .case-study-recent {
         padding: 2em;
+
+        @media (max-width: 480px) {
+          padding: 1em;
+        }
+
         a:hover {
           text-decoration: none;
         }
@@ -52,7 +57,11 @@
             padding-bottom: 2em;
 
             @media (max-width: 767px) {
-              top: 75%;
+              top: 80%;
+            }
+
+            @media (max-width: 480px) {
+              top: 85%;
             }
           }
         }

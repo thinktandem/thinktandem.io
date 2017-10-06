@@ -27,8 +27,32 @@ $(function () {
     $(this).find('.case-study-front').show();
   });
 
-  var cw = $('.case-study-home').width();
-  $('.case-study-home').css({'height':cw+'px'});
+
+  $(window).load(function() {
+    resizeWork();
+  });
+
+  $(window).bind('resize', function() {
+    var resizeTim = setTimeout( function() {
+      resizeWork();
+      clearTimeout(resizeTim);
+    } , 10 );
+  });
+
+
+  // Apply Inner Height to outer, matchheight can't do this.
+  function resizeWork() {
+    var height = 0;
+    var check = 0;
+    $('.case-study-recent').each(function() {
+      check = $(this).height();
+      if (check > height) {
+        height = $(this).height();
+      }
+    });
+    // Set the height to the largest
+    $('.case-study-home').css({'height':height + 'px'});
+  }
 
 });
 
