@@ -2,13 +2,13 @@
 title: "Better Local Dev"
 logo: images/tandem-logo.png
 org: Tandem
-byline: How we built <strong>Lando</strong>, a free and open source local development and DevOps tool to empower developers and bring more value to clients by saving their time.
+byline: How we built <strong>Lando</strong>, an open source local development tool to empower developers and bring more value to clients by saving their time.
 image:
   src: /images/case-studies/lando-screenshot.png
   title: Lando CLI
-challenge: Build a tool that allows developers to easily and quickly spin up the dev requirements needed for each of their projects.
+challenge: Build a tool that allows developers to easily and quickly spin up the infrastructure required for each of their projects.
 solution: Leverage our work and experience on the Kalabox project to build a config-file driven and Docker based *TOTAL DEV* tool.
-impact: Massive developer time savings in onboarding, production parity issues, testing and writing code that can all be passed on to the client.
+impact: Massive developer time savings in onboarding, testing and writing code that can all be passed on to the client.
 quote:
   content: "In real open source, you have the right to control your own destiny."
   author: Linus Torvalds
@@ -33,7 +33,7 @@ private: false
 date: 2017-07-07
 ---
 
-[Lando](http://github.com/lando/lando) is the culmination of many years of work trying to create an easy, powerful and comprehensive local development and DevOps tool. It is designed to work with most major languages, frameworks and services and to provide an easy way for users to specify simple or complex development requirements for their projects. This means that Lando can be used to specify things like `apache` or `memcache` but also things like `drush` or `pip`.
+[Lando](http://github.com/lando/lando) is the culmination of many years of work trying to create an easy, powerful and comprehensive local development and DevOps tool. It is designed to work with most major programming languages, frameworks and services and provides an easy way for users to specify simple or complex development requirements for their projects. This means that Lando can be used to specify things like `apache` or `memcache` but also things like `drush` or `pip`.
 
 In that way it can be thought of as a development dependency management tool.
 

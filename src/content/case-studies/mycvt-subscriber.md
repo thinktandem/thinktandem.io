@@ -35,12 +35,12 @@ permalink: true
 private: false
 ---
 
-After 5 years maintaining MyCVT, the primary insurance portal for California's Valued Trust, we knew a better user experience was possible. An audit of CVT's support logs confirmed our suspicions: subscribers were having trouble accessing basic information about their benefits. CVT was losing valuable support staff time and its subscribers weren't getting the most out of their insurance benefits.
+After 5 years maintaining MyCVT, the primary insurance portal for California's Valued Trust, we knew a better user experience was possible. An audit of CVT's support call logs confirmed our suspicions: subscribers were having trouble accessing basic information about their benefits. CVT was losing valuable support staff time and its subscribers weren't getting the most out of their insurance benefits.
 
 But we couldn't just jump into development. Creating a better solution for CVT's subscribers required understanding their needs. Tandem proposed a discovery project.
 
-First, we helped create user personas that represented different types of CVT users. From these we created journey maps showing how those users interacted with CVT's services, identifying different blockers they experienced. Finally, we held a collaborative sketching session to draft new user interfaces to help resolve these problems. These would be translated into an in-browser prototype that could be presented to real CVT users and tested as development progressed.
+First, we helped create user personas that represented different types of CVT users. From these we created journey maps showing how those users interacted with CVT's services, identifying different blockers they experienced. Finally, we held a collaborative sketching session to draft new user interfaces to help resolve these problems. These sketches were translated into an in-browser prototype that could be presented to real CVT users and tested as development progressed.
 
-The CVT IT team was initially dubious, but quickly realized the value of direct user interaction. Each conversation with CVT subscribers lead to new insights and a deeper commitment to subscriber success.
+The CVT IT team quickly realized the value of direct user interaction. Each conversation with CVT subscribers lead to new insights and a deeper commitment to subscriber success.
 
-Ultimately we made a much more informative and usable home page for MyCVT users, but our greatest achievement was introducing a series of user-centric design tools to CVT. We trained CVT's staff to conduct interviews and create the assets necessary to run this process themselves, and indeed they did much of the work throughout the project.
+Ultimately we made a much more informative and usable home page for MyCVT users, but our greatest achievement was introducing new user-centric design tools to CVT. We trained CVT's staff to conduct interviews and create the assets necessary to run this process themselves. Now these concepts are making their way from the IT department to the entirety of CVT.
