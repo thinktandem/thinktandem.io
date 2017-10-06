@@ -67,17 +67,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    cssmin: {
-      deploy: {
-        files: [{
-          expand: true,
-          cwd: 'build/styles',
-          src: ['main.css'],
-          dest: 'build/styles',
-          ext: '.css'
-        }]
-      }
-    },
 
     // Watch files and run tasks when changed
     watch: {
@@ -102,8 +91,7 @@ module.exports = function(grunt) {
   grunt.initConfig(config);
 
   // Register tasks
-  // grunt.registerTask('build', ['exec:build']);
-  grunt.registerTask('build', ['exec:build', 'cssmin', 'uglify']);
+  grunt.registerTask('build', ['exec:build', 'uglify']);
   grunt.registerTask('default', ['build', 'watch']);
   grunt.registerTask('test', ['htmllint', 'sasslint', 'build']);
 

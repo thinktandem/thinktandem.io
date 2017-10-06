@@ -243,6 +243,11 @@
         "assets/public/fontawesome/scss/",
         "templates/components/**/*"
       ]
+    },
+    "metalsmith-clean-css": {
+      "files": "**/**/*.css"
+    },
+    "metalsmith-inline-css": {
     }
   }
 }
