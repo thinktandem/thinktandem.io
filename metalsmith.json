@@ -140,7 +140,7 @@
           "url": "http://www.thinktandem.io",
           "logo": "http://www.thinktandem.io/images/favicon.png",
           "sameAs": [
-            "https://www.linkedin.com/company/think-tandem",
+            "https://www.linkedin.com/company/12898991/",
             "https://twitter.com/thinktandem"
           ]
         }
@@ -161,7 +161,7 @@
               "url": "http://www.thinktandem.io",
               "logo": "http://www.thinktandem.io/images/favicon.png",
               "sameAs": [
-                "https://www.linkedin.com/company/think-tandem",
+                "https://www.linkedin.com/company/12898991/",
                 "https://twitter.com/thinktandem"
               ]
             },
@@ -185,12 +185,12 @@
       },
       "seo": {
         "title": true,
-        "description": "Another great piece of content by Tandem.",
+        "description": "Tandem uses open-source tools like Drupal, Laravel, and Docker to transform your complex workflows and technical debt into elegant web applications.",
         "robots": "index, follow"
       },
       "ogp": {
         "defaultType": "website",
-        "defaultImage": "www.example.org/myImage.png",
+        "defaultImage": "thinktandem.io/images/favicon.png",
         "ignoreMissingImage": false
       }
     },
