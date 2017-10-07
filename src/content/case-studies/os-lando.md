@@ -14,7 +14,7 @@ quote:
   author: Linus Torvalds
 metrics:
   - key: Languages Supported
-    value: 6
+    value: 5
   - key: Prebaked Recipes
     value: 13
   - key: Auxiliary Services
@@ -51,7 +51,6 @@ A developer should be able to get a running site and the tools needed to develop
 **Lando supports these core languages:**
 
 *   [dotnet](http://docs.devwithlando.io/services/dotnet.html)
-*   [go](http://docs.devwithlando.io/services/go.html)
 *   [node](http://docs.devwithlando.io/services/node.html)
 *   [php](http://docs.devwithlando.io/services/php.html)
 *   [python](http://docs.devwithlando.io/services/python.html)
