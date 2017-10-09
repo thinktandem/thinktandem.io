@@ -2,11 +2,11 @@
 title: "Insurance Enrollment Portal"
 logo: images/clients/cvt/cvt.png
 org: California's Valued Trust
-byline: We helped <strong>California's Valued Trust</strong> power a shift from paper to digital by building a secure insurance enrollment portal in <strong>Drupal</strong>.
+byline: We helped <strong>California's Valued Trust</strong> power a shift from paper to digital by building a secure <strong>HIPAA-compliant</strong> insurance enrollment portal in <strong>Drupal</strong>.
 image:
   src: /images/case-studies/mycvt1.png
   title: MyCVT Enrollment Page Screenshot
-challenge: Build a secure online portal to help tens of thousands of California teachers and school staff enroll for insurance.
+challenge: Build a secure HIPAA-compliant online portal to help tens of thousands of California teachers and school staff enroll for insurance.
 solution: Use Drupal and Angular to quickly develop a user-friendly enrollment experience.
 impact: Nearly 30K users. Empowering more than 240 districts. New digital cornerstone of the CVT experience
 quote:
@@ -40,5 +40,6 @@ CVT was already in the process of modernizing its technology stack and was fortu
 - a standardized data model
 - an easy way to generate and consume APIs
 - automated report and simple interface generation
+- permissioning, authorization, and logging layers for HIPAA-compliance
 
 We selected Drupal as a way to prototype the MyCVT system. With roots as a popular CMS, Drupal could easily reproduce the data model of CVT's paper enrollment forms. The powerful suite of API and report construction tools included with Drupal allowed the construction and deployment of the initial version of MyCVT within months.
