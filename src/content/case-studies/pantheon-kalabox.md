@@ -17,8 +17,8 @@ metrics:
     value: 1500+
   - key: Spin Up Time
     value: 5 Minutes
-  - key: Cross Platfrom
-    value: You Bet!
+  - key: You Bet!
+    value: Cross Platfrom
 
 tech: docker, nodejs, drupal, wordpress
 industries: startups
