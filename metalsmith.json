@@ -259,7 +259,6 @@
     "metalsmith-clean-css": {
       "files": "**/**/*.css"
     },
-    "metalsmith-inline-css": {
-    }
+    "metalsmith-inline-css": {}
   }
 }
