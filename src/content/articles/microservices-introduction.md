@@ -5,8 +5,8 @@ tags: devops
 permalink: true
 author: Alec Reynolds
 private: true
-mainImage: images/articles/microservices.png
-img-src: images/articles/microservices.png
+mainImage: https://thinktandem.io/images/articles/microservices.png
+img-src: https://thinktandem.io/images/articles/microservices.png
 byline: In software development, things change. Learn how a microservice architecture can help you adapt to changing requirements and scale applications in the cloud.
 date: 2016-09-10
 ---
