@@ -5,8 +5,8 @@ tags: localdev, support
 permalink: true
 author: Mike Pirog
 private: false
-mainImage: images/articles/pantheon-nested-doc.png
-img-src: images/articles/pantheon-nested-doc.png
+mainImage: https://thinktandem.io/images/articles/pantheon-nested-doc.png
+img-src: https://thinktandem.io/images/articles/pantheon-nested-doc.png
 byline: Learn how to use composer-based workflows with your Pantheon site on Kalabox so you can
   dev like it's 2017.
 date: 2017-05-20
