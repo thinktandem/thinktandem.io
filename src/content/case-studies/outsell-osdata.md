@@ -18,8 +18,8 @@ challenge: Build a data platform to enable large-scale data entry and machine le
 solution: Use Laravel to build a flexible front-end for a large Postgres DB.
 impact: Scaling Outsell's data collection and maintenance by an order of magnitude.
 quote:
-  content: Too much information running through my brain...
-  author: The Police
+  content: From requirements and scoping to development and deployment, Tandem coordinated with all stakeholders to deliver the best solution to support our business needs. I highly recommend Tandem to anyone looking for strategic development.
+  author: Ben Sampson, Head of Product at Outsell Inc.
 metrics:
   - key: Technology Used
     value: Laravel

@@ -18,8 +18,8 @@ challenge: Remove Outsell's dependency on a costly and limiting third-party API.
 solution: Use the Laravel-powered DreamFactory API with custom Drupal modules to distribute data.
 impact: Eliminate a costly ongoing contract and allow Outsell to pursue new development directions with in-house resources.
 quote:
-  content:  Help me get my feet back on the ground...won't you please, please help me?
-  author: John Lennon/Paul McCartney
+  content: Tandem has been instrumental in helping us find a better path forward with our technology.
+  author: Ben Sampson, Head of Product at Outsell Inc.
 metrics:
   - key: Plug-and-play API
     value: DreamFactory
