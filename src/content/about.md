@@ -52,6 +52,6 @@ jsonld:
       - https://www.linkedin.com/in/geoff-st-pierre-28b19914/
       - https://twitter.com/serundeputy
       - https://github.com/serundeputy
-lastmod: 2017-10-11
+lastmod: 2017-10-12
 ---
 Our experienced and elite team has seen it all; wrangled projects big and small
