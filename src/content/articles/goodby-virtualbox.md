@@ -5,8 +5,8 @@ tags: localdev, support, testing
 permalink: true
 author: Mike Pirog
 private: false
-mainImage: images/articles/dockerTNG.png
-img-src: images/articles/dockerTNG.png
+mainImage: https://thinktandem.io/images/articles/dockerTNG.png
+img-src: https://thinktandem.io/images/articles/dockerTNG.png
 byline: With our newest version of Kalabox, we say goodbye to VirtualBox and hello to better performance and stability with Docker for Mac and Windows.
 date: 2016-11-08
 ---

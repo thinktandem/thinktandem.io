@@ -132,13 +132,18 @@
           "@type": "WebSite",
           "name": "Tandem",
           "alternateName": "The site for Tandem, a software strategy firm.",
-          "url": "http://www.thinktandem.io"
+          "url": "https://www.thinktandem.io"
         },
         {
           "@context": "http://schema.org",
           "@type": "Organization",
-          "url": "http://www.thinktandem.io",
-          "logo": "http://www.thinktandem.io/images/favicon.png",
+          "url": "https://www.thinktandem.io",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.thinktandem.io/images/logo-json.png",
+            "width": 213,
+            "height": 60
+          },
           "sameAs": [
             "https://www.linkedin.com/company/12898991/",
             "https://twitter.com/thinktandem"
@@ -152,14 +157,20 @@
             "@type": "BlogPosting",
             "headline": "title",
             "alternativeHeadline": "teaser",
+            "mainEntityOfPage": "true",
             "image": "mainImage",
             "keywords": "tags",
             "publisher": {
               "@context": "http://schema.org",
               "@type": "Organization",
               "name": "Kalabox Inc. DBA Tandem",
-              "url": "http://www.thinktandem.io",
-              "logo": "http://www.thinktandem.io/images/favicon.png",
+              "url": "https://www.thinktandem.io",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.thinktandem.io/images/logo-json.png",
+                "width": 213,
+                "height": 60
+              },
               "sameAs": [
                 "https://www.linkedin.com/company/12898991/",
                 "https://twitter.com/thinktandem"
@@ -167,6 +178,7 @@
             },
             "datePublished": "date",
             "dateCreated": "date",
+            "dateModified": "date",
             "description": "teaser",
             "author": {
               "@type": "Person",

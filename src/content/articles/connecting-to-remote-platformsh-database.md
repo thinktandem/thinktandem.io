@@ -5,8 +5,8 @@ tags: localdev, devops
 permalink: true
 author: Geoff St. Pierre
 private: false
-mainImage: images/articles/connect-to-sequel-pro.png
-img-src: images/articles/connect-to-sequel-pro.png
+mainImage: https://thinktandem.io/images/articles/connect-to-sequel-pro.png
+img-src: https://thinktandem.io/images/articles/connect-to-sequel-pro.png
 byline: Connecting to a remote Database on platform.sh is simple (when you know
   how)!
 date: 2017-03-03

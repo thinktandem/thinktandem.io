@@ -5,8 +5,8 @@ tags: deployment, localdev
 permalink: true
 author: Alec Reynolds
 private: false
-mainImage: images/articles/dependency-hell/inferno.jpg
-img-src: images/articles/dependency-hell/inferno.jpg
+mainImage: https://thinktandem.io/images/articles/dependency-hell/inferno.jpg
+img-src: https://thinktandem.io/images/articles/dependency-hell/inferno.jpg
 byline: A brief vacation to one of software development's notorious infernos reminded me why containers, Docker, and Kalabox are the way to manage development dependencies.
 date: 2016-12-31
 ---
