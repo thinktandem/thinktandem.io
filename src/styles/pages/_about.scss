@@ -22,6 +22,16 @@
       padding-bottom: 0;
       padding-top: 0;
     }
+
+    .staff {
+      @media (min-width: 768px) {
+        padding-bottom: 50px;
+
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+      }
+    }
   }
 
   h3 {
