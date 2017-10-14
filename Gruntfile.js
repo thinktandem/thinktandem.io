@@ -115,8 +115,8 @@ module.exports = function(grunt) {
               replacement: '<html amp'
             },
             {
-              match: '<style',
-              replacement: '<style amp-custom'
+              match: '<style type="text\/css">',
+              replacement: '<style amp-custom>'
             },
             {
               match: 'inline="" as="style" onload="this.rel=\'stylesheet\'"',
