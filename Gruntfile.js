@@ -44,6 +44,24 @@ module.exports = function(grunt) {
       ]
     },
 
+    // Run google font downloaders before metalsmith.
+    googlefonts: {
+      build: {
+        options: {
+          fontPath: 'assets/fonts/',
+          cssFile: 'assets/fonts/fonts.css',
+          fonts: [
+            {
+              family: 'Montserrat',
+              styles: [
+                300, 400, 500
+              ]
+            }
+          ]
+        }
+      }
+    },
+
     // Execute Metalsmith
     exec: {
       build: {
@@ -68,6 +86,26 @@ module.exports = function(grunt) {
       }
     },
 
+    critical: {
+      dist: {
+        options: {
+          base: './',
+          css: [
+          'build/styles/final.css'
+          ],
+          width: 2000,
+          height: 20000,
+          inline: true,
+          minify: true
+        },
+        // Uncomment when it is time to go live and remove the one below it.
+        // src: ['build/*.html','build/**/*.html'],
+        // dest: './'
+        src: ['build/*.html'],
+        dest: './'
+      }
+    },
+
     replace: {
       dist: {
         options: {
@@ -79,6 +117,18 @@ module.exports = function(grunt) {
             {
               match: '<style',
               replacement: '<style amp-custom'
+            },
+            {
+              match: 'inline="" as="style" onload="this.rel=\'stylesheet\'"',
+              replacement: ''
+            },
+            {
+              match: '..\/build\/styles\/assets\/fonts',
+              replacement: 'fonts'
+            },
+            {
+              match: '@charset "UTF-8";',
+              replacement: ''
             }
           ],
           usePrefix: false
@@ -122,7 +172,7 @@ module.exports = function(grunt) {
   grunt.initConfig(config);
 
   // Register tasks
-  grunt.registerTask('build', ['exec:build', 'uglify', 'replace']);
+  grunt.registerTask('build', ['googlefonts', 'exec:build', 'uglify', 'critical', 'replace']);
   grunt.registerTask('default', ['build', 'watch']);
   grunt.registerTask('test', ['htmllint', 'sasslint', 'build']);
 
