@@ -256,6 +256,13 @@
         "templates/components/**/*"
       ]
     },
+    "metalsmith-concat": {
+      "files": [
+        "styles/main.css",
+        "public/devicon/devicon.min.css"
+      ],
+      "output": "styles/final.css"
+    },
     "metalsmith-clean-css": {
       "files": "**/**/*.css"
     },

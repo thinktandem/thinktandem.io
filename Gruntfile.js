@@ -68,6 +68,37 @@ module.exports = function(grunt) {
       }
     },
 
+    replace: {
+      dist: {
+        options: {
+          patterns: [
+            {
+              match: '<html',
+              replacement: '<html amp'
+            },
+            {
+              match: '<style',
+              replacement: '<style amp-custom'
+            }
+          ],
+          usePrefix: false
+        },
+        files: [
+          {expand: true, flatten: true, src: ['build/*.html'], dest: 'build/'},
+          {expand: true, flatten: true, src: ['build/about/*.html'], dest: 'build/about/'},
+          {expand: true, flatten: true, src: ['build/blog/*.html'], dest: 'build/blog/'},
+          {expand: true, flatten: true, src: ['build/careers/*.html'], dest: 'build/careers/'},
+          {expand: true, flatten: true, src: ['build/case-studies/*.html'], dest: 'build/case-studies/'},
+          {expand: true, flatten: true, src: ['build/contact/*.html'], dest: 'build/contact/'},
+          {expand: true, flatten: true, src: ['build/contact-thanks/*.html'], dest: 'build/contact-thanks/'},
+          {expand: true, flatten: true, src: ['build/cvt-enrollment/*.html'], dest: 'build/cvt-enrollment/'},
+          {expand: true, flatten: true, src: ['build/services/*.html'], dest: 'build/services/'},
+          {expand: true, flatten: true, src: ['build/staff/*.html'], dest: 'build/staff/'},
+          {expand: true, flatten: true, src: ['build/work/*.html'], dest: 'build/work/'}
+        ]
+      }
+    },
+
     // Watch files and run tasks when changed
     watch: {
       all: {
@@ -91,7 +122,7 @@ module.exports = function(grunt) {
   grunt.initConfig(config);
 
   // Register tasks
-  grunt.registerTask('build', ['exec:build', 'uglify']);
+  grunt.registerTask('build', ['exec:build', 'uglify', 'replace']);
   grunt.registerTask('default', ['build', 'watch']);
   grunt.registerTask('test', ['htmllint', 'sasslint', 'build']);
 
