@@ -119,7 +119,7 @@ module.exports = function(grunt) {
               replacement: '<style amp-custom>'
             },
             {
-              match: 'inline="" as="style" onload="this.rel=\'stylesheet\'"',
+              match: 'as="style" onload="this.rel=\'stylesheet\'"',
               replacement: ''
             },
             {
@@ -128,6 +128,14 @@ module.exports = function(grunt) {
             },
             {
               match: '@charset "UTF-8";',
+              replacement: ''
+            },
+            {
+              match: '@-ms-viewport{width:device\-width}',
+              replacement: ''
+            },
+            {
+              match: '!important',
               replacement: ''
             }
           ],
