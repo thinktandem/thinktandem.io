@@ -137,9 +137,30 @@ module.exports = function(grunt) {
             {
               match: '!important',
               replacement: ''
+            },
+            {
+              match: '<noscript><link rel="stylesheet" href="styles\/final.css"><\/noscript>',
+              replacement: ''
+            },
+            {
+              match: '<noscript><style',
+              replacement: '<noscript><link rel="stylesheet" href="styles\/final.css"><style'
+            },
+            {
+              match: '<script',
+              replacement: '<script async custom-element="amp-iframe"'
+            },
+            {
+              match: '<script async custom\-element="amp\-iframe" type="application\/ld+json">',
+              replacement: '<script type="application/ld+json">'
+            },
+            {
+              match: '<script async custom\-element="amp\-iframe" async',
+              replacement: '<script async'
             }
           ],
-          usePrefix: false
+          usePrefix: false,
+          preserveOrder: true,
         },
         files: [
           {expand: true, flatten: true, src: ['build/*.html'], dest: 'build/'},

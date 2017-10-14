@@ -45,13 +45,13 @@
   {% endblock %}
 
   {% block scripts %}
-    <script async src="{{'js/scripts.min.js'|bustcache}}"></script>
     {% if jsonld %}
-    <script async type="application/ld+json">
+    <script type="application/ld+json">
       {{ jsonld|raw|json_encode }}
     </script>
     {% endif %}
-    <script async>
+    <script src="{{'js/scripts.min.js'|bustcache}}"></script>
+    <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
