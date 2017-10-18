@@ -1,0 +1,106 @@
+{% extends '../layouts/html.html' %}
+
+{% block title %}
+  {%parent%} | {{title}} | {{pageSlogan}}
+{% endblock %}
+
+{% block contents %}
+
+  <style>
+    #case-study .case-study-summary-item {
+      color: #FFFFFF;
+      background-color: #{{ background }};
+    }
+    #case-study .case-study-summary-item h3 {
+      color: #FFFFFF;
+    }
+    #case-study .case-study-quote blockquote {
+      color: #{{ background }};
+    }
+    #case-study .case-study-metric {
+      border-color: #{{ background }};
+    }
+  </style>
+
+  {% if dark %}
+    <style>
+      .navbar.hero .navbar-nav > li > a {
+        color: #47474A;
+      }
+      .navbar .navbar-header .navbar-brand .tandem-logo {
+        background-image: url('/images/tandem-logo-dark.png');
+      }
+      .hero-case-study h1 {
+        color: #47474A;
+      }
+      #hero p.hero-text {
+        color: #47474A;
+      }
+      #case-study .case-study-summary-item h3 {
+        color: #47474A;
+      }
+      #case-study .case-study-summary-item {
+        color: #47474A;
+      }
+    </style>
+  {% endif %}
+
+  <div id="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <img class="lando-img" src="images/LandoLogo.png" alt="Lando Logo.">
+        </div>
+        <div class="col-md-9" >
+          <h1 data-text="{{title|raw}}">{{ title|safe }}</h1>
+          <p class="hero-text" data-text="{{title|safe}}">{{ byline|raw }}</p>
+          <a class="btn btn-primary btn-cta" href="https://github.com/lando/lando/releases/tag/v3.0.0-beta.21">Get Lando</a>
+          <a class="lando-docs" href="https://docs.devwithlando.io/">Read Docs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <article id="case-study">
+
+    <div id="page-content">
+
+      <div class="case-study-img">
+        <div class="container">
+          <img src="{{ image.src }}" class="img-responsive" title="{{ image.title }}">
+        </div>
+      </div>
+
+      <div class="case-study-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="row">
+                {% for metric in metrics %}
+                  <div class="col-md-12">
+                    <div class="case-study-metric">
+                      <div class="case-study-metric-key text-center">
+                        {{ metric.value }}
+                      </div>
+                      <div class="case-study-metric-value text-center">
+                        {{ metric.key }}
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="col-md-8">
+              {{ contents|safe }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </article>
+
+  {% include '../components/organisms/cta/cta.html' %}
+
+{% endblock %}

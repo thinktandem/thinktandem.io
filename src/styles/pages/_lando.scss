@@ -1,0 +1,12 @@
+.lando-img {
+  max-width: 250px;
+  max-height: 30vh;
+}
+
+.lando-docs {
+  font-weight: 300;
+  margin: .5em; 
+  @media (max-width: 400px) {
+    display: block;
+  }
+}
