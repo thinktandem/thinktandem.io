@@ -38,6 +38,35 @@
   .case-study {
     height: 12em;
 
+    // CSS isn't smart enough to do this dynamically yet.
+    &[data-bg='BD587A'] {
+      background-color: #BD587A;
+    }
+
+    &[data-bg='ED3F7A'] {
+      background-color: #ED3F7A;
+    }
+
+    &[data-bg='8CC63E'] {
+      background-color: #8CC63E;
+    }
+
+    &[data-bg='EFD01B'] {
+      background-color: #EFD01B;
+    }
+
+    &[data-bg='00574D'] {
+      background-color: #00574D;
+    }
+
+    .dark {
+      color: $gray-base;
+    }
+
+    .light {
+      color: white;
+    }
+
     @media (max-width: 767px) {
       margin-bottom: 5px;
     }
@@ -52,6 +81,14 @@
       transform: translate(-50%, -50%);
       padding-top: 2em;
       padding-bottom: 2em;
+
+      &.dark {
+        color: $gray-base;
+      }
+
+      &.light {
+        color: white;
+      }
     }
     .case-study-front {
       .title {
