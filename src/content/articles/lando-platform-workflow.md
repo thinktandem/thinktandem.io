@@ -16,29 +16,29 @@ At Tandem we are super serious about designing (and using) best-practice develop
 * Use build processes
 * Allow many developers to easily collaborate
 * Are consistent from project to project
-* Spin up automated QA environments for manual testing
 * Facilitate peer code review
-* Deploy changes to production often
+* Automatically spin up QA environments for manual testing
 * Automate common linting, code standard, unit and functional tests
 * Provide some automated mechanism for deployment to production
+* Deploy changes to production often
 
 Good workflows that do the above almost always provide substantial time (read: $$$) savings during development. Not to mention they also produce a less frustrating collaborative experience for developers.
 
 Of course, the downside of implementing these complex workflows is that they themselves also take a considerable amount of time to set up. *Good automation and tight integration between disparate systems ain't easy, or cheap.*
 
-That's why we've developed a couple of easy-to-get-rolling start states to kickstart your dev workflow. Including a killer one for Drupal 8 that uses:
+That's why we've developed a couple of easy-to-get-rolling ways to kickstart your dev workflow, including a killer one for Drupal 8 that uses:
 
 * [**Lando**](https://github.com/lando/lando) - For Docker/container based local development
 * [**GitHub**](http://github.com) - For `git` repo management and [GitHub Flow](https://guides.github.com/introduction/flow/)
 * [**Platform.sh**](http://platform.sh) - For awesome hosting and manual QA environments
 * [**Travis CI**](https://travis-ci.org/) - For automated testing
 
-You can consult the full example [over here](https://github.com/thinktandem/platformsh-example-drupal8) or read more below on how to get spin up on this awesome dev workflow.
+You can jump straight to the [full example](https://github.com/thinktandem/platformsh-example-drupal8) now, or continue reading these step-by-step instructions on how to get yourself spun up on this awesome dev workflow.
 
 What You'll Need
 ----------------
 
-Before you kick off you'll need to make sure you have a few things:
+Before you kick off, you'll need to make sure you have a few things:
 
 1. [Lando installed](https://docs.devwithlando.io/installation/installing.html)
 1. A GitHub account (ideally with your SSH key(s) added)
@@ -49,18 +49,18 @@ Before you kick off you'll need to make sure you have a few things:
 
 It is also definitely worth reading about the upstream [starter kit](https://github.com/platformsh/platformsh-example-drupal8) and accompanying [documentation](https://docs.platform.sh/gettingstarted/local/lando.html) on using Lando with [Platform.sh](http://platform.sh).
 
-* If you don't want to install `git` you can edit the tooling section of your `.lando.yml` that contains the `git` routes. If you do this you can run `git` commands via `lando git`.
+* If you don't want to (or can't) install git separately, you can edit the tooling section of your `.lando.yml` that contains the git routes. If you do this, you can then run git commands using `lando git`, no other installation necessary.
 
 Getting Started
 ---------------
 
 ### 1. Setup GitHub
 
-Visit [this start state](https://github.com/thinktandem/platformsh-example-drupal8) on GitHub and fork the project to the org or account of your choosing. Then `git clone` the repo and `cd` into it.
+Visit [this start state](https://github.com/thinktandem/platformsh-example-drupal8) on GitHub and fork the project to your own organization or account. Then `git clone` the repo, and `cd` into it.
 
 ```bash
-git clone https://github.com/thinktandem/platformsh-example-drupal8.git mysite
-cd mysite
+git clone https://github.com/thinktandem/platformsh-example-drupal8.git MYSITENAME
+cd MYSITENAME
 ```
 
 Keep this terminal window active because you are going to need to need it for subsequent steps.
@@ -70,26 +70,25 @@ Keep this terminal window active because you are going to need to need it for su
 Login to Platform.sh and create a new project through the Platform.sh user interface. After naming your site select *"Import your existing code"*. Then follow the instructions on the next slide to import your forked repository. It should be something like this:
 
 ```bash
-# Add platform's git repo as a remote
-# Obviously replace PLATFORMID below with the one in your platform git clone command
+# Add Platform's git repo as a remote, replacing "PLATFORMID" with the ID from your own platform's `git clone` command.
 git remote add platform PLATFORMID@git.us.platform.sh:PLATFORMID.git
 
-# Push your GitHub repo to platform
+# Push your GitHub repo to Platform.
 git push -u platform master
 
-# Optionally remove the platform remote so you do not accidentally deploy from local to production!
+# Optionally, remove the Platform remote so that you do not accidentally deploy from local to production!
 git remote remove platform
 ```
 
-At this point it's probably a good idea to visit your built site on Platform.sh at this point to go through the Drupal installation process and get your DB dialed in.
+At this point it's probably a good idea to browse your site on Platform.sh and go through the Drupal 8 installation process to get your DB dialed in.
 
-### 3. Setup Local Lando and Connect Platform.sh with GitHub
+### 3. Start up Lando locally, then connect Platform.sh with GitHub
 
 #### Lando
 
 Let's start by spinning up a local copy of our Platform.sh site with Lando.
 
-This should spin up the services to run your app (eg `php`, `nginx`, `mariabdb`) and the tools you need to start development (eg `platform cli`, `drush`, `composer`, `drupal console`). This will install a bunch of deps the first time you run it but when it is done you should end up with some URLs you can use to visit your local site.
+This should spin up the services to run your app (eg `php`, `nginx`, `mariabdb`) and the tools you'll need to begin developing (eg `platform cli`, `drush`, `composer`, `drupal console`). This command will automatically download and install a bunch of dependencies the first time you run it, but when it is done you should end up with some vanity URLs you can use to visit your new local site.
 
 ```bash
 cd /path/to/my/repo
@@ -130,15 +129,15 @@ lando platform integration:add \
   --fetch-branches=true
 ```
 
-Once you paste the `webhook url` into GitHub your Platform.sh instance will track agsinst your GitHub repo.
+Once you paste the `webhook url` into GitHub, your Platform.sh instance will track against your GitHub repo.
 
-**THIS MEANS THAT YOUR MASTER BRANCH IS NOW DEPLOYABLE!!!**.
+**CAUTION, THIS MEANS THAT YOUR MASTER BRANCH IS NOW DEPLOYABLE!!!**.
 
-As a result it is an **EXTREMELY GOOD IDEA** to [enable branch protection](https://help.github.com/articles/configuring-protected-branches/) for your `master` branch so that people cannot merge to it directly unless appropriate status checks have passed.
+As a result, it is an **EXTREMELY GOOD IDEA** to [enable branch protection](https://help.github.com/articles/configuring-protected-branches/) for your `master` branch so that people cannot merge to it directly unless appropriate status checks have passed.
 
 #### Optionally Pull DB to Local
 
-You can also import your Platform.sh DB locally.
+You can also import your Platform.sh DB locally:
 
 ```bash
 # Use the platform.sh CLI to export your database
@@ -180,12 +179,12 @@ This is a trivial example which deploys all merges into the `master` branch to t
 # Go into the repo
 cd /path/to/my/github/repo
 
-# Checkout master and get the latest and greatest
+# Checkout master and retrieve the latest and greatest
 git checkout master
 git pull origin master
 
 # Spin up a well named topic branch eg ISSUE_NUMBER-DESCRIPTION
-git checkout -b 1-fixes-that-thing
+git checkout -b 123-fixes-that-thing
 ```
 
 ### 2. Do the dev, commit and push the codes
@@ -195,13 +194,13 @@ git checkout -b 1-fixes-that-thing
 
 # Git commit with a message that matches the issue number
 git add -A
-git commit -m "#1: Describes what i did"
+git commit -m "#123: Describing what I did to fix that thing."
 
 # Push the branch to GitHub
-git push origin 1-fixes-that-thing
+git push origin 123-fixes-that-thing
 ```
 
-* Check out the Lando Reference section below for some tips on how to run tests before you push. This can save a lot of time and reduce the potential shame you feel for failing the automated QA
+* Check out the Lando Reference section below for some tips on how to run tests before you push. This can save a lot of time and reduce the potential shame you feel for getting bounced by the automated QA and having to make a second commit enshrining your failure.
 
 ### 3. Open a PR and do manual and automated testing
 
@@ -215,19 +214,19 @@ Here is an example PR with:
 
 ### 4. Deploy
 
-When you are statisifed with the above, and any additional QA steps like manual code review you can [merge the pull request](https://help.github.com/articles/merging-a-pull-request/). This will deploy the feature to production.
+When you are satisfied with the above, and any additional QA steps like manual code review you can [merge the pull request](https://help.github.com/articles/merging-a-pull-request/). This will deploy the feature to production.
 
 Lando Reference
 ---------------
 
-You should definitely check out the [Lando docs](https://docs.devwithlando.io) for a full sweep on its capabilities but here are some helpers for this particular config. **YOU PROBABLY WANT TO LANDO START YOUR APP BEFORE YOU DO MOST OF THESE THINGS.**
+You should definitely check out the [Lando docs](https://docs.devwithlando.io) for a full sweep on its capabilities, but here are some helpers for this particular config. **YOU PROBABLY WANT TO `LANDO START` YOUR APP BEFORE YOU DO MOST OF THESE THINGS.**
 
-Unless otherwise indicated these should all be run from your repo root (eg the directory that contains the `.lando.yml` for your site).
+Unless otherwise indicated, these should all be run from your repo root (eg the directory that contains the `.lando.yml` for your site).
 
 ### Generic Ccommands
 
 ```bash
-# List all available lando commands for this app
+# List all available Lando commands for this app
 lando
 
 # Start my site
@@ -247,9 +246,9 @@ lando info
 lando rebuild
 # Destroy the containers and tools for this app
 lando destroy
-# Get info on lando service logs
+# Get info on Lando service logs
 lando logs
-# Get a publically accessible URL. Run lando info to get the proper localhost address
+# Get a publically accessible URL. (Run `lando info` to see the proper localhost address)
 lando share -u http://localhost:32813
 # "SSH" into the appserver
 lando ssh
@@ -261,22 +260,20 @@ lando ssh -- --help
 ### Development commands
 
 ```bash
-# Run composer things
+# Run Composer things
 lando composer install
 lando composer update
 
-# Run php things
+# Run PHP things
 lando php -v
 lando php -i
 
-# Run drush commands
-# replace web if you've moved your webroot to a difference subdirectory
+# Run Drush commands (replace "web" if you've moved your webroot to a different subdirectory)
 cd web
 lando drush status
 lando drush cr
 
-# Run drupal console commands
-# replace web if you've moved your webroot to a difference subdirectory
+# Run Drupal Console commands (replace "web" if you've moved your webroot to a different subdirectory)
 cd web
 lando drupal
 ```
@@ -284,35 +281,36 @@ lando drupal
 ### Testing commands
 
 ```bash
-# Lint code
+# Lint your code
 lando phplint
 
-# Run phpcs commands
+# Run PHPCS commands
 lando phpcs
 # Check drupal code standards
 lando phpcs --config-set installed_paths /app/vendor/drupal/coder/coder_sniffer
 lando phpcs -n --report=full --standard=Drupal --ignore=*.tpl.php --extensions=install,module,php,inc web/modules web/themes web/profiles
 
-# Run phpunit commands
-# replace web if you've moved your webroot to a difference subdirectory
+# Run PHPunit commands (replace "web" if you've moved your webroot to a different subdirectory)
 cd web
 lando phpunit
-# Run some phpunit tests
+
+# Run some PHPunit tests
 lando phpunit -c core --testsuite unit --exclude-group Composer
 
-# Run behat commands
+# Run Behat commands
 lando behat
-# Run some behat tests
+
+# Run some Behat tests
 lando behat --config=/app/tests/behat-lando.yml
 ```
 
 ### Platform.sh commands
 
 ```bash
-# List platform commands
+# List Platform commands
 lando platform list
 
-# Login to platform
+# Login to Platform
 lando platform login
 
 # Import a database from master
