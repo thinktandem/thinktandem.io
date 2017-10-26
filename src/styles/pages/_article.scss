@@ -152,4 +152,16 @@
   img {
     max-width: 100%;
   }
+
+  thead, td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 25px;
+    font-size: .75em;
+  }
+
+  table {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
 }
