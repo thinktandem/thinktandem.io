@@ -35,8 +35,82 @@
     border-top: 2px solid $gray-light;
   }
 
+
   .case-study {
-    height: 12em;
+
+    // Add the flip stuff here so it doesn;t affect the front page case studies
+    &.work-page {
+      perspective: 1000px;
+
+      &:hover {
+        .flipper {
+          transform: rotateY(180deg);
+        }
+      }
+
+      .flipper {
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+      }
+
+      .case-study-front, .case-study-back {
+        backface-visibility: hidden;
+      }
+
+      .case-study-front {
+        z-index: 2;
+        /* for firefox 31 */
+        transform: rotateY(0deg);
+        height: 265px;
+
+        .title {
+          h2 {
+            font-size: 1.6em;
+            padding: 15px;
+
+            @media (max-width: 767px) {
+              font-size: 1.3em;
+            }
+          }
+        }
+
+        .logo {
+          background-color: transparent;
+
+          &.case-study-usf-redirect-rescue {
+            img {
+              transform: translateX(-60%);
+            }
+          }
+
+          img {
+            width: 50%;
+            position: absolute;
+            left: 50%;
+            bottom: 5%;
+            transform: translateX(-55%);
+            padding-top: 2em;
+          }
+        }
+      }
+      .case-study-back {
+        transform: rotateY(180deg);
+        font-size: 1em;
+        padding: 15px;
+        height: 265px;
+        position: absolute;
+        top: 0;
+
+        &.dark {
+          color: $gray-base;
+        }
+
+        &.light {
+          color: white;
+        }
+      }
+    }
 
     // CSS isn't smart enough to do this dynamically yet.
     &[data-bg='BD587A'] {
@@ -71,56 +145,5 @@
       margin-bottom: 5px;
     }
 
-    .case-study-back {
-      display: none;
-      font-size: 1em;
-      width: 75%;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      padding-top: 2em;
-      padding-bottom: 2em;
-
-      &.dark {
-        color: $gray-base;
-      }
-
-      &.light {
-        color: white;
-      }
-    }
-    .case-study-front {
-      .title {
-        h2 {
-          position: absolute;
-          font-size: 1.6em;
-          padding: 15px;
-
-          @media (max-width: 767px) {
-            font-size: 1.3em;
-          }
-        }
-      }
-
-      .logo {
-        background-color: transparent;
-        height: 10em;
-
-        img {
-          width: 50%;
-          position: absolute;
-          left: 50%;
-          top: 80%;
-          transform: translate(-50%, -50%);
-          padding-top: 2em;
-          padding-bottom: 2em;
-
-          @media (max-width: 767px) {
-            top: 75%;
-          }
-        }
-      }
-    }
   }
 }

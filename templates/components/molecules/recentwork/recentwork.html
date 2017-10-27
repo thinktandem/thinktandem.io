@@ -1,0 +1,32 @@
+<div class="col-md-6 col-xs-12 case-study case-study-home case-study-{{ study.slug }}" data-bg="{{ study.background }}">
+  <div class="case-study-recent">
+    <a href="/work/{{ study.slug }}">
+      <div class="title">
+        <h2 class="{% if study.dark %} dark {% else %} light {% endif %}">{{ study.title }}</h2>
+      </div>
+      <div class="case-study-content {% if study.dark %} dark {% else %} light {% endif %}">
+        {{ study.byline|raw }}
+      </div>
+    </a>
+    <div class="case-study-tags {% if study.dark %} dark {% else %} light {% endif %}">
+      <div class="case-study-tag">Industries:
+      {% for industry in study.industries %}
+        <a href="/work/industry/{{ industry.slug }}" class="{% if study.dark %} dark {% else %} light {% endif %}">{{ industry.name }}</a>
+      {% endfor %}
+      </div>
+      <div class="case-study-tag">Technology:
+      {% for tech in study.tech %}
+        <a href="/work/technology{{ tech.slug }}" class="{% if study.dark %} dark {% else %} light {% endif %}">{{ tech.name }}</a>
+      {% endfor %}
+      </div>
+      <div class="case-study-tag">Services:
+      {% for service in study.services %}
+        <a href="/work/service/{{ service.slug }}" class="{% if study.dark %} dark {% else %} light {% endif %}">{{ service.name }}</a>
+      {% endfor %}
+      </div>
+    </div>
+    <div class="logo case-study-{{ study.slug }}">
+      <img class="client-logo" aria-hidden="true" src="{{ study.logo }}">
+    </div>
+  </div>
+</div>

@@ -1,67 +1,73 @@
 #work {
   .recent-work {
     margin-bottom: 10em;
-    .case-study {
 
-      @media (max-width: 767px) {
-        margin-bottom: 5px;
+    .case-studies {
+
+      @media (min-width: 992px) {
+        display: flex;
       }
 
-      .case-study-recent {
-        padding: 2em;
+      .case-study {
 
-        @media (max-width: 480px) {
-          padding: 1em;
+        @media (max-width: 767px) {
+          margin-bottom: 5px;
         }
 
-        a:hover {
-          text-decoration: none;
-        }
-        .title {
-          h2 {
-            line-height: 1.3em;
-            font-size: 1.4em;
-            font-weight: 700;
+        .case-study-recent {
+          padding: 2em;
+
+          @media (max-width: 480px) {
+            padding: 1em;
           }
-        }
 
-        .case-study-content {
-          font-weight: 200;
-        }
-        .case-study-tags {
-          opacity: 0.75;
-          margin-top: 0.5em;
-          margin-bottom: 0.5em;
-          font-size: 0.9em;
-          font-weight: 700;
-          .case-study-tag a {
+          a:hover {
+            text-decoration: none;
+          }
+          .title {
+            h2 {
+              line-height: 1.3em;
+              font-size: 1.4em;
+              font-weight: 700;
+            }
+          }
+
+          .case-study-content {
             font-weight: 200;
-            opacity: 1.2;
           }
-          .case-study-tag a:hover {
-            text-decoration: underline;
+          .case-study-tags {
+            opacity: 0.75;
+            margin-top: 0.5em;
+            margin-bottom: 7em;
+            font-size: 0.9em;
+            font-weight: 700;
+            .case-study-tag a {
+              font-weight: 200;
+              opacity: 1.2;
+            }
+            .case-study-tag a:hover {
+              text-decoration: underline;
+            }
           }
-        }
 
-        .logo {
-          background-color: transparent;
-          height: 10em;
+          .logo {
+            background-color: transparent;
+            text-align: center;
 
-          img {
-            width: 50%;
-            position: absolute;
-            left: 50%;
-            top: 85%;
-            transform: translate(-50%, -50%);
-            padding-top: 2em;
-            padding-bottom: 2em;
+            &.case-study-usf-redirect-rescue {
+              img {
+                transform: translateX(-60%);
+              }
 
-            @media (max-width: 767px) {
-              top: 80%;
             }
 
-            @media (max-width: 480px) {
-              top: 85%;
+            img {
+              width: 50%;
+              padding-top: 2em;
+              position: absolute;
+              left: 50%;
+              bottom: 5%;
+              transform: translateX(-55%);
             }
           }
         }
