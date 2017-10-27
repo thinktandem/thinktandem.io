@@ -96,7 +96,8 @@ module.exports = function(grunt) {
           width: 2000,
           height: 20000,
           inline: true,
-          minify: true
+          minify: true,
+          include: [/(.*?)::?[^ ,:.]+(.*)/g]
         },
         // Uncomment when it is time to go live and remove the one below it.
         // src: ['build/*.html','build/**/*.html'],
