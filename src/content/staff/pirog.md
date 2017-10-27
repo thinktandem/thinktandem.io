@@ -3,7 +3,7 @@ name: Mike Pirog
 first: Mike
 last: Pirog
 color: londonderry
-weight: 1
+weight: 2
 role: CTO
 dev: Senior DevOps Engineer
 image: images/mike-sm.jpg
