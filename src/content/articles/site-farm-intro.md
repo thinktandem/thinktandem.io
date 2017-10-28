@@ -23,7 +23,7 @@ Thankfully, there are alternatives. Over the last few years, BADCamp and the Hig
 Introducing SiteFarm
 --------------------
 
-This year at BADCamp Shawn Dearmond (UC Davis) and John Kealy (UC San Francisco) presented SiteFarm, a new Drupal installation profile targeted at the higher education usecase. SiteFarm is already being used by over 60 sites in the University of California (UC) system, with 200 more sites currently in production.
+This year at BADCamp Shawn Dearmond (UC Davis) and John Kealy (UC San Francisco) presented SiteFarm, a new Drupal installation profile targeted at the higher education usecase. SiteFarm is already being used by over 60 sites in the University of California (UC) system, with 200 more sites currently in development.
 
 **SiteFarm Features**
 * 100% Test Coverage (both Behat and Unit testing)
