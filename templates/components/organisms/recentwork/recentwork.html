@@ -20,7 +20,7 @@
               </div>
               <div class="case-study-tag">Technology:
               {% for tech in study.tech %}
-                <a href="/work/technology?/{{ tech.slug }}" style="{% if study.dark %} color: #47474A; {% else %} color: #FFFFFF; {% endif %}">{{ tech.name }}</a>
+                <a href="/work/technology/{{ tech.slug }}" style="{% if study.dark %} color: #47474A; {% else %} color: #FFFFFF; {% endif %}">{{ tech.name }}</a>
               {% endfor %}
               </div>
               <div class="case-study-tag">Services:
