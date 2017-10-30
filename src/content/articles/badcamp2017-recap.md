@@ -19,7 +19,9 @@ There was much fun in the air at BADCamp 2017!  It is so great to meet with cow
 Day one
 -------
 
-* [Backdrop CMS Summit](https://2017.badcamp.net/event/summit/backdrop-cms-summit) where many warm and insightful words were spoken.  Here are some of my take aways:
+* [Backdrop CMS Summit](https://2017.badcamp.net/event/summit/backdrop-cms-summit)
+
+Where many warm and insightful words were spoken.  Here are some of my take aways:
 
   * Two+ Years of Backdrop CMS ~ Jen Lampton & Nate Lampton
   * Drupal fork targeting small to medium sized businesses and non profits
@@ -40,6 +42,7 @@ Unexpected, but not a fire!
 We hung out in the court yard, networked and talked about [Backdrop dev](https://github.com/backdrop/backdrop-issues/issues), [Drush](https://github.com/backdrop-contrib/drush), and [Lando](https://docs.devwithlando.io)!
 
 * Lando ~ Geoff St. Pierre
+
 Lando is a local development solution and one way in which you can spin up, develop and deliver a Backdrop site.  
 This session was not recorded, but you can see a similar session by Mike Pirog also given at BADCamp: The Future of Dev is Now!!! and you can see the docs about how to spin up a Backdrop site on Lando here: [Backdrop Recipe](https://docs.devwithlando.io/tutorials/backdrop.html).
 <div class="center-youtube-vid">
@@ -47,9 +50,11 @@ youtube|veRpPNaBY14
 </div>
 
 * Pantheon ~ Matt Cheney
-Using Pantheon as a hosting platform for Backdrop CMS and ways that it can streamline your dev workflows, pipelines, and maintain a stable scalable site
+
+Using Pantheon as a hosting platform for Backdrop CMS and ways that it can streamline your dev workflows, pipelines, and maintain a stable scalable site.
 
 * Backdrop Core Dev Workflows ~ Nate Lampton
+
 Nate gave a great overview of the [issue queue](https://github.com/backdrop/backdrop-issues/issues), issue reporting, coding, review and even did a couple of live commits ([a394d88](https://github.com/backdrop/backdrop/commit/a394d885ccc4cf633cc3be8d54d8d51ac8c12de9), [5aae62bb](https://github.com/backdrop/backdrop/commit/5aae62bbd0fae797c2a10953e4450f6953832313))!
 
 Day two
@@ -58,6 +63,7 @@ Day two
 [DevOps Summit](https://2017.badcamp.net/event/summit/devops-summit) Tech pipelines and optimized workflows.
 
 * [Everything is DevOps](https://videocast.nih.gov/summary.asp?Live=24916&bhcp=1) ~ Michelle Krejci
+
 This excellent presentation made an argument that everything is DevOps and particularly we should focus on the grey areas where DevOps and Development overlap to make streamlined, repeatable pipelines that deliver the best infrastructure, software, and user experience in a robust and scalable way.  Wow that sounds like a lot and it is!  Watch her session here: [Everything is DevOps](https://videocast.nih.gov/summary.asp?Live=24916&bhcp=1).
 
 * Docker-Driven Development Panel + QA ~ Moderated by Rob Bayliss
