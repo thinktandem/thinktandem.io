@@ -51,6 +51,14 @@
         "basePath": "/"
       }
     },
+    "metalsmith-youtube": {
+      "width:": "560",
+      "height": "315",
+       "suggested": "true",
+        "controls": "true",
+        "showTitle": "true",
+        "privacy" : "true"
+    },
     "metalsmith-markdown": {
       "langPrefix": "language-"
     },
