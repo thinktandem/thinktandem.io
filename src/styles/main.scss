@@ -129,6 +129,15 @@ small.subtitle {
 }
 
 .navbar {
+
+  #navbar-toggle-cbox {
+    display:none;
+
+    &:checked ~ .collapse {
+      display: block;
+    }
+  }
+
   .navbar-header {
     .navbar-brand {
       .tandem-logo {
