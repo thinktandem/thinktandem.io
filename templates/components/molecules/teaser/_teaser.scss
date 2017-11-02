@@ -8,6 +8,7 @@
       padding-top: 2em;
       padding-bottom: 2em;
     }
+
   }
 
   .featured-post {
@@ -22,6 +23,12 @@
 
     &:last-child {
       border: 0;
+    }
+
+    @media (min-width: 992px) {
+      .title {
+        height: 220px;
+      }
     }
 
   }
