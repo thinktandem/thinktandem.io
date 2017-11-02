@@ -228,13 +228,6 @@
       "engine": "swig",
       "directory": "templates"
     },
-    "metalsmith-browserify": {
-      "files": [
-        "js/entry.js",
-        "js/theme.js"
-      ],
-      "dest": "js/scripts.js"
-    },
     "metalsmith-assets": {
       "source": "./assets",
       "dest": "."

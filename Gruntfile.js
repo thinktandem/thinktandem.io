@@ -69,23 +69,6 @@ module.exports = function(grunt) {
       },
     },
 
-    // Production performance helpers
-    uglify: {
-      options: {
-        compress: {
-          global_defs: {
-            'DEBUG': false
-          },
-          dead_code: true
-        }
-      },
-      deploy: {
-        files: {
-          'build/js/scripts.min.js': ['build/js/scripts.js']
-        }
-      }
-    },
-
     critical: {
       dist: {
         options: {
@@ -194,7 +177,7 @@ module.exports = function(grunt) {
   grunt.initConfig(config);
 
   // Register tasks
-  grunt.registerTask('build', ['googlefonts', 'exec:build', 'uglify', 'critical', 'replace']);
+  grunt.registerTask('build', ['googlefonts', 'exec:build', 'critical', 'replace']);
   grunt.registerTask('default', ['build', 'watch']);
   grunt.registerTask('test', ['htmllint', 'sasslint', 'build']);
 

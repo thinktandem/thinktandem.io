@@ -43,7 +43,6 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
-    "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-critical": "^0.3.0",
     "grunt-exec": "^0.4.6",
@@ -53,9 +52,6 @@
     "grunt-sass-lint": "^0.2.0",
     "matchdep": "^1.0.1",
     "shell-escape": "^0.2.0"
-  },
-  "browser": {
-    "bootstrap": "./assets/public/bootstrap-sass-twbs/assets/javascripts/bootstrap.min.js"
   },
   "browserify": {
     "transform": [
