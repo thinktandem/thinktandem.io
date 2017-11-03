@@ -98,7 +98,7 @@ While this change did provide some much needed improvements it wasn't enough to 
 About a month and a half later we had reached acceptance. Big changes were needed to Kalabox. Lando was born on [January 9, 2017](https://github.com/lando/lando/commit/481d74f0b29428623b7986c86b451eec044c5184) aiming to:
 
 * **DO MORE WITH LESS** - Lando is about **50%** less code than Kalabox but offers hundreds of times more power and stability, all in a single, in-repo config file.
-* **BE PATIENT** - Kalabox spent inordinate amounts of time trying to compensate and provide hackish workarounds for flaws in its underlying Docker technology (looking at you file sharing!!!). Lando resolved to work on itself while trusting that upstream dependencies would eventually imrpove.
+* **BE PATIENT** - Kalabox spent inordinate amounts of time trying to compensate and provide hackish workarounds for flaws in its underlying Docker technology (looking at you file sharing!!!). Lando resolved to work on itself while trusting that upstream dependencies would eventually improve.
 * **PLAY NICE** - Lando is designed to work even when used in combination with other common development tools. Got something assigned to `port 80` already? We will find a port that works.
 * **OPEN THINGS UP** - Kalabox's core technology was great, in fact most of it still lives on in Lando, but it was not very accessible to developers. Lando opens things up so users can easily spin up simple or complex requirements across a wide array of languages and services.
 * **WRITE GREAT DOCUMENTATION** - Documentation is always the unsung hero of a good project. We spent a considerable amount of time making sure our documentation was comprehensive and easy to understand.
