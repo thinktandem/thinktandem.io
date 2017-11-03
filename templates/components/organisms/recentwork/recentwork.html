@@ -1,6 +1,7 @@
 <div id="work">
   <div class="container recent-work">
     <div class="row header case-studies">
+<<<<<<< HEAD
       {% for study in collections.recentWork|slice(0,2) %}
         {% include "../../molecules/recentwork/recentwork.html" %}
       {% endfor %}
@@ -8,6 +9,41 @@
     <div class="row header case-studies">
       {% for study in collections.recentWork|slice(2,4) %}
         {% include "../../molecules/recentwork/recentwork.html" %}
+=======
+      {% for study in collections.recentWork %}
+        <div class="col-md-6 col-xs-12 case-study case-study-home case-study-{{ study.slug }}" style="background-color: #{{ study.background }};">
+          <div class="case-study-recent">
+            <a href="/work/{{ study.slug }}">
+              <div class="title">
+                <h2 style="{% if study.dark %} color: #47474A; {% else %} color: #FFFFFF; {% endif %}">{{ study.title }}</h2>
+              </div>
+              <div class="case-study-content" style="{% if study.dark %} color: #47474A; {% else %} color: #FFFFFF; {% endif %}">
+                {{ study.byline|raw }}
+              </div>
+            </a>
+            <div class="case-study-tags" style="{% if study.dark %} color: #47474A; {% else %} color: #FFFFFF; {% endif %}">
+              <div class="case-study-tag">Industries:
+              {% for industry in study.industries %}
+                <a href="/work/industry/{{ industry.slug }}" style="{% if study.dark %} color: #47474A; {% else %} color: #FFFFFF; {% endif %}">{{ industry.name }}</a>
+              {% endfor %}
+              </div>
+              <div class="case-study-tag">Technology:
+              {% for tech in study.tech %}
+                <a href="/work/technology/{{ tech.slug }}" style="{% if study.dark %} color: #47474A; {% else %} color: #FFFFFF; {% endif %}">{{ tech.name }}</a>
+              {% endfor %}
+              </div>
+              <div class="case-study-tag">Services:
+              {% for service in study.services %}
+                <a href="/work/service/{{ service.slug }}" style="{% if study.dark %} color: #47474A; {% else %} color: #FFFFFF; {% endif %}">{{ service.name }}</a>
+              {% endfor %}
+              </div>
+            </div>
+            <div class="logo">
+              <img class="client-logo" aria-hidden="true" src="{{ study.logo }}">
+            </div>
+          </div>
+        </div>
+>>>>>>> master
       {% endfor %}
     </div>
   </div>

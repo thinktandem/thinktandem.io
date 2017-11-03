@@ -3,7 +3,7 @@ name: John Ouellet
 first: John
 last: Ouellet
 color: miami
-weight: 2
+weight: 1
 role: Sales Engineering Manager
 dev: Senior Engineer
 image: images/john-sm.jpg

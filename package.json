@@ -30,6 +30,7 @@
     "metalsmith-sitemap": "^1.1.0",
     "metalsmith-swig-helpers": "https://github.com/thinktandem/metalsmith-swig-helpers",
     "metalsmith-tags": "https://github.com/thinktandem/metalsmith-tags",
+    "metalsmith-youtube": "^1.0.2",
     "swig": "^1.4.2",
     "swig-extras": "https://github.com/reynoldsalec/swig-extras.git",
     "xor-crypt": "~1.0.0"
