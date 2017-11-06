@@ -7,14 +7,14 @@ author: John Ouellet
 private: false
 mainImage: images/articles/wordpress-performance-essentials.jpg
 img-src: images/articles/wordpress-performance-essentials.jpg
-byline: How to make WordPress run fast and smooth.  A few tips and tricks to make sure your visitors don;t get frustrated.
+byline: How to make WordPress run fast and smooth.  A few tips and tricks to make sure your visitors don't get frustrated waiting on pages to load.
 date: 2017-11-06
 ---
 
-Make your WordPress Site Super Duper Fast
+Making Your WordPress Site Super Duper Fast
 -----------------------------------------
 
-Having a fast running site is a great feeling.  Your visitors will be happy, Google will be happy, and most of all you will be happy.  So much happiness all around can be achieved with just a little elbow grease and some TLC.  Let me show you some tips and tricks to get your WordPress site peforming well.
+Having a fast running site is a great feeling.  Your visitors will be happy, Google will be happy, and most of all you will be happy.  So much happiness all around can be achieved with just a little elbow grease and some TLC.  Let me show you some tips and tricks to get your WordPress site performing well.
 
 You can use free resources to test your progress while you are trying these tips.  [KeyCDN](https://tools.keycdn.com/speed) and [Pingdom](https://tools.pingdom.com/) both provide good speed benchmark tools that are fairly straightforward to understand and use.
 
@@ -28,25 +28,25 @@ Once you go through and [setup your site with Cloudflare](https://support.cloudf
 
 Here are the settings you should have on each of the sections/apps of CloudFlare:
 
-##### DNS
+##### **DNS**
 
   * Click the orange cloud (http proxy) on all A and CNAME records.
   * Also, you should utilize CNAME flattening as well. To do this create a new CNAME record and put www in the name and then @ in the domain name.
 
 
-##### Crypto
+##### **Crypto**
 
-  * Dependent on your hosting providers settings, you will chose Flexible or Full in the SSL setting.  Start with Flexible, change all the settings below and then try Full.  If Full causes a 5xx error on your site, change back to Flexbile, purge the caches in the Caches app and give it a minute.
+  * Dependent on your hosting providers settings, you will chose Flexible or Full in the SSL setting.  Start with Flexible, change all the settings below and then try Full.  If Full causes a 5xx error on your site, change back to Flexible, purge the caches in the Caches app and give it a minute.
   * Go down to Always use HTTPS and click it to on.  Also head down to Automatic HTTPS Rewrites and click it to on. All of these settings will enable https on your site, for free!  Just go back through your site to make sure you have no assets stuck on http.  You will see the mixed content message in the console.  Usually it is one or two assets, but easy enough to fix real quick.
 
 
-##### Speed
+##### **Speed**
 
-  * In the Auto Minfiy settings, check all 3 boxes for CSS, JS, and HTML.  This will reduce the page size on top of any other plugins you may be using.
+  * In the Auto Minify settings, check all 3 boxes for CSS, JS, and HTML.  This will reduce the page size on top of any other plugins you may be using.
   * You can also try enabling the RocketLoader, but I have always had mix results with it.  Test it out to see if it helps any.
 
 
-##### Caching
+##### **Caching**
 
 Here is where you can purge the CloudFlare cache manually if need be.  It comes in handy when applying these settings or when something goes awry with the cache.
 
@@ -55,7 +55,7 @@ Here is where you can purge the CloudFlare cache manually if need be.  It comes 
   * Make sure Always Online is set to On.
 
 
-##### Page Rules
+##### **Page Rules**
 
 This is where you can really customize things.  There are numerous articles out there for different settings.  *Note: a few months ago CloudFlare made https redirection free for all accounts, so you don't need a rule for it anymore.*
 
@@ -71,7 +71,7 @@ The one basic rule I usually add to all WP sites is this one for the files direc
 
 Since we only have 3 rules to play with on the free site, use the other 2 as you please.  Some articles suggest disable cache for admin pages.  The url for those patterns would be: `*YOURSITE.com/wp-content/wp-admin/*` and `*YOURSITE.com/wp-login.php*`.  This is useful if you are caching the base url and things are getting "stuck".  However when you only have 3 rules to play with, the first one I listed is the most important.  If you want to buy a couple extra rules, it would help in this area.
 
-Cloudflare is super simple to setup and the performance gains are quite nice.  Considering this tool is free and only takes a few minutes to setup, it would be unwise not to use it.
+CloudFlare is super simple to setup and the performance gains are quite nice.  Considering this tool is free and only takes a few minutes to setup, it would be unwise not to use it.
 
 
 Nginx
@@ -79,16 +79,16 @@ Nginx
 
 "Apache is like Microsoft Word, it has a million options but you only need six.  Nginx does those six things, and it does five of them 50 times faster than Apache".
 
-There are numerous articles out there they weigh the advantages of Nginx over Apache.  We could go on and on about the two of them, but if you want performance, go with Nginx. If you are still curious, [here is an article from the Nginx Community Wiki](https://www.nginx.com/resources/wiki/community/why_use_it/) on the advtanges of Nginx.
+There are numerous articles out there they weigh the advantages of Nginx over Apache.  We could go on and on about the two of them, but if you want performance, go with Nginx. If you are still curious, [here is an article from the Nginx Community Wiki](https://www.nginx.com/resources/wiki/community/why_use_it/) on the advantages of Nginx.
 
-Most hosting enivironment come with Nginx ready to go typically, like [Pantheon](https://pantheon.io/) and [Platform](https://platform.sh/).  If you are hosting through a do it yourself provider (like [Digital Ocean](https://www.digitalocean.com/)), then here are a couple tips and tricks.
+Most hosting environment come with Nginx ready to go typically, like [Pantheon](https://pantheon.io/) and [Platform](https://platform.sh/).  If you are hosting through a do it yourself provider (like [Digital Ocean](https://www.digitalocean.com/)), then here are a couple tips and tricks.
 
 
-##### Cache All Of Your Static Resources
+##### **Cache All Of Your Static Resources**
 
 Caching static assets like CSS, JS, images, etc has a huge benefit for your site.  You will deliver these assets faster to your end user while reducing the load on the server.  It is a win-win to set this up.  It is pretty simple and easy to do.
 
-Go to /etc/nginx/sites-available folder on your server.  Edit the file which corelates to your site (usually the default file).  You can do this with the command ```sudo nano default``` or whatever CLI editor you use.  Add the following settings to the file:
+Go to /etc/nginx/sites-available folder on your server.  Edit the file which correlates to your site (usually the default file).  You can do this with the command ```sudo nano default``` or whatever CLI editor you use.  Add the following settings to the file:
 
 ```bash
 server {
@@ -108,11 +108,10 @@ server {
 }
 
 ```
+<br>
+##### **Enable FastCGI**
 
-
-##### Enable FastCGI
-
-FastCGI is a caching mechanims that helps with all the behind the scenes CGI processes on the server. It only take a few seconds to set this up, but is quite powerful.  Here is the recommended method using the same conffig file from the static resource example:
+FastCGI is a caching mechanism that helps with all the behind the scenes CGI processes on the server. It only take a few seconds to set this up, but is quite powerful.  Here is the recommended method using the same config file from the static resource example:
 
 ```bash
 fastcgi_cache_path /var/run/nginx-cache levels=1:2 keys_zone=WORDPRESS:100m inactive=60m;
@@ -172,13 +171,32 @@ server {
 
 ```
 
-Enabling Nginx, caching your static resources, and enabling FastCGI will yeild great gains in yoru site performance.  There are many other tweaks you can do to Nginx beyond this.  If you are google savvy enough, you can squeeze out even more milliseconds of performance than what I listed above.
-
-
+Enabling Nginx, caching your static resources, and enabling FastCGI will yield great gains in your site performance.  There are many other tweaks you can do to Nginx beyond this.  If you are Google savvy enough, you can squeeze out even more milliseconds of performance than what I listed above.
 
 
 PHP 7.x
 --------
+
+PHP 7 comes with numerous new bells and whistles.  However the hands down best improvement is nearly twice the speed.  As you can see from this infographic below taken from [Zend.com PHP 7 Blog Post](https://www.zend.com/en/resources/php7_infographic):
+
+<img src="images/articles/wp-php-speed.jpg">
+
+On managed hosting platforms like [Pantheon](https://pantheon.io/) and [Platform](https://platform.sh/), there are simple settings to change the PHP version.  However, if you are on your own, then I would do the following to install PHP 7.x:
+
+```bash
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt-get install php7.1-fpm php7.1-curl php7.1-gd php7.1-xml php7.1-mysql php7.1-json php7.1-mbstring php7.1-opcache php7.1-zip
+```
+
+Then go into your Nginx sites at /etc/nginx/sites-available/YOURSITE and edit the fastcgi_pass line as follows:
+
+```bash
+#fastcgi_pass unix:/var/run/php5-fpm.sock;
+fastcgi_pass unix:/var/run/php/php7.1-fpm.sock;
+```
+
+Restart php service or the server and voila, your site is now using PHP 7!
 
 
 OpCache
