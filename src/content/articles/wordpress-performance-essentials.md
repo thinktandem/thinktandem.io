@@ -16,6 +16,8 @@ Make your WordPress Site Super Duper Fast
 
 Having a fast running site is a great feeling.  Your visitors will be happy, Google will be happy, and most of all you will be happy.  So much happiness all around can be achieved with just a little elbow grease and some TLC.  Let me show you some tips and tricks to get your WordPress site peforming well.
 
+You can use free resources to test your progress while you are trying these tips.  [KeyCDN](https://tools.keycdn.com/speed) and [Pingdom](https://tools.pingdom.com/) both provide good speed benchmark tools that are fairly straightforward to understand and use.
+
 
 CloudFlare
 ----------
@@ -28,13 +30,49 @@ Here are the settings you should have on each of the sections/apps of CloudFlare
 
 ##### DNS
 
-Click the orange cloud (http proxy) on all A and CNAME records.  Also, you should utilize CNAME flattening as well. To do this create a new CNAME record and put www in the name and then @ in the domain name.
+  * Click the orange cloud (http proxy) on all A and CNAME records.
+  * Also, you should utilize CNAME flattening as well. To do this create a new CNAME record and put www in the name and then @ in the domain name.
+
 
 ##### Crypto
 
-Dependent on your hosting providers settings, you will chose Flexible or Full in the SSL setting.  Start with Flexible, change all the settings below and then try Full.  If Full causes a 5xx error on your site, change back to Flexbile, purge the caches in the Caches app and give it a minute.
+  * Dependent on your hosting providers settings, you will chose Flexible or Full in the SSL setting.  Start with Flexible, change all the settings below and then try Full.  If Full causes a 5xx error on your site, change back to Flexbile, purge the caches in the Caches app and give it a minute.
+  * Go down to Always use HTTPS and click it to on.  Also head down to Automatic HTTPS Rewrites and click it to on. All of these settings will enable https on your site, for free!  Just go back through your site to make sure you have no assets stuck on http.  You will see the mixed content message in the console.  Usually it is one or two assets, but easy enough to fix real quick.
 
-Go down to Always use HTTPS and click it to on.  Also head down to Automatic HTTPS Rewrites and click it to on. All of these settings will enable https on your site, for free!  Just go back through your site to make sure you have no assets stuck on http.  You will see the mixed content message in the console.  Usually it is one or two assets, but easy enough to fix real quick.
+
+##### Speed
+
+  * In the Auto Minfiy settings, check all 3 boxes for CSS, JS, and HTML.  This will reduce the page size on top of any other plugins you may be using.
+  * You can also try enabling the RocketLoader, but I have always had mix results with it.  Test it out to see if it helps any.
+
+
+##### Caching
+
+Here is where you can purge the CloudFlare cache manually if need be.  It comes in handy when applying these settings or when something goes awry with the cache.
+
+  * In the Caching Level Area, select the Standard option.
+  * Browser Cache Expiration can be set to what you feel seems good.  I would recommend at least 14 days, I usually do a month.
+  * Make sure Always Online is set to On.
+
+
+##### Page Rules
+
+This is where you can really customize things.  There are numerous articles out there for different settings.  *Note: a few months ago CloudFlare made https redirection free for all accounts, so you don't need a rule for it anymore.*
+
+The one basic rule I usually add to all WP sites is this one for the files directory:
+
+  * URL: `*YOURSITE.com/wp-content/uploads*`
+
+  * Settings:
+    * Browser Cache TTL = 14 days +
+    * Security Level = High
+    * Cache Level = Cache Everything
+    * Edge Cache = 1 month +
+
+Since we only have 3 rules to play with on the free site, use the other 2 as you please.  Some articles suggest disable cache for admin pages.  The url for those patterns would be: `*YOURSITE.com/wp-content/wp-admin/*` and `*YOURSITE.com/wp-login.php*`.  This is useful if you are caching the base url and things are getting "stuck".  However when you only have 3 rules to play with, the first one I listed is the most important.  If you want to buy a couple extra rules, it would help in this area.
+
+Cloudflare is super simple to setup and the performance gains are quite nice.  Considering this tool is free and only takes a few minutes to setup, it would be unwise not to use it.
+
 
 Nginx
 -----
@@ -44,6 +82,7 @@ Nginx
 There are numerous articles out there they weigh the advantages of Nginx over Apache.  We could go on and on about the two of them, but if you want performance, go with Nginx. If you are still curious, [here is an article from the Nginx Community Wiki](https://www.nginx.com/resources/wiki/community/why_use_it/) on the advtanges of Nginx.
 
 Most hosting enivironment come with Nginx ready to go typically, like [Pantheon](https://pantheon.io/) and [Platform](https://platform.sh/).  If you are hosting through a do it yourself provider (like [Digital Ocean](https://www.digitalocean.com/)), then here are a couple tips and tricks.
+
 
 ##### Cache All Of Your Static Resources
 
@@ -69,6 +108,7 @@ server {
 }
 
 ```
+
 
 ##### Enable FastCGI
 
