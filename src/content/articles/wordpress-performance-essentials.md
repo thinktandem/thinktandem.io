@@ -31,7 +31,7 @@ Here are the settings you should have on each of the sections/apps of CloudFlare
 ##### **DNS**
 
   * Click the orange cloud (http proxy) on all A and CNAME records.
-  * Also, you should utilize CNAME flattening as well. To do this create a new CNAME record and put www in the name and then @ in the domain name.
+  * You should utilize CNAME flattening as well. To do this create a new CNAME record and put www in the name and then @ in the domain name.
 
 
 ##### **Crypto**
@@ -43,8 +43,9 @@ Here are the settings you should have on each of the sections/apps of CloudFlare
 ##### **Speed**
 
   * In the Auto Minify settings, check all 3 boxes for CSS, JS, and HTML.  This will reduce the page size on top of any other plugins you may be using.
-  * You can also try enabling the RocketLoader, but I have always had mix results with it.  Test it out to see if it helps any.
+  * You can also try enabling the RocketLoader, but I have always had mixed results with it.  Test it out to see if it helps any.
 
+<img src="images/articles/cname-flat.jpg">
 
 ##### **Caching**
 
@@ -81,14 +82,14 @@ Nginx
 
 There are numerous articles out there they weigh the advantages of Nginx over Apache.  We could go on and on about the two of them, but if you want performance, go with Nginx. If you are still curious, [here is an article from the Nginx Community Wiki](https://www.nginx.com/resources/wiki/community/why_use_it/) on the advantages of Nginx.
 
-Most hosting environment come with Nginx ready to go typically, like [Pantheon](https://pantheon.io/) and [Platform](https://platform.sh/).  If you are hosting through a do it yourself provider (like [Digital Ocean](https://www.digitalocean.com/)), then here are a couple tips and tricks.
+Most hosting environments come with Nginx ready to go. For example [Pantheon](https://pantheon.io/) and [Platform](https://platform.sh/) both use Nginx. If you are hosting through a do it yourself provider (like [Digital Ocean](https://www.digitalocean.com/), then here are a couple tips and tricks.
 
 
 ##### **Cache All Of Your Static Resources**
 
 Caching static assets like CSS, JS, images, etc has a huge benefit for your site.  You will deliver these assets faster to your end user while reducing the load on the server.  It is a win-win to set this up.  It is pretty simple and easy to do.
 
-Go to /etc/nginx/sites-available folder on your server.  Edit the file which correlates to your site (usually the default file).  You can do this with the command ```sudo nano default``` or whatever CLI editor you use.  Add the following settings to the file:
+Go to /etc/nginx/sites-available folder on your server.  Edit the file which corresponds to your site (usually the default file).  You can do this with the command ```sudo nano default``` or whatever CLI editor you use.  Add the following settings to the file:
 
 ```bash
 server {
@@ -417,7 +418,7 @@ You can then setup the CloudFlare settings in its respective tab and purge the c
 Autoptimize Plugin
 ------------------
 
-The [Autotimize](https://wordpress.org/plugins/autoptimize/) plugin is used to aggregate css / js and inline css on your site.  I mainly use this plugin to inline the CSS, but use its optimize options as well.  It is lightweight and very easy to setup.
+The [Autoptimize](https://wordpress.org/plugins/autoptimize/) plugin is used to aggregate css / js and inline css on your site.  I mainly use this plugin to inline the CSS, but use its optimize options as well.  It is lightweight and very easy to setup.
 
 To set this up, do the following:
 
