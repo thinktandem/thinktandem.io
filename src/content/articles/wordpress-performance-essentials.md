@@ -31,7 +31,9 @@ Here are the settings you should have on each of the sections/apps of CloudFlare
 ##### **DNS**
 
   * Click the orange cloud (http proxy) on all A and CNAME records.
-  * You should utilize CNAME flattening as well. To do this create a new CNAME record and put www in the name and then @ in the domain name.
+  * You should utilize CNAME flattening as well. To do this create a new CNAME record and put www in the name and then @ in the domain name fields.
+
+<img src="images/articles/cname-flat.jpg">
 
 
 ##### **Crypto**
@@ -45,7 +47,6 @@ Here are the settings you should have on each of the sections/apps of CloudFlare
   * In the Auto Minify settings, check all 3 boxes for CSS, JS, and HTML.  This will reduce the page size on top of any other plugins you may be using.
   * You can also try enabling the RocketLoader, but I have always had mixed results with it.  Test it out to see if it helps any.
 
-<img src="images/articles/cname-flat.jpg">
 
 ##### **Caching**
 
