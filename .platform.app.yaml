@@ -26,6 +26,10 @@ web:
           allow: true
         search_index\.json$:
           allow: true
+        ^/rss\.xml$:
+          allow: true
+        ^/sitemap\.xml$:
+          allow: true
 
 # The size of the persistent disk of the application (in MB).
 disk: 2048
