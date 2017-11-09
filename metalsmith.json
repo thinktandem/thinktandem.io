@@ -240,6 +240,14 @@
       "engine": "swig",
       "directory": "templates"
     },
+    "metalsmith-rss": {
+      "feedOptions": {
+        "title": "Tandem's RSS Feed on Drupal, Laravel, WordPress, Docker, etc",
+        "site_url": "https://thinktandem.io/",
+        "limit": 500,
+        "collection": "articles"
+      }
+    },
     "metalsmith-browserify": {
       "files": [
         "./../assets/public/matchheight/dist/jquery.matchHeight-min.js",
