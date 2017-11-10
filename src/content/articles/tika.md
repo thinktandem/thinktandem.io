@@ -68,8 +68,8 @@ new `build` hook or add to it if you already have one:
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
     build: |
-      mkdir -p /srv/bin
-      cd /srv/bin && curl -OL http://download.nextag.com/apache/tika/tika-app-1.16.jar
+      mkdir -p /app/srv/bin
+      cd /app/srv/bin && curl -OL http://download.nextag.com/apache/tika/tika-app-1.16.jar
 ```
 
 This creates the directory `/srv/bin` and downloads the tika jar executable
@@ -83,7 +83,10 @@ Now that we have the `tika-app-1.16.jar` file in place we are ready to configure
 the `search_api_attachments` module. Visit `/admin/config/search/search_api_attachments`
 in your browser and add the method, java executable, and tika paths configuration:
 
-<img src="/images/articles/tika/search_api_attachments_config.jpg" />
+<img src="/images/articles/tika/tika-config.jpg" />
+
+These paths correspond to the paths you entered in the `.platform.app.yaml` file
+for the `build` step.
 
 Adding Tika to Lando
 --------------------
@@ -100,8 +103,8 @@ services:
       - apt-get update -y
       - apt-get install -y openjdk-7-jre-headless
       - apt-get install -y openjdk-7-jdk
-      - mkdir -p /srv/bin && cd /srv/bin
-      - cd /srv/bin && curl -OL http://download.nextag.com/apache/tika/tika-app-1.16.jar
+      - mkdir -p /app/srv/bin && cd /app/srv/bin
+      - cd /app/srv/bin && curl -OL http://download.nextag.com/apache/tika/tika-app-1.16.jar
       - apt-get remove openjdk-7-jdk -y
 ```
 
