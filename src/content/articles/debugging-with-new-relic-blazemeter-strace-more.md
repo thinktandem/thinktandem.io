@@ -16,7 +16,7 @@ The Issue Before Us
 
 Not that long ago, we brought on a well known non profit Drupal 7 site into our mix.  They are also a top 5000 ranking site based off of [Alexa](https://www.alexa.com/siteinfo).  At times they can have hundreds of thousands of page views in a given month.  The site was not built that well at the theming layer and had numerous performance issues.  We moved the site to [platform.sh](https://platform.sh/) and that seemed to put a band aid on said issues.
 
-Last week, the band aid feel off and we nicked an artery.  While pushing up a suite of modules and enabling them on production, the site went down and it wasn't coming back up.  We had tested everything locally and on staging, so what went wrong?  I will layout the journey from hair pulling madness to pure zen.
+Last week, the band aid fell off and we nicked an artery.  While pushing up a suite of modules and enabling them on production, the site went down and it wasn't coming back up.  We had tested everything locally and on staging, so what went wrong?  I will layout the journey from hair pulling madness to pure zen.
 
 
 The Site is stuck in a loop
