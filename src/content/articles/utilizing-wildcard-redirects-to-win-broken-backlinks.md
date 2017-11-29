@@ -1,6 +1,6 @@
 ---
 layout: layouts/article.html
-title: "Utilizing Wildcard Redirects To Win Backlinks"
+title: "Utilizing Wildcard Redirects To Win Broken Backlinks"
 tags: development, support
 permalink: true
 author: John Ouellet
