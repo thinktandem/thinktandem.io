@@ -14,7 +14,7 @@ date: 2017-12-01
 Lando + Heroku Workflow
 -----------------------
 
-[Heroku](https://heroku.com) is a flexible cloud hosting platform. [Lando](https://docs.devwithlando.io) is a flexible local development environment. Together your dev workflow can really shine!
+[Heroku](https://heroku.com) is a flexible cloud hosting platform. [Lando](https://docs.devwithlando.io) is a flexible local development environment. Together the can make your dev workflow really shine!
 
 In and of itself, there is no reason you can't just take any app and deploy to Heroku as you normally would; this post will walk you through constructing a useful `.lando.yml` config file for working with Heroku.
 
