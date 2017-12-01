@@ -16,12 +16,12 @@ Lando + Heroku Workflow
 
 [Heroku](https://heroku.com) is a flexible cloud hosting platform. [Lando](https://docs.devwithlando.io) is a flexible local development environment. Together your dev workflow can really shine!
 
-In and of itself there is no reason you can't just take any app and deploy to Heroku as you normally would; this post will walk you through constructing a useful `.lando.yml` config file for working with Heroku.
+In and of itself, there is no reason you can't just take any app and deploy to Heroku as you normally would; this post will walk you through constructing a useful `.lando.yml` config file for working with Heroku.
 
 Heroku CLI
 ----------
 
-Heroku has a powerful cli tool to interact with your Heroku hosted apps. Let's take advantage of that and integrate it into lando. Start a `.lando.yml` file like this:
+Heroku has a powerful cli tool to interact with your Heroku hosted apps. Let's take advantage of that and integrate it into Lando. Start a `.lando.yml` file like this:
 
 ```yaml
 name: lando-heroku
@@ -56,16 +56,16 @@ tooling:
     cmd: /usr/bin/heroku
 ```
 
-The `appserver extras` section:
+The `appserver: extras` section:
 
 ```yaml
     extras:
       - "wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh"
 ```
 
-goes out and gets the `heroku` cli app and installs in the `appserver` container.  
+retrieves the `heroku` cli app and installs in the `appserver` container.  
 
-The `tooling heroku` section:
+The `tooling: heroku` section:
 
 ```yaml
 heroku:
@@ -87,7 +87,7 @@ Heroku CLI Basics
 Available `heroku` commands:
 
 ```bash
-geoff@yep lando-heroku $ lando heroku
+lando-heroku $ lando heroku
 Usage: heroku COMMAND
 
 Help topics, type heroku help TOPIC for more details:
@@ -132,7 +132,7 @@ Help topics, type heroku help TOPIC for more details:
  webhooks        setup HTTP notifications of app activity
 ```
 
-Now you have access to all the power of the `heroku` cli. Login:
+Login:
 
 ```bash
 lando heroku auth:login
@@ -150,7 +150,7 @@ lando heroku apps:create lando-heroku --buildpack heroku/php
 Get info about your Heroku app with the `apps:info` command:
 
 ```bash
-geoff@yep lando-heroku $ lando heroku apps:info lando-heroku
+lando-heroku $ lando heroku apps:info lando-heroku
 === lando-heroku
 Auto Cert Mgmt: false
 Dynos:
@@ -200,4 +200,4 @@ With a few simple configuration files and commands you are ready to go with all 
 * [`.lando.yml`](https://github.com/thinktandem/lando-heroku-demo/blob/master/.lando.yml)
 * [`nginx_app.conf`](https://github.com/thinktandem/lando-heroku-demo/blob/master/nginx_app.conf)
 
-🐼 All the convenience of Lando all the flexibility of Heroku; enjoy! 🐝
+🐼 All the convenience of Lando, all the flexibility of Heroku; enjoy! 🐝

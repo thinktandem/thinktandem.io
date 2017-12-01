@@ -22,13 +22,6 @@ Always good to dev locally before submitting a pull request. To do so, we recomm
 git clone https://github.com/thinktandem/thinktandem.io.git
 cd thinktandem.io
 
-# Install dependencies
-lando npm install
-lando bower install
-
-# Build site
-lando grunt build
-
 # Start up the site
 lando start
 ```
