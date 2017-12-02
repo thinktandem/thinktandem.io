@@ -1,13 +1,13 @@
 ---
 layout: layouts/article.html
-title: "Lando + Heroku Workflow"
+title: "Lando + Heroku + Laravel"
 tags: development, devops
 permalink: true
 author: Geoff St. Pierre
 private: false
-mainImage: images/articles/lando-heroku/lando-heroku.jpg
-img-src: images/articles/lando-heroku/lando-heroku.jpg
-byline: "🚀 ∞ Lando + Heroku: take your dev to the next level.  📦 ☄️"
+mainImage: images/articles/lando-heroku/lando-heroku-laravel.jpg
+img-src: images/articles/lando-heroku/lando-heroku-laravel.jpg
+byline: "🚀 ∞ Lando + Heroku + Laravel: take your dev to the next level.  📦 ☄️"
 date: 2017-12-01
 ---
 
