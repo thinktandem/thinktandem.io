@@ -7,7 +7,7 @@ author: John Ouellet
 private: false
 mainImage: images/articles/dynamic-routes.jpg
 img-src: images/articles/dynamic-routes.jpg
-byline: Handling a dynamic route is Drupal 8 is much different than it was in previous versions of Drupal.  A little more foot work is needed since the routing layer is now Symphony based.
+byline: Handling a dynamic route in Drupal 8 is much different than it was in previous versions of Drupal.  A little more foot work is needed since the routing layer is now Symphony based.
 date: 2017-12-03
 ---
 
@@ -21,7 +21,7 @@ The Routing Layer has changed
 
 For as long as I can remember, all paths / routing was handled through ```hook_menu()```.  However in Drupal 8, this is done though [Symfony's Routing Layer](https://symfony.com/doc/current/routing.html).  You can also [checkout this article on Drupal.org](https://www.drupal.org/docs/8/api/routing-system/routing-system-overview) that gives a brief overview.
 
-In the Drupal 7 version of my Blackbaud SKY API module, there is a callback only based path.  This module's only purpose is to establish a connection via OAuth to the Blackbaud SKY API.  When utilizing OAuth, having a callback URI is a fairly customary practice.  If you ever used the [Twitter](https://www.drupal.org/project/twitter) module, you know you needed to setup a callback uri in your application.  The Blackbaud SKY API application is no different.
+In the Drupal 7 version of my Blackbaud SKY API module, as mentioned previously, there is a callback path that is derived from a variable.  This module's only purpose is to establish a connection via OAuth to the Blackbaud SKY API.  When utilizing OAuth, having a callback URI is a fairly customary practice.  If you ever used the [Twitter](https://www.drupal.org/project/twitter) module, you know you needed to setup a callback uri in your application.  The Blackbaud SKY API application is no different.  I made this path configurable so the end user could change it in their respective application.
 
 The code for this in Drupal 7 was fairly straight forward:
 
@@ -65,11 +65,11 @@ function blackbaud_sky_api_redirect_uri_callback() {
 YAML, Controllers and Routes, OH MY!
 ------------------------------------
 
-One of the main driving force behind the framework change in Drupal 8 is to create a structure that is decoupled and interchangeable.  Drupalize.me's [overview of decoupling](https://drupalize.me/tutorial/decoupling-explained?p=2360) is a good starting point to understand what is going on now.  By making changes like this to the framework we are making Drupal be less "Drupaly".  We can now easily add in additional classes, interfaces, whatever to our routes now if we needed to.
+One of the main driving force behind the framework change in Drupal 8 is to create a structure that is decoupled and interchangeable.  Drupalize.me's [overview of decoupling](https://drupalize.me/tutorial/decoupling-explained?p=2360) is a good starting point to understand what is going on now.  By making changes like this to the framework we are making Drupal be less "Drupaly".  We can now easily add in additional classes, interfaces, or whatever to our routes now if we needed to.
 
 To generate a dynamic route, we start off with the route_callbacks method.  This was [introduced right](https://www.drupal.org/node/2177901) before the stable release of Drupal 8.  Previously you had to do this with an event subscriber and RouteSubscriberBase class.  You may still see an article or three floating around with this info still.  I would just ignore them as it is no longer needed.
 
-To begin, you just through the method in your routing.yml with the callback to your class and method:
+To begin, you just throw the method in your routing.yml with the callback to your class and method:
 
 ```yaml
 route_callbacks:
