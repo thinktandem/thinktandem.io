@@ -14,7 +14,7 @@ date: 2017-12-03
 The issue I faced with my module
 --------------------------------
 
-I have been on a journey to get all my [Drupal Contrib Modules](https://www.drupal.org/u/labboy0276) over to Drupal 8.  Usually the code structure is fairly close to its predecessor, but with just a little added flavor.  However, when I was converting my [Blackbaud SKY API](https://www.drupal.org/project/blackbaud_sky_api) module I ran into a coding dilemma.  My module has a path that is defined by a system variable and is not static.  It is not taking a wildcard argument from the path either.  How do you do this when your routing layer is driven by YAML and not PHP?  A little Google fu and some Drupal API magic helped me get there. Now I will show you.
+I have been on a journey to get all my [Drupal Contrib Modules](https://www.drupal.org/u/labboy0276) ported over to Drupal 8.  Usually the code structure is fairly close to its predecessor, but with just a little added flavor.  However, when I was converting my [Blackbaud SKY API](https://www.drupal.org/project/blackbaud_sky_api) module I ran into a coding dilemma.  My module has a path that is defined by a system variable and is not static.  It is not taking a wildcard argument from the path either.  How do you do this when your routing layer is driven by YAML and not PHP?  A little Google fu and some Drupal API magic helped me get there. Now I will show you.
 
 The Routing Layer has changed
 -----------------------------
@@ -45,7 +45,7 @@ function blackbaud_sky_api_menu() {
 }
 ```
 
-As you can see, this route is defined by either the variable blackbaud_sky_api_redirect_uri or the constant BLACKBAUD_SKY_API_REDIRECT_URI as a default.  It then went to the page callback blackbaud_sky_api_redirect_uri_callback that did whatever magic I needed.  I also through the logic in another file because clean code = happy code.
+As you can see, this route is defined by either the variable blackbaud_sky_api_redirect_uri or the constant BLACKBAUD_SKY_API_REDIRECT_URI as a default.  It then went to the page callback blackbaud_sky_api_redirect_uri_callback that did whatever magic I needed.  I also threw the logic in another file because clean code = happy code.
 
 Here is the callback function in the Drupal 7 module:
 
@@ -115,7 +115,7 @@ class BlackbaudRoutes {
 }
 ```
 
-As you can see this is basically adding another layer between the routing.yml and the Controller.  Our Controller looks like this:
+As you can see this is basically adding another layer between the routing.yml and the Controller.  Here is what our Controller looks like this:
 
 ```php
 namespace Drupal\blackbaud_sky_api\Controller;
@@ -219,4 +219,4 @@ By extending the ContainerInjectionInterface class, I am giving this object all 
 Conclusion
 ----------
 
-Doing things the Drupal 8 way can sometimes be a little more arduous.  However, there are several reasons why this is happening.  In the not so distant future I see Drupal as a powerful decoupled backend.  We will be able to plugin any front end device or front end language easily.  By injecting our dynamic route properly, we can make that reality happen.
+Doing things the Drupal 8 way can sometimes be a little more arduous.  However, there are several reasons why this is happening.  In the not so distant future I see Drupal as a powerful, decoupled backend.  We will be able to plug in any front-end device or front-end language easily.  By injecting our dynamic route properly, we can make that reality happen.
