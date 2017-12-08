@@ -11,18 +11,23 @@ byline: "Pro workflow with Lando, BLT, and Acquia cloud."
 date: 2017-12-08
 ---
 
+Introduction
+------------
+
+[Acquia BLT](https://blt.readthedocs.io/en/latest/) is the Acquia Build Launch Tool (BLT). It can be a paradigm shift for many Drupal developers. The idea is that your [`production` environment is an artifact of development](https://slides-production-artifact.herokuapp.com/#/). In brief that is to say that you need different things in your `dev` environment than what you need to run the `production` web application. BLT helps us embody this workflow by providing a build and deploy pipeline where we have all the tools we need and love in `dev` and with a simple `lando blt deploy` command the `production` artifact is generated, sanitized, and delivered to the Acquia Cloud. Awesome!
+
 Init the Lando BLT Lightning App
 --------------------------------
 
-Use the `lando init` command
+Make a directory for your new app and `cd` into it. Then use the `lando init` command to get going:
 
 ```bash
 lando init -r drupal8
 ```
 
-Edit `.lando.yml` file and add the `tooling` key. This will allow us to run `blt` cli inside our Lando app.  
+Edit the resulting `.lando.yml` file and add the `tooling` key. This will make Lando aware of the `blt` commnd inside the app.  
 
-```yml
+```yaml
 name: lando-lightning
 recipe: drupal8
 config:
@@ -55,9 +60,9 @@ Change directories into the new `lightning` app.
 cd lightning
 ```
 
-Tell BLT to use `lightning` by editing `blt/project.yml`; change `name: lightning` to `name: lightning`
+Tell BLT about your Acquia Cloud app by setting the `machine_name` in the `blt/project.yml` file to match the `machine_name` of your Acquia app from the dashboard. Also make sure to use the `lightning` profile by checking the line `name: lightning` indicates the `lightning` distribution, it should by default, but if it does not change it.
 
-```yml
+```yaml
 project:
   machine_name: landolightning
   prefix: BLT
@@ -156,7 +161,6 @@ Pro Tip
 Add `sites/default/local.drushrc.php` file to get nice URL output from `drush uli` add this line:
 
 ```php
-<?php
 $options['uri'] = "https://[LANDO-BLT].lndo.site";
 ```
 
@@ -167,7 +171,7 @@ Configure BLT `project.yml` to Deploy to Acquia Cloud
 
 Open the `lightning/blt/project.yml` file. Find the `git` key and add your Acquia git URL as a remote. Should look similar to this:
 
-```yml
+```yaml
 git:
   default_branch: master
   remotes:
