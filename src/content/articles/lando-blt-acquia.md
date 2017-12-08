@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.html
 title: "Lando + BLT + Acquia"
-tags: development, devops
+tags: development, devops, drupal
 permalink: true
 author: Geoff St. Pierre
 private: false
@@ -25,7 +25,7 @@ Make a directory for your new app and `cd` into it. Then, use the `lando init` c
 lando init -r drupal8
 ```
 
-Edit the resulting `.lando.yml` file and add the `tooling` key. This will make Lando aware of the `blt` command inside the app.  
+Edit the resulting `.lando.yml` file and add the `tooling` key. This will make Lando aware of the `blt` command inside the app.
 
 ```yaml
 name: lando-lightning

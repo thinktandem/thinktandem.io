@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.html
 title: "Utilizing Wildcard Redirects To Win Broken Backlinks"
-tags: development, support
+tags: development, support, drupal, wordpress
 permalink: true
 author: John Ouellet
 private: false
