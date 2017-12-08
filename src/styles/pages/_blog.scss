@@ -1,3 +1,21 @@
+.tags {
+  text-align: center;
+  &.tags-top {
+    margin-bottom: 15px;
+  }
+  .col {
+    a {
+      border-right: 1px solid black;
+      padding: 0 10px;
+      margin-left: -5px;
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+  }
+}
+
+
 #posts {
   -webkit-font-smoothing: antialiased;
   margin-top: 55px;

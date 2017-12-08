@@ -30,6 +30,8 @@ web:
           allow: true
         ^/sitemap\.xml$:
           allow: true
+        ^/drupal-feed\.xml$:
+          allow: true
 
 # The size of the persistent disk of the application (in MB).
 disk: 2048

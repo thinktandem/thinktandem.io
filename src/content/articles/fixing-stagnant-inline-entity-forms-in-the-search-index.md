@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.html
 title: "Fixing Stagnant Inline Entity Forms in the Search Index"
-tags: development, support
+tags: development, support, drupal
 permalink: true
 author: John Ouellet
 private: false

@@ -248,6 +248,13 @@
         "collection": "articles"
       }
     },
+    "metalsmith-feed-js": {
+      "tag": "drupal",
+      "site_url": "https://thinktandem.io/",
+      "title": "Tandem's RSS Feed on Drupal",
+      "limit": 500,
+      "destination": "drupal-feed.xml"
+    },
     "metalsmith-browserify": {
       "files": [
         "./../assets/public/matchheight/dist/jquery.matchHeight-min.js",

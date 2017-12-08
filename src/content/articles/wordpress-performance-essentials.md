@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.html
 title: "WordPress Performance Essentials"
-tags: development, devops
+tags: development, devops, support, wordpress
 permalink: true
 author: John Ouellet
 private: false

@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.html
 title: "Handling Dynamic Routes in Drupal 8"
-tags: development
+tags: development, drupal
 permalink: true
 author: John Ouellet
 private: false
