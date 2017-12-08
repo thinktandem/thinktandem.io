@@ -7,6 +7,7 @@ author: Geoff St. Pierre
 private: false
 mainImage: images/articles/lando-blt-acquia/lando-blt-acquia.jpg
 img-src: images/articles/lando-blt-acquia/lando-blt-acquia.jpg
+img-alt: "Lando + BLT + Acquia Cloud image depicting collaboration and flow."
 byline: "Pro workflow with Lando, BLT, and Acquia cloud."
 date: 2017-12-09
 ---
@@ -14,18 +15,18 @@ date: 2017-12-09
 Introduction
 ------------
 
-[Acquia BLT](https://blt.readthedocs.io/en/latest/) is the Acquia Build Launch Tool (BLT). It can be a paradigm shift for many Drupal developers. The idea is that your [`production` environment is an artifact of development](https://slides-production-artifact.herokuapp.com/#/). In brief that is to say that you need different things in your `dev` environment than what you need to run the `production` web application. BLT helps us embody this workflow by providing a build and deploy pipeline where we have all the tools we need and love in `dev` and with a simple `lando blt deploy` command the `production` artifact is generated, sanitized, and delivered to the Acquia Cloud. Awesome!
+[Acquia BLT](https://blt.readthedocs.io/en/latest/) is the Acquia Build Launch Tool (BLT). It can be a paradigm shift for many Drupal developers, but the idea is that your [`production` environment is an artifact of development](https://slides-production-artifact.herokuapp.com/#/). In brief, that is to say you need different things in your `dev` environment than what you need to run the `production` web application. BLT helps us embody this workflow by providing a build and deploy pipeline where we have all the tools we need and love in `dev` and with a simple `lando blt deploy` command the `production` artifact is generated, sanitized, and delivered to the Acquia Cloud. Awesome!
 
 Init the Lando BLT Lightning App
 --------------------------------
 
-Make a directory for your new app and `cd` into it. Then use the `lando init` command to get going:
+Make a directory for your new app and `cd` into it. Then, use the `lando init` command to get going:
 
 ```bash
 lando init -r drupal8
 ```
 
-Edit the resulting `.lando.yml` file and add the `tooling` key. This will make Lando aware of the `blt` commnd inside the app.  
+Edit the resulting `.lando.yml` file and add the `tooling` key. This will make Lando aware of the `blt` command inside the app.  
 
 ```yaml
 name: lando-lightning
@@ -60,7 +61,7 @@ Change directories into the new `lightning` app.
 cd lightning
 ```
 
-Tell BLT about your Acquia Cloud app by setting the `machine_name` in the `blt/project.yml` file to match the `machine_name` of your Acquia app from the dashboard. Also make sure to use the `lightning` profile by checking the line `name: lightning` indicates the `lightning` distribution, it should by default, but if it does not change it.
+Tell BLT about your Acquia Cloud app by setting the `machine_name` in the `blt/project.yml` file to match the `machine_name` of your Acquia app from the dashboard. Also, make sure to use the `lightning` profile by checking that the line `name: lightning` indicates the `lightning` distribution. It should by default, but if it does not you should change it.
 
 ```yaml
 project:
@@ -71,7 +72,7 @@ project:
     name: lightning
 ```
 
-Tell Lando about the `blt` cli tool:
+Hook up the Lando command we defined earlier in `.lando.yml` to the `blt` executable cli tool wyth a symlink:
 
 ```bash
 lando ssh -u root -c "ln -s /app/lightning/vendor/acquia/blt/bin/blt /usr/bin/blt"
@@ -86,7 +87,7 @@ lando blt help
 You should see `help` output similar to:
 
 ```bash
-geoff@yep decoupled (master) $ lando.dev blt help
+decoupled (master) $ lando blt help
 [warning] The xDebug extension is loaded. This will significantly decrease performance.
 Usage:
   help [options] [--] <command> [<command_name>]
@@ -123,7 +124,7 @@ Help:
 Install Drupal via `blt`
 ------------------------
 
-First you have to change your database credentials. Open the file `sites/default/settings/local.settings.php` and update the creds like so:
+First, you have to change your database credentials. Open the file `sites/default/settings/local.settings.php` and update the creds like so:
 
 ```php
 /**
@@ -147,18 +148,18 @@ $databases = array(
 );
 ```
 
-Now that the database creds are set we are ready to install the site. Run:
+Now that the database creds are set, we are ready to install the site. Run:
 
 ```bash
 lando blt setup
 ```
 
-During this step `drush` will output a random `username` and `password`. Make note of those so you can use them to login to your new site or you can login with `lando drush uli` to generate a one time login link.
+During this step, `drush` will output a random `username` and `password`. Make note of those so you can use them to login to your new site, or you can login with `lando drush uli` to generate a one-time login link.
 
 Pro Tip
 -------
 
-Add `sites/default/local.drushrc.php` file to get nice URL output from `drush uli` add this line:
+Create or edit the `sites/default/local.drushrc.php` file to get nice URL output from `drush uli` add this line:
 
 ```php
 $options['uri'] = "https://[LANDO-BLT].lndo.site";
@@ -241,4 +242,4 @@ Visit the [Acquia BLT Documentation](https://blt.readthedocs.io/en/latest/) to s
 Conclusion
 ----------
 
-⚡ Selecting the right tools can make your life easier; your app more stable; your clients happier. Everyone is a winner! Combine the best in breed tools from local dev with Lando to powerful scalable hosting with Acquia Cloud. ⚡
+⚡ Selecting the right tools can make your life easier; your app more stable; your clients happier. Everyone is a winner! Combine the best-in-breed tools from local dev with Lando to powerful scalable hosting with Acquia Cloud. ⚡
