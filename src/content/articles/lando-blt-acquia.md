@@ -7,7 +7,6 @@ author: Geoff St. Pierre
 private: false
 mainImage: images/articles/lando-blt-acquia/lando-blt-acquia.jpg
 img-src: images/articles/lando-blt-acquia/lando-blt-acquia.jpg
-img-alt: "Lando + BLT + Acquia Cloud image depicting collaboration and flow."
 byline: "Pro workflow with Lando, BLT, and Acquia cloud."
 date: 2017-12-09
 ---
