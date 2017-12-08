@@ -5,8 +5,8 @@ tags: development, devops
 permalink: true
 author: Geoff St. Pierre
 private: false
-mainImage: images/articles/tika/tika-platform.jpg
-img-src: images/articles/tika/tika-platform.jpg
+mainImage: images/articles/lando-blt-acquia/lando-blt-acquia.jpg
+img-src: images/articles/lando-blt-acquia/lando-blt-acquia.jpg
 byline: "Pro workflow with Lando, BLT, and Acquia cloud."
 date: 2017-12-08
 ---
