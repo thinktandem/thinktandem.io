@@ -20,14 +20,14 @@
   </div>
 
   <div class="container">
-    <div class="row tags tags-top">
+    <div class="row blog-tags tags-top">
       <div class="col col-md-12">
         {% for tag in tags.tags|slice(0,6) %}
           <a href="/blog/{{ tag }}" title="{{ tag }}">{{ tag }}</a>
         {% endfor %}
       </div>
     </div>
-    <div class="row tags tags-bottom">
+    <div class="row blog-tags tags-bottom">
       <div class="col col-md-12">
         {% for tag in tags.tags|slice(6,12) %}
           <a href="/blog/{{ tag }}" title="{{ tag }}">{{ tag }}</a>
