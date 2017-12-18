@@ -66,7 +66,7 @@ tooling:
 Connecting to the Databases
 ---------------------------
 
-To connect your databases use the `lando info` command to get the details and then plug them into your favorite datbase management tool. In this example I will use [Sequel Pro](https://www.sequelpro.com/).
+To connect your databases use the `lando info` command to get the details and then plug them into your favorite database management tool. In this example I will use [Sequel Pro](https://www.sequelpro.com/).
 
 Here is a snippet of the `lando info` command output
 
