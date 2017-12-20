@@ -6,6 +6,8 @@ byline: We helped <strong>Outsell Inc.</strong> move from a legacy SSO provider 
 image:
   src: /images/case-studies/outsell-auth0.png
   title: Outsell Login Interface
+seo:
+  description: byline
 challenge: Replace a legacy SSO provider with complex Salesforce logic spread over multiple client websites.
 solution: Use Auth0 to set up custom rules that handle the Salesforce logic in a single place for all clients.
 impact: Cheaper and better maintained SSO solution, unified and well tested auth logic that is shared across clients old and new.

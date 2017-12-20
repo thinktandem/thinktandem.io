@@ -14,6 +14,8 @@ date: 2016-09-23
 image:
   src: /images/case-studies/osdata.png
   title: OSData Page Screenshot
+seo:
+  description: byline
 challenge: Remove Outsell's dependency on a costly and limiting third-party API.
 solution: Use the Laravel-powered DreamFactory API with custom Drupal modules to distribute data.
 impact: Eliminate a costly ongoing contract and allow Outsell to pursue new development directions with in-house resources.

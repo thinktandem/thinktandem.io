@@ -3,6 +3,8 @@ title: "Insurance Enrollment Portal"
 logo: images/clients/cvt/cvt.png
 org: California's Valued Trust
 byline: We helped <strong>California's Valued Trust</strong> power a shift from paper to digital by building a secure <strong>HIPAA-compliant</strong> insurance enrollment portal in <strong>Drupal</strong>.
+seo:
+  description: byline
 image:
   src: /images/case-studies/mycvt1.png
   title: MyCVT Enrollment Page Screenshot

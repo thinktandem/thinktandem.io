@@ -6,6 +6,8 @@ byline: We quickly fixed a mission critical bug causing periodic downtime to <st
 image:
   src: /images/case-studies/usf-rescue.jpg
   title: USF Website
+seo:
+  description: byline
 challenge: Find and eliminate a bug causing frequent downtime to USF's primary marketing site.
 solution: Employ a custom debugging module, BlazeMeter and NewRelic to locate and squash bug.
 impact: Consistent uptime. Peace of mind for USF staff. Less code to manage going forward.

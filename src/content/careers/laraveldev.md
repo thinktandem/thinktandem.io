@@ -3,6 +3,8 @@ title: Laravel Developer
 short: Laravel Developer
 slug: laraveldev
 weight: 1
+seo:
+  description: laravel developer job opening
 private: true
 ---
 
