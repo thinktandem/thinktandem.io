@@ -5,6 +5,8 @@ byline: Using Drupal, Laravel, Node, or the next big thing, our devs create simp
 cta: See Development Services.
 link: /services/development
 color: green
+seo:
+  description: byline
 icons:
   - icon: devicons devicons-drupal
     name: Drupal

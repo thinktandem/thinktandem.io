@@ -5,6 +5,8 @@ byline: We establish best-practices development workflow using Github, CircleCI,
 cta: Automate all the things.
 link: /services/devops
 color: blue
+seo:
+  description: byline
 icons:
   - icon: devicons devicons-git_branch
     name: Gitflow
