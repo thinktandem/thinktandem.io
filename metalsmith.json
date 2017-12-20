@@ -206,6 +206,7 @@
       "seo": {
         "title": true,
         "description": "Tandem uses open-source tools like Drupal, Laravel, and Docker to transform your complex workflows and technical debt into elegant web applications.",
+        "keywords": "drupal, wordpress, laravel, node, angular, lando, developers, design, support, strategy",
         "robots": "index, follow"
       },
       "ogp": {

@@ -26,14 +26,15 @@
   <meta property="og:title" content="{{seo.ogp.title}}" />
   <meta name="description" content="{{seo.description}}">
   <meta property="og:description" content="{{seo.description}}" />
+  <meta name="keywords" content="{{seo.keywords}}" />
 
   {% if seo.ogp.type %}
-  <meta property="og:type" content="{{seo.ogp.type}}" />
+    <meta property="og:type" content="{{seo.ogp.type}}" />
   {% else %}
-  <meta property="og:type" content="website" />
+    <meta property="og:type" content="website" />
   {% endif %}
   {% if seo.ogp.image %}
-  <meta property="og:image" content="{{seo.ogp.image}}" />
+    <meta property="og:image" content="{{seo.ogp.image}}" />
   {% endif %}
 
   {% block styles %}
