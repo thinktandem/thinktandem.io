@@ -197,8 +197,8 @@
       }
     },
     "metalsmith-seo-checker": {
-      "trailingSlash": true,
-      "canonicalBase": "http://www.thinktandem.io",
+      "trailingSlash": false,
+      "canonicalBase": "https://www.thinktandem.io",
       "lengths": {
         "title": 60,
         "description": 160
@@ -215,13 +215,13 @@
       }
     },
     "metalsmith-sitemap": {
-      "hostname": "http://www.thinktandem.io",
+      "hostname": "https://www.thinktandem.io",
       "omitIndex": true
     },
     "metalsmith-robots": {
       "useragent": "googlebot",
       "disallow": ["404.html", "contact-thanks.html"],
-      "sitemap": "http://www.thinktandem.io/sitemap.xml"
+      "sitemap": "https://www.thinktandem.io/sitemap.xml"
     },
     "metalsmith-redirect": {
       "/blog/2016/09/20/from-kalabox-with-love": "/blog/2016/09/20/rejoice-kalabox-2-0-released",
