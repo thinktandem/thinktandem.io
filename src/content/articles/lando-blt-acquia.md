@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Lando + BLT + Acquia"
 tags: development, devops, drupal
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Geoff St. Pierre
 private: false
 mainImage: images/articles/lando-blt-acquia/lando-blt-acquia.jpg

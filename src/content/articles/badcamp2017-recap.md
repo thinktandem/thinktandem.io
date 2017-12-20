@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "BADCamp 2017 ~ All the Things"
 tags: development, conferences, drupal
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Geoff St. Pierre
 private: false
 mainImage: images/articles/badcamp-hp-bg-image.jpg

@@ -5,6 +5,8 @@ byline: Greater understanding of your users and stakeholders. Building the right
 cta: Start Strategizing
 link: /services/strategy
 color: orange
+seo:
+  description: byline
 icons:
   - icon: fa fa-comments-o
     name: Stakeholder Interviews

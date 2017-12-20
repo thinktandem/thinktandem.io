@@ -14,6 +14,8 @@ date: 2017-04-23
 image:
   src: /images/case-studies/osdata.png
   title: OSData Page Screenshot
+seo:
+  description: byline
 challenge: Build a data platform to enable large-scale data entry and machine learning-driven insights.
 solution: Use Laravel to build a flexible front-end for a large Postgres DB.
 impact: Scaling Outsell's data collection and maintenance by an order of magnitude.

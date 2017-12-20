@@ -4,6 +4,8 @@ title: "Making the MyCVT Enrollment Portal"
 logo: images/clients/cvt/cvt3.png
 author: Alec Reynolds
 permalink: true
+seo:
+  description: byline
 private: true
 mainImage: https://thinktandem.io/images/articles/dependency-hell/inferno.jpg
 img-src: https://thinktandem.io/images/articles/dependency-hell/inferno.jpg

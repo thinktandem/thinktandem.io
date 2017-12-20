@@ -6,6 +6,8 @@ byline: How we built <strong>Lando</strong>, an open source local development to
 image:
   src: /images/case-studies/lando-screenshot.png
   title: Lando CLI
+seo:
+  description: byline
 challenge: Build a tool that allows developers to easily and quickly spin up the infrastructure required for each of their projects.
 solution: Leverage our work and experience on the Kalabox project to build a config-file driven and Docker based *TOTAL DEV* tool.
 impact: Massive developer time savings in onboarding, testing and writing code that can all be passed on to the client.

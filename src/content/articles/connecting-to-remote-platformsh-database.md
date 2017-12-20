@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Connecting to a Remote Platform.sh Database"
 tags: localdev, devops
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Geoff St. Pierre
 private: false
 mainImage: https://thinktandem.io/images/articles/connect-to-sequel-pro.png

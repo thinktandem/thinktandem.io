@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Visiting Dependency Hell"
 tags: deployment, localdev
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Alec Reynolds
 private: false
 mainImage: https://thinktandem.io/images/articles/dependency-hell/inferno.jpg

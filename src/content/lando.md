@@ -3,6 +3,8 @@ title: "Meet Lando."
 logo: images/tandem-logo.png
 org: Tandem
 byline: Lando is an open source local development and DevOps tool that saves you time.
+seo:
+  description: byline
 image:
   src: /images/case-studies/lando-screenshot.png
   title: Lando CLI

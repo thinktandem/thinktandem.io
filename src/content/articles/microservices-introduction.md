@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Let's Get Small: Introduction to Microservices"
 tags: devops
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Alec Reynolds
 private: true
 mainImage: https://thinktandem.io/images/articles/microservices.png

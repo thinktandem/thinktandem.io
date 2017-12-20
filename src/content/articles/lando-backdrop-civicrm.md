@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Lando + Backdrop + CiviCRM"
 tags: development, devops, backdrop
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Geoff St. Pierre
 private: false
 mainImage: images/articles/lando-backdrop-civicrm/lando-backdrop-civicrm.jpg

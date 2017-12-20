@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "How My Agency uses Kalabox to Win all the Local"
 tags: deployment, localdev, testing
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Brian Gonzales
 private: false
 mainImage: https://thinktandem.io/images/articles/digital-agency-onboarding-with-kalabox/pairodime_x_kalabox.png

@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Using Pantheon's Nested Docroot with Kalabox"
 tags: localdev, support
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Mike Pirog
 private: false
 mainImage: https://thinktandem.io/images/articles/pantheon-nested-doc.png

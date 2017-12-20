@@ -6,6 +6,8 @@ byline: We helped <strong>California's Valued Trust</strong> create a secure sto
 image:
   src: /images/case-studies/mycvt1.png
   title: MyCVT Enrollment Page Screenshot
+seo:
+  description: byline
 challenge: Allow thousands of users to upload documents and allow administrators to review them, while keeping all assets encrypted and secure.
 solution: Extend Drupal's file system with AES encryption with tight permissioning around access.
 impact: More than 60K documents uploaded, stored, and reviewed.

@@ -6,6 +6,8 @@ byline: Building <strong>Pantheon System's</strong> official desktop application
 image:
   src: /images/case-studies/mycvt1.png
   title: MyCVT Enrollment Page Screenshot
+seo:
+  description: byline
 challenge: Build a desktop application that allows users of the Pantheon hosting platform to download and run websites on their local computers.
 solution: Use the Electron framework and Vue.js to create a graphical interface for Lando, Tandem's Docker and NodeJS-powered local development solution.
 impact: A new reason for users to love Pantheon's hosting service.
