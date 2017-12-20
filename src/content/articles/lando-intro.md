@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Journey to Lando: Mistakes, Pivots and Vindication"
 tags: deployment, development, devops, localdev, testing
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Mike Pirog
 private: false
 mainImage: images/articles/lando-space.jpg

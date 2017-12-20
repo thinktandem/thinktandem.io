@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Node Microservices on Docker Cloud"
 tags: devops
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Alec Reynolds
 private: true
 mainImage: https://thinktandem.io/images/articles/node-microservices-docker-cloud/node-microservices-docker-cloud.png

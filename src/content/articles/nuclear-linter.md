@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Save Prod & Peers: Linting and Styles for Node on Travis"
 tags: deployment, development, localdev, support, testing
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Mike Pirog
 private: false
 mainImage: https://thinktandem.io/images/articles/linter-is-coming/linteriscoming.jpeg
