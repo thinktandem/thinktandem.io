@@ -140,15 +140,15 @@
           "@type": "WebSite",
           "name": "Tandem",
           "alternateName": "The site for Tandem, a software strategy firm.",
-          "url": "https://www.thinktandem.io"
+          "url": "https://thinktandem.io"
         },
         {
           "@context": "http://schema.org",
           "@type": "Organization",
-          "url": "https://www.thinktandem.io",
+          "url": "https://thinktandem.io",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.thinktandem.io/images/logo-json.png",
+            "url": "https://thinktandem.io/images/logo-json.png",
             "width": 213,
             "height": 60
           },
@@ -172,10 +172,10 @@
               "@context": "http://schema.org",
               "@type": "Organization",
               "name": "Kalabox Inc. DBA Tandem",
-              "url": "https://www.thinktandem.io",
+              "url": "https://thinktandem.io",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.thinktandem.io/images/logo-json.png",
+                "url": "https://thinktandem.io/images/logo-json.png",
                 "width": 213,
                 "height": 60
               },
@@ -198,7 +198,7 @@
     },
     "metalsmith-seo-checker": {
       "trailingSlash": false,
-      "canonicalBase": "https://www.thinktandem.io",
+      "canonicalBase": "https://thinktandem.io",
       "lengths": {
         "title": 60,
         "description": 160
@@ -216,13 +216,13 @@
       }
     },
     "metalsmith-sitemap": {
-      "hostname": "https://www.thinktandem.io",
+      "hostname": "https://thinktandem.io",
       "omitIndex": true
     },
     "metalsmith-robots": {
       "useragent": "googlebot",
       "disallow": ["404.html", "contact-thanks.html"],
-      "sitemap": "https://www.thinktandem.io/sitemap.xml"
+      "sitemap": "https://thinktandem.io/sitemap.xml"
     },
     "metalsmith-redirect": {
       "/blog/2016/09/20/from-kalabox-with-love": "/blog/2016/09/20/rejoice-kalabox-2-0-released",
