@@ -11,4 +11,6 @@ link: /careers
 layout: components/molecules/bio/bio.html
 quote: Should I join the best team on the interwebs?
 private: true
+seo:
+  description: You - Ideal Role
 ---

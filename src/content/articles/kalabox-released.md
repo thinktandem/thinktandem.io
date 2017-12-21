@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Rejoice: Kalabox 2.0 Released"
 tags: deployment, localdev, misc, support, training, testing, devops
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Alec Reynolds
 private: false
 mainImage: https://thinktandem.io/images/articles/kalabox-released.png

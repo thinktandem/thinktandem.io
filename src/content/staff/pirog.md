@@ -11,4 +11,6 @@ link: https://twitter.com/pirogcommamike
 layout: components/molecules/bio/bio.html
 quote: Keep it simple stupid!
 private: true
+seo:
+  description: Mike Pirog - CTO
 ---

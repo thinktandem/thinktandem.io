@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Lando + Heroku + Laravel"
 tags: development, devops
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Geoff St. Pierre
 private: false
 mainImage: images/articles/lando-heroku/lando-heroku-laravel.jpg
@@ -63,7 +66,7 @@ The `appserver: extras` section:
       - "wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh"
 ```
 
-retrieves the `heroku` cli app and installs in the `appserver` container.  
+retrieves the `heroku` cli app and installs in the `appserver` container.
 
 The `tooling: heroku` section:
 

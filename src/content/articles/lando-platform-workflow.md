@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Killer D8 Workflow Using Lando and Platform.sh"
 tags: deployment, development, devops, localdev, testing, drupal
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Mike Pirog
 private: false
 mainImage: images/articles/platformlando.png

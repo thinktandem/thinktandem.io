@@ -3,8 +3,11 @@ layout: layouts/article.html
 title: "Let's Get Small: Introduction to Microservices"
 tags: devops
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Alec Reynolds
-private: true
+private: false
 mainImage: https://thinktandem.io/images/articles/microservices.png
 img-src: https://thinktandem.io/images/articles/microservices.png
 byline: In software development, things change. Learn how a microservice architecture can help you adapt to changing requirements and scale applications in the cloud.

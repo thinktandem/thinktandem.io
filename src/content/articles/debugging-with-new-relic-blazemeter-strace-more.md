@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Debugging with New Relic, BlazeMeter, strace & more"
 tags: development, support, drupal
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: John Ouellet
 private: false
 mainImage: images/articles/debugging-with-stuff/debugging-journey.jpg

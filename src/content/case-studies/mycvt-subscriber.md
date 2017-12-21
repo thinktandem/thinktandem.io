@@ -7,6 +7,8 @@ byline: We made a better subscriber experience for <strong>California's Valued T
 image:
   src: /images/case-studies/subscriber-home.png
   title: MyCVT Enrollment Page Screenshot
+seo:
+  description: byline
 challenge: Reduce support time by getting CVT subscribers quicker access to important information.
 solution: Use stakeholder interviews and personas to guide building an in-browser prototype in Laravel. Iterate with user testing.
 impact: Introduced user-centric design principles to CVT while building an essential product.

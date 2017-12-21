@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Goodbye VirtualBox: Kalabox 2.1.1"
 tags: localdev, support, testing
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Mike Pirog
 private: false
 mainImage: https://thinktandem.io/images/articles/dockerTNG.png

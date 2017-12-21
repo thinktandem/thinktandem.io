@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Apache Tika on Platform.sh"
 tags: development, devops, drupal
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Geoff St. Pierre
 private: false
 mainImage: images/articles/tika/tika-platform.jpg

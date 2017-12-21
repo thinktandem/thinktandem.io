@@ -5,6 +5,8 @@ byline: Stuck in a never ending cycle of unreliable contractors and disappointin
 cta: Find Salvation
 link: /services/rescue
 color: green
+seo:
+  description: byline
 icons:
 ---
 

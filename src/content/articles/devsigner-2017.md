@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Devsigner 2017 Takeaways"
 tags: conferences
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Alec Reynolds
 private: false
 mainImage: https://thinktandem.io/images/articles/devsigner-2017.jpg
