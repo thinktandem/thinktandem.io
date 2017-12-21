@@ -197,7 +197,7 @@
       }
     },
     "metalsmith-seo-checker": {
-      "trailingSlash": false,
+      "trailingSlash": true,
       "canonicalBase": "https://thinktandem.io",
       "lengths": {
         "title": 60,
