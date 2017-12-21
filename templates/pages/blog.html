@@ -42,7 +42,12 @@
     <div class="row">
       <div class="pages">
         <ul class="pagination">
-          {% set pages = pagination.getPages(4) %}
+          {% set pages = pagination.getPages(pagination.pages.length) %}
+          <li>
+            <a href="blog">
+              <i class="fa fa-fast-backward" aria-hidden="true"></i>
+            </a>
+          </li>
           {% for key, page in pages %}
             {% if pagination.num == page.pagination.num %}
               <li class="active">
@@ -58,6 +63,11 @@
               </li>
             {% endif %}
           {% endfor %}
+          <li><script>console.log(page.pagination.last.path)</script>
+            <a href="blog/{{ pagination.pages.length }}/index.html">
+              <i class="fa fa-fast-forward" aria-hidden="true"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
