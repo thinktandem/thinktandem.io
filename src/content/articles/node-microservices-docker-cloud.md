@@ -7,7 +7,7 @@ seo:
   description: byline
   keywords: tags
 author: Alec Reynolds
-private: true
+private: false
 mainImage: https://thinktandem.io/images/articles/node-microservices-docker-cloud/node-microservices-docker-cloud.png
 img-src: https://thinktandem.io/images/articles/node-microservices-docker-cloud/node-microservices-docker-cloud.png
 byline: How to run small NodeJS in an efficient, inexpensive, and scalable manner using Docker Cloud.
