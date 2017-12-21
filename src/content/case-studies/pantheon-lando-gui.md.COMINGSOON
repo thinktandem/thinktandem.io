@@ -24,8 +24,8 @@ metrics:
   - key: In Saved Development Budget
     value: ~$100,000
 
-tech: docker, nodejs, drupal, wordpress
-industries: startups, corporate
+####  tech: docker, nodejs, drupal, wordpress
+####  industries: startups, corporate
 services: development
 
 background: EFD01B
