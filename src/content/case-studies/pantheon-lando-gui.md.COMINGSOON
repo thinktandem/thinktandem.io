@@ -26,7 +26,7 @@ metrics:
 
 ####  tech: docker, nodejs, drupal, wordpress
 ####  industries: startups, corporate
-services: development
+####  services: development
 
 background: EFD01B
 layout: layouts/case-study.html
