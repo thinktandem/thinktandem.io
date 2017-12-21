@@ -211,8 +211,11 @@
       },
       "ogp": {
         "defaultType": "website",
-        "defaultImage": "thinktandem.io/images/favicon.png",
+        "defaultImage": "https://thinktandem.io/images/favicon.png",
         "ignoreMissingImage": false
+      },
+      "twitter": {
+        "image": "https://thinktandem.io/images/favicon.png"
       }
     },
     "metalsmith-sitemap": {
