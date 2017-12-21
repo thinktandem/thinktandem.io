@@ -14,7 +14,7 @@
     "metalsmith-collections": "^0.7.0",
     "metalsmith-collections-convention": "^1.0.0",
     "metalsmith-env": "^2.0.0",
-    "metalsmith-feed-js": "^0.3.0",
+    "metalsmith-feed-js": "https://github.com/thinktandem/metalsmith-feed-js",
     "metalsmith-in-place": "^1.4.4",
     "metalsmith-include": "https://github.com/thiagodemellobueno/metalsmith-include.git#includeWholeObject",
     "metalsmith-inline-css": "^1.0.2",
