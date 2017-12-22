@@ -45,24 +45,14 @@
     </div>
     <div class="row">
       <div class="pages">
-        <ul class="pagination">
-          {% set pages = pagination.getPages(4) %}
-          {% for key, page in pages %}
-            {% if pagination.num == page.pagination.num %}
-              <li class="active">
-                <a href="{{ page.path }}">
-                  {{ page.pagination.num }}
-                </a>
-              </li>
-            {% else %}
-              <li>
-                <a href="{{ page.path }}">
-                  {{ page.pagination.num }}
-                </a>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
+        <div class="pagination">
+          {% if pagination.previous %}
+            <a href="{{pagination.previous.path}}">Previous</a>
+          {% endif %}
+          {% if pagination.next %}
+            <a href="{{pagination.next.path}}">Next</a>
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>

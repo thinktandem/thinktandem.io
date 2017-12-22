@@ -99,7 +99,7 @@
         "metadataKey": "tags",
         "path": "blog/:tag/index.html",
         "pathPage": "blog/:tag/:num/index.html",
-        "perPage": 3,
+        "perPage": 10,
         "layout": "pages/tags.html",
         "sortBy": "date",
         "reverse": true
