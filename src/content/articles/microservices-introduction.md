@@ -39,4 +39,4 @@ Even if the process of creating single microservices may seem clear, the idea of
 
 Docker Cloud gives even novice programmers a simple interface to host Docker-powered applications. Tasks that were formerly complex, like connecting networks of microservices together properly or scaling services, are made trivial by Docker Cloud. For a small monthly fee, it gives you a powerful set of tools and the option to host your apps on AWS, Microsoft Azure, Digital Ocean, and more. We'll be showing you the ropes with Docker Cloud in a future post, so stay tuned for that!
 
-UPDATE: My follow-up post is [now available](/blog/2016/09/22/node-microservices-on-docker-cloud), so you can continue with some hands-on fun.
+UPDATE: My follow-up post is [now available](/blog/2016/09/23/node-microservices-on-docker-cloud), so you can continue with some hands-on fun.
