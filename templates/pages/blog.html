@@ -1,5 +1,7 @@
 {% extends '../layouts/html.html' %}
 
+{% block desc %}Tandem Blog = All Our Knowledges. We've been revealing truth since the Permian extinction.{% endblock %}
+
 {% block contents %}
 
 <div id="posts">
@@ -63,7 +65,7 @@
               </li>
             {% endif %}
           {% endfor %}
-          <li><script>console.log(page.pagination.last.path)</script>
+          <li>
             <a href="blog/{{ pagination.pages.length }}/index.html">
               <i class="fa fa-fast-forward" aria-hidden="true"></i>
             </a>

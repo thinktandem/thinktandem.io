@@ -17,14 +17,14 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-  <title>{{config.title}} | {{title}}</title>
+  <title>{% block title %}{{config.title}} | {{title}}{% endblock %}</title>
   <meta name="robots" content="{{seo.robots}}">
   <link rel="canonical" href="{{seo.canonical}}" />
-  <meta property="og:url" content="{{seo.canonical}}" />
-  <meta property="og:title" content="{{seo.ogp.title}}" />
-  <meta name="description" content="{{seo.description}}">
-  <meta property="og:description" content="{{seo.description}}" />
+  <meta name="description" content="{% block desc %}{{seo.description}}{% endblock %}">
   <meta name="keywords" content="{{seo.keywords}}" />
+  <meta property="og:title" content="{{seo.ogp.title}}" />
+  <meta property="og:url" content="{{seo.canonical}}" />
+  <meta property="og:description" content="{% block desc %}{{seo.description}}{% endblock %}" />
   {% if seo.ogp.type %}
   <meta property="og:type" content="{{seo.ogp.type}}" />
   {% else %}
