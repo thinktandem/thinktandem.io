@@ -1,6 +1,7 @@
 <div class="row services">
   <div class="col-md-12">
-    <div id="{{ service.slug }}" class="service">
+    <div id="{{ service.title|lower }}" class="service">
+      <a name="{{service.title|lower}}"></a>
       <h3>{{ service.title|safe }}</h3>
       {{ service.byline|safe }}
       <br>
