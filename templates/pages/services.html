@@ -25,7 +25,7 @@
         <div class="col-sm-4">
           {% for service in collections.services %}
             <div class="service-link">
-              <a href="services/#{{ service.slug }}">{{ service.title }}</a>
+              <a href="services/#{{ service.title|lower }}">{{ service.title }}</a>
             </div>
           {% endfor %}
         </div>
