@@ -193,7 +193,7 @@ lando heroku config:set APP_KEY=$(php artisan --no-ansi key:generate --show)
 
 Visit your new site:
 
-<img src="images/articles/lando-heroku/hello-laravel.jpg" align="center" />
+<img src="images/articles/lando-heroku/hello-laravel.jpg" align="center" alt="Laravel Hello Screen" />
 
 Conclusion
 ----------
