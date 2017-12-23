@@ -66,7 +66,7 @@ Configure Search API Attachments
 
 Now that we have the `tika-app-1.16.jar` file in place we are ready to configure the `search_api_attachments` module. Visit `/admin/config/search/search_api_attachments` in your browser and add the method, java executable, and tika paths configuration:
 
-<img src="/images/articles/tika/tika-config.jpg" />
+<img src="/images/articles/tika/tika-config.jpg" alt="Search API Configuration Screen" />
 
 These paths correspond to the paths you entered in the `.platform.app.yaml` file for the `build` step.
 
