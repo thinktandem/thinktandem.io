@@ -78,7 +78,7 @@ if (!empty($td)) {
 }
 ```
 
-To test it, I went into the temporary directory for the site and ran ```cat user_agent.txt```.  The results showed that this was working as expected:
+To test it, I went into the temporary directory for the site and ran ```cat user_agents.txt```.  The results showed that this was working as expected:
 
 ```bash
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36 4fe88001dac059edb824274aa71449904aa8bbbc
