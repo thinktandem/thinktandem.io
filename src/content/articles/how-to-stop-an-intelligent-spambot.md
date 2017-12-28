@@ -55,12 +55,36 @@ Here is the code that I used:
 // When hitting the google recaptcha enabled user registration page.
 $check = strtolower($_SERVER['REQUEST_URI']);
 if (strpos($check, 'user/register') !== FALSE) {
-  $random = ' ' . bin2hex(openssl_random_pseudo_bytes(20));
-  $_SERVER['HTTP_USER_AGENT'] = $_SERVER['HTTP_USER_AGENT'] . $random;
+  $_SERVER['HTTP_USER_AGENT'] .= ' ' . bin2hex(openssl_random_pseudo_bytes(20));
 }
 ```
 
-With this code I am malforming the User Agent on the point of the spam attack, which was the user registration page.  In theory and based on my research, this should do the trick.  I sat back and waited to see if this would work.
+With this code I am malforming the User Agent on the point of the spam attack, which was the user registration page.  In theory and based on my research, this should do the trick.  I ran the following curl requests to check the User Agents against the user registration page:
+
+```bash
+curl -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36" http://SITE.lndo.site/user/register
+
+curl -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36" http://SITE.lndo.site/user/register
+```
+
+I also wrote a little script I modified from the ```drupal_debug``` function to get the results.  I put this script right below the User Agent malforming code.
+
+```php
+$td = variable_get('file_temporary_path', NULL);
+if (!empty($td)) {
+  $out = print_r($_SERVER['HTTP_USER_AGENT'], TRUE) . "\n";
+  $file = $td . '/user_agents.txt';
+  file_put_contents($file, $out, FILE_APPEND);
+}
+```
+
+To test it, I went into the temporary directory for the site and ran ```cat user_agent.txt```.  The results showed that this was working as expected:
+
+```bash
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.89 Safari/537.36 4fe88001dac059edb824274aa71449904aa8bbbc
+
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36 40a6af406455d88088df7f9c168e3d91bc4feb88
+```
 
 Within 10 minutes, it seemed there were no more spambot type user registrations.  The human based spam accounts were still getting through, but they weren't the main issue.  Within a day the human spambots gave up and moved on.  The site and indirectly the universe was saved and the client found inner peace.
 
