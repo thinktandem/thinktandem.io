@@ -17,7 +17,7 @@ date: 2018-01-03
 Why?
 ----------------------
 
-We all know the amount of work it takes to get a site working and looking great across all browsers and screen sizes. The struggle is real. Pushing things up to staging for review only to find out that the Safari fix broke the mobile Firefox view; ugh. Enter `lando share`. With `lando share` you can expose a public URL to your local Lando app and use that URL to view the site on real phones, tablets, desktops. Now you can itrerate fast on the actual site and share the URL with Project Managers, other Developers, and stakeholders to get immediate feedback!
+We all know the amount of work it takes to get a site working and looking great across all browsers and screen sizes. The struggle is real. Pushing things up to staging for review only to find out that the Safari fix broke the mobile Firefox view; ugh. Enter `lando share`. With `lando share` you can expose a public URL to your local Lando app and use that URL to view the site on real phones, tablets, and desktops. Now you can itrerate fast on the actual site and share the URL with Project Managers, other Developers, and stakeholders to get immediate feedback!
 
 Lando Share
 -----------
