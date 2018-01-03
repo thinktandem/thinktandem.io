@@ -11,18 +11,18 @@ private: false
 mainImage: images/articles/lando-share/ipad-lappy-phone.jpg
 img-src: images/articles/lando-share/ipad-lappy-phone.jpg
 byline: Use the `lando share` command to expose a URL of your local Lando site. For example to view it on actual mobile devices for browser testing before you release it to the world!
-date: 2018-01-02
+date: 2018-01-03
 ---
 
 Why?
 ----------------------
 
-After working hard on your site time to theme for all the devices; mobile, tablets, and desktops! Here is a nifty command to make your life easier and view your content, your site, on your devices before launching it into the wild.
+We all know the amount of work it takes to get a site working and looking great across all browsers and screen sizes. The struggle is real. Pushing things up to staging for review only to find out that the Safari fix broke the mobile Firefox view; ugh. Enter `lando share`. With `lando share` you can expose a public URL to your local Lando app and use that URL to view the site on real phones, tablets, desktops. Now you can itrerate fast on the actual site and share the URL with Project Managers, other Developers, and stakeholders to get immediate feedback!
 
 Lando Share
 -----------
 
-When you sart a Lando app you can see all the commands you have at your finger tips with the `lando` command without any arguments.
+When you start a Lando app you can see all the commands you have at your finger tips with the `lando` command without any arguments.
 
 ```bash
 (master) $ lando
