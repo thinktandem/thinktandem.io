@@ -17,7 +17,7 @@ date: 2018-01-03
 Why?
 ----------------------
 
-We all know the amount of work it takes to get a site working and looking great across all browsers and screen sizes. The struggle is real. Pushing things up to staging for review only to find out that the Safari fix broke the mobile Firefox view; ugh. Enter `lando share`. With `lando share` you can expose a public URL to your local Lando app and use that URL to view the site on real phones, tablets, and desktops. Now you can itrerate fast on the actual site and share the URL with Project Managers, other Developers, and stakeholders to get immediate feedback!
+We all know the amount of work it takes to get a site working and looking great across all browsers and screen sizes. The struggle is real. Pushing things up to staging for review only to find out that the Safari fix broke the mobile Firefox view; ugh. Enter `lando share`. With `lando share` you can expose a public URL to your local Lando app and use that URL to view the site on real phones, tablets, and desktops. Now you can iterate fast on the actual site and share the URL with Project Managers, other Developers, and stakeholders to get immediate feedback!
 
 Lando Share
 -----------
@@ -77,7 +77,7 @@ Options:
   --url, -u  Url to share. Needs to be in the form http://localhost:port
 ```
 
-From this output we can see that `lando share` takes an optional `[appname]` argument and a required `--url` option. If you are already in a working Lando app then you don't need to provide the appname, but need to provide a URL to share out to [localtunnell.me](https://localtunnel.me). To get the URL to provide as the `--url` option use the `http://localhost:port` you see after starting your app. If you've already started your app and are working in the app directory you can get the URLs for your app at any time with `lando info`.
+From this output we can see that `lando share` takes an optional `[appname]` argument and a required `--url` option. If you are already in a working Lando app then you don't need to provide the appname, but need to provide a URL to share out to [localtunnel.me](https://localtunnel.me). To get the URL to provide as the `--url` option use the `http://localhost:port` you see after starting your app. If you've already started your app and are working in the app directory you can get the URLs for your app at any time with `lando info`.
 
 ```bash
 (master) $ lando info
