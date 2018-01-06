@@ -36,13 +36,18 @@
         {% endfor %}
       </div>
     </div>
-    <div class="row teasers">
-      {% for article in pagination.files %}
-      <div class="col-md-4">
-        {% include "../components/molecules/teaser/teaser.html" %}
-      </div>
-      {% endfor %}
-    </div>
+    {% for key, article in pagination.files %}
+      {% if (key%2 == 0)  %}
+        <div class="row post-row">
+      {% endif  %}
+          <div class="col-md-6">
+            {% include "../components/molecules/teaser/teaser.html" %}
+          </div>
+      {% if (key%2 == 1)  %}
+        </div>
+      {% endif %}
+
+    {% endfor %}
     <div class="row">
       <div class="pages">
         <ul class="pagination">

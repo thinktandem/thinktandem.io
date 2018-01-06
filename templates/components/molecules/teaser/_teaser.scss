@@ -1,30 +1,20 @@
 #posts {
 
-  .teasers {
-    padding-top: 5em;
-    padding-bottom: 5em;
-
-    @media (max-width: 767px) {
-      padding-top: 2em;
-      padding-bottom: 2em;
-    }
-    div {
-      a {
-        color: $brand-primary;
+  .post-row {
+    margin-top: 22px;
+    border-top: 1px solid $brand-primary;
+    .col-md-6 {
+      .featured-post {
+        .title {
+          a {
+            color: $brand-primary;
+          }
+        }
+      }
+      &:first-child {
+        border-right: 1px solid $brand-primary;
       }
     }
-  }
-
-  .featured-post {
-    border-top: 0;
-    border-bottom: 1px solid $brand-primary;
-
-    @media (min-width: 992px) {
-      border-right: none;
-      border-bottom: 1px solid $brand-primary;
-      padding: 8% 4% 8% 4%;
-    }
-
   }
 
 }
