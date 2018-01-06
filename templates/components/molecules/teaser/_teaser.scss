@@ -4,14 +4,14 @@
     padding-top: 5em;
     padding-bottom: 5em;
 
-    div.byline {
-      margin-bottom: 1.5em;
-      color: $brand-success;
-    }
-
     @media (max-width: 767px) {
       padding-top: 2em;
       padding-bottom: 2em;
+    }
+    div {
+      a {
+        color: $brand-primary;
+      }
     }
   }
 
@@ -23,10 +23,6 @@
       border-right: none;
       border-bottom: 1px solid $brand-primary;
       padding: 8% 4% 8% 4%;
-    }
-
-    &:last-child {
-      border: 0;
     }
 
   }
