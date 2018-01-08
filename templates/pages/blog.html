@@ -43,10 +43,13 @@
           <div class="col-md-6">
             {% include "../components/molecules/teaser/teaser.html" %}
           </div>
-      {% if (key%2 == 1)  %}
+      {% if (key%2 == 1) %}
+        </div>
+      {% endif  %}
+      {% if pagination.files.length % 2 == 1 && pagination.files.length == key + 1  %}
+          <div class="col-md-6"></div>
         </div>
       {% endif %}
-
     {% endfor %}
     <div class="row">
       <div class="pages">

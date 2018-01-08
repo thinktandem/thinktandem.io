@@ -2,17 +2,14 @@
 
   .post-row {
     margin-top: 22px;
-    border-top: 1px solid $brand-primary;
     .col-md-6 {
       .featured-post {
+        border-top: 2px solid $brand-success;
         .title {
           a {
             color: $brand-primary;
           }
         }
-      }
-      &:first-child {
-        border-right: 1px solid $brand-primary;
       }
     }
   }
