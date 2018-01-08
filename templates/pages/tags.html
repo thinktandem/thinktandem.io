@@ -39,9 +39,21 @@
       </div>
     </div>
     <div class="row teasers">
-      {% for article in pagination.files %}
-        {% include "../components/molecules/teaser/teaser.html" %}
-      {% endfor %}
+    {% for key, article in pagination.files %}
+      {% if (key % 2 == 0)  %}
+        <div class="row post-row">
+      {% endif  %}
+          <div class="col-md-6">
+            {% include "../components/molecules/teaser/teaser.html" %}
+          </div>
+      {% if (key%2 == 1) %}
+        </div>
+      {% endif  %}
+      {% if pagination.files.length % 2 == 1 && pagination.files.length == key + 1  %}
+          <div class="col-md-6"></div>
+        </div>
+      {% endif %}
+    {% endfor %}
     </div>
     <div class="row">
       <div class="pages">
