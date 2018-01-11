@@ -99,7 +99,7 @@ From this output we can see that `lando share` takes an optional `[appname]` arg
   },
 ```
 
-Use the http version of your localhost URL; in this case `http://localhost:32938`. Now putting it all toghether for this app the share command:
+Use the http version of your localhost URL; in this case `http://localhost:32938`. Now putting it all together for this app the share command:
 
 ```bash
 (master) $ lando.dev share --url http://localhost:32938
@@ -114,7 +114,7 @@ https://MYSITE.localtunnel.me
 Press any key to close the tunnel.
 ```
 
-Now you can visit `https://MYSITE.localtunnel.me` in the browser of your phones, tablets, or desktops to see what devloper sees with Project Managers, clients, or any stakeholder in a meeting or anytime.
+Now you can visit `https://MYSITE.localtunnel.me` in the browser of your phones, tablets, or desktops to see what the developer sees with Project Managers, clients, or any stakeholder in a meeting or anytime.
 
 
 Gotcha!
