@@ -4,12 +4,6 @@
       {% for article in featuredArticles %}
         <div class="col-md-6 featured-post">
 
-          <div class="tags">
-          {% for tag in article.tags %}
-            <a href="blog/{{ tag.name  }}">{{ tag.name }}</a>
-          {% endfor %}
-          </div>
-
           <div class="title">
             <a href="{{ 'blog/' + article.date | date('Y/m/d') + '/' + article.title | slug }}">{{ article.title }}</a>
           </div>
