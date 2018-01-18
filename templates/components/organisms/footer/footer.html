@@ -45,7 +45,7 @@
           <h2 class="text-center">Engage with all the socials.</h2>
           <div class="col-xs-12 icons text-center">
             {% for navItem in navigation.socialfooter %}
-              <a href="{{ navItem.url }}" title="{{ navItem.name }}">
+              <a href="{{ navItem.url }}" title="{{ navItem.name }}" aria-label="Click for Tandem's {{ navItem.name }}">
                 <i class="fa {{ navItem.icon }}" aria-hidden="true"></i>
               </a>
             {% endfor %}
