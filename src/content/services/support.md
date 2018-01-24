@@ -1,13 +1,22 @@
 ---
 layout: layouts/service.html
-title: Rescue
+title: Support
 byline: Stuck in a never ending cycle of unreliable contractors and disappointing results? We architect a sustainable development strategy.
 cta: Find Salvation
-link: /services/rescue
+link: /services/support
 color: green
 seo:
   description: byline
 icons:
+  - icon: fa fa-medkit
+    name: Quick Fixes
+    link: /services/support
+  - icon: fa fa-code
+    name: Small Projects
+    link: /services/support
+  - icon: fa fa-ticket
+    name: Fast Turnaround
+    link: /services/support
 ---
 
 Worried that your project has become an insatiable beast that devours development time? Victim of a revolving door of unreliable contractors?
