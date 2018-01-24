@@ -8,7 +8,7 @@
       <a href="{{ service.link }}"> {{ service.cta }}</a>
       <div class="icon-header">
         {% for icon in service.icons %}
-          <a href="{{ icon.link }}">
+          <a href="{{ icon.link }}" aria-label="Click for learn more about {{ icon.name }}">
             <div class="icon-wrapper ">
               <span class="custom-icon {{ service.color }}">
                 <i class="{{ icon.icon }}"></i>
