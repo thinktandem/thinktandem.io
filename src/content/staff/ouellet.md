@@ -12,4 +12,6 @@ link: https://twitter.com/labboy0276
 layout: components/molecules/bio/bio.html
 quote: Correct, I am here to win.
 private: true
+seo:
+  description: John Ouellet - Sales Engineering Manager
 ---

@@ -1,13 +1,14 @@
 <div class="row services">
   <div class="col-md-12">
-    <div id="{{ service.slug }}" class="service">
+    <div id="{{ service.title|lower }}" class="service">
+      <a name="{{service.title|lower}}"></a>
       <h3>{{ service.title|safe }}</h3>
       {{ service.byline|safe }}
       <br>
       <a href="{{ service.link }}"> {{ service.cta }}</a>
       <div class="icon-header">
         {% for icon in service.icons %}
-          <a href="{{ icon.link }}">
+          <a href="{{ icon.link }}" aria-label="Click for learn more about {{ icon.name }}">
             <div class="icon-wrapper ">
               <span class="custom-icon {{ service.color }}">
                 <i class="{{ icon.icon }}"></i>

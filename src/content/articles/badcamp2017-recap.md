@@ -1,8 +1,11 @@
 ---
 layout: layouts/article.html
 title: "BADCamp 2017 ~ All the Things"
-tags: development, conferences
+tags: development, conferences, drupal
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Geoff St. Pierre
 private: false
 mainImage: images/articles/badcamp-hp-bg-image.jpg
@@ -35,7 +38,7 @@ youtube|FzOWKV5Itfk
 
   * Fire Alarm!
 
-<img src="/images/articles/drud-firetrucks-badcamp2017croped.jpg" />
+<img src="/images/articles/drud-firetrucks-badcamp2017croped.jpg" alt="BadCamp 2017 - Berkeley fire trucks "/>
 Photo Courtesy of [Drud Technology](https://twitter.com/drud/status/920721386322018304)
 
 Unexpected, but not a fire!
@@ -73,7 +76,7 @@ This excellent presentation made an argument that everything is DevOps and part
   * Outrigger
   * Lando
 
-<img src="/images/articles/docker-dev-panel-cropped.jpg" />
+<img src="/images/articles/docker-dev-panel-cropped.jpg" alt="BadCamp 2017 - DevOps Summit Panel" />
 
 Rob fired off questions at the panelists bringing to light some of the similarities, differences and their relation to Drupal of these docker-driven solutions to the local development stack.
 
@@ -86,7 +89,7 @@ Sessions and Networking in the Sponsor Expo & Job Fair
 
 * Manning the booth
 
-<img src="/images/articles/tandem-booth-badcamp2017.jpg" />
+<img src="/images/articles/tandem-booth-badcamp2017.jpg" alt="BadCamp 2017 - Tande Booth" />
 
 I had opportunity to spend some time on the [Sponsor Expo & Job Fair](https://2017.badcamp.net/sponsors) floor representing Tandem my employer and company that sponsored my trip.  This was great opportunity to talk tech, business, and network.  Met many other businesses and people and had great conversations around fostering employment opportunities and business relationships.
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <base href="{{ basePath }}" />
   <meta charset="utf-8">
@@ -17,13 +17,14 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-  <title>
-    {% block title %}{{config.title}} | {{title}}{% endblock %}
-  </title>
+  <title>{% block title %}{{config.title}} | {{title}}{% endblock %}</title>
   <meta name="robots" content="{{seo.robots}}">
   <link rel="canonical" href="{{seo.canonical}}" />
-  <meta property="og:url" content="{{seo.canonical}}" />
+  <meta name="description" content="{% block desc %}{{seo.description}}{% endblock %}">
+  <meta name="keywords" content="{{seo.keywords}}" />
   <meta property="og:title" content="{{seo.ogp.title}}" />
+  <meta property="og:url" content="{{seo.canonical}}" />
+  <meta property="og:description" content="{% block desc %}{{seo.description}}{% endblock %}" />
   {% if seo.ogp.type %}
   <meta property="og:type" content="{{seo.ogp.type}}" />
   {% else %}
@@ -32,15 +33,14 @@
   {% if seo.ogp.image %}
   <meta property="og:image" content="{{seo.ogp.image}}" />
   {% endif %}
-
-  {% block head %}
-    <meta name="description" content="{{ description }}">
-    <meta property="og:description" content="{{description}}" />
-  {% endblock %}
-
+  <meta name="twitter:card" content="{{twitter.card}}" />
+  <meta name="twitter:site" content="{{twitter.site}}" />
+  <meta name="twitter:title" content="{{title}}" />
+  <meta name="twitter:description" content="{{seo.description}}" />
+  <meta name="twitter:image" content="{{twitter.image}}" />
   {% block styles %}
-    <link rel="stylesheet" href="public/devicon/devicon.min.css" inline>
-    <link rel="stylesheet" href="styles/main.css" inline>
+  <link rel="stylesheet" href="public/devicon/devicon.min.css" inline>
+  <link rel="stylesheet" href="styles/main.css" inline>
   {% endblock %}
 
 </head>
@@ -94,6 +94,7 @@
       ga('create', 'UA-74237404-2', 'auto');
       ga('send', 'pageview');
     </script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a44042be1fe27e2"></script>
   {% endblock %}
 
 </body>

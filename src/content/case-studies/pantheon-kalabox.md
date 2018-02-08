@@ -6,6 +6,8 @@ byline: We built <strong>Pantheon Systems</strong> an integration for our Kalabo
 image:
   src: /images/case-studies/kalabox.png
   title: Kalabox GUI
+seo:
+  description: byline
 challenge: Provide a one-click, push-button solution that gets a user developing their Pantheon site locally in a matter of minutes.
 solution: Use Kalabox and Docker technology to replicate the Pantheon development environment locally.
 impact: Allow users of all skill levels to start developing a Pantheon-hosted site almost instantly.

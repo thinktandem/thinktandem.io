@@ -6,12 +6,14 @@ byline: We traveled the US training digital agencies on Pantheon, Kalabox and go
 image:
   src: /images/case-studies/fasttrack-training.jpg
   title: People getting their learn On
+seo:
+  description: byline
 challenge: Get digital agencies up to speed on the best DevOps practices, workflows and optimizations to use with Pantheon.
 solution: Two days of on-site, in-your-agency trainings featuring rich presentation material, interactive workshops and lots of coffee.
 impact: Agencies got up to speed on the latest and greatest features of Pantheon and streamlined their internal workflows, supercharging all the dev.
 quote:
-  content: "Give a man a fish and you feed him for a day. Teach a man to fish and you feed him for a lifetime. Leave the dude alone and he'll figure it out."
-  author: Louis C.K.
+  content: "Give a man a fish, and you feed him for a day. Teach a man to fish, and you feed him for a lifetime."
+  author: Who Knows At This Point
 metrics:
   - key: Agencies Trained
     value: 7

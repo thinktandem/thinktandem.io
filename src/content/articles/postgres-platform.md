@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Working with Postgres Databases and Platform.sh"
 tags: localdev, devops
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Geoff St. Pierre
 private: false
 mainImage: https://thinktandem.io/images/articles/postgres-platform.png

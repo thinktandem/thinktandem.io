@@ -4,7 +4,9 @@ title: Strategy
 byline: Greater understanding of your users and stakeholders. Building the right thing, the best way possible.
 cta: Start Strategizing
 link: /services/strategy
-color: orange
+color: blue
+seo:
+  description: byline
 icons:
   - icon: fa fa-comments-o
     name: Stakeholder Interviews

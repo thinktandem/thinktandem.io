@@ -84,7 +84,7 @@
     },
     "metalsmith-pagination": {
       "collections.articles": {
-        "perPage": 3,
+        "perPage": 10,
         "layout": "pages/blog.html",
         "first": "blog/index.html",
         "path": "blog/:num/index.html",
@@ -99,7 +99,7 @@
         "metadataKey": "tags",
         "path": "blog/:tag/index.html",
         "pathPage": "blog/:tag/:num/index.html",
-        "perPage": 3,
+        "perPage": 10,
         "layout": "pages/tags.html",
         "sortBy": "date",
         "reverse": true
@@ -140,15 +140,15 @@
           "@type": "WebSite",
           "name": "Tandem",
           "alternateName": "The site for Tandem, a software strategy firm.",
-          "url": "https://www.thinktandem.io"
+          "url": "https://thinktandem.io"
         },
         {
           "@context": "http://schema.org",
           "@type": "Organization",
-          "url": "https://www.thinktandem.io",
+          "url": "https://thinktandem.io",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.thinktandem.io/images/logo-json.png",
+            "url": "https://thinktandem.io/images/logo-json.png",
             "width": 213,
             "height": 60
           },
@@ -172,10 +172,10 @@
               "@context": "http://schema.org",
               "@type": "Organization",
               "name": "Kalabox Inc. DBA Tandem",
-              "url": "https://www.thinktandem.io",
+              "url": "https://thinktandem.io",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.thinktandem.io/images/logo-json.png",
+                "url": "https://thinktandem.io/images/logo-json.png",
                 "width": 213,
                 "height": 60
               },
@@ -198,7 +198,7 @@
     },
     "metalsmith-seo-checker": {
       "trailingSlash": true,
-      "canonicalBase": "http://www.thinktandem.io",
+      "canonicalBase": "https://thinktandem.io",
       "lengths": {
         "title": 60,
         "description": 160
@@ -206,22 +206,26 @@
       "seo": {
         "title": true,
         "description": "Tandem uses open-source tools like Drupal, Laravel, and Docker to transform your complex workflows and technical debt into elegant web applications.",
+        "keywords": "drupal, wordpress, laravel, node, angular, lando, developers, design, support, strategy",
         "robots": "index, follow"
       },
       "ogp": {
         "defaultType": "website",
-        "defaultImage": "thinktandem.io/images/favicon.png",
+        "defaultImage": "https://thinktandem.io/images/favicon.png",
         "ignoreMissingImage": false
+      },
+      "twitter": {
+        "image": "https://thinktandem.io/images/favicon.png"
       }
     },
     "metalsmith-sitemap": {
-      "hostname": "http://www.thinktandem.io",
+      "hostname": "https://thinktandem.io",
       "omitIndex": true
     },
     "metalsmith-robots": {
       "useragent": "googlebot",
       "disallow": ["404.html", "contact-thanks.html"],
-      "sitemap": "http://www.thinktandem.io/sitemap.xml"
+      "sitemap": "https://thinktandem.io/sitemap.xml"
     },
     "metalsmith-redirect": {
       "/blog/2016/09/20/from-kalabox-with-love": "/blog/2016/09/20/rejoice-kalabox-2-0-released",
@@ -239,6 +243,21 @@
     "metalsmith-layouts": {
       "engine": "swig",
       "directory": "templates"
+    },
+    "metalsmith-rss": {
+      "feedOptions": {
+        "title": "Tandem's RSS Feed on Drupal, Laravel, WordPress, Docker, etc",
+        "site_url": "https://thinktandem.io/",
+        "limit": 500,
+        "collection": "articles"
+      }
+    },
+    "metalsmith-feed-js": {
+      "tag": "drupal",
+      "site_url": "https://thinktandem.io/",
+      "title": "Tandem's RSS Feed on Drupal",
+      "limit": 500,
+      "destination": "drupal-feed.xml"
     },
     "metalsmith-browserify": {
       "files": [

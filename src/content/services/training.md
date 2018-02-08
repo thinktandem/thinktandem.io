@@ -4,7 +4,9 @@ title: Training
 byline: Your team is the best investment you can make. Get them up to speed on the latest and most cutting edge development practices.
 cta: Move your team into the 21st century.
 link: /services/training
-color: red
+color: orange
+seo:
+  description: byline
 icons:
   - icon: devicons devicons-git_branch
     name: Gitflow

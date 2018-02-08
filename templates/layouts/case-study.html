@@ -1,8 +1,5 @@
 {% extends './html.html' %}
 
-{% block title %}
-  {%parent%} | {{title}} | {{pageSlogan}}
-{% endblock %}
 
 {% block contents %}
 
@@ -63,7 +60,7 @@
 
       <div class="case-study-img">
         <div class="container">
-          <img src="{{ image.src }}" class="img-responsive" title="{{ image.title }}">
+          <img src="{{ image.src }}" class="img-responsive" title="{{ image.title }}" alt="{{ title|safe }}">
         </div>
       </div>
 

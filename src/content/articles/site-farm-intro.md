@@ -1,8 +1,11 @@
 ---
 layout: layouts/article.html
 title: "Higher Ed Drupal Fun Down on the SiteFarm"
-tags: development, conferences
+tags: development, conferences, drupal
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Alec Reynolds
 private: false
 mainImage: images/articles/site-farm-intro.jpg

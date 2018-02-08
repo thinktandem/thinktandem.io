@@ -1,9 +1,5 @@
 {% extends './html.html' %}
 
-{% block title %}
-  {%parent%} | {{title}} | {{pageSlogan}}
-{% endblock %}
-
 {% block contents %}
 
   <article id="article">
@@ -13,7 +9,12 @@
         <div class="row header">
           <div class="col-md-12 ">
             <h1>{{ title|safe }}</h1>
-            <small>By {{author|safe}}</small>
+            <div class="col-md-8">
+              <small>By {{author|safe}}</small>
+            </div>
+            <div class="col-md-4">
+              {{date|date('F d, Y')}}
+            </div>
             <div class="linerule">
               <hr>
             </div>
@@ -27,7 +28,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <img src="{{mainImage}}" class="img-responsive blog-main-image" alt="blogpost" />
+              <img src="{{mainImage}}" class="img-responsive blog-main-image" alt="Blog Post - {{ title|safe }}" />
             </div>
           </div>
         </div>
@@ -45,6 +46,7 @@
     <div id="page-content">
       <div class="container">
         {{ contents|safe }}
+        <div class="addthis_inline_share_toolbox"></div>
       </div>
     </div>
 

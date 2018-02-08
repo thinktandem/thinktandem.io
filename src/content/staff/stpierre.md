@@ -12,4 +12,6 @@ link: https://twitter.com/serundeputy
 layout: components/molecules/bio/bio.html
 quote: I make things!
 private: true
+seo:
+  description: Geoff St. Pierre - Lead Developer
 ---

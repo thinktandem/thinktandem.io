@@ -7,6 +7,7 @@ image: /images/working.jpeg
 seo:
   ogp:
     image: /images/working.jpeg
+  description: byline
 jsonld:
   - "@context": http://schema.org/
     "@type": Person

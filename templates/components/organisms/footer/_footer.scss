@@ -53,6 +53,10 @@ footer {
     }
     a {
       font-size: 3.0em;
+
+      &:hover {
+        text-decoration: none !important;
+      }
     }
   }
 

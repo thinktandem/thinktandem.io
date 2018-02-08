@@ -24,40 +24,47 @@
   </div>
 
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="service-link">
-          {% for tag in tags.tags %}
-            <a href="/blog/{{ tag }}" title="{{ tag }}">{{ tag }}</a> |
-          {% endfor %}
-        </div>
+    <div class="row blog-tags tags-top">
+      <div class="col col-md-12">
+        {% for tag in tags.tags|slice(0,6) %}
+          <a href="/blog/{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="row blog-tags tags-bottom">
+      <div class="col col-md-12">
+        {% for tag in tags.tags|slice(6,12) %}
+          <a href="/blog/{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+        {% endfor %}
       </div>
     </div>
     <div class="row teasers">
-      {% for article in pagination.files %}
-        {% include "../components/molecules/teaser/teaser.html" %}
-      {% endfor %}
+    {% for key, article in pagination.files %}
+      {% if (key % 2 == 0)  %}
+        <div class="row post-row">
+      {% endif  %}
+          <div class="col-md-6">
+            {% include "../components/molecules/teaser/teaser.html" %}
+          </div>
+      {% if (key%2 == 1) %}
+        </div>
+      {% endif  %}
+      {% if pagination.files.length % 2 == 1 && pagination.files.length == key + 1  %}
+          <div class="col-md-6"></div>
+        </div>
+      {% endif %}
+    {% endfor %}
     </div>
     <div class="row">
       <div class="pages">
-        <ul class="pagination">
-          {% set pages = pagination.getPages(4) %}
-          {% for key, page in pages %}
-            {% if pagination.num == page.pagination.num %}
-              <li class="active">
-                <a href="{{ page.path }}">
-                  {{ page.pagination.num }}
-                </a>
-              </li>
-            {% else %}
-              <li>
-                <a href="{{ page.path }}">
-                  {{ page.pagination.num }}
-                </a>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
+        <div class="pagination">
+          {% if pagination.previous %}
+            <a href="{{pagination.previous.path}}">Previous</a>
+          {% endif %}
+          {% if pagination.next %}
+            <a href="{{pagination.next.path}}">Next</a>
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>

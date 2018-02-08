@@ -3,6 +3,9 @@ layout: layouts/article.html
 title: "Connecting to a Remote Platform.sh Database"
 tags: localdev, devops
 permalink: true
+seo:
+  description: byline
+  keywords: tags
 author: Geoff St. Pierre
 private: false
 mainImage: https://thinktandem.io/images/articles/connect-to-sequel-pro.png
@@ -27,7 +30,7 @@ Instructions
 Open up Sequel Pro and click the `+` in the bottom left corner to create a new connection. You will be prompted for connection settings. At the top there are three tabs. Each type of connection prompts for different settings. Select the `ssh` tab for a platform.sh connection.
 
 <center>
-  <img alt="sequel-pro-connection-screen" src="images/articles/sqp-connect.png" width="433" align="center" />
+  <img alt="Sequel Pro Connection Screen" src="images/articles/sqp-connect.png" width="433" align="center" />
 </center>
 
 Let's break down the rest of the settings.

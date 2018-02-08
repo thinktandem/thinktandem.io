@@ -1,5 +1,7 @@
 {% extends '../layouts/html.html' %}
 
+{% block desc %}Tandem Blog = All Our Knowledges. We've been revealing truth since the Permian extinction.{% endblock %}
+
 {% block contents %}
 
 <div id="posts">
@@ -20,24 +22,44 @@
   </div>
 
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="service-link">
-          {% for tag in tags.tags %}
-            <a href="/blog/{{ tag }}" title="{{ tag }}">{{ tag }}</a> |
-          {% endfor %}
-        </div>
+    <div class="row blog-tags tags-top">
+      <div class="col col-md-12">
+        {% for tag in tags.tags|slice(0,6) %}
+          <a href="/blog/{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+        {% endfor %}
       </div>
     </div>
-    <div class="row teasers">
-      {% for article in pagination.files %}
-        {% include "../components/molecules/teaser/teaser.html" %}
-      {% endfor %}
+    <div class="row blog-tags tags-bottom">
+      <div class="col col-md-12">
+        {% for tag in tags.tags|slice(6,12) %}
+          <a href="/blog/{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+        {% endfor %}
+      </div>
     </div>
+    {% for key, article in pagination.files %}
+      {% if (key % 2 == 0)  %}
+        <div class="row post-row">
+      {% endif  %}
+          <div class="col-md-6">
+            {% include "../components/molecules/teaser/teaser.html" %}
+          </div>
+      {% if (key%2 == 1) %}
+        </div>
+      {% endif  %}
+      {% if pagination.files.length % 2 == 1 && pagination.files.length == key + 1  %}
+          <div class="col-md-6"></div>
+        </div>
+      {% endif %}
+    {% endfor %}
     <div class="row">
       <div class="pages">
         <ul class="pagination">
-          {% set pages = pagination.getPages(4) %}
+          {% set pages = pagination.getPages(pagination.pages.length) %}
+          <li>
+            <a href="blog">
+              <i class="fa fa-fast-backward" aria-hidden="true"></i>
+            </a>
+          </li>
           {% for key, page in pages %}
             {% if pagination.num == page.pagination.num %}
               <li class="active">
@@ -53,6 +75,11 @@
               </li>
             {% endif %}
           {% endfor %}
+          <li>
+            <a href="blog/{{ pagination.pages.length }}/index.html">
+              <i class="fa fa-fast-forward" aria-hidden="true"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
