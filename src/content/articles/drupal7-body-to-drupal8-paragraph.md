@@ -10,216 +10,175 @@ author: John Ouellet
 private: false
 mainImage: images/articles/d7-d8.jpg
 img-src: images/articles/d7-d8.jpg
-byline: Migrating A Drupal 7 long text field to a Drupal 8 nested text field in a pargaraph is a two step process.  It is quick and easy once you get the basic grasp of the mechanisms involved.
-date: 2018-2-08
+byline: Migrating A Drupal 7 long text field to a Drupal 8 nested text field in a paragraph is a two step process.  It is quick and easy once you get the basic grasp of the mechanisms involved.
+date: 2018-02-08
 ---
 
-The issue I faced with my module
---------------------------------
+Why are we doing this?
+----------------------
 
-I have been on a journey to get all my [Drupal Contrib Modules](https://www.drupal.org/u/labboy0276) ported over to Drupal 8.  Usually the code structure is fairly close to its predecessor, but with just a little added flavor.  However, when I was converting my [Blackbaud SKY API](https://www.drupal.org/project/blackbaud_sky_api) module I ran into a coding dilemma.  My module has a path that is defined by a system variable and is not static.  It is not taking a wildcard argument from the path either.  How do you do this when your routing layer is driven by YAML and not PHP?  A little Google fu and some Drupal API magic helped me get there. Now I will show you.
+We were hired on as to help consult with one of our University clients migration from Drupal 7 to Drupal 8.  One of the tasks their development team was stuck one was migrating their Drupal 7 body fields to a Drupal 8 paragraph.  There were a few examples and blog posts out their in the universe, but they just did not seem to work right when applied.  After some Google-fu and a lot of trial and error, I was able to find a replicable working solution.  Once I solved this dilemma, it was actually quite easy to understand the moving parts.
 
-The Routing Layer has changed
------------------------------
+The migration mechanisms at work
+---------------------------------
 
-For as long as I can remember, all paths / routing was handled through ```hook_menu()```.  However in Drupal 8, this is done though [Symfony's Routing Layer](https://symfony.com/doc/current/routing.html).  You can also [checkout this article on Drupal.org](https://www.drupal.org/docs/8/api/routing-system/routing-system-overview) that gives a brief overview.
+The basic theory behind this is that we will be migrating the body field alone to its own entity reference based migration first.  Then we will take that paragraph and migrate with the content type.  We can change these events together via the ```migration_dependencies``` key in the yaml file.
 
-In the Drupal 7 version of my Blackbaud SKY API module, as mentioned previously, there is a callback path that is derived from a variable.  This module's only purpose is to establish a connection via OAuth to the Blackbaud SKY API.  When utilizing OAuth, having a callback URI is a fairly customary practice.  If you ever used the [Twitter](https://www.drupal.org/project/twitter) module, you know you needed to setup a callback uri in your application.  The Blackbaud SKY API application is no different.  I made this path configurable so the end user could change it in their respective application.
+Another factor in this equation is that we are using the [Migrate Source CSV](https://www.drupal.org/project/migrate_source_csv) module to handle the migration. The client was using [Open Atrium](https://www.drupal.org/project/openatrium) in their Drupal 7 site.  If you are familiar with the project, it is a panels heavy based approach.  There is no Drupal 8 solution for Open Atrium and they decided against a panels approach in the migration.  So, it was easier for them to grab all the panels content and node content in a spreadsheet in one due to this.
 
-The code for this in Drupal 7 was fairly straight forward:
+Seems pretty straight forward, but it took a hot minute to figure how to actually pull this off based on all these factors.
 
-```php
-/**
- * Implements hook_menu().
- */
-function blackbaud_sky_api_menu() {
-  $items = array();
+This is how we do it
+---------------------
 
-  // Oauth Redirect URI
-  $items[variable_get('blackbaud_sky_api_redirect_uri', BLACKBAUD_SKY_API_REDIRECT_URI)] = array(
-    'title' => 'Blackbaud Redirect URI',
-    'access callback' => TRUE,
-    'page callback' => 'blackbaud_sky_api_redirect_uri_callback',
-    'type' => MENU_CALLBACK,
-    'file' => 'includes/blackbaud_sky_api.admin.inc',
-  );
+### Migrating the body field to a paragraph
 
-  return $items;
-}
-```
-
-As you can see, this route is defined by either the variable blackbaud_sky_api_redirect_uri or the constant BLACKBAUD_SKY_API_REDIRECT_URI as a default.  It then went to the page callback blackbaud_sky_api_redirect_uri_callback that did whatever magic I needed.  I also threw the logic in another file because clean code = happy code.
-
-Here is the callback function in the Drupal 7 module:
-
-```php
-/**
- * Blackbaud Oauth Redirect URI Callback.
- */
-function blackbaud_sky_api_redirect_uri_callback() {
-  // Instantiate the BlackBaud request and Authorize.
-  $bb = new BlackbaudOauth();
-  if (isset($_GET['code'])) {
-    $bb->getAuthCode('init', $_GET['code']);
-  }
-}
-```
-
-YAML, Controllers and Routes, OH MY!
-------------------------------------
-
-One of the main driving force behind the framework change in Drupal 8 is to create a structure that is decoupled and interchangeable.  Drupalize.me's [overview of decoupling](https://drupalize.me/tutorial/decoupling-explained?p=2360) is a good starting point to understand what is going on now.  By making changes like this to the framework we are making Drupal be less "Drupaly".  We can now easily add in additional classes, interfaces, or whatever to our routes now if we needed to.
-
-To generate a dynamic route, we start off with the route_callbacks method.  This was [introduced right](https://www.drupal.org/node/2177901) before the stable release of Drupal 8.  Previously you had to do this with an event subscriber and RouteSubscriberBase class.  You may still see an article or three floating around with this info still.  I would just ignore them as it is no longer needed.
-
-To begin, you just throw the method in your routing.yml with the callback to your class and method:
+So the first step is to grab the body field and migrate it into a paragraph on the Drupal 8 site.  What I did was create a new paragraph bundle with the name of migrate.  Within the migrate paragraph bundle I created a long formatted text named field_migrate_test.  This is the field we will be testing the migration to.  Once I had this I began dissecting the yaml file I had for migrating the whole Drupal 7 node.  I ripped out all the irrelevant pieces and changed it to look like this below:
 
 ```yaml
-route_callbacks:
-  - '\Drupal\blackbaud_sky_api\Routing\BlackbaudRoutes::routes'
+id: body_to_paragraph
+label: Import a D7 body to a D8 paragraph
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - custom_migration
+migration_group: null
+source:
+  plugin: csv
+  path: "public://your-mom-goes-to-college.csv"
+  delimiter: ','
+  enclosure: '"'
+  header_row_count: 1
+  keys:
+    - id
+  column_names:
+    0:
+      id: Identifier
+    1:
+      url: Alias
+    2:
+      title: Title
+    3:
+      body: Body
+
+process:
+  type:
+    plugin: default_value
+    default_value: migrate
+  'field_migrate_test/value': body
+  'field_migrate_test/format':
+    plugin: default_value
+    default_value: full_html
+
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+
+migration_dependencies:
+  required: {  }
+  optional: {  }
 ```
 
-Then you just need to make a Routing class and slap in your logic.  Basically you are creating the YAML version of the typical route in PHP in the routes method.  Here is the _non-Dependency Injection_ way of converting the ```hook_menu``` portion to Drupal 8:
+If you are not familiar with Migrate Source CSV module, Lucas Hedding [wrote a great how to article](https://www.mtech-llc.com/blog/lucas-hedding/migrating-using-csv) on it.  The main to things to take away from the first part of this migration are the ```process``` and the ```destination``` keys in the yaml.
 
-```php
-namespace Drupal\blackbaud_sky_api\Routing;
+Within the ```process``` key, I am only migrating the body column into the field_migrate_test field.  Also, for me, wrapping the fields in single quotes was the only way this could work.  I am not 100% sure why, but maybe I will figure that out one day.  Also defined in there is the ```type``` key which uses the migrate bundle as it's ```default_value```.
 
-use Symfony\Component\Routing\Route;
+The ```destination``` key shows that we are migrating this body to the paragraph we created prior to the migration tasks.  In the next part, we will use this paragraph as the migration source.
 
-/**
- * Defines a dynamic path based off of the redirect uri variable.
- */
-class BlackbaudRoutes {
+### Migrating the node type with the paragraph
 
-  /**
-   * Returns an array of route objects.
-   *
-   * @return \Symfony\Component\Routing\Route[]
-   *   An array of route objects.
-   */
-  public function routes() {
-    $routes = [];
+This next part of the migration was the part that took me the longest to unravel.  A lot of posts out there steered me in the wrong direction and I kept going down the wrong rabbit hole.  The common misconception was that we are migrating a body field in the paragraph to a body field on the node type.  Sorry Charlie, but that is not the way.  We are migrating a paragraph entity to a paragraph entity on the node type.
 
-    // Grab the Config form option or the constant for the path.
-    $path = \Drupal::config('blackbaud_sky_api.settings')->get('blackbaud_sky_api_redirect_uri') ?: BLACKBAUD_SKY_API_REDIRECT_URI;
+What I did was create a paragraph field on the Basic Page node type called field_migrate_final.  I linked it up to the migrate paragraph bundle I used before.  Once I set that up, I could tweak the yaml file to reflect this new destination.  Check out the example below to see how this works:
 
-    $routes['blackbaud_sky_api.oauth_redirect_uri'] = new Route(
-      '/' . $path,
-      [
-        '_controller' => '\Drupal\blackbaud_sky_api\Controller\DefaultController::redirectUriCallback',
-      ],
-      [
-        '_access' => 'TRUE',
-      ]
-    );
-    return $routes;
-  }
+```yaml
+id: csv_pages
+label: Import all the csv to the basic page type
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - custom_migration
 
-}
+source:
+  plugin: csv
+  path: "public://your-mom-goes-to-college.csv"
+  delimiter: ','
+  enclosure: '"'
+  header_row_count: 1
+  keys:
+    - id
+  column_names:
+    0:
+      id: Identifier
+    1:
+      url: Alias
+    2:
+      title: Title
+    3:
+      body: Body
+
+process:
+  type:
+    plugin: default_value
+    default_value: page
+  id: id
+  title: title
+  path: url
+  field_migrate_final/target_id:
+    -
+      plugin: migration
+      migration: body_to_paragraph
+      no_stub: true
+      source: id
+    -
+      plugin: extract
+      index:
+        - '0'
+  field_migrate_final/target_revision_id:
+    -
+      plugin: migration
+      migration: body_to_paragraph
+      no_stub: true
+      source: id
+    -
+      plugin: extract
+      index:
+        - 1
+destination:
+  plugin: entity:node
+
+migration_dependencies:
+  required:
+    - body_to_paragraph
 ```
 
-As you can see this is basically adding another layer between the routing.yml and the Controller.  Here is what our Controller looks like this:
+So the big take aways again are in the ```process`` key for this migration.  As you can see I have some fun things going on with the field_migrate_final portion.  Let's break this down a little so it makes more sense:
+1. The ```plugin:migration``` (which is now called [migration_lookup](https://www.drupal.org/docs/8/api/migrate-api/migrate-process-plugins/process-plugin-migration_lookup-formerly-migration)) grabs the value of the paragraph from our previous step.
+1. The ```migration``` key we are using the id of the previous step.
+1. The ```no_stub``` key set to true means we want the whole actual entity.  A stub entity is a partially populated entity that stands in for the real thing as a FYI.
+1. The ```source``` key (source_ids in the new nomenclature) is the id key field from our previous step as well.
+1. The ```plugin:extract``` key is a way to exract ids from a field that is an array.  [Here is the documentation](https://api.drupal.org/api/drupal/core%21modules%21migrate%21src%21Plugin%21migrate%21process%21Extract.php/class/Extract) on this migration plugin.
+1. The ```index``` key is equivivoal to something like ```field_name[und][0][value]``` in a Drupal field array.
 
-```php
-namespace Drupal\blackbaud_sky_api\Controller;
+The final part of this equation is the ```migration_dependencies``` which lists the first step as a requirement.
 
-use Drupal\Core\Controller\ControllerBase;
-use Drupal\blackbaud_sky_api\BlackbaudOauth;
+### Running the migration
 
-/**
- * Default controller for the blackbaud_sky_api module.
- */
-class DefaultController extends ControllerBase {
+Now that this is all setup, it is your typical method to run the migration.  I went ahead and ran this drush command to do the import:
 
-  public function redirectUriCallback() {
-    // Instantiate the BlackBaud request and Authorize.
-    $bb = new BlackbaudOauth();
-    if (isset($_GET['code'])) {
-      $bb->getAuthCode('init', $_GET['code']);
-    }
-  }
-
-}
+```bash
+drush mim csv_pages --feedback="1 seconds"
 ```
 
-Dependency Injection + You = Electric Boogaloo
-----------------------------------------------
 
-One of the major design patterns in Drupal 8 is dependency injection.  Dependency injection is a design pattern that eliminates hard coding dependencies.  This makes your code more modular and maintainable.  When I was first converting this module to Drupal 8, I did it the fastest and easiest way.  Which is totally fine, I got it working.  I then knew I needed to go back and remove as many ``` \Drupal::``` static type calls as possible.   Why is this important and why should I do this?
-
-Imagine if the core developers changed the static call from ```\Drupal::config``` to ``` \Drupal::config-a-licious```.  You would have to change every single function in your code. While that is fairly easy to do, it is not desirable.  The ``` \Drupal::config``` is a wrapper for the config factory service.  We should be injecting this into our constructor instead.  I could go over all of the Dependency Injection scenarios, but that is not the point of this article.  I recommend reading this straight forward and easy to follow [article on Dependency Injection](https://code.tutsplus.com/tutorials/drupal-8-properly-injecting-dependencies-using-di--cms-26314).
-
-Down to the nitty gritty, here is the Dependency Injected version of my previous Routing class:
-
-```php
-namespace Drupal\blackbaud_sky_api\Routing;
-
-use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
-use Drupal\Core\Config\ConfigFactoryInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\Routing\Route;
-
-/**
- * Defines a dynamic path based off of the redirect uri variable.
- */
-class BlackbaudRoutes implements ContainerInjectionInterface {
-
-  /**
-   * The Config.
-   *
-   * @var \Drupal\Core\Config\ConfigFactoryInterface
-   */
-  protected $config;
-
-  /**
-   * Class constructor.
-   *
-   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
-   *   The config factory interface service.
-   */
-  public function __construct(ConfigFactoryInterface $config_factory) {
-    $this->config = $config_factory->get('blackbaud_sky_api.settings');
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function create(ContainerInterface $container) {
-    return new static(
-      $container->get('config.factory')
-    );
-  }
-
-  /**
-   * Returns an array of route objects.
-   *
-   * @return \Symfony\Component\Routing\Route[]
-   *   An array of route objects.
-   */
-  public function routes() {
-    $routes = [];
-    // Grab the Config form option or the constant for the path.
-    $path = $this->config->get('blackbaud_sky_api_redirect_uri') ?: BLACKBAUD_SKY_API_REDIRECT_URI;
-
-    $routes['blackbaud_sky_api.oauth_redirect_uri'] = new Route(
-      '/' . $path,
-      [
-        '_controller' => '\Drupal\blackbaud_sky_api\Controller\DefaultController::redirectUriCallback',
-      ],
-      [
-        '_access' => 'TRUE',
-      ]
-    );
-    return $routes;
-  }
-
-}
-```
-
-By extending the ContainerInjectionInterface class, I am giving this object all the magic it needs to inject all the dependencies.  The concept takes a little bit to really grasp, but once you get it, you will be happy.
+I like to add the feedback to show me what is going on within the migration.  A stagnant cursor is always a worrisome sign to me.  I could of also added this to a migration group if I wanted to.  However, for this example, just migrating with the 2nd parts key was good enough.
 
 
 Conclusion
 ----------
 
-Doing things the Drupal 8 way can sometimes be a little more arduous.  However, there are several reasons why this is happening.  In the not so distant future I see Drupal as a powerful, decoupled backend.  We will be able to plug in any front-end device or front-end language easily.  By injecting our dynamic route properly, we can make that reality happen.
+Now that you have the basics behind doing a more complicated migration, you can begin to imagine how this can be used in other mechanisms as well.  Migrating various types of entities to new and improved entities in Drupal 8 is quite a common thing now.
+Take the lessons from this and win every migration task that is given to you.
