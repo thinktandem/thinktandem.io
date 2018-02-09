@@ -17,12 +17,12 @@ date: 2018-02-08
 Why are we doing this?
 ----------------------
 
-We were hired on as to help consult with one of our University clients migration from Drupal 7 to Drupal 8.  One of the tasks their development team was stuck one was migrating their Drupal 7 body fields to a Drupal 8 paragraph.  There were a few examples and blog posts out their in the universe, but they just did not seem to work right when applied.  After some Google-fu and a lot of trial and error, I was able to find a replicable working solution.  Once I solved this dilemma, it was actually quite easy to understand the moving parts.
+We were hired on to act as consultants for one of our University clients migration from Drupal 7 to Drupal 8.  One of the tasks their development team was stuck one was migrating their Drupal 7 body fields to a Drupal 8 paragraph.  There were a few examples and blog posts out their in the universe, but they just did not seem to work right when applied.  After some Google-fu and a lot of trial and error, I was able to find a replicable working solution.  Once I solved this dilemma, it was actually quite easy to understand the moving parts.
 
 The migration mechanisms at work
 ---------------------------------
 
-The basic theory behind this is that we will be migrating the body field alone to its own entity reference based migration first.  Then we will take that paragraph and migrate with the content type.  We can change these events together via the ```migration_dependencies``` key in the yaml file.
+The basic theory behind this is that we will be migrating the body field alone to its own entity reference based migration first.  Then we will take that paragraph and migrate with the content type.  We can chain these events together via the ```migration_dependencies``` key in the yaml file.
 
 Another factor in this equation is that we are using the [Migrate Source CSV](https://www.drupal.org/project/migrate_source_csv) module to handle the migration. The client was using [Open Atrium](https://www.drupal.org/project/openatrium) in their Drupal 7 site.  If you are familiar with the project, it is a panels heavy based approach.  There is no Drupal 8 solution for Open Atrium and they decided against a panels approach in the migration.  So, it was easier for them to grab all the panels content and node content in a spreadsheet in one due to this.
 
@@ -33,7 +33,7 @@ This is how we do it
 
 ### Migrating the body field to a paragraph
 
-So the first step is to grab the body field and migrate it into a paragraph on the Drupal 8 site.  What I did was create a new paragraph bundle with the name of migrate.  Within the migrate paragraph bundle I created a long formatted text named field_migrate_test.  This is the field we will be testing the migration to.  Once I had this I began dissecting the yaml file I had for migrating the whole Drupal 7 node.  I ripped out all the irrelevant pieces and changed it to look like this below:
+So the first step is to grab the body field and migrate it into a paragraph on the Drupal 8 site.  What I did was create a new paragraph bundle with the name migrate.  Within the migrate paragraph bundle I created a long formatted text named field_migrate_test.  This is the field we will be testing the migration to.  Once I had this I began dissecting the yaml file I had for migrating the whole Drupal 7 node.  I ripped out all the irrelevant pieces and changed it to look like this below:
 
 ```yaml
 id: body_to_paragraph
@@ -80,7 +80,7 @@ migration_dependencies:
   optional: {  }
 ```
 
-If you are not familiar with Migrate Source CSV module, Lucas Hedding [wrote a great how to article](https://www.mtech-llc.com/blog/lucas-hedding/migrating-using-csv) on it.  The main to things to take away from the first part of this migration are the ```process``` and the ```destination``` keys in the yaml.
+If you are not familiar with Migrate Source CSV module, Lucas Hedding [wrote a great how to article](https://www.mtech-llc.com/blog/lucas-hedding/migrating-using-csv) on it.  The main two things to take away from the first part of this migration are the ```process``` and the ```destination``` keys in the yaml.
 
 Within the ```process``` key, I am only migrating the body column into the field_migrate_test field.  Also, for me, wrapping the fields in single quotes was the only way this could work.  I am not 100% sure why, but maybe I will figure that out one day.  Also defined in there is the ```type``` key which uses the migrate bundle as it's ```default_value```.
 
@@ -172,7 +172,6 @@ Now that this is all setup, it is your typical method to run the migration.  I w
 ```bash
 drush mim csv_pages --feedback="1 seconds"
 ```
-
 
 I like to add the feedback to show me what is going on within the migration.  A stagnant cursor is always a worrisome sign to me.  I could of also added this to a migration group if I wanted to.  However, for this example, just migrating with the 2nd parts key was good enough.
 
