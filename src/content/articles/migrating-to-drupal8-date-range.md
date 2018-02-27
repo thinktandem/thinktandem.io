@@ -27,7 +27,7 @@ So this would cause the migration to implode when we tried to move the date rang
 The transformation
 -------------------
 
-## Setting up the data.
+### Setting up the data.
 
 So we are going to transform this data first.  We can easily do this via ```hook_migrate_prepare_row()```.  Here is how we set this up for later use in our ```process``` plugin.
 
@@ -59,7 +59,7 @@ function YOUR_MODULE_migrate_prepare_row(Row $row, MigrateSourceInterface $sourc
 }
 ```
 
-## Processing the data.
+### Processing the data.
 
 Now that we have the date fields split out, we can then use the magic in the ```process``` plugin key on our migration yaml.
 
