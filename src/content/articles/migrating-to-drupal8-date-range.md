@@ -17,12 +17,12 @@ date: 2018-02-27
 The Situation before us
 ---------------------
 
-Right now we are using the [Migrate Source CSV](https://www.drupal.org/project/migrate_source_csv) module to handle the migration.  In the CSV that we used, dates were exported form the old site as Unix timestamps.  Which worked great for single date migration in Drupal 8.  Our date ranges though were showing up like this in the CSV:
+Right now we are using the [Migrate Source CSV](https://www.drupal.org/project/migrate_source_csv) module to handle the migration.  In the CSV that we used, dates were exported form the old site as Unix timestamps.  Which worked great for single date migration in Drupal 8.  However, our date ranges though were showing up like this in the CSV:
 
 ```bash
 1285905600 to 1317355200
 ```
-So this would cause the migration to implode when we tried to move the date ranges over.  We needed to transform the data before it went through the process mechanisms during the migration.  Once we figured it out, it was quite easy to do this.  Out solution is for how our data is coming across during the migration.  However, you can apply the same principle to your data in whatever format your data is in.
+This would cause the migration to implode when we tried to move the date ranges over.  We needed to transform the data before it went through the process mechanisms during the migration.  Once we figured it out, it was quite easy to do this.  This solution is specific to this use case.  However, you can apply the same principles to your data in whatever format your data is in.
 
 The transformation
 -------------------
@@ -61,7 +61,7 @@ function YOUR_MODULE_migrate_prepare_row(Row $row, MigrateSourceInterface $sourc
 
 ### Processing the data.
 
-Now that we have the date fields split out, we can then use the magic in the ```process``` plugin key on our migration yaml.
+Now that we have the date fields split out, we can then use the created source properties in the ```process``` plugin key on our migration yaml.  On top of that, the ```format_date``` plugin can be utilized to change the date as we needed.
 
 ```yaml
 process:
@@ -77,10 +77,7 @@ process:
     source: 'Date End'
 ```
 
-Very straight forward and easy to do.  We are using the format_date plugin to transform the Unix timestamp that we split up into the date only range on the Drupal 8 side.
-
-
 Conclusion
 ----------
 
-The Drupal 8 migration API is very customizable.  Once you start handling more advanced tasks, you can migrate just about anything.  Remeber to always search the core code base for examples and you can easily whip up a solution like I did above.
+The Drupal 8 migration API is very customizable.  Once you start handling more advanced tasks, you can migrate just about anything.  Remember to always search the core code base for examples and you can easily whip up a solution like I did above.
