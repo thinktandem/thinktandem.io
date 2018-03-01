@@ -17,15 +17,65 @@ date: 2018-02-27
 The Situation before us
 ---------------------
 
-Right now we are using the [Migrate Source CSV](https://www.drupal.org/project/migrate_source_csv) module to handle the migration.  In the CSV that we used, dates were exported form the old site as Unix timestamps.  Which worked great for single date migration in Drupal 8.  However, our date ranges though were showing up like this in the CSV:
+Right now we are using the [Migrate Source CSV](https://www.drupal.org/project/migrate_source_csv) module to handle the migration.  In the CSV that we used, dates were exported form the old site as Unix timestamps.  Which worked great for single date migration in Drupal 8.
+
+Our data is currently coming from this source field:
+
+```yaml
+source:
+  column_names:
+    0:
+      date_ranges: 'The date range'
+```
+
+However, our date ranges though were showing up like this in the CSV:
 
 ```bash
 1285905600 to 1317355200
 ```
-This would cause the migration to implode when we tried to move the date ranges over.  We needed to transform the data before it went through the process mechanisms during the migration.  Once we figured it out, it was quite easy to do this.  This solution is specific to this use case.  However, you can apply the same principles to your data in whatever format your data is in.
 
-The transformation
--------------------
+When we tried to import it like this, the migration would explode and cause a black hole in time.  We needed to transform the data before it went through the process mechanisms during the migration.  We found two ways to do this and both are quite easy to do this.  This solutions are specific to this use case.  However, you can apply the same principles to your data in whatever format your data is in.
+
+
+Method 1: Plugin Only
+---------------------
+
+This method utilizes the vast array of plugins that come with a Drupal 8 migration.  Our string needs to manipulated to get the proper dates for the date range values.  We can do this with the ```explode``` and ```extract``` plugins.  It is pretty straightforward as you can see:
+
+```yaml
+process:
+  field_date_ranges/value:
+    -
+      plugin: explode
+      source: date_ranges
+      delimiter: ' to '
+    -
+      plugin: extract
+      index:
+        - '0'
+    -
+      plugin: format_date
+      from_format: U
+      to_format: Y-m-d
+  field_date_ranges/end_value:
+    -
+      plugin: explode
+      source: date_ranges
+      delimiter: ' to '
+    -
+      plugin: extract
+      index:
+        - '1'
+    -
+      plugin: format_date
+      from_format: U
+      to_format: Y-m-d
+```
+
+So basically we are taking the string and exploding it just like php's explode function.  We then grab the perspective start and end dates from the array.  Finally we are formatting the date as needed in our case.
+
+Method 2: Some php + plugins
+----------------------------
 
 ### Setting up the data.
 
@@ -43,11 +93,6 @@ function YOUR_MODULE_migrate_prepare_row(Row $row, MigrateSourceInterface $sourc
   switch ($migration->id()) {
     case 'YOUR_MIGRATION_ID':
       // Use your source id from the range you are trying to migrate form the yml.
-      // i.e:
-      // source:
-      //   column_names:
-      //     0:
-      //       date_ranges: 'The date range'
       if ($values = $row->getSourceProperty('date_ranges')) {
         $value = explode(' to ', $values);
         $row->setSourceProperty('Date Start', $value[0]);
@@ -80,4 +125,4 @@ process:
 Conclusion
 ----------
 
-The Drupal 8 migration API is very customizable.  Once you start handling more advanced tasks, you can migrate just about anything.  Remember to always search the core code base for examples and you can easily whip up a solution like I did above.
+The Drupal 8 migration API is very customizable.  Once you start handling more advanced tasks, you can migrate just about anything.  I prefer the first method in our example, but showed you both.  As you can see, you can do a lot of cool things with the process plugin system and the migration API.
