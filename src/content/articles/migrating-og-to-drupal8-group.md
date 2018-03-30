@@ -127,4 +127,174 @@ So that is it for setting up the Group entities themselves.  Once I run ```drush
 
 So here is where more heavy duty coding comes into play.  We have to overcome a few obstacles here to get the users to migrate and become members of the respective groups.  Two of the obstacles I found were: getting the user Organic Group data and adding the user post save of the migration.  Let's go over how we can overcome the first obstacle.
 
-When I was looking at the data in the database of the Drupal 7 site, it seemed that the Organic Groups entity reference fields were not storing the data in their field tables.  All the data was stored in two tables instead: ```og_membership``` and ```og_users_roles```.  So I couldn;t just map the source field data to the process field like usual, I had to create the mapping.
+When I was looking at the data in the database of the Drupal 7 site, it seemed that the Organic Groups entity reference fields were not storing the data in their field tables.  All the data was stored in two tables instead: ```og_membership``` and ```og_users_roles```.  So I couldn't just map the source field data to the process field like usual, I had to create the mapping.  We can do this by extending out source plugin as follows:
+
+```php
+namespace Drupal\YOUR_MODULE\Plugin\migrate\source;
+
+use Drupal\user\Plugin\migrate\source\d7\User;
+use Drupal\migrate\Row;
+
+/**
+ * Extends the D7 Node source plugin so we can grab OG info.
+ *
+ * @MigrateSource(
+ *   id = "d7_group_user",
+ *   source_module = "user"
+ * )
+ */
+class GroupUser extends User {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function prepareRow(Row $row) {
+    // Grab our nid and grab the Group ID from the D7 OG tables.
+    $uid = $row->getSourceProperty('uid');
+
+    // Grab data from both tables.
+    $query = $this->select('og_membership', 'og')
+      ->fields('og', ['gid'])
+      ->condition('etid', $uid)
+      ->condition('entity_type', 'user')
+      ->execute()
+      ->fetchAll();
+
+    $query2 = $this->select('og_users_roles', 'our')
+      ->fields('our', ['gid'])
+      ->condition('uid', $uid)
+      ->execute()
+      ->fetchAll();
+
+    // Set our array of values.
+    $gids = [];
+    foreach ($query as $gid) {
+      $gids[] = $gid['gid'];
+    }
+
+    foreach ($query2 as $gid) {
+      $gids[] = $gid['gid'];
+    }
+
+    // Set the property to use for the user yaml ER field.
+    $row->setSourceProperty('gids', $gids);
+
+    // Set the property to use in the custom_user destination.
+    $row->setDestinationProperty('gids', $gids);
+
+    return parent::prepareRow($row);
+  }
+}
+```
+
+So the magic here is that I am doing what I can do in ```hook_migrate_prepare_row``` but via the OO approach.  The reason I am doing it this way is due to the fact I can utilize the inherited injected database functionality.  We then will set the yaml source plugin to ```d7_group_user``` instead of the usual ```d7_user```.  This will tell it to use this source plugin instead.
+
+You can also see that I am setting two properties for the source and destination.  It is probably overkill, but I like my code tiddy and readable.  For the task of migrating the users as is and adding them to their groups, we will focus on the destination property for now.
+
+__Side note, you can migrate the user roles as is or perform tweaks to it.  I am not covering that in this post as it is really tertiary to the task at hand.__
+
+So now that is set, we need to overcome our second obstacle, which is adding users to the group post save.  We can't add the users to a Group before the are saved because they don't exist yet.  There are no post hook actions in Drupal 8 yet, so we had to do some magic to handle this.  We need to extend the ```entity:user``` destination plugin and tweak it to our needs.  This proved to be a little challenging and took a few tries to get the code to function properly.  Here is the destination plugin I ended up with:
+
+```php
+namespace Drupal\YOUR_MODULE\Plugin\migrate\destination;
+
+use Drupal\migrate\Row;
+use Drupal\group\Entity\Group;
+use Drupal\user\Plugin\migrate\destination\EntityUser;
+use Drupal\Core\Entity\ContentEntityInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\migrate\Plugin\MigrationInterface;
+
+/**
+ * @MigrateDestination(
+ *   id = "custom_user"
+ * )
+ */
+class EntityUserPostSave extends EntityUser {
+
+  /**
+   * The og group ids array we passed through.
+   *
+   * @var array
+   */
+  private $gids;
+
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition, MigrationInterface $migration = NULL) {
+    // Basically we need to "trick" the plugin_id to use the right entity type.
+    $entity_type = static::getEntityTypeId($plugin_id);
+    return new static(
+      $configuration,
+      'entity:user',
+      $plugin_definition,
+      $migration,
+      $container->get('entity.manager')->getStorage($entity_type),
+      array_keys($container->get('entity.manager')->getBundleInfo($entity_type)),
+      $container->get('entity.manager'),
+      $container->get('plugin.manager.field.field_type'),
+      $container->get('password')
+    );
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function import(Row $row, array $old_destination_id_values = []) {
+    // Set this so we can process in the save method.
+    $this->gids = $row->getDestinationProperty('gids');
+    return parent::import($row, $old_destination_id_values);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function save(ContentEntityInterface $entity, array $old_destination_id_values = []) {
+    // We need to pull the parts of the parents into this class.
+    // If we don't, we get a failed migration.
+
+    // From EntityUser::save()
+    // Do not overwrite the root account password.
+    if ($entity->id() != 1) {
+      // Set the pre_hashed password so that the PasswordItem field does not hash
+      // already hashed passwords. If the md5_passwords configuration option is
+      // set we need to rehash the password and prefix with a U.
+      // @see \Drupal\Core\Field\Plugin\Field\FieldType\PasswordItem::preSave()
+      $entity->pass->pre_hashed = TRUE;
+      if (isset($this->configuration['md5_passwords'])) {
+        $entity->pass->value = 'U' . $this->password->hash($entity->pass->value);
+      }
+    }
+
+    // Save the entity as in EntityContentBase::save().
+    $entity->save();
+
+
+    // Let's go through Each Group and add users.
+    foreach ($this->gids as $gid) {
+      if ($gid !== NULL) {
+        $group = Group::load($gid);
+        if ($group !== NULL) {
+          $group->addMember($entity);
+        }
+      }
+    }
+
+    // return the entity ids as in EntityContentBase::save().
+    return [$entity->id()];
+  }
+}
+```
+
+Let's break down what I had to do to get this to work.  First, I had to extend the create plugin and hard code the ```$plugin_id``` as ```entity:user```.  If I didn't do this, it would fail and say that the ```custom_user``` plugin did not exist.  Which makes sense since I am defining that in the Annotation potion of the code.  We technically wanted to extend the user plugin, not create a new one.  So this tweak fixed that issue.
+
+The next issue was getting out destination variables we set in the source plugin into this class.  The way to handle this is through the import method as you can see.  We are setting a private property so that we can use it in the next step.
+
+The final issue was getting the entity to save then mapping it against the user's respective groups.  To do this, I had to extend the save method and slap in the code from its parents.  My class had two parents: EntityUser and EntityContentBase.  When I tried to just add the user to the group without doing this, it would fail.  Why would it do this?  Because the user was still being saved post fact of this class.  Also, just called the parent function before my group saving code didn't work either.  So, the solution was to grab the parts from the parents, call it in order in my code.  This solved the issues.
+
+You can see from the code above, I am also using the static method ```Group::load()```.  This is where the Groups module is greate because it allows me to do simple calls like this to handle my functionality.  the code is pretty straight foeard, but lets go over it realy quick.  The gids are the Organic Group nids form the Drupal 7 that are now the Drupal 8 Group ids.  We are cycling thought each one and adding it to the Group via the ```addMember``` method that the loaded Group class provides us with.  Pretty simple and easy to do and this gets our users into their respective groups on migration.
+
+### Migrating the Organic Group User Entity Reference Field.
+
