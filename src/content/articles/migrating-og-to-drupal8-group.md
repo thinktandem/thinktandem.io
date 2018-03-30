@@ -30,7 +30,7 @@ Migrating Organic Groups to Group
 
 ### Setup Group on Drupal 8
 
-Before we migrate any data, we need to setup the group module on our Drupal 8 site.  Use ```composer require drupal/group`` and enable the module with ```drush en group```.  The Drupal 7 site happens to use both Organic Group Group and Organic Group Spaces, so we will need to migrate all of those entities.  To simplify things, I went to ```/admin/group/types``` and created two group types: Groups and Spaces.
+Before we migrate any data, we need to setup the group module on our Drupal 8 site.  Use ```composer require drupal/group``` and enable the module with ```drush en group```.  The Drupal 7 site happens to use both Organic Group Group and Organic Group Spaces, so we will need to migrate all of those entities.  To simplify things, I went to ```/admin/group/types``` and created two group types: Groups and Spaces.
 
 Now that our group types are setup, we can begin adding groups to the site via migration.  Organic Groups in Drupal 7 were essentially node references that were used on whatever entity you needed to control permissions on.  So with that knowledge, I knew I had to migrate the two content types: ```oa_group``` and ```oa_space```.  Most people only use the group potion of Organic Groups, so you can disregard any code around the Spaces functionality going forward if need be.
 
