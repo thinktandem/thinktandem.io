@@ -123,7 +123,7 @@ So as you can see from both YAMLs it is too different than a typical content mig
 
 So that is it for setting up the Group entities themselves.  Once I run ```drush mim --group=insert_group``` all my Drupal 7 Organic Groups will be migrated as Drupal 8 Groups.
 
-### Migrate the Users
+### Migrating the Users
 
 So here is where more heavy duty coding comes into play.  We have to overcome a few obstacles here to get the users to migrate and become members of the respective groups.  Two of the obstacles I found were: getting the user Organic Group data and adding the user post save of the migration.  Let's go over how we can overcome the first obstacle.
 
