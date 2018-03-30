@@ -191,7 +191,7 @@ So the magic here is that I am doing what I can do in ```hook_migrate_prepare_ro
 
 You can also see that I am setting two properties for the source and destination.  It is probably overkill, but I like my code tiddy and readable.  For the task of migrating the users as is and adding them to their groups, we will focus on the destination property for now.
 
-__Side note, you can migrate the user roles as is or perform tweaks to it.  I am not covering that in this post as it is really tertiary to the task at hand.__
+_Side note, you can migrate the user roles as is or perform tweaks to it.  I am not covering that in this post as it is really tertiary to the task at hand._
 
 So now that is set, we need to overcome our second obstacle, which is adding users to the group post save.  We can't add the users to a Group before the are saved because they don't exist yet.  There are no post hook actions in Drupal 8 yet, so we had to do some magic to handle this.  We need to extend the ```entity:user``` destination plugin and tweak it to our needs.  This proved to be a little challenging and took a few tries to get the code to function properly.  Here is the destination plugin I ended up with:
 
@@ -294,7 +294,352 @@ The next issue was getting out destination variables we set in the source plugin
 
 The final issue was getting the entity to save then mapping it against the user's respective groups.  To do this, I had to extend the save method and slap in the code from its parents.  My class had two parents: EntityUser and EntityContentBase.  When I tried to just add the user to the group without doing this, it would fail.  Why would it do this?  Because the user was still being saved post fact of this class.  Also, just called the parent function before my group saving code didn't work either.  So, the solution was to grab the parts from the parents, call it in order in my code.  This solved the issues.
 
-You can see from the code above, I am also using the static method ```Group::load()```.  This is where the Groups module is greate because it allows me to do simple calls like this to handle my functionality.  the code is pretty straight foeard, but lets go over it realy quick.  The gids are the Organic Group nids form the Drupal 7 that are now the Drupal 8 Group ids.  We are cycling thought each one and adding it to the Group via the ```addMember``` method that the loaded Group class provides us with.  Pretty simple and easy to do and this gets our users into their respective groups on migration.
+You can see from the code above, I am also using the static method ```Group::load()```.  This is where the Groups module is great because it allows me to do simple calls like this to handle my functionality.  the code is pretty straight forward, but lets go over it really quick.  The gids are the Organic Group nids form the Drupal 7 that are now the Drupal 8 Group ids.  We are cycling thought each one and adding it to the Group via the ```addMember``` method that the loaded Group class provides us with.  Pretty simple and easy to do and this gets our users into their respective groups on migration.  I will show the final YAML for the user migration below in the next section.
 
 ### Migrating the Organic Group User Entity Reference Field.
 
+A requirement was to have an Entity Reference field on the user profile that links and adds users to groups.  If you are not needing to do this for your users, you can skip this part.  However, i like this approach since it is easier and quicker than adding users to every Group manually.
+
+So to start, I added an entity reference field to the user profile called ```field_user_group```.  I then linked it to both group types I made.  From here, it is just a matter or linking the source gid property i set in ```d7_group_user``` in the yaml.  This is what the final user yaml migration file looked like:
+
+```yaml
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_user
+class: Drupal\user\Plugin\migrate\User
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+migration_group: users
+label: 'User accounts'
+source:
+  plugin: d7_group_user
+process:
+  uid: uid
+  name: name
+  pass: pass
+  mail: mail
+  created: created
+  access: access
+  login: login
+  status: status
+  timezone: timezone
+  langcode:
+    plugin: user_langcode
+    source: language
+    fallback_to_site_default: false
+  preferred_langcode:
+    plugin: user_langcode
+    source: language
+    fallback_to_site_default: true
+  preferred_admin_langcode:
+    plugin: user_langcode
+    source: language
+    fallback_to_site_default: true
+  init: init
+  roles:
+    plugin: migration_lookup
+    migration: upgrade_d7_user_role
+    source: roles
+  field_user_group: gids
+destination:
+  plugin: custom_user
+migration_dependencies:
+  required:
+    - upgrade_d7_user_role
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_file
+    - upgrade_user_picture_field_instance
+    - upgrade_user_picture_entity_display
+    - upgrade_user_picture_entity_form_display
+```
+
+As you can see, we lined up all the elements of our ground here in the migration.  I have the custom source plugin ```d7_group_user```, the custom destination plugin ```custom_user``` and the ```field_user_group``` is getting populated with our gids set in the source plugin.  so that gets our users migrated and into their respective groups plus it lines up our entity reference field as well.  So how do we handle users and groups post migration?  Let's go over that now.
+
+#### Adding users to groups post migration via the Entity Reference Field.
+
+So our use case wants us to be able to add users to their respective Groups when they are saved.  We can do this by utilizing Drupal 8's hook entity system.  Here is the code I created to handle this, first in the .module of your custom module throw this in there:
+
+```php
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ *
+ * Adds a user to the respective group identified.
+ */
+function YOUR_MODULE_user_insert(EntityInterface $entity) {
+  $add = (new YourModuleGroup($entity))->addUserToGroup('field_user_group');
+}
+```
+
+Then I created a custom class that looks like this:
+
+```php
+namespace Drupal\YOUR_MODULE;
+
+use Drupal\group\Entity\Group;
+
+class YourModuleGroup {
+
+  /**
+   * @var object
+   */
+  protected $entity;
+
+  /**
+   * DgreatGroup constructor.
+   */
+  public function __construct($entity) {
+    $this->entity = $entity;
+  }
+
+  /**
+   * Adds a user to a group specified by a ER field on the user profile.
+   *
+   * @param $field
+   *   The field we are using as a reference for the group.
+   *
+   * @return bool
+   */
+  public function addUserToGroup($field) {
+    $group_ids = $this->entity->get($field)->getValue();
+
+    // Let's go through Each Group and add users.
+    foreach ($group_ids as $gid) {
+      if (isset($gid['target_id'])) {
+
+        $group = Group::load($gid['target_id']);
+
+        if ($group !== NULL) {
+          $group->addMember($this->entity);
+        }
+      }
+    }
+
+    // Fail safe return
+    return FALSE;
+  }
+}
+```
+
+So let's break this down a little so you can understand the mechanisms at play.  When a user is being added (aka inserted), we are instantiating this custom class.  We are then passing the entity reference field name to the method ```addUserToGroup```.  From there, it is cycling through all the entity reference ids and adding the user entity to those groups.  Pretty straight forward and easy to do.  We will be adding to this class later on as well.
+
+_Note: We also need to add a method for removing the user from groups if they are no longer in that field.  That would be done via hook_entity_update, but that isn't covered here._
+
+### Migrating the Content
+
+So the final part of this migration is migrating over the content into its respective groups.  There is also a similar requirement for having an entity reference field on the node that adds the content to its respective groups.  Our approach is not too dissimilar from what we did with our users.  The only difference is we do not need a custom destination plugin since the content entity is available before the migration is finished.
+
+Prior to this step, I migrated the ```node_type``` and removed the Organic Group entity reference field from my respective content type.  I then created a new Group entity reference field called ```field_group_audience``` that linked to groups group type.  I then went to my group types and hit edit.  I clicked on the content tab and installed the relationship for the node type I am migrating.  This creates the bridge between the group and then node.
+
+So with the content type setup we can truck ahead.  The first part of this migration, like before, is finding all the Organic Group nids that the piece of content belongs to.  We do this was a custom source plugin that looks like this:
+
+```php
+
+namespace Drupal\YOUR_MODULE\Plugin\migrate\source;
+
+use Drupal\node\Plugin\migrate\source\d7\Node;
+use Drupal\migrate\Row;
+
+/**
+ * Extends the D7 Node source plugin so we can grab OG info.
+ *
+ * @MigrateSource(
+ *   id = "d7_node_custom",
+ *   source_module = "node"
+ * )
+ */
+class CustomNode extends Node {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function prepareRow(Row $row) {
+    // Grab our nid and grab the Group ID from the D7 OG table.
+    $nid = $row->getSourceProperty('nid');
+    $query = $this->select('og_membership', 'og')
+      ->fields('og', ['gid'])
+      ->condition('etid', $nid)
+      ->condition('entity_type', 'node')
+      ->execute()
+      ->fetchAll();
+
+    // Set our array of values.
+    $gids = [];
+    foreach ($query as $gid) {
+      $gids[] = $gid['gid'];
+    }
+
+    // Set the property to use as source in the yaml.
+    $row->setSourceProperty('gids', $gids);
+
+    return parent::prepareRow($row);
+  }
+}
+```
+
+Fairly straight forward and similar to our previous source plugin.  So by now, you should be seeing a pattern emerging on migrating this data.  From here, we just need to tidy up our YAML to reflect the changesas such:
+
+```yaml
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_MY_NODE_TYPE
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+migration_group: nodes
+label: 'Nodes (MY_NODE_TYPE)'
+source:
+  plugin: d7_node_custom
+  node_type: MY_NODE_TYPE
+process:
+  nid: tnid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  field_group_audience: gids
+destination:
+  plugin: 'entity:node'
+  default_bundle: MY_NODE_TYPE
+migration_dependencies:
+  optional:
+    - upgrade_d7_node_type
+    - upgrade_d7_user
+    - upgrade_d7_field_instance
+    - upgrade_d7_comment_field_instance
+```
+
+For the sake of brevity and what not, there were other fields that were getting migrating, I just didn't show them in the example.  So as you can see, this is similar to everything else we have been doing.  We set the custom source plugin ```d7_node_custom``` and then set up our entity reference field ```field_group_audience``` to match our gids as well.
+
+From here, we also need to add our nodes to their respective group as they are being migrated.  We can do this via the class we wrote above and an additional method.  In the same .module you used with your user migration add the following:
+
+```php
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ *
+ * Adds a node to the respective group identified.
+ */
+function YOUR_MODULE_node_insert(EntityInterface $entity) {
+
+  switch ($entity->bundle()) {
+    case 'MY_NODE_TYPE':
+      $add = (new YourModuleGroup($entity))->addNodeToGroup('field_group_audience');
+      break;
+  }
+}
+```
+
+Then in the YourModuleGroup class, we are adding another method for the nodes.  The full example of the class is:
+
+```php
+namespace Drupal\YOUR_MODULE;
+
+use Drupal\group\Entity\Group;
+
+class YourModuleGroup {
+
+  /**
+   * @var object
+   */
+  protected $entity;
+
+  /**
+   * DgreatGroup constructor.
+   */
+  public function __construct($entity) {
+    $this->entity = $entity;
+  }
+
+  /**
+   * Adds a node to a group specified by a ER field on the node.
+   *
+   * @param $field
+   *   The field we are using as a reference for the group.
+   *
+   * @return bool
+   */
+  public function addNodeToGroup($field) {
+    $plugin_id = 'group_node:' . $this->entity->bundle();
+    $group_ids = $this->entity->get($field)->getValue();
+
+    foreach ($group_ids as $group_id) {
+      // If it is assigned, then lets do the magix.
+      if (isset($group_id['target_id'])) {
+
+        $group = Group::load($group_id['target_id']);
+
+        // Unpublished groups were not migrated.
+        // This prevents the failure due to this.
+        if ($group === NULL) {
+          continue;
+        }
+
+        // Lets remove the existing content to prevent errors.
+        $check = $group->getContentByEntityId($plugin_id, $this->entity->id());
+        if (!empty($check)) {
+          foreach ($check as $g) {
+            $g->delete();
+          }
+        }
+
+        // Add the content to the group.
+        $group->addContent($this->entity, $plugin_id);
+      }
+    }
+
+    // Fail safe return
+    return FALSE;
+  }
+
+  /**
+   * Adds a user to a group specified by a ER field on the user profile.
+   *
+   * @param $field
+   *   The field we are using as a reference for the group.
+   *
+   * @return bool
+   */
+  public function addUserToGroup($field) {
+    $group_ids = $this->entity->get($field)->getValue();
+
+    // Let's go through Each Group and add users.
+    foreach ($group_ids as $gid) {
+      if (isset($gid['target_id'])) {
+
+        $group = Group::load($gid['target_id']);
+
+        if ($group !== NULL) {
+          $group->addMember($this->entity);
+        }
+      }
+    }
+
+    // Fail safe return
+    return FALSE;
+  }
+}
+```
+
+As you can see, we added the addNodeToGroup method in our class.  The main difference is that we are grabbing the relationship bridge we set up earlier in the content tab of the group type.  This allows us to properly add the node to the right content type relationship.  You can see by my comments in the method about some other added flair as well.  So that is it, this adds our content to the group when it is migrated and everything is all set.
+
+Conclusion
+----------
+
+This was a lot of ground to cover and I hope you were able to follow it.  There was some added functionality with our use case, but you can cherry pick the parts you need in order to get your migration to work properly.  I really like how the Group module functions and will use it with all our projects that require that type of functionality.  I hope this helps you to easily migrate your site when the time comes.
