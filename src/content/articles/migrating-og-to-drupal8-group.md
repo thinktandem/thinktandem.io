@@ -63,7 +63,7 @@ function YOUR_MODULE_migrate_prepare_row(Row $row, MigrateSourceInterface $sourc
 
 As you can see, I am basically grabbing the title, and then slugifying it into a url.  this way we have a new alias based off our title.  Having an alias for a group is different than Organic Groups because every Group has its own landing page basically.  When you view a Group, there are multiple actions that can be taken, like viewing the nodes and users.  This is the all encompassing feature I mentioned earlier.
 
-So now that we have the mechanism to import the Organic Groups, now we need to setup our YAML file to handle the actual migration of the groups.
+So now that we have the mechanism to import the Organic Groups, now we need to setup our YAML files to handle the actual migration of the groups.
 
 ```yaml
 langcode: en
@@ -119,7 +119,7 @@ destination:
 migration_dependencies: null
 ```
 
-So as you can see from both YAMLs it is too different than a typical content migration tasks with a few exceptions.  The magic is happening in the process portion of these YAML migration files.  In the ```type``` key I am specifying the group type I setup earlier.  I am then mapping the 3 fields accordingly and using the Group ```destination``` plugin.  If you ever need to see what entity plugins are available, you can use [Drupal Console](https://drupalconsole.com/) and run ```drupal debug:entity``` from your cli.
+So as you can see from both YAMLs it isn't too different than a typical content migration tasks with a few exceptions.  The magic is happening in the process portion of these YAML migration files.  In the ```type``` key I am specifying the group type I setup earlier.  I am then mapping the 3 fields accordingly and using the Group ```destination``` plugin.  If you ever need to see what entity plugins are available, you can use [Drupal Console](https://drupalconsole.com/) and run ```drupal debug:entity``` from your cli.
 
 So that is it for setting up the Group entities themselves.  Once I run ```drush mim --group=insert_group``` all my Drupal 7 Organic Groups will be migrated as Drupal 8 Groups.
 
@@ -149,7 +149,7 @@ class GroupUser extends User {
    * {@inheritdoc}
    */
   public function prepareRow(Row $row) {
-    // Grab our nid and grab the Group ID from the D7 OG tables.
+    // Grab our uid and grab the Group ID from the D7 OG tables.
     $uid = $row->getSourceProperty('uid');
 
     // Grab data from both tables.
@@ -288,13 +288,13 @@ class EntityUserPostSave extends EntityUser {
 }
 ```
 
-Let's break down what I had to do to get this to work.  First, I had to extend the create plugin and hard code the ```$plugin_id``` as ```entity:user```.  If I didn't do this, it would fail and say that the ```custom_user``` plugin did not exist.  Which makes sense since I am defining that in the Annotation potion of the code.  We technically wanted to extend the user plugin, not create a new one.  So this tweak fixed that issue.
+Let's break down what I had to do to get this to work.  First, I had to extend the create plugin and hard code the ```$plugin_id``` as ```entity:user```.  If I didn't do this, it would fail and say that the ```custom_user``` plugin did not exist.  Which makes sense since I am defining that in the Annotation portion of the code.  We technically wanted to extend the user plugin, not create a new one.  So this tweak fixed that issue.
 
-The next issue was getting out destination variables we set in the source plugin into this class.  The way to handle this is through the import method as you can see.  We are setting a private property so that we can use it in the next step.
+The next issue was getting the destination variables we set in the source plugin into this class.  The way to handle this is through the import method as you can see.  We are setting a private property so that we can use it in the next step.
 
-The final issue was getting the entity to save then mapping it against the user's respective groups.  To do this, I had to extend the save method and slap in the code from its parents.  My class had two parents: EntityUser and EntityContentBase.  When I tried to just add the user to the group without doing this, it would fail.  Why would it do this?  Because the user was still being saved post fact of this class.  Also, just called the parent function before my group saving code didn't work either.  So, the solution was to grab the parts from the parents, call it in order in my code.  This solved the issues.
+The final issue was getting the entity to save then mapping it against the user's respective groups.  To do this, I had to extend the save method and slap in the code from its parents.  My class had two parents: EntityUser and EntityContentBase.  When I tried to just add the user to the group without doing this, it would fail.  Why would it do this?  Because the user was still being saved post fact of this class.  Also, just called the parent function before my group saving code didn't work either.  So, the solution was to grab the parts from the parents, call it in order in my code.
 
-You can see from the code above, I am also using the static method ```Group::load()```.  This is where the Groups module is great because it allows me to do simple calls like this to handle my functionality.  the code is pretty straight forward, but lets go over it really quick.  The gids are the Organic Group nids form the Drupal 7 that are now the Drupal 8 Group ids.  We are cycling thought each one and adding it to the Group via the ```addMember``` method that the loaded Group class provides us with.  Pretty simple and easy to do and this gets our users into their respective groups on migration.  I will show the final YAML for the user migration below in the next section.
+You can see from the code above, I am also using the static method ```Group::load()```.  This is where the Groups module is great because it allows me to do simple calls like this to load and use different parts of the group.  the code is pretty straight forward, but lets go over it really quick.  The gids are the Organic Group nids form the Drupal 7 that are now the Drupal 8 Group ids.  We are cycling thought each one and adding it to the Group via the ```addMember``` method that the loaded Group class provides us with.  Pretty simple and easy to do and this gets our users into their respective groups on migration.  I will show the final YAML for the user migration below in the next section.
 
 ### Migrating the Organic Group User Entity Reference Field.
 
@@ -480,7 +480,7 @@ class CustomNode extends Node {
 }
 ```
 
-Fairly straight forward and similar to our previous source plugin.  So by now, you should be seeing a pattern emerging on migrating this data.  From here, we just need to tidy up our YAML to reflect the changesas such:
+Fairly straight forward and similar to our previous source plugin.  So by now, you should be seeing a pattern emerging on migrating this data.  From here, we just need to tidy up our YAML to reflect the changes as such:
 
 ```yaml
 langcode: en
@@ -526,7 +526,7 @@ migration_dependencies:
     - upgrade_d7_comment_field_instance
 ```
 
-For the sake of brevity and what not, there were other fields that were getting migrating, I just didn't show them in the example.  So as you can see, this is similar to everything else we have been doing.  We set the custom source plugin ```d7_node_custom``` and then set up our entity reference field ```field_group_audience``` to match our gids as well.
+For the sake of brevity and what not, there were other fields that were getting migrated, I just didn't show them in the example.  So as you can see, this is similar to everything else we have been doing.  We set the custom source plugin ```d7_node_custom``` and then set up our entity reference field ```field_group_audience``` to match our gids as well.
 
 From here, we also need to add our nodes to their respective group as they are being migrated.  We can do this via the class we wrote above and an additional method.  In the same .module you used with your user migration add the following:
 
