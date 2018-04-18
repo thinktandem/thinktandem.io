@@ -37,7 +37,8 @@
     "metalsmith-youtube": "^1.0.2",
     "swig": "^1.4.2",
     "swig-extras": "https://github.com/reynoldsalec/swig-extras.git",
-    "xor-crypt": "~1.0.0"
+    "xor-crypt": "~1.0.0",
+    "prismjs": "1.13.0"
   },
   "scripts": {
     "build": "/app/node_modules/.bin/metalsmith build",

@@ -22,6 +22,6 @@ To determine the leaders for this report, Clutch evaluated hundreds of companies
 
 With every project, we deliver finely honed code and impressive digital strategies with our client’s needs and best interests in mind. Our team does everything we can to increase the value each business gets from its technology-enabled channels. As a result of our dedication and top-notch services, we’ve experienced successes and earned an overall 5-star rating from our client on Clutch. Check out the great comments they shared about their experience working with us and the database architecture we developed for them:
 
-“I've worked with a lot of developers over the years, and Tandem is incredibly easy to communicate with...The whole team was an absolute pleasure to work with. They understood our business goals and provided quality development.”
+> I've worked with a lot of developers over the years, and Tandem is incredibly easy to communicate with...The whole team was an absolute pleasure to work with. They understood our business goals and provided quality development.
 
 Thank you to our clients for sharing your feedback, and to Clutch for including us in their research!
