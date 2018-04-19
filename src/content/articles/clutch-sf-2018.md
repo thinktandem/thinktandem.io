@@ -14,7 +14,7 @@ byline: Clutch has named Tandem one of the leading Drupal development agencies i
 date: 2018-04-18
 ---
 
-Last month, the B2B ratings and reviews platform Clutch named the top San Francisco agencies and developers in 2018. We are proud to announce that Tandem was recognized for our expertise and made the list!
+Last month, the B2B ratings and reviews platform Clutch named the top San Francisco agencies and developers in 2018. We are proud to announce that Tandem was recognized for our expertise and made [the list](https://clutch.co/developers/drupal/san-francisco)!
 
 While we have experience with a variety of technologies, Drupal is our top choice for enterprise-grade needs because of its strength as an open source content management system. We've been working with Drupal for over 6 years, and many of our developers have been Drupal contributors for more than a decade. This is why we are thrilled to be featured in this research as one of the top 15 Drupal developers.
 
