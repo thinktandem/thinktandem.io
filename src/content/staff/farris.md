@@ -3,7 +3,7 @@ name: Joel Farris
 first: Joel
 last: Farris
 color: habenero
-weight: 5
+weight: 99
 role: Technical PM
 dev: Senior Front End Developer
 image: images/joel-sm.jpg
