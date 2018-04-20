@@ -1,6 +1,6 @@
 ---
 layout: layouts/article.html
-title: "Handling Post Migation Events in Drupal 8"
+title: "Handling Post Migration Events in Drupal 8"
 tags: development, drupal
 permalink: true
 seo:
