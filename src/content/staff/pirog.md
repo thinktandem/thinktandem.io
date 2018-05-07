@@ -3,9 +3,9 @@ name: Mike Pirog
 first: Mike
 last: Pirog
 color: londonderry
-weight: 2
+weight: 3
 role: CTO
-dev: Senior DevOps Engineer
+dev: DevOps, NodeJS, and VueJS
 image: images/mike-sm.jpg
 link: https://twitter.com/pirogcommamike
 layout: components/molecules/bio/bio.html

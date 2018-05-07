@@ -5,7 +5,7 @@ last: Reynolds
 color: ostara
 weight: 0
 role: CEO
-dev: Senior Architect
+dev: Laravel and AngularJS
 image: images/alec-sm.jpg
 link: https://twitter.com/reynoldsalec
 layout: components/molecules/bio/bio.html
