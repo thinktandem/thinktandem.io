@@ -75,7 +75,7 @@ jsonld:
     jobTitle: Operations
     sameAs:
       - https://www.linkedin.com/in/natasha-kondratenko-4551b28b/
-      - https://twitter.com/kondratenko_tas
+      - https://twitter.com/natusechka22
 lastmod: 2017-10-12
 ---
 Our experienced and elite team has seen it all; wrangled projects big and small
