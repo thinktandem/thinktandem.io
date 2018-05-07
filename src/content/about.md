@@ -32,7 +32,7 @@ jsonld:
   - "@context": http://schema.org/
     "@type": Person
     name: John Ouellet
-    jobTitle: Sales Engineering Manager
+    jobTitle: Senior Software Engineer
     sameAs:
       - https://www.linkedin.com/in/johnouellet/
       - https://twitter.com/labboy0276
@@ -48,11 +48,34 @@ jsonld:
   - "@context": http://schema.org/
     "@type": Person
     name: Geoff St. Pierre
-    jobTitle: Lead Developer
+    jobTitle: Senior Software Engineer
     sameAs:
       - https://www.linkedin.com/in/geoff-st-pierre-28b19914/
       - https://twitter.com/serundeputy
       - https://github.com/serundeputy
+  - "@context": http://schema.org/
+    "@type": Person
+    name: Dustin LeBlanc
+    jobTitle: Senior Software Engineer
+    sameAs:
+      - https://www.linkedin.com/in/dustinleblanc/
+      - https://twitter.com/DustinLeblanc
+      - https://github.com/dustinleblanc
+  - "@context": http://schema.org/
+    "@type": Person
+    name: Sarah Branon
+    jobTitle: Senior Software Engineer
+    sameAs:
+      - https://www.linkedin.com/in/sarahthereynolds/
+      - https://twitter.com/SarahBranon
+      - https://github.com/sarahbranon
+  - "@context": http://schema.org/
+    "@type": Person
+    name: Natasha Kondratenko
+    jobTitle: Operations
+    sameAs:
+      - https://www.linkedin.com/in/natasha-kondratenko-4551b28b/
+      - https://twitter.com/kondratenko_tas
 lastmod: 2017-10-12
 ---
 Our experienced and elite team has seen it all; wrangled projects big and small
