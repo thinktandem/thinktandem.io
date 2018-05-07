@@ -3,9 +3,9 @@ name: Natasha Kondratenko
 first: Natasha
 last: Kondratenko
 color: hotSauce
-weight: 12
+weight: 4
 role: Operations
-dev: Finances & Admin
+dev: Finances and Admin
 image: images/natasha.jpg
 hover: images/natasha.jpg
 link: https://twitter.com/kondratenko_tas

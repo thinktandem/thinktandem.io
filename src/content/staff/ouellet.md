@@ -4,8 +4,8 @@ first: John
 last: Ouellet
 color: miami
 weight: 1
-role: Sales Engineering Manager
-dev: Senior Engineer
+role: Senior Software Engineer
+dev: Sales Engineering, Drupal, and Wordpress
 image: images/john-sm.jpg
 hover: images/john-hover.jpg
 link: https://twitter.com/labboy0276
