@@ -7,7 +7,6 @@ weight: 10
 role: Senior Software Engineer
 dev: Laravel, Drupal, Rails, and NodeJS
 image: images/dustin-sm.jpg
-hover: images/gff_hover.jpg
 link: https://twitter.com/DustinLeblanc
 layout: components/molecules/bio/bio.html
 quote: People Don't buy what you do, they buy why you do it.
