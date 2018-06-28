@@ -45,6 +45,24 @@ dependencies:
 # The hooks that will be performed when the package is deployed.
 hooks:
   build: |
+    curl -sS https://platform.sh/cli/installer | php
     npm install
     bower install
     grunt build
+
+# The configuration of scheduled execution.
+crons:
+    snapshot:
+        # Take a snapshot automatically every night at 3 am (UTC).
+        spec: '0 3 * * *'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = master ]; then
+                /app/.platformsh/bin/platform snapshot:create --yes --no-wait
+            fi
+    renewcert:
+        # Force a redeploy at 9 am (UTC) on the 14th of every month.
+        spec: '0 9 14 * *'
+        cmd: |
+            if [ "$PLATFORM_BRANCH" = master ]; then
+                /app/.platformsh/bin/platform redeploy --yes --no-wait
+            fi
