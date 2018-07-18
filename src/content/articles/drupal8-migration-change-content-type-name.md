@@ -10,22 +10,22 @@ author: John Ouellet
 private: false
 mainImage: images/articles/drupal-migration.jpg
 img-src: images/articles/drupal-migration.jpg
-byline: Changing a content type machine name in Drupal Migration requires a little bit of migration knowledge, but is fairly straight forward to do.
+byline: Changing a content type machine name during a Drupal Migration requires a little bit of migration knowledge, but is fairly straight forward to do.
 date: 2018-07-18
 ---
 
 The Use Case
 ---------------------
 
-It is a typical occurrence when a Drupal site has its content types named one way, but then later, it is decided to rename it.  You can change the display name of the content type, but the machine name is more difficult to change.  There are not many options in Drupal 7 to rectify this issue.  So usually you just truck ahead with it staying as is.
+It is a typical occurrence when a Drupal site has its content types named one way when it is built.  Then, later on it is changed to better reflect what that type currently does.  You can change the display name of the content type, but the machine name is more difficult to change.  There are not many options in Drupal 7 to rectify this issue.  So usually you just truck ahead with it staying as is.
 
 There are several issues with leaving this as is:
 
-1. If you use content type based templates, it is confusing as to what the template belongs to.
+1. If you use content type based templates, it is confusing as to what content type the template belongs to.
 2. If you use field naming conventions (i.e field_MACHINENAME_FIELDNAME) they won't match.
 3. It can be confusing for new developers to the site.
 
-Since we are migrating this site to a Decoupled Drupal 8 architecture, now is our chance to rectify this problem.  Below you will see the way I recommend doing this.  I will also show a partial alternate way of handling it as well.
+When you migrate a site to Drupal 8, you will have your chance to rectify this problem.  Below you will see the way I recommend doing this.  I will also show a partial alternate way of handling it as well.
 
 
 My Recommended Migration Method for changing the content type machine name
@@ -33,7 +33,7 @@ My Recommended Migration Method for changing the content type machine name
 
 Every Drupal 8 migration I have done so far needs some custom love to make it work right.  It is common to skip over certain fields, exclude certain entity types, etc.  Every scenario has a reason to do this.  I have found that ```hook_migrate_prepare_row()``` is by far the quickest and easiest way to handle said tasks.  There are also use cases to use the migration classes as well, but this is not one of them.
 
-Below is the final code I used to rename a few content types for this migration.  I will break out each section and explain what is going on.
+Below is the final code I used to rename a few content types for this migration.  I will break out each section and explain what is going on after this code snippet.
 
 
 ```php
