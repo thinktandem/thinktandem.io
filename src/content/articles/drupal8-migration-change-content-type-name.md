@@ -138,7 +138,7 @@ So this is fairly easy to do.  It just took a lot of debugging on my part to fig
 Alternate Migration Method for changing the content type machine name
 ---------------------
 
-Drupal has a robust migration plugin system that uses the yaml discovery process.  Since all our migrations are in config, you can perform some of the tasks above via yaml files instead.  However, you won't fully be able to do the whole thing in the yaml files due to the logic that needs to happen with the ```upgrade_d7_field``` id.
+Drupal has a robust migration plugin system that uses the yaml discovery process.  Since all our migrations are in config, you can perform some of the tasks above via yaml files instead.  However, you won't fully be able to do the whole task at hand in the yaml files due to the logic that needs to happen with the ```upgrade_d7_field``` id.
 
 **Node Type YAML Changes**
 
