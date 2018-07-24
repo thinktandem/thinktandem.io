@@ -37,6 +37,11 @@
             {% include "../components/molecules/bio/bio.html" %}
           {% endfor %}
         </div>
+        <div class="row staff">
+          {% for staff in collections.staff|slice(9,12) %}
+          {% include "../components/molecules/bio/bio.html" %}
+          {% endfor %}
+        </div>
       </div>
     </div>
 

@@ -168,7 +168,7 @@ So as you can see, this class has 3 methods: query, fields, and getIds.  The que
 
 Now that we have the source class written, we can link it up with what was listed in the Drupal 8 table identified above.  The result of that is the following:
 
-```YAML
+```yaml
 langcode: en
 status: true
 dependencies:
