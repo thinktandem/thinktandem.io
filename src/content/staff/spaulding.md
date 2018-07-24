@@ -5,7 +5,7 @@ last: Spaulding
 color: ostara
 weight: 25
 role: Designer
-dev: Branding & Design
+dev: Branding and Design
 image: images/kyle.jpg
 link: #
 layout: components/molecules/bio/bio.html
