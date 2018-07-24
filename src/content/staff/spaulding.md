@@ -4,7 +4,7 @@ first: Kyle
 last: Spaulding
 color: ostara
 weight: 25
-role: Senior Designer
+role: Designer
 dev: Branding & Design
 image: images/kyle.jpg
 link: #
