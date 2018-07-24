@@ -91,7 +91,7 @@ I double check this by searching the code base for the workflow_transition plugi
 Writing The Migration Path
 ----------------------------
 
-So with the investigation complete, it is time to get our hands dirty and write this migration path.  We will need two items to make this happen: a class defining the migration source and a yaml config file mapping that source.  Let's start with the migration source class:
+So with the investigation complete, it is time to get our hands dirty and write this migration path.  We will need two items to make this happen: a class defining the migration source and a YAML config file mapping that source.  Let's start with the migration source class:
 
 ### The Migration Source Class
 
@@ -168,7 +168,7 @@ So as you can see, this class has 3 methods: query, fields, and getIds.  The que
 
 Now that we have the source class written, we can link it up with what was listed in the Drupal 8 table identified above.  The result of that is the following:
 
-```yaml
+```YAML
 langcode: en
 status: true
 dependencies:
@@ -238,7 +238,7 @@ destination:
 migration_dependencies: {  }
 ```
 
-Let's break this down a little to make it easier to understand.  We identified the source as the plugin we created ```workflow_migrate```.  That links this yaml file to that class via the yaml discovery plugin process.  From there we just mapped the entity / database fields to the Drupal 7 source fields.
+Let's break this down a little to make it easier to understand.  We identified the source as the plugin we created ```workflow_migrate```.  That links this YAML file to that class via the YAML discovery plugin process.  From there we just mapped the entity / database fields to the Drupal 7 source fields.
 
 One item that stands out is the wid field.  This was not in the Drupal 7 database and after digging, it is the workflow id.  This is the id of the workflow we manually setup.  Since we have just one workflow on this site, we just used a default value for it as it is the same for all the entries.
 
