@@ -17,9 +17,9 @@ date: 2018-07-24
 Migrating The Workflow Module
 ---------------------
 
-We have a client that utilizes Drupal in a unique way.  They use Drupal as a proposal management system for their philanthropic efforts.  We recently migrated their site from Drupal 7 to Drupal 8.   It was a very complex and unique Drupal 8 migration compared to others we have done.  One of the module they use on their site is [Workflow](https://www.drupal.org/project/workflow).  It is used to handle various states of the proposal throughout the grant process.
+We have a client that utilizes Drupal in a unique way. They use Drupal as a proposal management system for their philanthropic efforts.  We recently migrated their site from Drupal 7 to Drupal 8.   It was a complex and very different when compared to other Drupal 8 migrations our team has performed.  One of the module they use on their site is [Workflow](https://www.drupal.org/project/workflow).  It is used to handle various states of the proposal throughout the grant process.
 
-It is a great module and simplifies their workflow tremendously.  One issue though, is there is no migration built yet for their Drupal 8 version.  We did need to migrate all the proposal workflow history as a requirement for legal reasons.  So we knew we had to handle this on our own.  Fortunately, it is very easy to do, so keep reading and we will show you how to handle writing the module upgrade path.
+Workflow is a great module and simplifies their workflow tremendously.  One issue though, is there is no migration built yet for their Drupal 8 version.  We did need to migrate all the proposal workflow history as a requirement for legal reasons, so we knew we had to handle this on our own.  Fortunately, it is very easy to do, so keep reading and we will show you how to handle writing the module upgrade path.
 
 
 Investigating what to move
@@ -29,7 +29,7 @@ I know that in both the Drupal 7 and Drupal 8 version of Workflow, all data is s
 
 ### Drupal 7 Database Investigation
 
-I fired up the Drupal 7 version of the site and drop into the MySQL CLI via ```drush sql-cli```.  I then run ```SHOW TABLES;``` to list all the tables in the database.  I can see 8 tables that pertain to the Workflow module.  Since we are only moving the workflow history, the ```workflow_node_history``` table seemed to be our winner.  I then ran ```DESCRIBE workflow_node_history;``` and the output is as such:
+I fired up the Drupal 7 version of the site and drop into the MySQL CLI via ```drush sql-cli```.  I then run ```SHOW TABLES;``` to list all the tables in the database.  I can see eight tables that pertain to the Workflow module.  Since we are only moving the workflow history, the ```workflow_node_history``` table seemed to be our winner.  I then ran ```DESCRIBE workflow_node_history;``` and the output is as such:
 
 ```sql
 mysql> describe workflow_node_history;
@@ -56,7 +56,7 @@ These are all the fields that contain the data I need.  I figured this out via a
 
 ### Drupal 8 Database Investigation
 
-On the Drupal 8 side, workflow is already installed and set up.  We manually migrated the workflow states and everything pertaining to that setup.  So that just leaves looking into the database for how the workflow history is stored now.  Using the ```SHOW TABLES;``` command, I could see that there were only 2 Workflow tables and one was ```workflow_transition_history```.  I ran my describe command and it showed the following:
+On the Drupal 8 side, workflow is already installed and set up.  We manually migrated the workflow states and everything pertaining to that setup.  So that just leaves looking into the database for how the workflow history is stored now.  Using the ```SHOW TABLES;``` command, I could see that there were only two Workflow tables and one was ```workflow_transition_history```.  I ran my describe command and it showed the following:
 
 ```sql
 MariaDB [drupal8]> describe workflow_transition_history;
@@ -80,7 +80,7 @@ MariaDB [drupal8]> describe workflow_transition_history;
 13 rows in set (0.00 sec)
 ```
 
-So the data is very similar.  There is a new column (wid) and some are named different.  Luckily for us, it is very straight forward to map data to whatever column we need.
+The data is very similar; there is a new column (wid) and some are named different.  Luckily for us, it is very straight forward to map data to whatever column we need.
 
 ### Drupal 8 Entity Investigation
 
