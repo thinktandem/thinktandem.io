@@ -37,8 +37,8 @@ Tandem recommends that every site be at least Section 508 compliant as well as W
   <div class="col-sm-6">
     <h2>Accessibility Implementation</h2>
     <ul>
-      <li>Implement manul fixes to become compliant</li>
-      <li>Implement automated accessibility testing in a Continuous Integratio</li>
+      <li>Implement manual fixes to become compliant</li>
+      <li>Implement automated accessibility testing in a Continuous Integration</li>
       <l1>Create documentation to preserve an accessible content strategy into the future</li>
     </ul>
   </div>
