@@ -11,7 +11,7 @@ private: false
 mainImage: images/articles/a11yHigherEd.png
 img-src: images/articles/a11yHigherEd.png
 byline: And how to make it a little easier to manage
-date: 2019-08-02
+date: 2018-08-03
 ---
 
 What Higher Ed. Needs to Know About Accessibility
