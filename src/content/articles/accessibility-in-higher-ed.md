@@ -92,7 +92,7 @@ So what are those steps? Those may vary from institute to institute but from wha
 	</li><li>Know that you and your team are doing the right thing to provide the most positive user experience you can for ALL of your users.</li></ul></ol>
 
 
-Experts are those who are constantly aware how much there is left to learn and decided to learn more!
+Experts are those who are constantly aware of how much there is left to learn and have decided to learn more!
 ----------
 
 What do I mean by that? It’s simple, there’s a LOT out there. Accessibility affects every aspect of your website marketing; from persona development to UX/design, to both front and backend development. There are social, ethical, and legal considerations. There’s a lot but you’re just another person traveling this path and we’re all learning. Hopefully, a little wiser to what accessibility is and how to navigate these woods than you were a few minutes ago. And [if you need help or just someone to help you put it into context for your stakeholders, give me a shout](https://thinktandem.io/contact/)! You’ll be fine, and your little dog too. <em>...couldn't resist...</em>
