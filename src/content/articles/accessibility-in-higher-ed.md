@@ -36,7 +36,7 @@ Accessibility 101: The Cliffs Notes
 Okay, there’s a lot of information out there about accessibility, and in some cases, those of us who write about all of this can drone on so let me break this down to it’s bare bones.
 
   * Web Accessibility exists to break down barriers for those with visual, auditory, amiability, or cognitive disabilities
-  * Web Accessibility is also good for SEO, emerging technologies, and helps your users who are experiencing a bad user experience (glare, cracked screen, crowded room)
+  * Web Accessibility is also good for SEO, emerging technologies, and helps your users who are in the midst of a bad user experience (glare, cracked screen, crowded room)
   * The W3C sets the bar for standards and best practices for the web internationally
   * The Web Content Accessibility Guidelines (WCAG) are the internationally recognized standards that provide guidance as to what on a site needs to be accessible
   * WCAG 2.0 is the older version and is still very relevant
