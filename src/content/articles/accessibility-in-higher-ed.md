@@ -14,11 +14,6 @@ byline: And how to make it a little easier to manage
 date: 2018-08-03
 ---
 
-What Higher Ed. Needs to Know About Accessibility
------------------------------
-And how to make it a little easier 
--------
-
 So do you want the good news or bad news first? Bad news first, you’ve got it! 
 
   * Last I checked, the [University of Minnesota](http://www.d.umn.edu/~lcarlson/atteam/lawsuits.html) listed 163 “Higher educational institutions face liability for inaccessible web content and technologies.” This had grown significantly since the last I checked and I’ve not verified that it is a complete representation. 
