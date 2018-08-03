@@ -24,6 +24,10 @@
     padding-bottom: 1em;
     padding-top: 1em;
   }
+  
+ #posts .featured-post .title a {
+   text-transform: none;
+  }
 
   .pages {
     @media(max-width: 991px) {
