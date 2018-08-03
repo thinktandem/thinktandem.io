@@ -76,20 +76,20 @@ Maybe the Accessibility Process is Like the Yellow Brick Road?
 And if it is, well then it’s a series of steps to the goal of a compliant site. **Again, it’s a process, not a nightmare!** 
 
 So what are those steps? Those may vary from institute to institute but from what I’ve read and seen to date this is the path I’d take:
-# **Put in a low-fidelity Accessibility Statement**, covering the fact you know there’s an issue and you’re assessing it now to find solutions. Also, provide them with contact information so they can reach out and be an active part of the solution! And as this is a legal statement - please send to your legal team for revisions and/or sign off prior to posting. 
-# **Invest in a full, professional accessibility assessment of your website.** These may be called audits too. Have your testers use both automated and manual testing methods. In some cases, you may wish to hire user testing groups of native users of assistive technologies. In their report be sure to know what the issue is, what guideline they are referencing, and if possible, solutions. It is helpful if they can give context as to why it is important as well. 
-# **Create a plan internally that aligns each task to estimated times to complete them.** Build this plan into your sprints to estimate how long it will take you to update the site based on your current resources. Confirm that this is in alignment with what you and your legal team negotiated and edit as needed (if working with the OCR or other legal entity).
-# **Update your Accessibility Statement to show more specific examples** of what needs to be updated and when your organization expects to have those changes made. Again, please send to your legal team for review/revisions before posting.  
-# **Start working through your tickets and updating your site.** And, depending what your lawyers say, I’d likely update your Accessibility Statement on a regular basis throughout this process to show your progress. 
-# **Train your content editors!** <em>I cannot emphasize this one enough.</em> They are on the front lines of your website maintenance and need to know what needs to be done and why. A compliant site is unlikely to stay that way without an investment from this important team!
-# **Schedule accessibility health checks.** That’s right, even with everyone invested in your site’s mission to be accessible things can drift. A single oversight by this person and that, an updated technology or new functionality: A website is a living document and can become inaccessible over time. Periodic assessments will help to keep your site in check. 
-# **Enjoy the other benefits of an accessible website!** YES, this should be on your list because there are many of them. 
-	# Potentially deter future OCR complaints and other legal action
-	# Enjoy the positive PR (or at least the lack of negative PR) that comes with having a more inclusive web presence
-	# An accessible site is more search engine friendly! Enjoy the results of SEO built into your everyday practices.
-	# Help users who are experiencing a bad user experience: glare, cracked screen, crowded place, low bandwidth, hands are full, kids playing loudly, … the list goes on and on 
-	# Friendlier to emerging technologies that use some of the same code as assistive technologies to make your everyday life easier
-	# Know that you and your team are doing the right thing to provide the most positive user experience you can for ALL of your users. 
+<ol><li>**Put in a low-fidelity Accessibility Statement**, covering the fact you know there’s an issue and you’re assessing it now to find solutions. Also, provide them with contact information so they can reach out and be an active part of the solution! And as this is a legal statement - please send to your legal team for revisions and/or sign off prior to posting. 
+	</li><li>**Invest in a full, professional accessibility assessment of your website.** These may be called audits too. Have your testers use both automated and manual testing methods. In some cases, you may wish to hire user testing groups of native users of assistive technologies. In their report be sure to know what the issue is, what guideline they are referencing, and if possible, solutions. It is helpful if they can give context as to why it is important as well. 
+</li><li>**Create a plan internally that aligns each task to estimated times to complete them.** Build this plan into your sprints to estimate how long it will take you to update the site based on your current resources. Confirm that this is in alignment with what you and your legal team negotiated and edit as needed (if working with the OCR or other legal entity).
+</li><li>**Update your Accessibility Statement to show more specific examples** of what needs to be updated and when your organization expects to have those changes made. Again, please send to your legal team for review/revisions before posting.  
+</li><li>**Start working through your tickets and updating your site.** And, depending what your lawyers say, I’d likely update your Accessibility Statement on a regular basis throughout this process to show your progress. 
+</li><li>**Train your content editors!** <em>I cannot emphasize this one enough.</em> They are on the front lines of your website maintenance and need to know what needs to be done and why. A compliant site is unlikely to stay that way without an investment from this important team!
+</li><li>**Schedule accessibility health checks.** That’s right, even with everyone invested in your site’s mission to be accessible things can drift. A single oversight by this person and that, an updated technology or new functionality: A website is a living document and can become inaccessible over time. Periodic assessments will help to keep your site in check. 
+</li><li>**Enjoy the other benefits of an accessible website!** YES, this should be on your list because there are many of them. <ul>
+	<li>Potentially deter future OCR complaints and other legal action
+	</li><li>Enjoy the positive PR (or at least the lack of negative PR) that comes with having a more inclusive web presence
+	</li><li>An accessible site is more search engine friendly! Enjoy the results of SEO built into your everyday practices.
+	</li><li>Help users who are experiencing a bad user experience: glare, cracked screen, crowded place, low bandwidth, hands are full, kids playing loudly, … the list goes on and on 
+	</li><li>Friendlier to emerging technologies that use some of the same code as assistive technologies to make your everyday life easier
+	</li><li>Know that you and your team are doing the right thing to provide the most positive user experience you can for ALL of your users.</li></ul></ol>
 
 
 Experts are those who are constantly aware how much there is left to learn and decided to learn more!
