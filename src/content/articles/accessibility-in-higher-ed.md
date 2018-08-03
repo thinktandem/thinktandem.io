@@ -45,7 +45,7 @@ Okay, there’s a lot of information out there about accessibility, and in some 
   * The American with Disabilities Act (ADA) Section 508 deals with access for disabled Americans
   * [ADA Section 508, now that it’s been refreshed](https://www.section508.gov/content/build/website-accessibility-improvement/WCAG-conformance), is equal to WCAG 2.0 AA
   * If an ADA complaint is filed against an institution it’s likely the Office of Civil Rights (OCR) that will investigate it
-		* This is different from a private firm filing papers for the same infraction. There are legal entities that specifically go hunting for sites that may not be compliant
+	* This is different from a private firm filing papers for the same infraction. There are legal entities that specifically go hunting for sites that may not be compliant
   * The goal of an OCR investigation is to determine if there is an issue and work towards a resolution
 
 Got all that? Okay! 
