@@ -1,6 +1,6 @@
 ---
 layout: layouts/article.html
-title: "What Higher Ed. Needs to Know About Accessibility"
+title: "Higher Ed. & Accessibility"
 tags: accessibility, a11y, higher education
 permalink: true
 seo:
