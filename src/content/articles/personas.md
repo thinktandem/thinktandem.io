@@ -34,6 +34,7 @@ We’ve all been in that spot: Too busy for the full-on in-depth analysis but to
 K.I.S.S.
 -------
 Like all other deliverables, I try to break the persona research down to the bare-bones, “must have” list and grow it from there. Let’s touch on what you absolutely need to know about your personas.
+
 <strong>Demographics</strong>
 Now I get that in a truly inclusive internet, many of these wouldn’t matter but at this stage, we’re not strictly talking about the web. We are looking for who is most likely to become your customer.
 * Age
@@ -43,14 +44,18 @@ Now I get that in a truly inclusive internet, many of these wouldn’t matter bu
 * Geographic location
 * Education
 * Likelihood of disabilities
+
 <strong>Tech Savviness</strong>
 Just because we’re not strictly looking at the web doesn't mean we don’t need to understand how they are comfortable engaging your company. 
 * Preferred device (desktop, tablet, phone)
 * How comfortable they are likely to be with their technology
+
 <strong>Influencers</strong>
 Through research, we can get a rough idea of who your target customer listens to. Online or off these influencers play a key role in the decision-making process.
+
 <strong>Variances</strong>
-Maybe your target customer that includes mothers ages 35-50 really has two distinct subgroups within that persona. The device and/or time of day the user looks at your website may be different between working and stay-at-home mothers. Note the important variances you’re seeing with the data you’re collecting. </li><li>
+Maybe your target customer that includes mothers ages 35-50 really has two distinct subgroups within that persona. The device and/or time of day the user looks at your website may be different between working and stay-at-home mothers. Note the important variances you’re seeing with the data you’re collecting. 
+
 <strong>Industry Specific Markers</strong>
 No one knows a company and it’s customers like the people who work with them Talk to your strategist and let them know what’s meaningful to you!
 
@@ -67,7 +72,9 @@ No really! I love this part! You get to start laying out all of the puzzle piece
 * Industry-specific organizations and publications
 
 … and by now you should have started seeing patterns. From this basic information, chances are, you’re already starting to seeing who is likely to be a customer and who’s the exception. Do you think you have a feel for who your three or four personas are? Great! Pull them out! Now let’s get to know those personas better!
+
 Fine Tuning & Presentation
+-------
 At this point, I typically start to get creative. I start to pull my deck together and give my personas a name. I look at stock photography sites and try to find imagery that is in alignment with the Juan, Dick or Henriettas I have been getting to know. I lay out demographic information and supplement it with an about section that tells a little about that persona’s life such as hobbies or other interests. 
 
 Over the following slides, I map out that personas goals, pain-points, influencers and other data relevant to the business. 
@@ -79,10 +86,12 @@ Overall - tell their story! You are their voice, so share what you feel is relev
 
 In the End, They Are the Customer
 -------
-Even at an accelerated rate, you’ve made an investment into building these personas so get to know them on a first name basis! You’re not likely to get out and speak to every customer there is so talk to your personas and know how they’d react because, in the end, they’ll be the cornerstone for many of your strategic initiatives: 
+Even at an accelerated rate, you’ve made an investment into building these personas so get to know them on a first name basis! You’re not likely to get out and speak to every customer there is so talk to your personas and know how they’d react. In the end, they’ll be the cornerstone for many of your strategic initiatives, like: 
 
 * Content Analysis - how do they take in the copy
 * Competitive Analysis - if they’re choosing between two companies, why choose one over another
 * Editorial Calendar - what will resonate with them?
 
 This can be a genuinely enjoyable process but if you get stuck, [reach out to our team, we’d love to introduce you to your updated personas](https://thinktandem.io/contact/).
+
+
