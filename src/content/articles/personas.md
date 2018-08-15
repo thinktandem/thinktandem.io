@@ -15,7 +15,7 @@ date: 2019-08-02
 
 The Strategic Cornerstones
 -------
-For me, stories have always been about the character-driven plot. I read long series that would grow these amazing characters over time; Perin from The Wheel of Time series was my favorite. Starting out as a shy gentle giant of a young man, over the 16 books he grew into a dynamic and amazing leader who balanced a primal understanding of the world against the careful and rational man he was at his core. When you were engrossed in those chapters you could feel how he’d react as he was doing it, becoming something more than a figment of Robert Jordan’s imagination. You see, growing up I wanted to be a professional writer and would either write or read other’s in-depth character studies to have a near empathetic connection to them. Did you ever read a book that had a character you understood so very well?
+For me, stories have always been about the character-driven plot. I read long series that would grow these amazing characters over time; Perin from The Wheel of Time series was my favorite. Starting out as a shy gentle giant of a young man, over the 16 books he grew into a dynamic and amazing leader who balanced a primal understanding of the world against the careful and rational man he was at his core. When you were engrossed in those chapters you could feel how he’d react as he was doing it, becoming something more than a figment of Robert Jordan’s imagination. Did you ever read a book that had a character you understood so very well?
 
 …”oh great, Donna’s on another of her tangent’s again.”
 
@@ -35,7 +35,7 @@ K.I.S.S.
 -------
 Like all other deliverables, I try to break the persona research down to the bare-bones, “must have” list and grow it from there. Let’s touch on what you absolutely need to know about your personas.
 
-<strong>Demographics</strong>
+<strong>Demographics:</strong>
 Now I get that in a truly inclusive internet, many of these wouldn’t matter but at this stage, we’re not strictly talking about the web. We are looking for who is most likely to become your customer.
 * Age
 * Gender
@@ -45,19 +45,19 @@ Now I get that in a truly inclusive internet, many of these wouldn’t matter bu
 * Education
 * Likelihood of disabilities
 
-<strong>Tech Savviness</strong>
+**Tech Savviness:**
 Just because we’re not strictly looking at the web doesn't mean we don’t need to understand how they are comfortable engaging your company. 
 * Preferred device (desktop, tablet, phone)
 * How comfortable they are likely to be with their technology
 
-<strong>Influencers</strong>
+**Influencers:**
 Through research, we can get a rough idea of who your target customer listens to. Online or off these influencers play a key role in the decision-making process.
 
-<strong>Variances</strong>
+**Variances:**
 Maybe your target customer that includes mothers ages 35-50 really has two distinct subgroups within that persona. The device and/or time of day the user looks at your website may be different between working and stay-at-home mothers. Note the important variances you’re seeing with the data you’re collecting. 
 
-<strong>Industry Specific Markers</strong>
-No one knows a company and it’s customers like the people who work with them Talk to your strategist and let them know what’s meaningful to you!
+**Industry Specific Markers:**
+No one knows an industry, a company and it’s customers like the people who work with them every day. Define what’s meaningful to you!
 
 Next is the fun part! Research!
 -------
