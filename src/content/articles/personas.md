@@ -10,7 +10,7 @@ author: Donna Bungard
 private: false
 mainImage: images/articles/personas1.png
 img-src: images/articles/personas1.png
-date: 2019-08-02
+date: 2018-08-15
 ---
 
 The Strategic Cornerstones
