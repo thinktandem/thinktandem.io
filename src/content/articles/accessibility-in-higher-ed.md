@@ -16,16 +16,16 @@ date: 2018-08-03
 
 So do you want the good news or bad news first? Bad news first, you’ve got it! 
 
-  * Last I checked, the [University of Minnesota](http://www.d.umn.edu/~lcarlson/atteam/lawsuits.html) listed 163 “Higher educational institutions face liability for inaccessible web content and technologies.” This had grown significantly since the last I checked and I’ve not verified that it is a complete representation. 
+  * Last I checked, the [University of Minnesota](http://www.d.umn.edu/~lcarlson/atteam/lawsuits.html) listed 163 higher educational institutions that face liability for "inaccessible web content and technologies.” This had grown significantly since the last I checked and is probably not a complete representation of accessibility-focused lawsuits against campuses. 
   * Countless schools are faced with tight technology budgets and increasing demands, and that’s probably not going to change. 
 
 **Ready for the good news yet?** Okay. 
 
-We can take some of the flying monkeys out of these woods through education and the taking of the time to work through the process. That’s it! 
+We can take some of the flying monkeys out of these woods by taking the time to work through the process. That’s it! 
 
-Now don’t get me wrong, there’s plenty of education and process to go around but once we break it down a bit for you, you’ll see that it’s entirely manageable, regardless of the size of your team. 
+Now don’t get me wrong, there’s plenty of education and process to go around, but once we break it down a bit for you, you’ll see that it’s entirely manageable, regardless of the size of your team. 
 
-And as for the legal side, well let me say it here at the beginning: it can be an issue! Talk to your legal team, ask them between standards (like the ADA’s Section 508) and laws. Ask them about your website and what timeframe works within legal recommendations. Ask them what they feel is the priority or how to officially handle things. I’m not a lawyer. I am someone who’s invested a lot of energy into analyzing and educating on website accessibility issues. I can give you the background, I can give you context but in the end, this is a legal issue. Not sure what to say to your legal team? Not sure the questions to ask? Well read on and maybe you’ll find what you need; if not, [contact us and we’ll take a look at your site and talk to them with you so that you’re in the best place you can be moving forward](https://thinktandem.io/contact/).  
+And as for the legal side, let me say it here at the beginning: it can be an issue! Talk to your legal team, ask them the difference between standards (like the ADA’s Section 508) and laws. Ask them about your website and what an acceptable timeframe for addressing accessibility issues is. Ask them about priorities and how to communicate accessibility efforts to the public. I’m not a lawyer. I am someone who’s invested a lot of energy into analyzing and educating on website accessibility issues. I can give you the background, I can give you context but in the end, this is a legal issue. Not sure what to say to your legal team? Not sure the questions to ask? Well read on and maybe you’ll find what you need; if not, [contact us and we’ll take a look at your site and talk to them with you so that you’re in the best place you can be moving forward](https://thinktandem.io/contact/).  
 
 Okay, disclaimer complete - let’s dive into this!
 
@@ -33,7 +33,7 @@ Okay, disclaimer complete - let’s dive into this!
 Accessibility 101: The Cliffs Notes 
 -------
 
-Okay, there’s a lot of information out there about accessibility, and in some cases, those of us who write about all of this can drone on so let me break this down to it’s bare bones.
+There’s a lot of information out there about accessibility, and in some cases, those of us who write about all of this can drone on so let me break this down to it’s bare bones.
 
   * Web Accessibility exists to break down barriers for those with visual, auditory, amiability, or cognitive disabilities
   * Web Accessibility is also good for SEO, emerging technologies, and helps your users who are in the midst of a bad user experience (glare, cracked screen, crowded room)
@@ -59,7 +59,7 @@ The filing of an OCR complaint starts a legal process. [The ED.gov site](https:/
   * The accuser will be asked if they had tried to resolve the issue by another method
   * “The complainant will be informed that the complaint will be closed if written consent is necessary in order to resolve the complaint and is not received within 20 calendar days of the date of the acknowledgement letter or the date the Consent Form is requested from the complainant.“
 
-Yeah, that last one is a mouthful but basically, it’s showing you, the institute, that one of their first steps is to involve you in the investigation and determine if you are in violation. Take note of that: **this is a process in which you are actively involved.** Here, look at this quote regarding next steps:
+Yeah, that last one is a mouthful but basically, it’s showing you, the institution, that one of their first steps is to involve you in the investigation and determine if you are in violation. Take note of that: **this is a process in which you are actively involved.** Here, look at this quote regarding next steps:
 
 <blockquote>If OCR determines that a recipient failed to comply with one of the civil rights laws that OCR enforces, OCR will contact the recipient and will attempt to secure the recipient’s willingness to negotiate a voluntary resolution agreement. If the recipient agrees to resolve the complaint, the recipient will negotiate and sign a written resolution agreement that describes the specific remedial actions that the recipient will undertake to address the area(s) of noncompliance identified by OCR.“</blockquote>
 <span style="text-aligh:right;">- [Ed.gov](https://www2.ed.gov/about/offices/list/ocr/complaints-how.htm)</span>
@@ -76,11 +76,11 @@ Maybe the Accessibility Process is Like the Yellow Brick Road?
 And if it is, well then it’s a series of steps to the goal of a compliant site. **Again, it’s a process, not a nightmare!** 
 
 So what are those steps? Those may vary from institute to institute but from what I’ve read and seen to date this is the path I’d take:
-<ol><li>**Put in a low-fidelity Accessibility Statement**, covering the fact you know there’s an issue and you’re assessing it now to find solutions. Also, provide them with contact information so they can reach out and be an active part of the solution! And as this is a legal statement - please send to your legal team for revisions and/or sign off prior to posting. 
+<ol><li>**Put in a low-fidelity Accessibility Statement**, covering the fact you know there’s an issue and you’re assessing solutions. Also, provide complainants with contact information so they can reach out and be an active part of the solution! And since this is a legal statement, send it to your legal team for revisions and/or sign off prior to posting. 
 	</li><li>**Invest in a full, professional accessibility assessment of your website.** These may be called audits too. Have your testers use both automated and manual testing methods. In some cases, you may wish to hire user testing groups of native users of assistive technologies. In their report be sure to know what the issue is, what guideline they are referencing, and if possible, solutions. It is helpful if they can give context as to why it is important as well. 
-</li><li>**Create a plan internally that aligns each task to estimated times to complete them.** Build this plan into your sprints to estimate how long it will take you to update the site based on your current resources. Confirm that this is in alignment with what you and your legal team negotiated and edit as needed (if working with the OCR or other legal entity).
+</li><li>**Create a plan internally that aligns each task to estimated times to complete them.** Build this plan into your ongoing development plan to estimate how long it will take you to update the site based on your current resources. Confirm that this is in alignment with what you and your legal team negotiated and edit as needed (if working with the OCR or other legal entity).
 </li><li>**Update your Accessibility Statement to show more specific examples** of what needs to be updated and when your organization expects to have those changes made. Again, please send to your legal team for review/revisions before posting.  
-</li><li>**Start working through your tickets and updating your site.** And, depending what your lawyers say, I’d likely update your Accessibility Statement on a regular basis throughout this process to show your progress. 
+</li><li>**Start working through your tickets and updating your site.** Depending on what your lawyers say, consider updating your Accessibility Statement on a regular basis throughout this process to show your progress. 
 </li><li>**Train your content editors!** <em>I cannot emphasize this one enough.</em> They are on the front lines of your website maintenance and need to know what needs to be done and why. A compliant site is unlikely to stay that way without an investment from this important team!
 </li><li>**Schedule accessibility health checks.** That’s right, even with everyone invested in your site’s mission to be accessible things can drift. A single oversight by this person and that, an updated technology or new functionality: A website is a living document and can become inaccessible over time. Periodic assessments will help to keep your site in check. 
 </li><li>**Enjoy the other benefits of an accessible website!** YES, this should be on your list because there are many of them. <ul>
@@ -95,4 +95,4 @@ So what are those steps? Those may vary from institute to institute but from wha
 Experts are those who are constantly aware of how much there is left to learn and have decided to learn more!
 ----------
 
-What do I mean by that? It’s simple, there’s a LOT out there. Accessibility affects every aspect of your website marketing; from persona development to UX/design, to both front and backend development. There are social, ethical, and legal considerations. There’s a lot but you’re just another person traveling this path and we’re all learning. Hopefully, a little wiser to what accessibility is and how to navigate these woods than you were a few minutes ago. And [if you need help or just someone to help you put it into context for your stakeholders, give me a shout](https://thinktandem.io/contact/)! You’ll be fine, and your little dog too. <em>...couldn't resist...</em>
+What do I mean by that? It’s simple, there’s a LOT out there. Accessibility affects every aspect of your website marketing; from persona development to UX/design, to both front and backend development. There are social, ethical, and legal considerations. There’s a lot but you’re just another person traveling this path and we’re all learning. Hopefully you're a little wiser to what accessibility is and how to navigate these woods than you were a few minutes ago. And [if you need help or just someone to help you put it into context for your stakeholders, give me a shout](https://thinktandem.io/contact/)! You’ll be fine, and your little dog too. <em>...couldn't resist...</em>
