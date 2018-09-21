@@ -88,11 +88,40 @@ As in our Keyword Explorer step, you want to find the keywords that have the big
 
 Another tactic I use with the Siet Explorer, is to use [afrefs Content Explorer](https://ahrefs.com/content-explorer) as well.  Basically, just take your main keywords and keyword phrases and put them into the Content Explorer.  Grab the top three results for each and plug them back through the Site Explorer.  The same principle applies here as before.  This step usually gives us an extra keyword or tow for our writing sample.    
 
+### Deeper Competitor Research
 
-Research Competitors 
--------------------
+We have already looked at our competitors websites during our keyword research phase.  In this step, we are going to take some metrics from the top 10 keyword ranking competitors and analyse them.  We are looking for two main factors in this step, the word count and the number of external links.
 
+Copy and paste [this spreadsheet](https://docs.google.com/spreadsheets/d/1x60USJde1vfHYWeM1kNkb02H06HjLGLHMKEyuhet8mU/edit#gid=0) I made for you. To begin put the main keyword phrase (I usually choose the blog post title) into Google and grab the top 10 results.  
 
+Ahrefs toolbar does not have an export feature unlike thg Moz toolbar does.  So if you are using ahrefs, you will have to do this step manually.  However, usually you can install the Moz toolbar for free and grab the export via the button in the top left of the toolbar.  It is so much easier.  If I used the Moz export, I just grab the title and the url of the top 10 domains.  I then go through and fill in all the Domain Ratings for each url.
+
+**Word Count**
+
+Now that we have the start of our spreadsheet we just need to grab the word count of each article.  Use [this Word Counter tool](https://wordcounter.net/website-word-count) to grab the word count for each writing sample in your top 10.  I usually throw out one or two results that are way higher or lower than the other results.  Now look at the average number.  That is the word count goal you need to hit with your writing sample. 
+
+**External Links**
+
+This is a decent [external link counter](https://www.seoreviewtools.com/internal-link-analyzer/) that I use.  Again, go through and each url into this website and put the result in the spreadsheet. The same as above, the average number of outbound links is what you want to hit.
 
 Writing
 ----------
+
+The hard part is essentially over now.  You have done your research on what you need to write to get the best SEO blog post.  Now you just need to take the data from the previous steps and begin writing.  
+
+I generally try to follow these standards when writing the blog post:
+
+1. Your main keywords should be used about 15+ times per blog post.
+2. The keyword phrases can be included in the number above.
+3. Try to exceed the average number of words and external link in your writing sample.
+
+The rest just comes down to taking the time and writing the blog post.  I suggest just blasting through in initially and let the words flow up.  Keep in mind to utilize the keywords you planned out.  Take the extra long route when forming your sentences.  It is ok to add extra explination to get that word count even higher.
+
+The once you have that first draft, go back through and add keywords where you can.  Make sure the ebb and flow of the words is logically.  Google is very smart and you don't want a SEO penalty from [keyword stuffing](https://moz.com/beginners-guide-to-seo/myths-and-misconceptions-about-search-engines).
+
+While you are writing the blog post, I usually like to use this [tool for checking the word count](https://wordcounter.net/).  Once you feel comfortable with what you wrote, publish!
+
+Conclusion
+----------
+
+It does take a few hours to come up with this best plan for writing a great SEO blog post.  However, once you get the knack down for it, you will be able to bang out long form, keyword saturated blog posts in no time.
