@@ -8,8 +8,8 @@ seo:
   keywords: tags
 author: John Ouellet
 private: false
-mainImage: images/articles/a11yHigherEd.png
-img-src: images/articles/a11yHigherEd.png
+mainImage: images/articles/writing-best-seo-post/writing-seo.jpg
+img-src: images/articles/writing-best-seo-post/writing-seo.jpg
 byline: Tips and tricks so you get the most out of your blogging efforts.
 date: 2018-09-21
 ---
@@ -40,17 +40,19 @@ At the start, you generally want to pick three to four keywords that you want to
 
 ### Planning the Title
 
-Having a proper is title is one of the biggest steps in writing a technically proficient blog post.  Typically the title of our blog post is what is also used in your meta tags and in the slug of the blog post's URL.  So taking the time to plan out a good title is extremely important.
+Having a proper is title is one of the biggest steps in writing a technically proficient blog post.  Typically the title of our blog post is what is also used in your meta tags and in the slug of the blog post's url.  So taking the time to plan out a good title is extremely important.
 
 Another suggestion is to use some [title modifiers](https://www.adamriemer.me/50-modifiers-boost-seo-drive-sales/) as well.  You can tell by the title of this article I used this advice as well.  Don't go too crazy with the modifiers as you need to keep the title about 50-60 characters long.
 
 ### Keyword Planning
 
+**Keyword Explorer**
+
 So now begins the real heavy lifting part in our SEO blog post writing efforts.  This is where you will need a paid ahrefs account to get the most of this step.  
 
 To begin, we will take each of our keywords and plug them into the [ahrefs Keyword Explorer](https://ahrefs.com/keywords-explorer).  I found it easier to use one keyword at a time as it just seem quicker to find long tail results.  
 
-We are doing two things here when using the Keyword Explorer.  First, we are trying to increase the saturation of our main keywords by resuing them in a more clever way.  Second, we are also hitting less competitve search terms that can bring in more traffic for our SEO efforts.  I [found this article on long tail keywords](https://blog.hubspot.com/marketing/definition-long-tail-keyword-100-words-sr) to be the best explanation of this effort.
+We are doing two things here when using the Keyword Explorer.  First, you are trying to increase the saturation of your main keywords by resuing them in a more clever way.  Second, you are also hitting less competitive search terms that can bring in more traffic for our SEO efforts.  I [found this article on long tail keywords](https://blog.hubspot.com/marketing/definition-long-tail-keyword-100-words-sr) to be the best explanation of this effort.
 
 Once you have the result from the Keyword Explorer, you need to di the following:
 
@@ -63,7 +65,28 @@ Your results should look something like this:
 
 Make sure you are sorting by volume as well.  We want to be picking keywords that have the best SEO results with the lowest competition.  The KD metric is the [Keyword Difficulty](https://ahrefs.com/keyword-difficulty) factor.  The higher the number, the harder it is to rank SEO wise for that keyword.  
 
-      
+For each main keyword you want to pick 1-2 keywords from the Keyword Explorer.  Be realistic in this part, you don't want to pick words that make no sense to your goals.  Once done, set those keywords aside as you will be incorporating these into the blog post during the writing phase of his effort.
+ 
+**Site Explorer**
+
+The [ahrefs Site Explorer](https://ahrefs.com/site-explorer) is a very powerful tool that basically give you all the SEO metrics for a give url.  We will be using it for the purpose of viewing the top ranking posts in regards to our main keywords.  
+
+To begin do the following:
+
+1. In Google put the title of your article in the search bar.
+2. Make sure your ahrefs toolbar is turned on.
+3. Grab the urls of the top 5 results that have a Domain Rating of 50 or higher. 
+4. Take each one of the urls and paste it into the Site Explorer.  Make sure you are setting the select list from prefix to url only.
+5. Under organic search on the left, click the Organic Keywords link.
+6. Filter by a KD of 0-30 and make sure you are sorting by traffic.
+
+Your results should come out like this:
+
+<img src="images/articles/writing-best-seo-post/site-explorer-compressor.jpg" alt="ahrefs Site Explorer example">
+
+As in our Keyword Explorer step, you want to find the keywords that have the biggest audience with the lowest competition.  The goal of these steps is to have around a dozen keyword phrases / long tail keywords that also contain your main keywords.  This way you can begin to craft your writing sample with metrics I will explain below.
+
+Another tactic I use with the Siet Explorer, is to use [afrefs Content Explorer](https://ahrefs.com/content-explorer) as well.  Basically, just take your main keywords and keyword phrases and put them into the Content Explorer.  Grab the top three results for each and plug them back through the Site Explorer.  The same principle applies here as before.  This step usually gives us an extra keyword or tow for our writing sample.    
 
 
 Research Competitors 
