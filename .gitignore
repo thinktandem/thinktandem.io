@@ -9,3 +9,4 @@ src/content/articles/dummy-content*
 *.log
 *.tmp
 *.swp
+.idea
