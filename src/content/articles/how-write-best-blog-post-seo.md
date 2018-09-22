@@ -29,7 +29,7 @@ Once you have the toolbar installed, head over to Google and type any search.  I
 
 As you can see, there are numerous indicators as to why this SEO-friendly content ranks higher than others.  The main factor I usually look at during my research is the DR (Domain Rating) number.  Here is a great blog post on what the [ahrefs Domain Rating](https://ahrefs.com/blog/domain-rating/) is and how to understand the values.
 
-1. Setup & Planning
+Setup & Planning
 -------------------
 
 Before you start writing, you need to identify a topic that matches your SEO goals. Although this may take several hours, the effort pays dividends in the end by focusing every element of your article on the keywords you want to compete for in Google search rankings.
@@ -44,7 +44,7 @@ Having a proper title is one of the biggest steps in optimizing your blog post f
 
 For the best title, use some [title modifiers](https://www.adamriemer.me/50-modifiers-boost-seo-drive-sales/).  You can tell by the title of this article I used this advice as well.  Don't go too crazy with the modifiers as you need to keep the title about 50-60 characters long.  I believe they may be changing this to a slightly higher number (or have), but for now just go with the old rule of thumb.
 
-2. Keyword Planning
+Keyword Planning
 -------------------
 
 **Keyword Explorer**
@@ -91,7 +91,7 @@ As in our Keyword Explorer step, you want to find the keywords that have the big
 
 It's also helpful to put your main keywords and keyword phrases into the [ahrefs Content Explorer](https://ahrefs.com/content-explorer) to get a few more keyword ideas. Grab the top three results from the Content Explorer and plug them back through the Site Explorer and repeat the steps from above. This step usually gives us an extra keyword or two for our writing sample.
 
-3. Deeper Competitor Research
+Deeper Competitor Research
 -----------------------------
 
 We have already looked at our competitors' websites during our keyword research phase.  In this step, we are going to take some metrics from the top 10 keyword competitors and analyze them.  We are looking for two main factors in this step: the word count and the number of external links.  These are both important ranking factors with any search engine.  The longer the post, the more chances there are to add keywords.  The more external links there are, the more authoritative the post appears.
@@ -108,7 +108,7 @@ Now that we have the start of our spreadsheet we just need to grab the word coun
 
 This is a decent [external link counter](https://www.seoreviewtools.com/internal-link-analyzer/) that I use.  Again, go through each URL in this website and put the result in the spreadsheet. The same as above, the average number of outbound links is what you want to hit when writing your blog post.
 
-4. Writing
+Writing
 ----------
 
 The hard part is essentially over now.  You have done your research on what you need to write to get the best SEO blog post.  Now you just need to take the data from the previous steps and begin writing.
