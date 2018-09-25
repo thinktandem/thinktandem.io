@@ -14,7 +14,7 @@ byline: Apache Tika allows you to index PDF docs for searching with Solr.
 date: 2017-11-10
 ---
 
-Apache Tika on Pltaform.sh
+Apache Tika on Platform.sh
 --------------------------
 
 [Apache Tika](https://tika.apache.org/) is a java library that can extract metadata from documents such as PDF and create a searchable index for [Solr](http://lucene.apache.org/solr/).
