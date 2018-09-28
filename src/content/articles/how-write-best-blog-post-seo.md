@@ -16,12 +16,12 @@ date: 2018-09-28
 
 Before diving in, I strongly recommend you have either a paid [ahrefs](https://ahrefs.com), [Moz](https://moz.com/), or [SEMrush](https://www.semrush.com/) account.  Each platform gives you a number of robust SEO tools that are well documented and easy to use. They are crucial for any SEO writing effort.
 
-I use ahrefs when evaluating SEO metrics for my blog posts, but you can use Moz or SEMrush to implement my examples below.  When reading the article, just find the similar tools and adjust what I lay out.  Most of these SEO platforms are about the same as far as functionality goes.  It is just a matter of what you are used to using.  Also, there are still a plethora of free SEO tools that offer help with keyword planning, content planning, SEO technical writing, etc... but that's a topic for another day.
+I use ahrefs when evaluating SEO metrics for my blog posts, but you can use Moz or SEMrush to implement my examples below.  When reading the article, just find the similar tools and adjust what I lay out.  Most of these SEO platforms have similar functionality; it's just a matter of what you are most comfortable using.  Also, there are still a plethora of free SEO tools that offer help with keyword planning, content planning, SEO technical writing, etc... but that's a topic for another day.
 
 Prerequisites
 -------
 
-You will need to install the toolbar for your preferred SEO platform.  This allows us to easily search [Google](https://www.google.com/) for metrics on SEO friendly content during our research.  Ahrefs [has a chrome extension](https://ahrefs.com/seo-toolbar) that requires no configuration.  I believe all the major SEO toolbars require little to no setup as well.
+You will need to install the toolbar for your preferred SEO platform.  This allows us to easily search [Google](https://www.google.com/) for metrics on SEO-friendly content during our research.  Ahrefs [has a chrome extension](https://ahrefs.com/seo-toolbar) that requires no configuration.  I believe all the major SEO toolbars require little to no setup as well.
 
 Once you have the toolbar installed, head over to Google and type any search.  I searched for the infamous quote "Shampoo is better" and the results looked like this:
 
@@ -34,13 +34,13 @@ Now that you have your toolbar setup and you understand the basics of how it wor
 Setup
 -----
 
-Before you start writing, you need to identify a topic that matches your SEO goals. "What is a SEO goal?" you may ask.  To put this very simply for this effort, we want content that ranks well for a phrase, term, or set of keywords.  We also want a subject we know we can write at length as well.  This will not be a quick short blog post, so take some time and think about this.
+Before you start writing, you need to identify a topic that matches your SEO goals. "What is a SEO goal?" you may ask.  To put this very simply, we want content that ranks well for a phrase, term, or set of keywords.  We also want a subject we know we can write about at length as well.  This will not be a quick or short blog post, so take some time and think about this.
 
 **Picking Keywords**
 
-You have two paths to pick keywords for your blog post.  The first way is that sometimes the keywords just come up naturally while already knowing the topic you will be writing on.  Later you'll investigate these keywords in-depth to evaluate their usefulness to your goals.  The keywords can always be adjusted during the research phase as well.
+You have two paths to pick keywords for your blog post.  Sometimes your knowledge of a topic will lead you to keywords naturally while thinking about your post.  Later you'll investigate these keywords in-depth to evaluate their usefulness to your goals.  The keywords can always be adjusted during the research phase as well.
 
-The other way is to find keywords for a topic that may need some TLC.  I would recommend using the [ahrefs Rank Tracker](https://ahrefs.com/rank-tracker).  For every site we monitor, we start a campaign within the rank tracker to check how the site's keywords are doing on search engines and against their competitors.  If you find that some of your keywords are lacking in either metric, then plan a topic around those keywords.
+The other way is to find keywords for a topic that may need some further investigation.  I would recommend using the [ahrefs Rank Tracker](https://ahrefs.com/rank-tracker).  For every site we monitor, we start a campaign within the rank tracker to check how the site's keywords are doing on search engines and against their competitors.  If you find that some of your keywords are lacking in either metric, then plan a topic around those keywords.
 
 Although either way may take some time, the effort pays dividends in the end by focusing every element of your article on the keywords you want to compete for in Google search rankings.
 
@@ -114,7 +114,7 @@ Longer word count is important because it lets your content rank better, earns t
 
 **External Links**
 
-This is a decent [external link counter](https://www.seoreviewtools.com/internal-link-analyzer/) that I use.  Again, go through each URL in this website and put the result in the spreadsheet. The same as above, the average number of outbound links is what you want to hit when writing your blog post.
+This is a decent [external link counter](https://www.seoreviewtools.com/internal-link-analyzer/).  Again, go through each URL in this website and put the result in the spreadsheet. Similar to exceeding your competitor's average word count, you want to beat the average number of outbound links on your competitor's site when writing your blog post.
 
 You also want to make sure that you are linking to quality blog posts with a high DR.  [External linking](https://moz.com/learn/seo/external-link) helps show that you post is authoritative and has numerous sources.  This in turn will raise the ranking of your blog post and your domain.
 
