@@ -11,32 +11,38 @@ private: false
 mainImage: images/articles/writing-best-seo-post/writing-seo.jpg
 img-src: images/articles/writing-best-seo-post/writing-seo.jpg
 byline: Tips and tricks so you get the most out of your blogging efforts.
-date: 2018-09-21
+date: 2018-09-28
 ---
 
-Before diving in, I strongly recommend you have either a paid [ahrefs](https://ahrefs.com), [Moz](https://moz.com/), or [SEMrush](https://www.semrush.com/) account.  They are crucial for any SEO writing effort.
+Before diving in, I strongly recommend you have either a paid [ahrefs](https://ahrefs.com), [Moz](https://moz.com/), or [SEMrush](https://www.semrush.com/) account.  Each platform gives you a number of robust SEO tools that are well documented and easy to use. They are crucial for any SEO writing effort.
 
-I use ahrefs when evaluating SEO for my articles, but you can use Moz or SEMrush to implement my examples below.  Also, there are still a plethora of free SEO tools that offer help with keyword planning, content planning, SEO technical writing, etc...but that's a topic for another day.
+I use ahrefs when evaluating SEO metrics for my blog posts, but you can use Moz or SEMrush to implement my examples below.  When reading the article, just find the similar tools and adjust what I lay out.  Most of these SEO platforms are about the same as far as functionality goes.  It is just a matter of what you are used to using.  Also, there are still a plethora of free SEO tools that offer help with keyword planning, content planning, SEO technical writing, etc... but that's a topic for another day.
 
 Prerequisites
 -------
 
-You will need to install the toolbar for your preferred SEO platform.  This allows us to easily search [Google](https://www.google.com/) for metrics on SEO friendly content during our research.  Ahrefs [has a chrome extension](https://ahrefs.com/seo-toolbar) that requires no configuration.
+You will need to install the toolbar for your preferred SEO platform.  This allows us to easily search [Google](https://www.google.com/) for metrics on SEO friendly content during our research.  Ahrefs [has a chrome extension](https://ahrefs.com/seo-toolbar) that requires no configuration.  I believe all the major SEO toolbars require little to no setup as well.
 
 Once you have the toolbar installed, head over to Google and type any search.  I searched for the infamous quote "Shampoo is better" and the results looked like this:
 
 <img src="images/articles/writing-best-seo-post/ahrefs-toolbar-shampoo.jpg" alt="ahrefs Google search toolbar example">
 
-As you can see, there are numerous indicators as to why this SEO-friendly content ranks higher than others.  The main factor I usually look at during my research is the DR (Domain Rating) number.  Here is a great blog post on what the [ahrefs Domain Rating](https://ahrefs.com/blog/domain-rating/) is and how to understand the values.
+As you can see, there are numerous indicators as to why this SEO-friendly content ranks higher than others.  The main factor I usually look at during my research is the DR (Domain Rating) number.  Here is a great blog post on what the [ahrefs Domain Rating](https://ahrefs.com/blog/domain-rating/) is and how to understand the values.  Basically, we only want content from sites that have a higher Domain Rating than 50.  These sites have a good amount of backlinks and ranking power when they get to that level.
 
-Setup & Planning
--------------------
+Now that you have your toolbar setup and you understand the basics of how it works, it is time to start planning your post.
 
-Before you start writing, you need to identify a topic that matches your SEO goals. Although this may take several hours, the effort pays dividends in the end by focusing every element of your article on the keywords you want to compete for in Google search rankings.
+Setup
+-----
+
+Before you start writing, you need to identify a topic that matches your SEO goals. "What is a SEO goal?" you may ask.  To put this very simply for this effort, we want content that ranks well for a phrase, term, or set of keywords.  We also want a subject we know we can write at length as well.  This will not be a quick short blog post, so take some time and think about this.
 
 **Picking Keywords**
 
-At the start, pick three to four keywords to base your blog post around.  Later you'll research these keywords; for now just think of a few important keywords based on your chosen topic.  Try not to worry too much about how these keywords may rank.  You can adjust the keyword phrases during research.
+You have two paths to pick keywords for your blog post.  The first way is that sometimes the keywords just come up naturally while already knowing the topic you will be writing on.  Later you'll investigate these keywords in-depth to evaluate their usefulness to your goals.  The keywords can always be adjusted during the research phase as well.
+
+The other way is to find keywords for a topic that may need some TLC.  I would recommend using the [ahrefs Rank Tracker](https://ahrefs.com/rank-tracker).  For every site we monitor, we start a campaign within the rank tracker to check how the site's keywords are doing on search engines and against their competitors.  If you find that some of your keywords are lacking in either metric, then plan a topic around those keywords.
+
+Although either way may take some time, the effort pays dividends in the end by focusing every element of your article on the keywords you want to compete for in Google search rankings.
 
 **Planning the Title**
 
@@ -51,9 +57,9 @@ Keyword Planning
 
 Now begins the real heavy lifting in our SEO blog post writing efforts.  This is where you will need a paid ahrefs account to get the most from your efforts.  If you don't have the budget for a paid tool like ahrefs or Moz, [check out some free resources](https://www.highervisibility.com/blog/top-5-free-keyword-research-tools/) that may help fill the gap, but be warned that results may vary!
 
-To begin, we will take each of our keywords and plug them into the [ahrefs Keyword Explorer](https://ahrefs.com/keywords-explorer).  I find it quicker to use one keyword at a time to find long tail results.
+To begin, we will take each of our keywords from our research above and plug them into the [ahrefs Keyword Explorer](https://ahrefs.com/keywords-explorer).  I find it quicker to use one keyword at a time to find long tail results.
 
-We are doing two things here when using the Keyword Explorer.  First, you are trying to increase the saturation of your main keywords by reusing them in a more clever way.  Second, you are also hitting less competitive search terms that can bring in more traffic for our SEO efforts.  I [found this article on long tail keywords](https://blog.hubspot.com/marketing/definition-long-tail-keyword-100-words-sr) to be the best explanation of the second point of this effort.
+We are doing two things here when using the Keyword Explorer.  First, you are trying to increase the saturation of your main keywords by reusing them in a more clever way.  Second, you are also hitting less competitive search terms that can bring in more traffic for our SEO efforts.  The later is called using long tail keywords.  I [found this article on long tail keywords](https://blog.hubspot.com/marketing/definition-long-tail-keyword-100-words-sr) to be the best explanation of how this tactic works.
 
 Once you have the result from the Keyword Explorer, you need to do the following:
 
@@ -64,7 +70,7 @@ Your results should look something like this:
 
 <img src="images/articles/writing-best-seo-post/keyword-ideas.jpg" alt="ahrefs Keyword Explorer example">
 
-Make sure you are sorting by volume as well.  We want to be picking keywords that have the best SEO results with the lowest competition.  The KD metric is the [Keyword Difficulty](https://ahrefs.com/keyword-difficulty) factor.  The higher the number, the harder it is to rank in Google's top results for that keyword.
+Make sure you are sorting by volume as well.  We want to be picking keywords that have the best SEO results with the lowest competition.  The KD metric is the [Keyword Difficulty](https://ahrefs.com/keyword-difficulty) factor.  The higher the number, the harder it is to rank in Google's top results for that keyword.  We are trying to take the strategic route with this tactic by finding keywords with biggest bang for our buck.
 
 For each main keyword you want to pick 1-2 keywords from the Keyword Explorer.  Be realistic in this part; you don't want to pick words that make no sense to your goals.  Write these new keywords down, as you will be incorporating these into the blog post during the writing phase of this effort.
 
@@ -104,9 +110,13 @@ Ahrefs toolbar does not have an export feature (the Moz toolbar does).  So if yo
 
 Now that we have the start of our spreadsheet we just need to grab the word count of each article.  Use [this Word Counter tool](https://wordcounter.net/website-word-count) to grab the word count for each writing sample in your top 10.  I usually throw out one or two results that are way higher or lower than the other results.  Now look at the average number.  That is the word count goal you need to hit with your writing sample.
 
+Longer word count is important because it lets your content rank better, earns the blog post more backlinks, the blog post gets more social shares, etc.  There are [so many other factors](https://www.sweor.com/seocontentlength) that come into play with the length and quality of your blog post.  If your competitors are writing thousands of words, then you need to write even more than them to rank better.
+
 **External Links**
 
 This is a decent [external link counter](https://www.seoreviewtools.com/internal-link-analyzer/) that I use.  Again, go through each URL in this website and put the result in the spreadsheet. The same as above, the average number of outbound links is what you want to hit when writing your blog post.
+
+You also want to make sure that you are linking to quality blog posts with a high DR.  [External linking](https://moz.com/learn/seo/external-link) helps show that you post is authoritative and has numerous sources.  This in turn will raise the ranking of your blog post and your domain.
 
 Writing
 ----------
@@ -131,3 +141,5 @@ Conclusion
 ----------
 
 It does take a few hours to come up with the best plan for writing a blog post tuned for SEO.  However, once you get the knack for it, you will be able to bang out long-form, keyword-saturated blog posts in no time.
+
+In a couple months I will write another blog post on how this article ranked on the keywords I chose.  This way you can see how I used my method to rank well for the keywords I will picked during my research phase. Good luck and I hope you found this blog post useful to your SEO efforts.
