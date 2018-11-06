@@ -1,7 +1,7 @@
 ---
 layout: layouts/service.html
-title: Support
-byline: Stuck in a never ending cycle of unreliable contractors and disappointing results? We architect a sustainable development strategy.
+title: Ongoing Support 
+byline: ...because the relationship doesn’t end when the project’s done.
 cta: Find Salvation
 link: /services/support
 color: green
@@ -18,36 +18,25 @@ icons:
     name: Fast Turnaround
     link: /services/support
 ---
+Tandem, by our very name, is about partnership. Digital products, especially websites, are continuously evolving entities that require upkeep and enhancements for you to stay ahead of the curve and the competition.
 
-Worried that your project has become an insatiable beast that devours development time? Victim of a revolving door of unreliable contractors?
+<strong>Some common services include:</strong>
+<ul>
+<li>Troubleshooting Pain Points
+  <ul><li>Find relief from performance bottlenecks</li>
+    <li>Solving perplexing problems and errors</li>
+    <li>Recovering hacked sites</li></ul></li>
+<li>Re-Architecting Legacy Systems
+ <ul><li>Picking the best replacement technology</li>
+<li>Upgrading Drupal sites to Drupal 8 or Backdrops</li></ul></li>
+<li>Hiring & Training Developers
+ <ul><li>Interviewing and finding great developers</li>
+   <li><a href="training">Train your existing team on modern best practices</a></li></ul></li>
+<li>Ongoing Digital Strategy and SEO
+ <ul><li>SEO reporting and analysis</li>
+<li>Content strategy consultation</li>
+<li>AdWords and reporting</li>
+<li>Accessibility assessments/li></ul></li>
+ 
+There is no one-fit for every client. <a href="../contact">Tell us what you’re missing</a>.
 
-Tandem helps you take back control of your technical destiny. We find the best way to achieve your business goals with your current resources. For some organizations, that means hiring developers or retraining your current team. For others, that means a targeted one-time refactoring of legacy software.
-
-Whatever the solution, we’ll always give you an honest assessment with actionable advice to find the path forward.
-
-<div class="row">
-  <div class="col-sm-6">
-    <h2>Troubleshooting Pain Points</h2>
-    <ul>
-      <li>Identifying performance bottlenecks</li>
-      <li>Solving perplexing problems and errors</li>
-      <li>Recovering hacked sites</li>
-    </ul>
-  </div>
-  <div class="col-sm-6">
-    <h2>Re-architecting Legacy Systems</h2>
-    <ul>
-      <li>Picking the best replacement technology</li>
-      <li>Upgrading Drupal 6 (and earlier) sites to Drupal 8 or Backdrops</li>
-    </ul>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-6">
-    <h2>Hiring and Training Developers</h2>
-    <ul>
-      <li>Interviewing and finding great developers</li>
-      <li>Train your existing team on modern best practices</li>
-    </ul>
-  </div>
-</div>
