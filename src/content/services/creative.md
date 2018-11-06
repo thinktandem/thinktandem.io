@@ -3,7 +3,7 @@ layout: layouts/service.html
 title: Creative
 byline: Design services that are as practical as they are creative
 cta: Let's talk
-link: /services/strategy
+link: /services/creative
 color: blue
 seo:
   description: byline
