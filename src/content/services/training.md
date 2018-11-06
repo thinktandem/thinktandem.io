@@ -1,8 +1,8 @@
 ---
 layout: layouts/service.html
-title: Training
-byline: Your team is the best investment you can make. Get them up to speed on the latest and most cutting edge development practices.
-cta: Move your team into the 21st century.
+title: Training Opportunities
+byline:  ...because your team is the best investment you can make
+cta: Acheive with your team.
 link: /services/training
 color: orange
 seo:
@@ -25,43 +25,22 @@ icons:
     link: https://github.com/
 ---
 
-Tandem believes strongly in a “teach a developer to fish” philosophy. Where many consultancies make themselves a long-term dependency, we want your organization to succeed on its own terms. Often, that means helping to train your team to support new technologies and learn better ways of developing software.
+The long-term goal is to empower your organization to succeed on its own terms. Often, that means helping to train your team to support new technologies and learn better ways of developing solutions. There are times you’ll want help (link to support) but you the day-to-day world, you can be the hero by teaching your team how to succeed on their own. 
 
-<div class="row">
-  <div class="col-sm-3">
-    <h2>Drupal Training</h2>
-  </div>
-  <div class="col-sm-9">
-    <p>We've trekked across the United States and beyond giving Drupal trainings to our clients and at conferences. Accelerate your team's understandings of this powerful (but sometimes idiosyncratic) content management system with our experts. A few trainings we've offered in the past include...</p>
-    <div class="row">
-      <div class="col-sm-6">
-        <ul>
-          <li>Developer’s Guide to Drupal</li>
-          <li>Content Creator’s Guide to Drupal</li>
-        </ul>
-      </div>
-      <div class="col-sm-6">
-        <ul>
-          <li>Advanced Drupal Module Development</li>
-          <li>Introduction to Drupal 8</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-3">
-    <h2>DevOps Training</h2>
-  </div>
-  <div class="col-sm-9">
-    <p>DevOps concepts like continuous integration and automated testing can create huge performance gains for your team. However, when you're always focused on the next feature or pushing for an upcoming deadline, it's difficult to make the investments in learning to introduce these needed changes. Our trainings help catalyze DevOps transformations, accommodating your team's busy schedule.</p>
-    <div class="row">
-      <div class="col-sm-6">
-        <ul>
-          <li>Introduction to Continuous Integration</li>
-          <li>Automated Testing for PHP Applications</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+<ul><li><strong>Drupal</strong><br>
+We've trekked across the world to lead Drupal training events. Accelerate your team's understandings of this powerful content management system with our experts. Past training opportunities have included:
+  <ul><li>A Developer’s Guide to Drupal</li>
+<li>Content Creator’s Guide to Drupal</li>
+<li>Advanced Drupal Module Development</li>
+    <li>Introduction to Drupal 8</li></ul></li>
+<li><strong>DevOps</strong><br> 
+DevOps concepts such as continuous integration and automated testing can create huge performance gains for your team, but it can be difficult to invest the time necessary to overcome the learning curve on your own. Our training events help catalyze DevOps transformations, accommodating your team's busy schedule.
+<ul><li>ntroduction to Continuous Integration</li>
+  <li>Automated Testing for PHP Applications</li></ul></li>
+<li><strong>Accessibility</strong><br>
+Inclusive best practices are great for SEO, have been known to safeguard against legal issues, and help your digital products prepare for emerging technologies, but it’s not up to your development team alone. 
+<ul><li>Introduction to Accessibility </li>
+<li>Accessibility for Content Editors</li></ul></li></ul>
+
+<a href="../contact>Invest in your team now and take ownership of your success</a>.
+
