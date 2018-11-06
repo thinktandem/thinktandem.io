@@ -4,28 +4,6 @@ title: Strategy
 byline: Get the most from your time and investment with data-driven strategy.
 cta: Start Strategizing
 link: /services/strategy
-color: blue
-seo:
-  description: byline
-icons:
-  - icon: fa fa-comments-o
-    name: Stakeholder Interviews
-    link: /services/strategy
-  - icon: fa fa-address-card-o
-    name: User Personas
-    link: /services/strategy
-  - icon: fa fa-th-large
-    name: Information Architecture
-    link: /services/strategy
-  - icon: fa fa-window-maximize
-    name: In-browser Prototypes
-    link: /services/strategy
-  - icon: fa fa-map-o
-    name: Journey Maps
-    link: /services/strategy
-  - icon: fa fa-user-circle-o
-    name: User Testing
-    link: /services/strategy
 ---
 Digital strategy is about your users. 
 
@@ -52,6 +30,6 @@ Content really is king! Keep your website fresh and focused by way of continued 
 * **Accessibility Assessments**<br>
 Even the most compliant site can drift over time. Our experts will analyze your site with a combination of automated and manual testing to ensure an inclusive experience 
 
-There are many ways to fortify your vision as we find the right path to your team’s success story. <a href="creative">Learn how this informs our creative team’s recommendations</a> or <a href="../contact">reach out to us to learn more</a>. 
+There are many ways to fortify your vision as we find the right path to your team’s success story. <a href="/services/creative">Learn how this informs our creative team’s recommendations</a> or <a href="../contact">reach out to us to learn more</a>. 
 
 
