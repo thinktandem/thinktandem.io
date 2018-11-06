@@ -52,6 +52,6 @@ Content really is king! Keep your website fresh and focused by way of continued 
 * Accessibility Assessments
 Even the most compliant site can drift over time. Our experts will analyze your site with a combination of automated and manual testing to ensure an inclusive experience 
 
-There are many ways to fortify your vision as we find the right path to your team’s success story. <a href="creative">Learn how this informs our creative team’s recommendations</a> or <a href="../contact"reach out to us to learn more</a>. 
+There are many ways to fortify your vision as we find the right path to your team’s success story. <a href="creative">Learn how this informs our creative team’s recommendations</a> or <a href="../contact">reach out to us to learn more</a>. 
 
 
