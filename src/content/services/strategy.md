@@ -31,7 +31,7 @@ Digital strategy is about your users.
 
 Your users, and their goals, will inform every other decision made in your digital ecosystem. Together, we’ll get to know them, their habits, their motivators, and their skill level. We’ll combine demographic and psychographic information and compare that to your analytics to determine the optimal user journey. With a focus on continual growth, we’ll customize a discovery or ongoing analysis to keep your team informed as you determine next steps. Educated decisions lead to better, sustainable growth.
 
-##Some common deliverables include:##
+<h2>Some common deliverables include:</h2>
 
 * **KPI Analysis**<br>
 Benchmark where you are and how we will quantify your success to stakeholders.
