@@ -42,5 +42,5 @@ Inclusive best practices are great for SEO, have been known to safeguard against
 <ul><li>Introduction to Accessibility </li>
 <li>Accessibility for Content Editors</li></ul></li></ul>
 
-<a href="../contact>Invest in your team now and take ownership of your success</a>.
+<a href="../contact">Invest in your team now and take ownership of your success</a>.
 
