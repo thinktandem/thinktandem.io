@@ -27,14 +27,14 @@ Developing your digital presence shouldn’t be that hard! To get you back to fo
 
 <h2>Not sure which is right for you? Here’s an easy guide:</h2>
 <ul>
-<li> **Drupal** <br>
+<li><strong>Drupal</strong> <br>
 Tandem's team has decades of collective Drupal experience. Enterprise-grade needs need Drupal for an open source content management system.<ul>
   <li>Drupal 7/8 + Backdrop CMS</li>
   <li>Custom Drupal Module and Theme Development</li>
   <li>Long-term Drupal Support</li>
   <li>Drupal Security</li>
   <li>Drupal Migrations</li></ul></li>
-<li> **Laravel** <br>
+<li><strong>Laravel</strong><br>
 Laravel provides a strong framework for creating custom web applications at any scale.
   <ul><li>Custom Laravel Development</li>
     <li>Test-Driven Development</li>
@@ -42,11 +42,11 @@ Laravel provides a strong framework for creating custom web applications at any 
     <li>PDF Manipulation and Generation</li>
     <li>API Design and Implementation</li>
     <li>Secure Architecture</li></ul></li>
-<li> **WordPress** <br>
+<li><strong>WordPress</strong><br>
 As the simplest open source content management system available, it's no surprise that WordPress powers over 30% of the Internet! <ul>
   <li>Custom WordPress Plugin Development</li>
   <li>Advanced + Enterprise WordPress</li></ul></li>
-<li> **Node.JS** <br>
+<li><strong>Node.JS</strong><br>
 For high-concurrency and performance demanding applications, Tandem often turns to Node.JS. We even built the entirety of our popular Lando project using Node.
   <ul><li>Performant APIs</li>
     <li>High Concurrency Analytics Servers</li>
