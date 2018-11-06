@@ -9,7 +9,7 @@ seo:
 Your organization’s needs are unique. Our team is not looking to recreate your competition's websites in the hope you’ll perform better: we’re here to help you develop your unique value proposition and infuse that into your digital products and media. We get it; growing your business is about helping you meet your user's needs. To accomplish this goal we’ve selected a suite of services that can be customized to facilitate growth. 
 <ul>
   <li><strong><a href="services/strategy">Strategy</a></strong><br>
-Informed decisions lead to effective growth done efficiently. We can work together to get to know your personas, analyze your data, and evaluate your competition. a href="services/strategy">Find out more about our digital strategy services</a></li>
+Informed decisions lead to effective growth done efficiently. We can work together to get to know your personas, analyze your data, and evaluate your competition. <a href="services/strategy">Find out more about our digital strategy services</a></li>
 <li><strong><a href="services/creative">Creative</a></strong><br>
 There’s more to creative than your brand colors: constructing the user’s journey takes a solid understanding of strategic principles and functional capabilities. <a href="services/creative">See how our creative services will enhance your digital presence.</a></li>
 <li><strong><a href="services/devops">Architecture</a></strong><br>
