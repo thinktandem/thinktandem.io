@@ -83,6 +83,6 @@ link: /services/strategy
   </div>
 </div>
 
-<p>There are many ways to fortify your vision as we find the right path to your team’s success story. <a href="/services/creative">Learn how this informs our creative team’s recommendations</a> or <a href="../contact">reach out to us to learn more</a>.</p>
+<p>There are many ways to fortify your vision as we find the right path to your team’s success story. <a href="../services/creative">Learn how this informs our creative team’s recommendations</a> or <a href="../contact">reach out to us to learn more</a>.</p>
 
 
