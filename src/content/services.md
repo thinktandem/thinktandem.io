@@ -54,7 +54,7 @@ description: byline
     <h3><a href="services/training">Training</a></h3>
   </div>
   <div class="col-sm-8">
-    <p><li><strong></strong><br>
+    <p>
 Your team will need to be able to manage the day-to-day on your own. It’s simply not about us so we’ll teach you how to be self-sufficient and enable you to thrive on your own. <a href="services/training">Learn more about your options.</a></p>
   </div>
 </div>
