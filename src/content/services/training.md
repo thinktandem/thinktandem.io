@@ -26,7 +26,7 @@ link: /services/training
   </div>
   <div class="col-sm-8">
     <p>DevOps concepts such as continuous integration and automated testing can create huge performance gains for your team, but it can be difficult to invest the time necessary to overcome the learning curve on your own. Our training events help catalyze DevOps transformations, accommodating your team's busy schedule.</p>
-<ul><li>ntroduction to Continuous Integration</li>
+<ul><li>Introduction to Continuous Integration</li>
   <li>Automated Testing for PHP Applications</li></ul>
   </div>
 </div>
