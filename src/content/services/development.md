@@ -59,5 +59,5 @@ link: /services/development
     <li>Cross-OS Desktop Applications</li></ul>
   </div>
 </div>
-
-<p>Custom digital development without the bloat. With agile, sprint-based management, automated testing and continuous integration and frequent, reliable deployments, your projects keep moving forward the right way. <a href="../contact">Talk to us for solutions</a> or <a href="devops">learn about the foundations on which we build these!</a></p>
+<p>
+Custom digital development without the bloat. With agile, sprint-based management, automated testing and continuous integration and frequent, reliable deployments, your projects keep moving forward the right way. <a href="../contact">Talk to us for solutions</a> or <a href="../services/devops">learn about the foundations on which we build these!</a></p>
