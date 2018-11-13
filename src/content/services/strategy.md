@@ -47,7 +47,7 @@ link: /services/strategy
     <h3>Technical SEO</h3>
   </div>
   <div class="col-sm-8">
-    <p>Audits, setup, and configuration all go into making sure that the data is giving you the most insight possible. </p>
+    <p>Audits, setup, and configuration optimize your site to make sure your most valuable audiences are finding you in their top search results. </p>
   </div>
 </div>
 <div class="row">
@@ -55,7 +55,7 @@ link: /services/strategy
     <h3>Backlink Analysis and Acquisition</h3>
   </div>
   <div class="col-sm-8">
-    <p>Who’s linking to you matters. Let’s take a look at the quality of your backlinks and help develop a strategy for getting the right websites linking back</p>
+    <p>Who’s linking to you matters. Let’s take a look at the quality of your backlinks and help develop a strategy for getting the right websites linking back.</p>
   </div>
 </div>
 <div class="row">
@@ -79,7 +79,7 @@ link: /services/strategy
     <h3>Accessibility Assessments</h3>
   </div>
   <div class="col-sm-8">
-    <p>Even the most compliant site can drift over time. Our experts will analyze your site with a combination of automated and manual testing to ensure an inclusive experience </p>
+    <p>Even the most compliant site can drift over time. Our experts will analyze your site with a combination of automated and manual testing to ensure an inclusive experience.</p>
   </div>
 </div>
 
