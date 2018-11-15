@@ -32,6 +32,8 @@ web:
           allow: true
         ^/drupal-feed\.xml$:
           allow: true
+       '^/google5640e84dd65cb365\.html$':
+          allow: true
 
 # The size of the persistent disk of the application (in MB).
 disk: 2048
