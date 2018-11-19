@@ -1,12 +1,12 @@
 ---
 layout: layouts/service.html
 title: Training Opportunities
-byline:  ...because your team is the best investment you can make
+byline:  ...because your team is the best investment you can make.
 cta: Acheive with your team.
 link: /services/training
 
 ---
-<p>The long-term goal is to empower your organization to succeed on its own terms. Often, that means helping to train your team to support new technologies and learn better ways of developing solutions. <a href="../services/support">There are times you’ll want help</a> but you the day-to-day world, you can be the hero by teaching your team how to succeed on their own.</p>
+<p>Empower your organization to succeed on its own terms by helping to train your team with new technologies and better ways of developing solutions. <a href="../services/support">There are times you’ll want help</a>, but in the day-to-day world, you can be the hero by teaching your team how to succeed on their own.</p>
 
 <div class="row">
   <div class="col-sm-4">
@@ -35,7 +35,7 @@ link: /services/training
     <h3>Accessibility</h3>
   </div>
   <div class="col-sm-8">
-   <p>Inclusive best practices are great for SEO, have been known to safeguard against legal issues, and help your digital products prepare for emerging technologies, but it’s not up to your development team alone. </p>
+   <p>Inclusive best practices are great for SEO, safeguard against legal issues, and help your digital products prepare for emerging technologies. Essential skills for both content editors and your developers.</p>
 <ul><li>Introduction to Accessibility </li>
 <li>Accessibility for Content Editors</li></ul>
   </div>
