@@ -25,7 +25,7 @@ icons:
     link: /services/development
 
 ---
-<p>Developing your digital presence shouldn’t be that hard! To get you back to focusing on the big picture we practice a transparent development process that simplifies difficult decisions by selecting from best-in-breed technologies for your needs. Drupal, Laravel, Node, or the next big thing, our devs create simplified, stable solutions that are built to both scales and endure.</p>
+<p>Developing your digital presence shouldn’t be that hard! Our transparent development process focuses on delivering value quickly to your users, so you don't have to wait to see results. No matter if your application is built in Drupal, WordPress, Node.js, or another open-source solution, our devs create elegant solutions that are built to scale and endure.</p>
 
 <h2>Not sure which is right for you? Here’s an easy guide:</h2>
 
@@ -34,12 +34,14 @@ icons:
     <h3>Drupal</h3>
   </div>
   <div class="col-sm-8">
-    <p>Tandem's team has decades of collective Drupal experience. Enterprise-grade needs need Drupal for an open source content management system.</p><ul>
-  <li>Drupal 7/8 + Backdrop CMS</li>
-  <li>Custom Drupal Module and Theme Development</li>
-  <li>Long-term Drupal Support</li>
-  <li>Drupal Security</li>
-  <li>Drupal Migrations</li></ul>
+    <p>Tandem's team has decades of collective Drupal experience, making it our preferred enterprise content management system.</p>
+    <ul>
+      <li>Drupal 7/8 + Backdrop CMS</li>
+      <li>Custom Drupal Module and Theme Development</li>
+      <li>Long-term Drupal Support</li>
+      <li>Drupal Security</li>
+      <li>Drupal Migrations</li>
+    </ul>
   </div>
 </div>
 <div class="row">
@@ -48,12 +50,14 @@ icons:
   </div>
   <div class="col-sm-8">
     <p>Laravel provides a strong framework for creating custom web applications at any scale.</p>
-  <ul><li>Custom Laravel Development</li>
-    <li>Test-Driven Development</li>
-    <li>Single Sign-On and Authentication</li>
-    <li>PDF Manipulation and Generation</li>
-    <li>API Design and Implementation</li>
-    <li>Secure Architecture</li></ul>
+    <ul>
+      <li>Custom Laravel Development</li>
+      <li>Test-Driven Development</li>
+      <li>Single Sign-On and Authentication</li>
+      <li>PDF Manipulation and Generation</li>
+      <li>API Design and Implementation</li>
+      <li>Secure Architecture</li>
+    </ul>
   </div>
 </div>
 <div class="row">
@@ -78,5 +82,4 @@ icons:
     <li>Cross-OS Desktop Applications</li></ul>
   </div>
 </div>
-<p>
-Custom digital development without the bloat. With agile, sprint-based management, automated testing and continuous integration and frequent, reliable deployments, your projects keep moving forward the right way. <a href="../contact">Talk to us for solutions</a> or <a href="../services/devops">learn about the foundations on which we build these!</a></p>
+<p>Agile project management combined with automated testing and a continuous integration workflow power frequent, reliable deployments to keep your projects moving forward the right way. <a href="../contact">Talk to us for solutions</a> or <a href="../services/devops">learn about the DevOps foundations on which we build our development process!</a></p>
