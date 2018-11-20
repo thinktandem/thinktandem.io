@@ -4,6 +4,25 @@ title: Development
 byline: Using Drupal, Laravel, Node, or the next big thing, our devs create simple solutions that are built to last.
 cta: See Development Services.
 link: /services/development
+color: green
+seo:
+  description: byline
+icons:
+  - icon: devicons devicons-drupal
+    name: Drupal
+    link: /services/development#drupal
+  - icon: devicons devicons-laravel
+    name: Laravel
+    link: /services/development#laravel
+  - icon: devicons devicons-wordpress
+    name: WordPress
+    link: /services/development#wordpress
+  - icon: devicons devicons-nodejs_small
+    name: Node.js
+    link: /services/development#nodejs
+  - icon: devicons devicons-angular
+    name: Angular
+    link: /services/development
 
 ---
 <p>Developing your digital presence shouldn’t be that hard! To get you back to focusing on the big picture we practice a transparent development process that simplifies difficult decisions by selecting from best-in-breed technologies for your needs. Drupal, Laravel, Node, or the next big thing, our devs create simplified, stable solutions that are built to both scales and endure.</p>
