@@ -1,10 +1,22 @@
 ---
 layout: layouts/service.html
-title: Ongoing Support 
+title: Ongoing Support
 byline: ...because the relationship doesn’t end when the project’s done.
 cta: Find Salvation
 link: /services/support
-
+color: green
+seo:
+  description: byline
+icons:
+  - icon: fa fa-medkit
+    name: Quick Fixes
+    link: /services/support
+  - icon: fa fa-code
+    name: Small Projects
+    link: /services/support
+  - icon: fa fa-ticket
+    name: Fast Turnaround
+    link: /services/support
 ---
 <p>Tandem is about partnership. Digital products, especially websites, are continuously evolving entities that require upkeep and enhancements for you to stay ahead of the curve and the competition.</p>
 
@@ -54,6 +66,5 @@ link: /services/support
     </ul>
   </div>
 </div>
- 
-<p>Your needs are special. <a href="../contact">Tell us what you’re missing</a>.</p>
 
+<p>Your needs are special. <a href="../contact">Tell us what you’re missing</a>.</p>
