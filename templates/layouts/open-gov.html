@@ -1,0 +1,58 @@
+{% extends './html.html' %}
+
+{% block title %}
+  {%parent%} | {{title}} | {{pageSlogan}}
+{% endblock %}
+
+{% block contents %}
+
+  <div id="hero" class="hero-case-study">
+    <div class="container">
+      <div class="row">
+        <h1 data-text="{{title|raw}}">{{ title|safe }}</h1>
+        <p class="hero-text" data-text="{{title|safe}}">{{ byline|raw }}</p>
+        <form role="form" id="contact-form" method="post" action="{{action}}">
+          <div class="form-group">
+            <input type="text" aria-label="Email" title="Email" name="email" class="form-control" id="email" placeholder="Email" required />
+          </div>
+          <input type="hidden" name="_next" value="contact-thanks" />
+          <input type="hidden" name="_subject" value="Pantheon Training" />
+          <button type="submit" class="btn btn-primary">Get a Demo</button>
+          <span class="learn-more">
+            or <a href="/pantheon-training/#service" class="btn">Learn More</a>
+          </span>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <article id="service">
+
+    <div id="page-content">
+
+      <div class="service-description">
+        <div class="container">
+          <div class="row">
+              {{ contents|safe }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+
+  <div id="cta">
+    <div class="container social">
+      <div class="row header">
+        <div class="col-xs-12">
+          <h3>Ready For Pantheon Training?</h3>
+          <p>Talk to us today so we can craft a custom training to make your DevOps dreams come true.</p>
+          <a href="/contact" title="contact" class="btn btn-primary" role="button">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
