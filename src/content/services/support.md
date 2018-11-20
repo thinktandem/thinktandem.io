@@ -6,33 +6,39 @@ cta: Find Salvation
 link: /services/support
 
 ---
-<p>Tandem, by our very name, is about partnership. Digital products, especially websites, are continuously evolving entities that require upkeep and enhancements for you to stay ahead of the curve and the competition.</p>
+<p>Tandem is about partnership. Digital products, especially websites, are continuously evolving entities that require upkeep and enhancements for you to stay ahead of the curve and the competition.</p>
 
 <h2>Some common services include:</h2>
 <div class="row">
   <div class="col-sm-4">
-    <h3>Troubleshooting Pain Points</h3>
+    <h3>Solving Pain Points</h3>
   </div>
   <div class="col-sm-8">
-  <ul><li>Find relief from performance bottlenecks</li>
-    <li>Solving perplexing problems and errors</li>
-    <li>Recovering hacked sites</li></ul>
+    <ul>
+      <li>Eliminating performance bottlenecks</li>
+      <li>Solving perplexing problems and errors</li>
+      <li>Recovering hacked sites</li>
+    </ul>
   </div>
 </div><div class="row">
   <div class="col-sm-4">
     <h3>Re-Architecting Legacy Systems</h3>
   </div>
   <div class="col-sm-8">
-  <ul><li>Picking the best replacement technology</li>
-<li>Upgrading Drupal sites to Drupal 8 or Backdrops</li></ul>
+    <ul>
+      <li>Picking the best replacement technology</li>
+      <li>Upgrading Drupal sites to Drupal 8, Backdrop, WordPress, Laravel, or the Next Big Thing™</li>
+    </ul>
   </div>
 </div><div class="row">
   <div class="col-sm-4">
     <h3>Hiring & Training Developers</h3>
   </div>
   <div class="col-sm-8">
-   <ul><li>Interviewing and finding great developers</li>
-   <li><a href="../services/training">Train your existing team on modern best practices</a></li></ul>
+    <ul>
+      <li>Interviewing and finding great developers</li>
+      <li><a href="../services/training">Train your existing team on modern best practices</a></li>
+    </ul>
   </div>
 </div>
  <div class="row">
@@ -40,12 +46,14 @@ link: /services/support
     <h3>Ongoing Digital Strategy and SEO</h3>
   </div>
   <div class="col-sm-8">
-  <ul><li>SEO reporting and analysis</li>
-<li>Content strategy consultation</li>
-<li>AdWords and reporting</li>
-<li>Accessibility assessments</li></ul>
+    <ul>
+      <li>SEO reporting and analysis</li>
+      <li>Content strategy consultation</li>
+      <li>AdWords and reporting</li>
+      <li>Accessibility assessments</li>
+    </ul>
   </div>
 </div>
  
-<p>There is no one-fit for every client. <a href="../contact">Tell us what you’re missing</a>.</p>
+<p>Your needs are special. <a href="../contact">Tell us what you’re missing</a>.</p>
 
