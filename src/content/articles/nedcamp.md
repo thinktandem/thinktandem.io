@@ -9,7 +9,7 @@ seo:
 author: Donna Bungard
 private: false
 byline: Team, Training, Sessions, and Community
-date: 2018-10-02
+date: 2018-11-21
 ---
 
 Well, I’m almost caught up on sleep from this year’s [New England Drupal (NED) Camp](https://nedcamp.org/) held at Rhode Island College in Providence RI. With this year’s focus on [DevOps](https://thinktandem.io/services/devops/), some asked why someone who works in [Strategy](https://thinktandem.io/services/strategy/) and Project Mangement would be interested in this development centric camp. The answer is, that it’s all connected and to keep being able to speak not only to the end users needs but to that of my team, I need to try to take in as much as I can. And add to it that two of my [team members](https://thinktandem.io/about/) and many friends were going to be there - how could I have resisted?
