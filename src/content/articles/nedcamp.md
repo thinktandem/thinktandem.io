@@ -53,8 +53,8 @@ No Drupal camp would be complete without the afterparty. The college hosted us i
 NEDCamp 2018 Takeaways
 -------
 On the drive home the next morning I had the music up and the sun streaming in through my sunroof. I had a few hours to think through this camp’s experiences. 
-<ul><li>**Team:** I love spending time with team members - Stephanie and Mike are wonderful people to work and to play with!
-</li><li>**Community:** you’ve heard me go on before but, in short, these faces I only see a handful of times a year have become important faces to me
-</li><li>**Technology:** digital is about people - we make websites and applications FOR people. And well, I learned that DevOps is about people too… it’s about the people who make the resources for the rest of us out there. 
+<ul><li> **Team:** I love spending time with team members - Stephanie and Mike are wonderful people to work and to play with!
+</li><li> **Community:** you’ve heard me go on before but, in short, these faces I only see a handful of times a year have become important faces to me
+</li><li> **Technology:** digital is about people - we make websites and applications FOR people. And well, I learned that DevOps is about people too… it’s about the people who make the resources for the rest of us out there. 
 </li></ul>
 Until next year NED Camp! And thank you. 
