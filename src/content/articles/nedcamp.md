@@ -23,7 +23,7 @@ After lunch, we moved onto a more technical role. We spun up local environments 
 In the end, we summarized what we took from the session and gave constructive feedback to allow future attendees to benefit from the insights each of us was able to share.
 
 <h3>Dinner and Singing</h3>
-That evening many of us descended upon Cassarino's for fine Italian food and better conversation. We spoke of professional experiences, laughed as friends and enjoyed a variety of delicious food. Later there was karaoke with a handful of wonderful people; the highlights included drinking from porcelain cats, singing alongside a teammate and hearing the others give it their all! 
+<p>That evening many of us descended upon Cassarino's for fine Italian food and better conversation. We spoke of professional experiences, laughed as friends and enjoyed a variety of delicious food. Later there was karaoke with a handful of wonderful people; the highlights included drinking from porcelain cats, singing alongside a teammate and hearing the others give it their all! </p>
 
 
 Session Day! All the learning!
