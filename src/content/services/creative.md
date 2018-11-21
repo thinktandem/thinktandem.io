@@ -6,14 +6,33 @@ cta: Let's talk
 link: /services/creative
 
 ---
-<p>Your brand defines who you are and allows you to stand out online, but can it do more? It should! Your branding has the power to be worked into the overall user experience of your digital echo-sphere to intensify your identity. Your user’s journey should be unique to your site and drive the conversions you’re looking for. Relying heavily on <a href="../services/strategy">strategic research</a> and with <a href="../services/development">an understanding of the technical requirements and limitations</a>, your wireframes, designs, icons and other collateral will keep your ROI at front-of-mind.</p>
+<p>In today's competitive digital echosphere, your creative needs to go beyond what “looks good” and must be strategically designed to invoke user behaviors that convert. This path from research to concept to design must be a superhighway to visually engaging, accessible resources that support your brand’s mission. </p>
+ 
+ <div class="row">
+  <div class="col-sm-4">
+    <h3>Creative Strategy</h3>
+  </div>
+  <div class="col-sm-8">
+   <p>1. Building off your <a href="../services/strategy/">strategic research</a> to date, our team will review your <a href="../blog/2018/08/15/notes-on-personas/">personas</a>, competitors and, using your key performance indicators as a lens, start to formulate a strategic plan to drive the user’s journey towards conversion. </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-4">
+    <h3>Conceptualizing/Wireframing</h3>
+  </div>
+  <div class="col-sm-8">
+    <p>2. Before making you look good, our design team will make sure your site is setup to win. Wireframes are more than just layout, they work through functionality, determine many of the add ons needed, and help to architect that optimal user journey.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-4">
+    <h3>Mockups/Design</h3>
+  </div>
+  <div class="col-sm-8">
+    <p>3. With the visual scaffolding in place, we build out the look and feel that speaks to your market. Special attention is paid towards your brands guidelines, accessibility, content requirements and more. Referring back to the strategic research we proceed with confidence that the design we’re working on now will scale with your looking ahead..</p>
+  </div>
+</div>
+ 
+ <p>Inclusive creative designed to increase your ROI: it’s as easy as 1, 2, 3. <a href="../contact">Ready to take your first step? Let’s talk.</a></p>
 
-<h2>The Process </h2>
-<ol>
- <li>We start with usability. Wireframing allows your team to see the user journey as it’s being mapped out. This is a great time to check for the accessibility of requested features too!</li>
-<li>Designing a site that is in-brand, accessible, and takes into account the anticipated functionality, all while being engaging can be a lot to ask of a design but that’s where you’ll go next! </li>
-<li>Once you’re feeling confident that the mockups are in alignment with your vision we’ll start work on the fine-tuning: icons, edits, and function-specific design.</li>
-<li>When you and your stakeholders are ready to approve the look and proposed user journey, it’s time for hand-off your designs to <a href="../services/development">our development team</a> where we’ll create an interactive style guide that allows you to see your designs come to life.</li></ol>
-
-<p>By simplifying this process we can enhance your brand's digital presence, plan the optimal user journey and wrap it up into an inclusive design that embodies where form meets function. Not sure how this will work with your creative goals? <a href="../contact">Reach out to our team</a>.</p>
  
