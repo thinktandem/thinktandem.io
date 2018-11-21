@@ -8,8 +8,6 @@ seo:
   keywords: tags
 author: Donna Bungard
 private: false
-mainImage: images/articles/nedcamp.jpg
-img-src: images/articles/nedcamp.jpg
 byline: Team, Training, Sessions, and Community
 date: 2018-10-02
 ---
