@@ -10,17 +10,19 @@ services:
 
     # Use the available version of Apache by not specifying a version
     image: tugboatqa/httpd
-
     # A set of commands to run while building this service
     commands:
 
       # Commands that set up the basic preview infrastructure
       init:
-
+        - curl -sL https://deb.nodesource.com/setup_11.x | bash -
+        - apt-get install -y nodejs
         # Link the document root to the expected path. Tugboat uses /docroot
         # by default. So, if the root is located at any other path in your git
         # repository, change that here. This example links /web to the docroot
-        - npm install
-        - bower install
-        - grunt build
         - ln -snf "${TUGBOAT_ROOT}/build" "${DOCROOT}"
+      build:
+        - npm install
+        - npm install -g bower grunt-cli
+        - bower --allow-root install
+        - grunt build
