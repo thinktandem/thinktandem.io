@@ -6,8 +6,8 @@ color: uniform
 weight: 5
 role: Project Strategist 
 dev: Digital Strategy, Project Management, Accessibility 
-image: images/meSmall.jpg
-hover: images/meSmall.jpg
+image: images/meSmall1.jpg
+hover: images/meSmall1.jpg
 link: https://twitter.com/dbungard
 layout: components/molecules/bio/bio.html
 quote: We've got you covered!
