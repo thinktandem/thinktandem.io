@@ -95,6 +95,7 @@
 
   #page-content {
     p {
+      margin-top: 0px;
       font-weight: 300;
       line-height: 1.6em;
     }
@@ -107,6 +108,13 @@
     padding-bottom: 1em;
     padding-top: 1em;
 
+  }
+
+  .row {
+    margin-top: 1em;
+    h3 {
+      margin-top: 0px;
+    }
   }
 
 }
