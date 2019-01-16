@@ -48,38 +48,6 @@
     margin: 10px;
   }
 
-  .custom-icon {
-
-    i {
-      font-size: 4em;
-      margin: auto;
-      display: inline-block;
-      border-radius: 70px;
-      padding: 10px;
-      opacity: .88;
-      padding: 10px;
-      -webkit-border-radius: 1100%;
-      -moz-border-radius: 100%;
-      -o-border-radius: 100%;
-      border-radius: 100%;
-      border: 0;
-      color: #fff;
-      width: 111px;
-      height: 111px;
-    }
-
-    .custom-icon-name {
-      margin-top: 37px;
-      color: #fff;
-      font-size: 21px;
-      text-transform: uppercase;
-    }
-
-  }
-  .fix-editor {
-    display:none;
-  }
-
   .container {
     position: relative;
     z-index: 33;
@@ -87,28 +55,31 @@
     height: 100%;
   }
 
-  h1.hero-text {
-    //margin: 2em 0em 1em 0em;
-    margin-top: 25px;
-    margin-right: 15px;
-    -webkit-animation-duration: 1s;
-    font-size: 3.5em;
-    line-height: 1;
+  .hero-text {
+    padding: 3em;
+    h1 {
+      //margin: 2em 0em 1em 0em;
+      margin-top: 25px;
+      margin-right: 15px;
+      -webkit-animation-duration: 1s;
+      font-size: 3.5em;
+      line-height: 1;
 
-    @media (max-width: 767px) {
-      font-size: 2em;
-      //margin: 0em 0em 0.75em 0em;
-      //line-height: 1em;
+      @media (max-width: 767px) {
+        font-size: 2em;
+        //margin: 0em 0em 0.75em 0em;
+        //line-height: 1em;
+      }
     }
-  }
 
-  p.hero-text {
-    font-size: 1.4em;
-    margin-bottom: 0;
+    p {
+      font-size: 1.4em;
+      margin-bottom: 0;
 
-    @media (max-width: 767px) {
-      font-size: 1em;
-      //margin: 1em 1em 1em 0em;
+      @media (max-width: 767px) {
+        font-size: 1em;
+        //margin: 1em 1em 1em 0em;
+      }
     }
   }
 
@@ -119,140 +90,6 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-  }
-
-  .sub-text {
-    -webkit-font-smoothing: antialiased;
-    width: 50%;
-    margin-top: 25px;
-    font-family: $montserrat;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-
-    -webkit-animation-duration: 1s;
-
-    @media (max-width: 991px) {
-      width: 70%;
-    }
-
-    @media (max-width: 767px) {
-      font-size: 15px;
-      width: 100%;
-      text-align: center;
-    }
-  }
-
-  .hero-readmore {
-    /*position: absolute; */
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    margin-top: 20px;
-    a {
-      display: block;
-      text-decoration: none;
-      font-weight: 100;
-      color: white;
-    }
-
-    i {
-      display: block;
-      margin-top: -.3em;
-    }
-  }
-
-  .cta {
-    @include animationDelay(0.6s);
-    margin-top: 60px;
-
-    @media (max-width: 767px) {
-      text-align: center;
-    }
-
-    a {
-      margin-right: 20px;
-      padding: 15px 31px;
-
-      @media (max-width: 767px) {
-        font-size: 14px;
-        padding: 12px 25px;
-        margin: 0px 15px 15px 0px;
-      }
-    }
-  }
-
-  .img {
-    position: absolute;
-    top: 15px;
-    left: 625px;
-    width: 570px;
-    height: 333px;
-    background-image: url("../../images/static-hero.png");
-    background-repeat: no-repeat;
-
-    @media(max-width: 991px) {
-      display: none;
-    }
-  }
-  .hero-icons {
-    margin-top: 8em;
-    @media(max-width: 767px) {
-      margin-top: 4em;
-    }
-  }
-  .hero-icon {
-    display: inline-block;
-    img {
-      margin: auto;
-      display: block;
-      width: 100%;
-      max-width: 90px;
-    }
-    h2 {
-      margin-top: 1.2em;
-      @media(max-width: 767px) {
-        font-size: .7em;
-      }
-    }
-  }
-
-  .flip-container:hover .flipper,
-  .flip-container.hover .flipper {
-    transform: rotateY(180deg);
-  }
-  .flip-container,
-  .flip-container .front,
-  .flip-container .back {
-    -moz-border-radius: 100px;
-    -webkit-border-radius: 100px;
-    border-radius: 100px;
-    width: 111px;
-    height: 111px;
-    overflow: hidden;
-  }
-  .flip-container .flipper {
-    transition: 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-  }
-  .flip-container .flipper .front,
-  .flip-container .flipper .back {
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .flip-container .flipper .front {
-    background: #72F0A1;
-    z-index: 2;
-    transform: rotateY(0deg);
-  }
-  .flip-container .flipper .back {
-    background-color: #078ABC;
-    border: 3px solid #efefef;
-    transform: rotateY(180deg);
   }
 
 }
