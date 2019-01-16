@@ -1,9 +1,17 @@
 <div id="hero">
-  <div class="container">
-    <div class="row">
+  <div class="row">
+    <div class="col-md-5 banner-top-image-text">
+      <img src="images/front/new-front.jpeg" class="img-responsive" title="Tandem" alt="Tandem">
+    </div>
+    <div class="col-md-7">
       <h1 class="hero-text animated" data-text="{{title|raw}}">{{ heroPri|raw }}</h1>
-      <p class="hero-text animated " data-text="{{title|safe}}">{{ heroSec}}</p>
-      <a href="/services" class="btn btn-primary">Learn More</a>
+      <p class="hero-text animated " data-text="{{title|safe}}">{{ heroSec|raw }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 banner-top-cta">
+      <a href="/services" class="btn btn-inverse-large">Learn More</a>
+      <a href="/contact" class="btn btn-inverse-large">Let's Talk</a>
     </div>
   </div>
 </div>

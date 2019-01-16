@@ -56,6 +56,22 @@ p {
   }
 }
 
+.btn-inverse-large {
+  z-index: 999;
+  border: 5px solid white;
+  color: white;
+  letter-spacing: 0.7px;
+  @include transition(all .2s linear);
+  background-color: inherit;
+  font-size: 2em;
+  &:hover {
+    text-decoration: none;
+    background-color: inherit;
+    font-weight: 800;
+    color: white;
+  }
+}
+
 
 .navbar.hero .navbar-nav > li > a:hover {
   background: none;
