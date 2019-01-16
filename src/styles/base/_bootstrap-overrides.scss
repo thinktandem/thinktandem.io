@@ -63,7 +63,7 @@ p {
   letter-spacing: 0.7px;
   @include transition(all .2s linear);
   background-color: inherit;
-  font-size: 2em;
+  font-size: 1em;
   &:hover {
     text-decoration: none;
     background-color: inherit;
