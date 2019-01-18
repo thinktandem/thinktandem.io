@@ -2,8 +2,8 @@
 layout: pages/home.html
 title: Tandem
 pageSlug: homepage
-heroPri: "Relax. <br> We’ve got this."
-heroSec: "Tandem does strategy, development, and URGENT HELP engagements for organizations that are serious about getting things done."
+heroPri: "Websites that grow your organization."
+heroSec: "Increased traffic.<br>More conversions.<br>Happier annual reports.<br><strong>What can we achieve together?</strong>"
 ---
 A static site framework for quickly and effectively prototyping responsive sites, developing styleguides and designing in-browser.
 

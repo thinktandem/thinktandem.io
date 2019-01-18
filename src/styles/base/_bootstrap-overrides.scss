@@ -56,6 +56,30 @@ p {
   }
 }
 
+.btn-inverse-large {
+  z-index: 999;
+  border: 5px solid white;
+  color: white;
+  letter-spacing: 0.7px;
+  @include transition(all .2s linear);
+  background-color: inherit;
+  font-size: 1em;
+  &:hover {
+    text-decoration: none;
+    background-color: inherit;
+    font-weight: 800;
+    color: white;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 1.5em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8em;
+  }
+}
+
 
 .navbar.hero .navbar-nav > li > a:hover {
   background: none;
