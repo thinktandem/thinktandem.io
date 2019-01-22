@@ -17,12 +17,12 @@ date: 2019-01-22
 Why are we writing about this?
 -------------------
 
-Drupal 6 reached end of life on February 24th, 2016.  This means that your Drupal 6 site is no longer receiving security updates, all its modules are now marked unsupported, and all support requests will no longer be responded to.  The problem with this is that there is still well over 50,000 Drupal 6 sites out there at the time of this blog post.  Some smaller organizations don't have the budget to make a major CMS upgrade / migration and have to maintain what they have.  So these sites still need to be kept up to date and safe from any potential hacks.  We have helped a handful of Drupal 6 sites remain secure and it is not that difficult to do.
+Drupal 6 reached end of life on February 24th, 2016.  This means that your Drupal 6 site is no longer receiving security updates, all its modules are now marked unsupported, and all support requests will no longer be responded to.  The problem is that there are still well over 50,000 Drupal 6 sites out there at the time of this blog post.  Smaller organizations may not have the budget to make a major CMS upgrade / migration and have to maintain what they have.  So these sites still need to be kept up to date and safe from any potential hacks.  We have helped a handful of Drupal 6 sites remain secure and it is not that difficult to do.
 
 Drupal 6 Long Term Support
 ------------------
 
-Fortunately there are a handful of companies and individuals whom are maintaining Drupal 6 core and a some modules on their own.  You [can read more](https://www.drupal.org/project/d6lts) about these companies and what they are doing to help out.  There is also a [GitHub project page](https://github.com/d6lts) that has not only a LTS version of Drupal 6 core, but other contrib modules that are maintained as well.
+Fortunately, there are a handful of companies and individuals who are maintaining Drupal 6 core and some modules on their own.  [You can read more about these companies and what they are doing to help out](https://www.drupal.org/project/d6lts).  There is also a [GitHub project page](https://github.com/d6lts) that has not only a LTS version of Drupal 6 core, but other contrib modules that are maintained as well.
 
 These efforts have also let Drupal 6 become compatible with PHP 7.1+.  This is another huge help since PHP 5 and PHP 7.0 just became unsupported on Jan 1, 2019.  You can easily get Drupal 6 working on PHP 7.1 and soon 7.2 as well.  This helps extend the life of your Drupal 6 site for some time.  
 
@@ -33,7 +33,7 @@ Setup your site
 
 #### Migrating To Platform.sh
 
-We chose [platform.sh](https://platform.sh/) to move the Drupal 6 sites we maintain. This is largely due to the fact that our other go to hosting provider, [Pantheon](https://pantheon.io/) only allows certain vendors to spin up new Drupal 6 sites.  If you have moved a vanilla Drupal site to platform.sh before, the process is pretty much the same.  
+We chose [platform.sh](https://platform.sh/) to move the Drupal 6 sites we maintain. This is largely due to the fact that our other go-to hosting provider, [Pantheon](https://pantheon.io/) only allows certain vendors to spin up new Drupal 6 sites.  If you have moved a vanilla Drupal site to platform.sh before, the process is pretty much the same.  
 
 We usually like to hook all our platform sites up to github as they are easier to maintain.  Once you have your Drupal 6 site in github, we need to add a couple files to the repo.
 
@@ -146,7 +146,7 @@ You should now have a working Drupal 6 site on platform.sh!  Just move your DB a
 
 #### Updating Drupal 6 Core and Modules to the Long Term Support Versions.
 
-This next part is the longest and most tedious of this process.  It isn't overly difficult, just more time consuming than anything.  So grab a snack and lets get this done.
+This next part is the longest and most tedious of this process.  It isn't overly difficult, just more time consuming than anything.  So grab a snack and let's get this done..
 
 First we need to update the core of your Drupal 6 site.  Doing this is fairly straight forward if your core isn't hacked up.  Just go to the root of your project in your CLI and run the following:
 
@@ -154,13 +154,13 @@ First we need to update the core of your Drupal 6 site.  Doing this is fairly st
 git pull -Xtheirs git@github.com:d6lts/drupal.git --allow-unrelated-histories
 ```
 
-This will get the core of your Drupal 6 site up to the latest and greatest Drupal 6 LTS version.  You may some some merge conflicts, so just follow normal merge conflict procedures and add those files to your repo.  The most common issue we have seen by doing this is image file conflicts in core.  Those are just resolved by just running a ```git add -A``` and commiting the changes.  
+This will get the core of your Drupal 6 site up to the latest and greatest Drupal 6 LTS version.  You may some some merge conflicts, so just follow normal merge conflict procedures and add those files to your repo.  The most common issues we come across all involve image file conflicts in core.  Those are just resolved by just running a ```git add -A``` and committing the changes.  
 
 The next part is the most manual out of all of this.  We need to update all our modules to their last drupal.org version or the Drupal 6 LTS version.  You can no longer run ```drush up``` in Drupal 6 site as all modules are deemed unsupported now.  What you can do is ```drush dl``` on your code base to get the last Drupal 6 version of a module.  You can blindly go in and grab all your modules names and use some text manipulation to download all your modules at once.  However that is a little cowboy and can cause you more pain.  
 
 I like to update a handful of modules at a time and check the site to make sure everything is ok.  Usually, I either check the module install page to see what version the module is on and sometimes the .info a module as well.  I then check the Drupal 6 LTS repo by using the machine name of the module in the url like: ```https://github.com/d6lts/MODULE_NAME```.  I then check the drupal.org release page doing the same: ```https://www.drupal.org/project/MODULE_NAME/releases?api_version%5B%5D=87``` . Obviously change the MODULE_NAME to the machine name of your modules.  This does take some time, but once it is done, you won't have to do this very often again.
 
-Once this is done, this should have your site to the latest Drupal 6 LTS versions and you are not only secure, but you can go to a higher version of PHP now.
+You should now have your site to the latest Drupal 6 LTS versions and you are not only secure, but you can go to a higher version of PHP now.
 
 #### Upgrading to PHP 7.1
 
@@ -179,9 +179,9 @@ To this:
 $db_url = 'mysqli://user@database.internal/main';
 ```
 
-We use [lando](https://github.com/lando/lando) for all our local development, so changing the php version is quick and easy.  Most modern localdev solutions allow the same thing.  So, go ahead and bump the php version in your localhost to 7.1.  Test out your site locally and address any issues.  Once that is done, go ahead and just the php version in your .platform.app.yaml as well.  That is it basically, your site should be on php 7.1 and running fast and happy.
+We use [lando](https://github.com/lando/lando) for all our local development, so changing the PHP version is quick and easy.  Most modern localdev solutions allow the same thing.  So, go ahead and bump the php version in your localhost to 7.1.  Test out your site locally and address any issues.  Once that is done, go ahead and just the PHP version in your .platform.app.yaml as well.  That is it basically, your site should be on PHP 7.1 and running fast and happy.
 
 Conclusion
 -----------
 
-Keeping your Drupal 6 site maintainable and up to date is crucial if you can not upgrade any time in the near future.  By following this guide, you can quickly and easily sping up your site on a reliable and secure host while keeping yoru Drupal 6 site on the latest and greatest support versions.  
+Keeping your Drupal 6 site maintainable and up to date is crucial if you can not upgrade any time in the near future. By following this guide, you can quickly and easily spin up your site on a reliable and secure host while keeping your Drupal 6 site on the latest and greatest support versions. If you're having trouble or need backup, just let us know - we're here to help.
