@@ -3,43 +3,16 @@
   min-height: 95vh;
   position: relative;
 
+  @media (min-width: 1700px) {
+    min-height: 85vh;
+  }
+
   @media (max-width: 1024px) {
     min-height: 50vh;
   }
 
   @media (max-width: 767px) {
     min-height: auto;
-  }
-
-  &:before {
-    position: absolute;
-    content: '';
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  &:after {
-    position: absolute;
-    content: '';
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  i {
-    color: #FFCC4F;
-    font-size: 5.5em;
-    margin: 10px;
-  }
-
-  .container {
-    position: relative;
-    z-index: 33;
-    top: 2em;
-    height: 100%;
   }
 
   .hero-text {
@@ -60,6 +33,14 @@
       font-size: 3.5em;
       line-height: 1;
 
+      @media (min-width: 1700px) {
+        font-size: 4em;
+      }
+
+      @media (min-width: 1900px) {
+        font-size: 4.5em;
+      }
+
       @media (max-width: 1024px) {
         font-size: 2.5em;
       }
@@ -77,10 +58,17 @@
       font-size: 1.4em;
       margin-bottom: 0;
 
+      @media (min-width: 1700px) {
+        font-size: 1.7em;
+      }
+
+      @media (min-width: 1900px) {
+        font-size: 2em;
+      }
+
       @media (max-width: 1024px) {
         font-size: 1.1em;
       }
-
 
       @media (max-width: 991px) {
         padding-bottom: 1em;

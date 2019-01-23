@@ -44,6 +44,27 @@ p {
   font-weight: 300;
   text-transform: uppercase;
   padding: .5em 1em;
+  font-size: 1em;
+
+  @media (min-width: 1700px) {
+    font-size: 1.2em;
+  }
+
+  @media (min-width: 1800px) {
+    font-size: 1.3em;
+  }
+
+  @media (min-width: 1800px) {
+    font-size: 1.4em;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 1.5em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8em;
+  }
 }
 
 .btn-secondary {
@@ -63,20 +84,11 @@ p {
   letter-spacing: 0.7px;
   @include transition(all .2s linear);
   background-color: inherit;
-  font-size: 1em;
   &:hover {
     text-decoration: none;
     background-color: inherit;
     font-weight: 800;
     color: white;
-  }
-
-  @media (max-width: 991px) {
-    font-size: 1.5em;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 0.8em;
   }
 }
 
