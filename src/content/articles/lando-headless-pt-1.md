@@ -1,6 +1,6 @@
 ---
 layout: layouts/article.html
-title: "Lando + Contenta CMS + NuxtJs Pt. 1"
+title: "Lando + Contenta CMS + Nuxt Pt. 1"
 tags: development, api, drupal, javascript
 permalink: true
 seo:
