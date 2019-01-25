@@ -3,7 +3,9 @@
 
   .sub-hero-ask {
     p {
-      font-size: 26px;
+      @media (min-width: 992px) {
+        font-size: 26px;
+      }
     }
   }
 
