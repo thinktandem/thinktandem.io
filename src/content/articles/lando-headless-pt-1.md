@@ -1,6 +1,6 @@
 ---
 layout: layouts/article.html
-title: "Lando + Contenta CMS + NuxtJs Part I"
+title: "Lando + Contenta CMS + NuxtJs Pt. 1"
 tags: development, api, drupal, javascript
 permalink: true
 seo:
@@ -8,8 +8,8 @@ seo:
   keywords: tags
 author: Geoff St. Pierre
 private: false
-mainImage: images/articles/drupal.jpg
-img-src: images/articles/drupal.jpg
+mainImage: images/articles/headless-pt-1/landoContentaNuxt.png
+img-src: images/articles/headless-pt-1/landoContentaNuxt.png
 byline: Set up a headless Drupal architecture in Lando
 date: 2019-01-25
 ---
