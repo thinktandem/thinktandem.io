@@ -72,7 +72,7 @@ config:
   webroot: web
 ```
 
-Nothing too complicated there, but be choose to answer the `lando init`
+Nothing too complicated there, but be sure to answer the `lando init`
 questions with `druapl8` for the recipe and `web` for the `webroot` as Contenta
 CMS will set up a nested webroot in the directory called `web`.
 
@@ -80,7 +80,7 @@ Now that we have the app started we'll use `composer` to pull in the Contenta
 CMS Drupal distibution:
 
 ```bash
-lando composer create-project contentacms/contenta-jsonapi-project blah --stability dev --no-        interaction --no-install
+lando composer create-project contentacms/contenta-jsonapi-project blah --stability dev --no-interaction --no-install
 ```
 
 Composer will not let us install to a directory that already has things in it
