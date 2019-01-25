@@ -18,14 +18,14 @@ Why?
 ----
 
 Headless architectures offer many advantages to app construction. From the COPE
-create once publish everywhere strategy, to parallell development of the
+(create once publish everywhere) strategy, to parallell development of the
 frontend and the backend of the app, but getting the infrastructure right can be
-a bit tricky. Let's take a look at how to landoize your apps infrastructure and
-get the apps talking to each other.
+a bit tricky. Let's take a look at how to Landoize your infrastructure and get
+the apps talking to each other.
 
 There are also alot of choices available in headless architecture. In this
 artilcle we will reduce complexity by making specific choices and give a
-concrete example of setting up a Headless app. Here is the Tech stack:
+concrete example of setting up a headless app. Here is the Tech stack:
 
 * [Lando](https://docs.devwithlando.io) (dev environments)
 * [Contenta CMS](https://www.contentacms.org) (Drupal API app)
@@ -38,11 +38,11 @@ baked in like [jsonapi](https://www.drupal.org/project/jsonapi),
 few.
 
 Nuxt is an opinionated [Vue.js](https://vuejs.org) framework. Vue can do
-anything, but that said that means you can configure it in many ways, by using
+anything, but that said, it means you can configure it in many ways. By using
 Nuxt we leverage known good development patterns and can get up and running
 quickly and still have all the power of Vue.
 
-We will set up two independent `lando` apps one for the frontend and one for the
+We will set up two independent Lando apps one for the frontend and one for the
 API. We will use Contenta CMS for the API and Nuxt for the frontend.
 
 Setup Contenta CMS
@@ -189,3 +189,6 @@ Now you've set up the Contenta CMS API and the Nuxt frontend app. In the next
 post we'll walk through wiring up queries from the Nuxt app to the API site via
 [axios](https://github.com/axios/axios). That is where the fun really begins! 🧜‍♂️
 
+Looking for more help getting your Lando setup? Subscribe to our
+[YouTube channel](https://www.youtube.com/channel/UCl_QBNuGJNoo7yH-n18K7Kg) for
+instructional videos, and/or find us on [slack](https://slackpass.io/kalabox).
