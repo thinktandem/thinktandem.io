@@ -169,6 +169,9 @@ lando start
 lando yarn create nuxt app .
 ```
 
+When running this command it will interactively prompt you for some options for
+our `mynuxt` app. Be sure to select `axios` as we'll need that for our API calls.
+
 This will pull in nuxt and the needed dependencies and will take a minute or
 two. Once it completes restart the app:
 
@@ -188,6 +191,9 @@ Conclusion
 Now you've set up the Contenta CMS API and the Nuxt frontend app. In the next
 post we'll walk through wiring up queries from the Nuxt app to the API site via
 [axios](https://github.com/axios/axios). That is where the fun really begins! 🧜‍♂️
+
+Read on in [Part 2](https://thinktandem.io/blog/2019/02/01/lando-contenta-cms-nuxt-pt-2/) making API requests from the `mynuxt` frontend to the `myapi` app.
+
 
 Looking for more help getting your Lando setup? Subscribe to our
 [YouTube channel](https://www.youtube.com/channel/UCl_QBNuGJNoo7yH-n18K7Kg) for
