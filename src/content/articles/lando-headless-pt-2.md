@@ -28,7 +28,7 @@ Configure Contenta CMS
 ----------------------
 
 We'll need to configure Contenta to listen for API requests. The three main
-parts requird are a consumer, a user, and a role.
+parts required are a consumer, a user, and a role.
 
 
 *** Configure an API role `vue_role` ***
@@ -119,7 +119,7 @@ to our app. Underneath the `modules` array add and axios block:
 
 ```
 
-To see all the available optins you can read the URL in the comment. For our
+To see all the available options you can read the URL in the comment. For our
 purposes we'll turn on debugging with the caveat that our `APP_ENV` is not production.
 
 
@@ -242,7 +242,7 @@ we've referenced the `body` property this time in a `v-html` vue directive. We'v
 used `v-html` to demonstrate passing through data that may contain html. We could
 have referenced it the same way we referenced `title`.
 
-Now visit your page at https://tstnuxt.lndo.site and you should see something
+Now visit your page at https://mynuxt.lndo.site and you should see something
 like this:
 
 <img style="width: 100%; border: 1px gray solid;" src="images/articles/headless-pt-2/placeHolderPost.png" alt="Screeenshot of nuxt app with placeholder data"/>
@@ -318,7 +318,7 @@ Pro Tip
 
 While developing in my `*.vue` files I like to have a terminal pane open running
 `lando logs -s appserver -f` which tells me when changes are rebuilt via the nuxt
-webpack process. It also reports out errors caugh by eslint and any `console.log`
+webpack process. It also reports out errors caught by eslint and any `console.log`
 output you put in for debugging.
 
 
