@@ -93,10 +93,10 @@ to load in the environment variables to the app containers.
 
 *** Configure axios `nuxt.config.js` ***
 
-The set up requires telling `mynuxt` about the axios `baseURL` and opitionally
+The set up requires telling `mynuxt` about the axios `baseURL` and optionally
 setting up debugging. Open the file `nuxt.config.js` in your code editor.
 
-In the `modules` seciton of the file you will see that `axios` is already added
+In the `modules` sectiton of the file, you will see that `axios` is already added
 to our app. Underneath the `modules` array add and axios block:
 
 ```js
@@ -120,15 +120,15 @@ to our app. Underneath the `modules` array add and axios block:
 ```
 
 To see all the available options you can read the URL in the comment. For our
-purposes we'll turn on debugging with the caveat that our `APP_ENV` is not production.
+purposes, we'll turn on debugging with the caveat that our `APP_ENV` is not production.
 
 
 
 *** Configure `baseURL` ***
 
-Also in the `nuxt.config.js` file we will add in `env` code block to configure
+Also in the `nuxt.config.js` file, we will add in `env` code block to configure
 the `baseURL` telling axios where to make the API calls to Contenta. At the
-bottom of the file after the `buid` section add the following lines:
+bottom of the file after the `build` section add the following lines:
 
 ```js
   env: {
@@ -138,7 +138,7 @@ bottom of the file after the `buid` section add the following lines:
 ```
 
 After making changes to either the `.env` or `nuxt.config.js` files you'll need
-to rebuild the lando app `lando rebuild -y` in order to let the `mynuxt` app
+to rebuild the Lando app `lando rebuild -y` in order to let the `mynuxt` app
 load in those changes.
 
 That sets up our axios config so now we can make requests from our `mynuxt` app
@@ -171,7 +171,7 @@ section will contain our html, `<script>` will contain our javascript, and
 
 Now let's stand up some `data` for our template. In the `<script>` section of
 `pages/posts/index.vue` let's add a `data()` function to let the template know
-what data we'll be expecing. In this case our `posts` content type consists of
+what data we'll be expecting. In this case our, `posts` content type consists of
 a `title` and a `body` field. Open `pages/posts/index.vue` in your code editor.
 In the `<scripts>` section add in the `data()` function:
 
@@ -237,7 +237,7 @@ start building our template. Add to your template section references to the
 ```
 
 On line `5` we have referenced the `title` key of our `data()` function and
-rendered the default placeholder content in our template. Similarly on line `12`
+rendered the default placeholder content in our template. Similarly, on line `12`
 we've referenced the `body` property this time in a `v-html` vue directive. We've
 used `v-html` to demonstrate passing through data that may contain html. We could
 have referenced it the same way we referenced `title`.
@@ -251,7 +251,7 @@ Now let's replace the placeholder data with real data from `myapi`.
 
 Inside the `<script>` section we'll add a new function called `asyncData` which
 will call back to our `myapi` app with axios calls and get the data and swap out
-the placholder data with real data!
+the placeholder data with real data!
 
 ```js
   1 <template>
@@ -301,11 +301,11 @@ the placholder data with real data!
 ```
 
 Here on line `22` we've swapped out the `data()` function with `asyncData()`.
-The `asyncData` function is passed in the `app` context wich has acess to the
+The `asyncData` function is passed in the `app` context which has acess to the
 `$axios` object via the work we did in `.env` and `nuxt.config.js` files. We
 use this `$axios` object to make a GET request back to `myapi` and get the post
 node with `uuid=698c9621-e676-475f-bb00-63d946bc3fd9` in this example that `uuid`
-is hard coded for a specific post.
+is hardcoded for a specific post.
 
 Now visiting: https://mynuxt.lndo.site we see real data fetched from Contenta:
 
@@ -330,7 +330,7 @@ Conclusion
 ----------
 
 In [Part 1](https://thinktandem.io/blog/2019/01/25/lando-contenta-cms-nuxt-pt-1/)
-we set up the infrastracutre for our headless apps and here we've configured the
+we set up the infrastrucutre for our headless apps and here we've configured the
 apps for REST communication and shown an example GET request to get data from a
 `post` content. I encourage you to read the Nuxt, Contenta, and axios docs to
 drill deeper into the possibilities.
