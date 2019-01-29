@@ -17,7 +17,7 @@ date: 2018-02-08
 Why are we doing this?
 ----------------------
 
-We were hired on to act as consultants for one of our University clients migration from Drupal 7 to Drupal 8.  One of the tasks their development team was stuck one was migrating their Drupal 7 body fields to a Drupal 8 paragraph.  There were a few examples and blog posts out their in the universe, but they just did not seem to work right when applied.  After some Google-fu and a lot of trial and error, I was able to find a replicable working solution.  Once I solved this dilemma, it was actually quite easy to understand the moving parts.
+We were hired on to act as consultants for one of our University clients migration from Drupal 7 to Drupal 8.  One of the tasks their development team was stuck on was migrating their Drupal 7 body fields to a Drupal 8 paragraph.  There were a few examples and blog posts out their in the universe, but they just did not seem to work right when applied.  After some Google-fu and a lot of trial and error, I was able to find a replicable working solution.  Once I solved this dilemma, it was actually quite easy to understand the moving parts.
 
 The migration mechanisms at work
 ---------------------------------
