@@ -1,0 +1,12 @@
+#distributed {
+  padding-bottom: 2em;
+
+  p {
+    font-weight: bold;
+
+    &.top-text {
+      margin-top: 0;
+      font-size: 26px;
+    }
+  }
+}
