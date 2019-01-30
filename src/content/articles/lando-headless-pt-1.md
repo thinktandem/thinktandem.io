@@ -16,6 +16,12 @@ date: 2019-01-25
 
 Why?
 ----
+Prefer video?
+
+
+<div class="center-youtube-vid">
+youtube|hYTqsXmiK4M
+</div>
 
 Headless architectures offer many advantages to app construction. From the COPE
 (create once publish everywhere) strategy, to parallell development of the
