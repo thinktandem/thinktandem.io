@@ -48,7 +48,7 @@ But [you don't have to take my word for it](https://www.youtube.com/watch?v=vAvQ
 
 Believe it or not the technical debt ratio at the beginning of 2018 was actually around **60%!**.
 
-While this reduction has been much needed we've implemented CI test to make sure no new code introduced into Lando increases its technical debt beyond an unacceptable threshold.
+While this reduction has been much needed we've implemented CI tests to make sure no new code introduced into Lando increases its technical debt beyond an unacceptable threshold.
 
 Locking Down the API
 --------------------
@@ -235,7 +235,7 @@ lando update-deps
 
 #### Multi-command tooling
 
-`cmd` can also be an array. This allows you to chain an indefinate amount of commands together.
+`cmd` can also be an array. This allows you to chain an indefinite amount of commands together.
 
 ```yaml
 tooling:
