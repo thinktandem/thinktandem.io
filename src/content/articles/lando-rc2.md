@@ -14,7 +14,7 @@ byline: We've waited, we've bided our time, we've gathered data and now we are r
 date: 2019-02-01
 ---
 
-Holla!!! We are super pumped to announce the release of [Lando 3.0.0-rc.2](https://github.com/lando/lando/releases/tag/v3.0.0-rc.1)!.
+Holla!!! We are super pumped to announce the release of [Lando 3.0.0-rc.2](https://github.com/lando/lando/releases/tag/v3.0.0-rc.2)!.
 
 About midway through 2018 we reached a few of the milestones we were looking for:
 
