@@ -1,5 +1,5 @@
 ---
-title: "ELEVATING WHILE RETAINING THE BRAND"
+title: "Brand-friendly Redesign"
 logo: images/clients/poets/poets.png
 org: Academy of American Poets
 byline: <strong>The Academy of American Poets</strong> needed a refreshed design that respected their time-honored brand.
