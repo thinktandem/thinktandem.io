@@ -2,7 +2,7 @@
 title: "ELEVATING WHILE RETAINING THE BRAND"
 logo: images/clients/poets/poets.png
 org: Academy of American Poets
-byline: <strong>The Academy of American Poets</strong> is a beautiful resource meant to inspire, educate, and connect. It was time to elevate their website while retaining their time-honored brand.
+byline: <strong>The Academy of American Poets</strong> needed a refreshed design that respected their time-honored brand.
 image:
   src: /images/case-studies/poets-design.jpg
   title: Academy of American Poets
@@ -24,7 +24,7 @@ tech: drupal
 industries: non-profit
 services: strategy, design
 
-background: 00b4F0
+background: 0093d6
 layout: layouts/case-study.html
 slug: poets-redesign
 dark: false
@@ -33,21 +33,29 @@ private: false
 date: 2019-11-15
 ---
 
-Poets.org is a elegant resource that connects users to over a million poets, poems, educational resources, event and more. With a large member-base and many more casual visitors, the site needs to be able to reach a huge audience, keeping our focus on user experience, accessibility and on brand representation. 
+Poets.org is a elegant resource that connects users to over a million poets, poems, educational resources, event and more. With a large member-base and many more casual visitors, the site needs to be able to reach a huge audience, keeping our focus on user experience, accessibility and on brand representation.
 
 Tandem performed many of the tasks associated with a full discovery to build the knowledge base that would inform the team. This included:
-- Stakeholder Interviews
-- Industry Research
-- Analytics Review
-- Persona Development
+
+-   Stakeholder Interviews
+
+-   Industry Research
+
+-   Analytics Review
+
+-   Persona Development
 
 From here the creative team worked together with our strategists to review brand documentation and identify the strengths of the current website. We developed an array of creative assets including:
-- Wireframes for specialized content types
-- Mobile mockups
-- Desktop mockups
-- Invision Prototypes
 
-With active client participation, we embraced all that Poets.org wanted to communicate in a repeatable way that can scale with their ever-growing site. This new design, reminiscent of the old, honors the tradition, creativity and overall brand of Poet.org. 
+-   Wireframes for specialized content types
 
+-   Mobile mockups
 
-Site launch is expected Spring 2019. 
+-   Desktop mockups
+
+-   Invision Prototypes
+
+With active client participation, we embraced all that Poets.org wanted to communicate in a repeatable way that can scale with their ever-growing site. This new design, reminiscent of the old, honors the tradition, creativity and overall brand of Poet.org.
+
+Site launch is expected Spring 2019.
+expected Spring 2019. 
