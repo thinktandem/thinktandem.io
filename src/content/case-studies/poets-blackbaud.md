@@ -2,7 +2,7 @@
 title: "CUSTOM BLACKBAUD INTEGRATION"
 logo: images/clients/poets/poets.png
 org: Academy of American Poets
-byline: <strong>The Academy of American Poets</strong> utilized Blackbaud to handle all their fundraising / donor management needs. They desired to centralize the functionality on their Drupal website. 
+byline: Tandem helped <strong>The Academy of American Poets</strong> centralize their Blackbaud-powered fundraising efforts on their Drupal website. 
 image:
   src: /images/case-studies/poets-blackbaud.jpg
   title: Academy of American Poets
@@ -24,7 +24,7 @@ tech: drupal
 industries: non-profit
 services: development
 
-background: 00b4F0
+background: 0093d6
 layout: layouts/case-study.html
 slug: poets-blackbaud-integration
 dark: false
