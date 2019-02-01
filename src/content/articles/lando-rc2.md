@@ -157,7 +157,7 @@ Breaking changes aside, here are all the awesome improvements in RC2.
 
 ### Better Images
 
-We've rebased a lot of our images on the [Bitnamis](https://hub.docker.com/u/bitnami/) because they are more "local dev" ready. This has provided a bunch of extra stability.
+We've rebased a lot of our images on [Bitnami's](https://hub.docker.com/u/bitnami/) because they are more "local dev" ready. This has provided a bunch of extra stability.
 
 A downside of this is that [some supported Lando versions](https://docs.devwithlando.io/guides/updating-to-rc2.html#service-versions) have gone away.
 
@@ -272,7 +272,7 @@ tooling:
 
 You can also omit the `service` and define `cmd` as an array of objects where the `key` is the service and the `value` is the command. This can allow you to consolidate complex testing and build steps that need to happen across many different services.
 
-It also allows you to reuse a common interface across many different Landofiles eg `lando test` may differ from project to project but it's always what we use to run our tests.
+It also allows you to reuse a common interface across many different Landofiles, eg `lando test` may differ from project to project but it's always what we use to run our tests.
 
 ```yaml
 tooling:
@@ -295,7 +295,7 @@ lando test && lando build
 
 #### Dynamic service commands
 
-Sometimes you have, need or want a single command that can be used on a user-specified service. In these situations you can tell Lando to set the service with an option.
+Sometimes you have, need, or want a single command that can be used on a user-specified service. In these situations you can tell Lando to set the service with an option.
 
 Note that the `:` prefix is what tells Lando to use an option instead of a literal string. Also note that you should be careful to avoid collisions between options *you* specify and options the *underlying command* does.
 
@@ -401,7 +401,7 @@ On the flip side you might have some user-specific configuration you'd like to u
 
 ### Restart vs. Rebuild
 
-If you change your Landofiles you now need to explicitly lando rebuild instead of running lando restart. This helps to provide stability between restarts until you explicitly ask for things to change and vastly speeds up stops and starts.
+If you change your Landofiles you now need to explicitly run `lando rebuild` instead of running `lando restart`. This helps to provide stability between restarts until you explicitly ask for things to change and vastly speeds up stops and starts.
 
 **old**
 
@@ -439,6 +439,8 @@ lando init --source pantheon
 ### No Registry
 
 There is no longer a register of apps stored at `~/.lando/cache/registry`. As a consequence you can no longer do things like `lando start MYAPP`
+
+**old**
 
 ```bash
 lando start MYAPP
@@ -549,7 +551,7 @@ If you have written your own custom plugins
 1. Sorry!! :/
 2. Once you see the new format you'll feel better :)
 
-We've finally locked down a [Plugin System](http://docs.devwithlando.io/dev/plugins.html) that uses the [Lando](http://docs.devwithlando.io/api/lando.html) and [App](http://docs.devwithlando.io/api/app.html) APIs and while we still don't have a great way to manage the installation and management of these plugins it is going to be the defining feature of `3.1.0`.
+We've finally locked down a [Plugin System](http://docs.devwithlando.io/dev/plugins.html) that uses the [Lando](http://docs.devwithlando.io/api/lando.html) and [App](http://docs.devwithlando.io/api/app.html) APIs and while we still don't have a great way to manage the installation and management of these plugins, it is going to be the defining feature of `3.1.0`.
 
 ### Bug Fixes
 
