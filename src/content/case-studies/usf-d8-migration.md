@@ -1,7 +1,7 @@
 ---
 title: "MIGRATED INTRANET TO DRUPAL 8"
 logo: images/clients/usf/usf.png
-org: Tandem
+org: University of San Francisco
 byline: Performance issues plagued USF’s Drupal 7 intranet and it was time for a better solution.  Tandem helped USF migrate their intranet and redid all of their custom functionality.
 image:
   src: /images/case-studies/usf-d8.png
