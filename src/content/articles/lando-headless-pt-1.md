@@ -172,7 +172,7 @@ Start the app and pull in nuxt:
 
 ```bash
 lando start
-lando yarn create nuxt app .
+lando yarn create nuxt-app .
 ```
 
 This will pull in nuxt and the needed dependencies and will take a minute or
