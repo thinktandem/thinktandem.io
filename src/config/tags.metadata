@@ -15,7 +15,6 @@ tags:
 industries:
   - agencies
   - corporate
-  - health
   - higher-education
   - startups
   - non-profit
@@ -31,4 +30,5 @@ services:
   - rescue
   - strategy
   - training
+  - design
 ---
