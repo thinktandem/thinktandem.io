@@ -18,6 +18,7 @@ industries:
   - health
   - higher-education
   - startups
+  - non-profit
 tech:
   - docker
   - drupal

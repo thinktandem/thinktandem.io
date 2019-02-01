@@ -2,7 +2,7 @@
 title: "STREAMLINED DISCOVERY"
 logo: images/clients/twinstar/twinstar.png
 org: TwinStar Credit Union
-byline: TwinStar Credit Union needed our team to bring their user research together with our technical recommendations to plan out the evolution of their site. 
+byline: <strong>TwinStar Credit Union</strong> needed our team to bring their user research together with our technical recommendations to plan out the evolution of their site. 
 image:
   src: /images/case-studies/twinstar-cycle.jpg
   title: TwinStar Credit Union
@@ -30,7 +30,7 @@ slug: twinstar-credit-union-discovery
 dark: false
 permalink: true
 private: false
-date: 2019-01-28
+date: 2019-01-15
 ---
 
 TwinStar continually looks to understand the needs of their members. With a watchful eye to both improve their members’ experience as well as website management they are embarking on a several phase update to their website. 
