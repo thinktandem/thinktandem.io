@@ -21,7 +21,7 @@ metrics:
     value: 250k
 
 tech: drupal
-industries: higher-education
+industries: higher education
 services: development
 
 background: 00574D
