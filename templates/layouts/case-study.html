@@ -57,12 +57,13 @@
   <article id="case-study">
 
     <div id="page-content">
-
-      <div class="case-study-img">
-        <div class="container">
-          <img src="{{ image.src }}" class="img-responsive" title="{{ image.title }}" alt="{{ title|safe }}">
+      {% if image.src %}
+        <div class="case-study-img">
+          <div class="container">
+            <img src="{{ image.src }}" class="img-responsive" title="{{ image.title }}" alt="{{ title|safe }}">
+          </div>
         </div>
-      </div>
+      {% endif %}
 
       <div class="case-study-summary">
         <div class="container">
@@ -95,18 +96,20 @@
         </div>
       </div>
 
-      <div class="case-study-quote">
-        <div class="container">
-          <div class="row">
-            <blockquote>
-              {{ quote.content|safe }}
-              <small>
-                {{ quote.author|safe }}
-              </small>
-            </blockquote>
+      {% if quote.content %}
+        <div class="case-study-quote">
+          <div class="container">
+            <div class="row">
+              <blockquote>
+                {{ quote.content|safe }}
+                <small>
+                  {{ quote.author|safe }}
+                </small>
+              </blockquote>
+            </div>
           </div>
         </div>
-      </div>
+      {% endif %}
 
 
       <div class="case-study-content">
