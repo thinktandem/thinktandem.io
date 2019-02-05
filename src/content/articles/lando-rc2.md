@@ -14,7 +14,7 @@ byline: We've waited, we've bided our time, we've gathered data and now we are r
 date: 2019-02-01
 ---
 
-Holla!!! We are super pumped to announce the release of [Lando 3.0.0-rc.2](https://github.com/lando/lando/releases/tag/v3.0.0-rc.2)!.
+Holla!!! We are super pumped to announce the release of [Lando 3.0.0-rc.2](https://github.com/lando/lando/releases)!.
 
 About midway through 2018 we reached a few of the milestones we were looking for:
 
@@ -557,6 +557,7 @@ We've finally locked down a [Plugin System](http://docs.devwithlando.io/dev/plug
 
 Here is the complete list of changes in RC2.
 
+* Added a `LANDO_HOST_USER` envvar [#1082](https://github.com/lando/lando/issues/1082)
 * Added `inquirer-autocomplete-prompt` to select inquirer prompts [#1017](https://github.com/lando/lando/issues/1017)
 * Added configurable support for `pre` and `post` `.lando.*.yml` source files eg `.lando.[#local|dist].yml` [#759](https://github.com/lando/lando/pulls/759) [#1154](https://github.com/lando/lando/pulls/1154)
 * Added support for `elasticsearch` `6` [#1114](https://github.com/lando/lando/pulls/1114)
@@ -567,18 +568,35 @@ Here is the complete list of changes in RC2.
 * Added a better message if users arrive at an "impossible" place [#1158](https://github.com/lando/lando/issues/1158)
 * Bumped `xdebug.max_nesting_level` to `512` [#1094](https://github.com/lando/lando/issues/1094)
 * Changed `rebuild` events to fire on the outside [#1352](https://github.com/lando/lando/issues/1352)
+* Changed `ssh` key loading to also load passphrase protected keys by default [#1288](https://github.com/lando/lando/issues/1288) [#1143](https://github.com/lando/lando/issues/1143) [#808](https://github.com/lando/lando/issues/808)
+* Changed default `http_resp_hdr_len` for `varnish` to `64000` [#1142](https://github.com/lando/lando/issues/1142)
 * Changed `xdebug: false` to actually disable the `php` extension [#760](https://github.com/lando/lando/issues/760)
 * Changed update warning to print to `stderr` [#1000](https://github.com/lando/lando/issues/1000)
 * Changed `wordpress` recipe to download `wp-cli` version `1.5.1` if using php 5.3 [#1334](https://github.com/lando/lando/issues/1334)
 * Changed PHP to have unlimited memory for CLI ops [#732](https://github.com/lando/lando/issues/732)
+* Fixed `postgres` config loading preventing outside connections [#1379](https://github.com/lando/lando/issues/1379)
+* Fixed busted auto-naming on Windows deploy [#1375](https://github.com/lando/lando/issues/1375)
+* Fixed busted `drush` global-local handoff on Pantheon [#1375](https://github.com/lando/lando/issues/1375)
+* Fixed regression in `LANDO_INFO` causing services to be index values instead of names [#1376](https://github.com/lando/lando/issues/1376)
+* Fixed regression causing databases to report as unhealthy after a restart [#1381](https://github.com/lando/lando/issues/1381)
+* Fixed tooling on Windows to not always run as root [#1362](https://github.com/lando/lando/issues/1362)
 * Fixed annoying recoverable php error `Cannot set 'user' save handler by ini_set()` on php 7.2 [#747](https://github.com/lando/lando/issues/747)
+* Fixed bug where files `rsync`ed from Pantheon were being set to `750` [#1325](https://github.com/lando/lando/issues/1325) [#1067](https://github.com/lando/lando/issues/1067) [#1330](https://github.com/lando/lando/issues/1330)
+* Fixed longstanding permissions bug with legacy `solr` version `3.6` [#692](https://github.com/lando/lando/issues/692)
+* Fixed bug where not-owned-by-me `.ssh` config was blowing up `ssh` key loading [#1203](https://github.com/lando/lando/issues/1203)
+* Fixed bug causing `mysql`, `mariadb` and `postgres` services to intermittently crash on `lando restart` [#1381](https://github.com/lando/lando/issues/1381)
+* Fixed regression in `events` caused by "multi word" tooling eg `command [something]`
+* Fixed regression in `lando logs --service SERVICE` not actually filtering [#1386](https://github.com/lando/lando/issues/1386)
 * Fixed long-standing race condition causing build fail perimission errors on `linux` [#1227](https://github.com/lando/lando/issues/1227) [#1197](https://github.com/lando/lando/issues/1197) [#1170](https://github.com/lando/lando/issues/1170)
 * Fixed bug where `docker-compose` files were not loading correctly outside of the app root [#1007](https://github.com/lando/lando/issues/1007)
 * Fixed bug where `node` services were not getting the `gid` correctly on `linux` [#1240](https://github.com/lando/lando/issues/1240)
 * Fixed bug where cyclical `app -> app` symlink was being create in `pantheon` recipes [#1043](https://github.com/lando/lando/issues/1043)
 * Fixed various `solr` config bugs [#1249](https://github.com/lando/lando/issues/1249) [#1350](https://github.com/lando/lando/issues/1350) [#1319](https://github.com/lando/lando/issues/1319) [#1351](https://github.com/lando/lando/issues/1351)
 * Increased events `maxListeners` to `64` [#1097](https://github.com/lando/lando/issues/1097)
+* Improved tooling is-service-already-running delegation [#1378](https://github.com/lando/lando/issues/1378)
 * Improved `drush` handling, fixes [#1315](https://github.com/lando/lando/issues/1315) [#1317](https://github.com/lando/lando/issues/1317) [#1318](https://github.com/lando/lando/issues/1318)
+* Improved `ssh` key loading to use the `LANDO_HOST_USER` by default [#1082](https://github.com/lando/lando/issues/1082)
+* Improved handling when an unknown service is used with the `proxy` [#1389](https://github.com/lando/lando/issues/1389)
 * Removed `lando` "global options", fixes [#1173](https://github.com/lando/lando/issues/1173)
 * Upgraded `terminus` to version `1.9.0` [#1259](https://github.com/lando/lando/issues/1259)
 * Upgraded `docker` to version `18.09.0/2.0.0.2` [#1297](https://github.com/lando/lando/issues/1297) [#1316](https://github.com/lando/lando/issues/1316)
