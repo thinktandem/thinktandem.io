@@ -172,7 +172,7 @@ Start the app and pull in nuxt:
 
 ```bash
 lando start
-lando yarn create nuxt app .
+lando yarn create nuxt-app .
 ```
 
 When running this command it will interactively prompt you for some options for

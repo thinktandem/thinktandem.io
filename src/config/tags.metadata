@@ -15,9 +15,9 @@ tags:
 industries:
   - agencies
   - corporate
-  - health
   - higher-education
   - startups
+  - non-profit
 tech:
   - docker
   - drupal
@@ -30,4 +30,5 @@ services:
   - rescue
   - strategy
   - training
+  - design
 ---
