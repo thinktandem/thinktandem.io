@@ -10,22 +10,16 @@ author: Dustin LeBlanc
 private: false
 mainImage: images/articles/headless-pt-1/landoContentaNuxt.png
 img-src: images/articles/headless-pt-1/landoContentaNuxt.png
-byline: Testing decoupled websites is completely possible!
+byline: Run end to end javascript tests on a decoupled frontend
 date: 2019-02-08
 ---
-
-Building on Geoff's posts about setting up Lando, Contenta, and Nuxt, and subsequently fetching resources, today we're going to take a look at ensuring this process works, and continues to work for the rest of the development project by writing some automated tests for the front end.
-
+Building on Geoff's posts about [setting up Lando, Contenta, and Nuxt](/blog/2019/01/25/lando-contenta-cms-nuxt-pt-1/), and subsequently [fetching resources](/blog/2019/02/01/lando-contenta-cms-nuxt-pt-2/), today we're going to take a look at ensuring this process works, and continues to work for the rest of the development project by writing some automated tests for the front end.
 Testing decoupled sites is a novel problem space, especially inside a CI environment. Standing up a full API backend on your CI server would be quite complex, especially when the backend of the site lives in a separate repository.
-
 ## The Strategy
-With a decoupled site, the front end is mostly going to be responsible for consuming API endpoints and transforming that data into the markup that matches your desired design. The typical pattern of acceptance testing with a tool like behat applies here. We want to run a headless browser that is pretending to be a user running the site in a browser. We'll use CodeceptJS to handle the actual testing, and a utility very similar to VCR for mocking the API responses for calls to our API backend called Talkback.
-
-Talkback boots up a proxy server that sits between our API backend and our frontend, intercepting all requests and storing them for later playback. When the site is bootstrapped on the CI server, talkback can play the responses that we recorded in development.
-
+With a decoupled site, the front end is mostly going to be responsible for consuming API endpoints and transforming that data into the markup that matches your desired design. The typical pattern of acceptance testing with a tool like behat applies here. We want to run a headless browser that is pretending to be a user running the site in a browser. We'll use [CodeceptJS](https://codecept.io/) to handle the actual testing, and a utility very similar to VCR for mocking the API responses for calls to our API backend called [Talkback](https://github.com/ijpiantanida/talkback/).
+Talkback boots up a proxy server that sits between our API backend and our frontend, intercepting all requests and storing them for later playback. When the site is bootstrapped on the CI server, talkback can playback the responses that we recorded in development.
 ## The Setup
 If you've been following along with the previous posts, you should have something like the following in your `.lando.yml`
-
 ```yaml
 name: mynuxt
 proxy:
@@ -48,9 +42,7 @@ tooling:
     cmd: /app/node_modules/.bin/nuxt
     service: appserver
 ```
-
 We need to add an additional couple of services that will run our tests and talkback proxy:
-
 ```yaml
 name: mynuxt
 proxy:
@@ -94,21 +86,15 @@ tooling:
     service: appserver
 ```
 We've also added some tooling entries so we can run the tests easily from our local machine with `lando test` or `lando codecept`.
-
 We now need to add our new JS dependencies:
-
 ```bash
 lando yarn add talkback codeceptjs puppeteer --dev
 ```
-
 and add the following script to our `package.json` scripts section:
-
 ```json
 "test": "codeceptjs run"
 ```
-
 Setup CodeceptJS by running the initializer:
-
 ```bash
 lando codecept init
 # select the puppeteer helpers
@@ -118,7 +104,6 @@ Generate your first test:
 lando codecept gt
 ```
 Edit the generated test file to something like the following if you followed Geoff's previous posts:
-
 ```js
 Feature('Posts Page');
 
@@ -127,9 +112,7 @@ Scenario('Should List posts', (I) => {
   I.see('{ my first post }');
 });
 ```
-
 This is a really basic and brittle test, but it will suffice for this exercise. In reality, you'll want to either be seeding data that you can test against, or asserting the presence of things on the page that are content agnostic.
-
 The last thing we should have to do to get this working locally is ensure codeception is properly configured to hit our site within Lando. Your `./codecept.json` should look something like this:
 ```json
 {
@@ -152,11 +135,8 @@ The last thing we should have to do to get this working locally is ensure codece
   "name": "mynuxt"
 }
 ```
-
 This is pretty vanilla from what the init command will generate, but notice that we've told codecept to look for the site based on Docker's internal hostname for our appserver container. This keeps things contained inside Lando's network to rule out funky network issues messing with test execution.
-
 You should now be able to run your test with `lando test` and it should come back green if your front end and backend are up and running. The app will probably take a bit to run this as it has to pull the new codeception container.
-
 ## Mocking the Backend
 Things should be going swimmingly for local development now when the backend is up and running, but our goal is to make this CI testable, so let's mock the backend with Talkback. We've required the project and we've setup a container to run it, but we need to write the actual server code to run the proxy:
 
@@ -197,9 +177,8 @@ server.start(() => console.log("Talkback started!"));
 
 ```
 You should be able to copy/paste this directly. What we're doing here isrequiring the talkback package, setting some options, creating a NodeJS HTTP server using talkback, and then booting that server up to listen on port 80.
-
 We're doing a few things to note in the options:
-1. We're setting some ignore headers and ignoring the body. Your mileage may vary on what headers to ignore, but the set I picked here seemed to give me reliable results
+1. We're setting some ignore headers and ignoring the body. Your mileage may vary on what headers to ignore, but the set I picked here seemed to give me reliable results.
 2. We've set some environment variables to allow some control of the proxy without having to modify the proxy itself.
 
 Make sure the tapes directory is setup by running `mkdir -p test/tapes`. Once that is setup, we need to alter our `.env` file and rebuild.
