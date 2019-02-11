@@ -90,4 +90,4 @@ Like more development workflow philosophies, continuous integration is applied s
 
 ## Is Your Team Headed the Right Way?
 
-Upgrading your development workflow can have HUGE productivity gains. If project stakeholders are always breathing down your neck, these tools can give you ways to make them happy by working smarter, not harder. [Reach out](/contact) if you're interested in getting a kickstart from our experts!
+Upgrading your development workflow can have HUGE productivity gains. If project stakeholders are always breathing down your neck, these tools can give you ways to make them happy by working smarter, not harder. [Reach out if you're interested in getting a kickstart from our experts](/contact)!
