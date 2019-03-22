@@ -17,9 +17,9 @@ date: 2019-03-22
 Use Case For This Effort
 -----------------------
 
-I previously wrote about [handling an upgrade path for modules that don't have a Drupal 8 migration path yet](https://thinktandem.io/blog/2018/07/24/writing-a-custom-drupal-8-module-upgrade-path/).  That works well when your module has a Drupal 8 entity already setup and good to go.  Sometimes you just need to move infos from a database table.  In our case, we need to move the mapped auth data for the [OneAll Social Login](https://www.drupal.org/project/social_login) module.
+I previously wrote about [handling an upgrade path for modules that don't have a Drupal 8 migration path yet](https://thinktandem.io/blog/2018/07/24/writing-a-custom-drupal-8-module-upgrade-path/).  That works well when your module has a Drupal 8 entity already setup and good to go.  Sometimes you just need to move info from a database table.  In our case, we need to move the mapped auth data for the [OneAll Social Login](https://www.drupal.org/project/social_login) module.
 
-OneAll Social Login is used by our client to allow people to login via Facebook and Google.  The module has two tables in the database in Drupal 7 that store authorization mappings needed to login.  We need to migrate this infos as it is mapped not only in Drupal but in OneAll Social Login's system.  Failure to do so would not let users login that already had their accounts mapped.
+OneAll Social Login is used by our client to allow people to login via Facebook and Google.  The module has two tables in the database in Drupal 7 that store authorization mappings needed to login.  We need to migrate this info as it is mapped not only in Drupal but in OneAll Social Login's system.  Failure to do so would not let users login that already had their accounts mapped.
 
 
 Figuring out what to move
@@ -27,7 +27,7 @@ Figuring out what to move
 
 After looking through OneAll Social Login's install file, I knew that there were two tables that needed to get migrated.  The Drupal 7 version of the module utilizes the core table of authmap and also their own table called oneall_social_login_identities.  I then looked at the Drupal 8 module's install file and saw that the two tables I needed to migrate to were oneall_social_login_authmap and oneall_social_login_identities.
 
-_Note: for the sake of brevity in this blog post, we will only cover migrating the authmap table since it is the more "complicated" one to move.  However, the oneall_social_login_identities mapping is done exactly the same way, in fact all the columns are one to one._
+<em>Note: for the sake of brevity in this blog post, we will only cover migrating the authmap table since it is the more "complicated" one to move.  However, the oneall_social_login_identities mapping is done exactly the same way, in fact all the columns are one to one.</em>
 
 Before we dive in, I am using my typical Drupal 8 migration [lando](https://docs.devwithlando.io/) setup to handle this migration.  If you want an easy and repeatable way to do migrations with lando, check out my [Florida DrupalCamp presentation](https://www.youtube.com/watch?v=lZ1dzZwcHnU&t=1072s).  If you don't use lando, supplement the commands to coincide with whatever setup you are using.   
 
@@ -60,7 +60,7 @@ MariaDB [drupal8]> DESCRIBE oneall_social_login_authmap;
 +------------+------------------+------+-----+---------+----------------+
 ```
 
-After creating a test account on the Drupal 8 side, I could see how the data gets injected.  The database mappings are pretty much the same.  The exceptions are the authmap column maps to the user_token table.  Also, the module column is not used, but it identifies what module (obviously) the datas map to in the Drupal 7 side.
+After creating a test account on the Drupal 8 side, I could see how the data gets injected.  The database mappings are pretty much the same.  The exceptions are the authmap column maps to the user_token table.  Also, the module column is not used, but it identifies what module (obviously) the data map to in the Drupal 7 side.
 
 So now that we know what to do, let me show you how to get this done.
 
@@ -68,7 +68,7 @@ So now that we know what to do, let me show you how to get this done.
 Writing The Source Migration
 ----------------------------
 
-If you [read my previous article on doing a custom migration](https://thinktandem.io/blog/2018/07/24/writing-a-custom-drupal-8-module-upgrade-path/), setting up the source is very similar.  Basically all we need to do is grab the columns we need to get all the source datas.  Here is the class I came up with:
+If you [read my previous article on doing a custom migration](https://thinktandem.io/blog/2018/07/24/writing-a-custom-drupal-8-module-upgrade-path/), setting up the source is very similar.  Basically, all we need to do is grab the columns we need to get all the source data.  Here is the class I came up with:
 
 ```php
 namespace Drupal\YOUR_MODULE\Plugin\migrate\source;
@@ -120,7 +120,7 @@ class OneAllAuth extends SqlBase {
 }
 ```
 
-You only need these 3 methods to really grab any data in a Drupal 7 database.  The query is straight forward to understand, it just grabs the fields and their respective datas.  The fields method exposes these fields so we can use them in our config.  The getIds is our primary key, which seems to be required to do this.  
+You only need these 3 methods to really grab any data in a Drupal 7 database.  The query is straight forward to understand, it just grabs the fields and their respective data.  The fields method exposes these fields so we can use them in our config.  The getIds is our primary key, which seems to be required to do this.  
 
 So with this done, we clear our caches and now we can create our migration yaml.
 
@@ -162,9 +162,9 @@ destination:
 migration_dependencies: {  }
 ```
 
-As you can see, in the ```source``` key, I have the class I showed you above.  The ```process``` key is just mapping the field as you would in any Drupal 8 migration.  You can also alter the datas here, etc.  Finally the destination plugin is where all the magic happens.  The ```plugin``` and ```table_name``` keys are self-explanatory.  The ```id_fields``` is required and is your primary keys.  Finally the ```fields``` key is basically the same thing as your process plugin minus any processing plugins you may be using.  
+As you can see, in the ```source``` key, I have the class I showed you above.  The ```process``` key is just mapping the field as you would in any Drupal 8 migration.  You can also alter the data here, etc.  Finally, the destination plugin is where all the magic happens.  The ```plugin``` and ```table_name``` keys are self-explanatory.  The ```id_fields``` is required and is your primary keys.  The ```fields``` key is basically the same thing as your process plugin minus any processing plugins you may be using.  
 
-So really that is it.  After you run ```lando drush cim -y``` you can run ```lando drush mim upgrade_d7_oneall_auth``` and all your datas will come over your ```drush ms``` will look like this:
+So really that is it.  After you run ```lando drush cim -y``` you can run ```lando drush mim upgrade_d7_oneall_auth``` and all your data will come over your ```drush ms``` will look like this:
 
 ```bash
  --------------------------------- ----------------------------------------------------------------- ----------- ------- ---------- ------------- --------------------- 
