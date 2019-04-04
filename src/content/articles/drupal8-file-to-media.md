@@ -127,7 +127,7 @@ I also go through and delete the original files as a cleanup task in the end, si
 
 ### Handling the Rollback
 
-One thing I noticed after getting this all to work is that the media entities were not deleted on rollback.  That is problematic as we will be re-rolling migrations numerous times throughout this process.  Using my previous migration efforts I knew I had to write a [Migration Event Subsriber](https://api.drupal.org/api/drupal/core%21modules%21migrate%21src%21Event%21MigrateEvents.php/class/MigrateEvents/8.2.x) to do this.  If have used Migration Event Subscriber's numerous times in all the migrations I have done.  I also [wrote a blog post about](https://thinktandem.io/blog/2018/04/20/handling-post-migration-events-in-drupal-8/) them last year.
+One thing I noticed after getting this all to work is that the media entities were not deleted on rollback.  That is problematic as we will be re-rolling migrations numerous times throughout this process.  Using my previous migration efforts I knew I had to write a [Migration Event Subscriber](https://api.drupal.org/api/drupal/core%21modules%21migrate%21src%21Event%21MigrateEvents.php/class/MigrateEvents/8.2.x) to do this.  If have used Migration Event Subscriber's numerous times in all the migrations I have done.  I also [wrote a blog post about](https://thinktandem.io/blog/2018/04/20/handling-post-migration-events-in-drupal-8/) them last year.
 
 First you need to register your event subscriber in your modules.services.yml:
 
