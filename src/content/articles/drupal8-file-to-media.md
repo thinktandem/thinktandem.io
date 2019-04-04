@@ -99,7 +99,7 @@ class MediaGenerate extends ProcessPluginBase {
     $alt = $row->getSourceProperty('alt');
     if (empty($alt)) {
       // Generate alt tag since the didn't exist in the D7 site.
-      $alt = "TwinStar Credit Union Image Name: " . $file->label();
+      $alt = "Media Name: " . $file->label();
     }
 
     $media = Media::create([
