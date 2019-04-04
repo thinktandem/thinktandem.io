@@ -14,10 +14,10 @@ byline: Media has been in core since 8.3.  As of this blog post, no migration pa
 date: 2019-04-04
 ---
 
-Use Case For This Effort
--------------------
+Use Case
+--------
 
-Recently I was involved with migrating a site that had numerous file based widgets on their Drupal 7 site.  The technical stakeholder was aware of the media module in Drupal 8.  The client requested that we migrated all file based items to media entities for better management in the new site.  The file widgets on the entities themselves would also be migrated to Entity Reference Media widgets as well.  This was something I had not totally done yet, but I knew anything is possible with Drupal 8's Migration API.  The following is how I figured out to handle this and I hope it helps you.
+Recently I was involved with migrating a site that had numerous file based widgets on their Drupal 7 site.  The technical stakeholder was aware of the media module in Drupal 8.  The client requested that we migrate all file based items to media entities for better management in the new site.  The file widgets on the entities themselves would also be migrated to Entity Reference Media widgets as well.  This was something I had not done yet, but I knew anything is possible with Drupal 8's Migration API.  The following is how I figured out to handle this and I hope it helps you.
 
 
 Research and Exploration
@@ -25,9 +25,9 @@ Research and Exploration
 
 I started out using Google to see if anyone else had figured this out.  There was a [a blog post by PreviousNext](https://www.previousnext.com.au/blog/migrating-drupal-7-file-entities-drupal-8-media-entities) and a [Drupal StackExchange post](https://drupal.stackexchange.com/questions/247328/how-do-i-migrate-file-entities-into-media-entities) that seemed promising.  After some tinkering, the PreviousNext post didn't fit my use case.  The StackExchange post straight up didn't work due to missing parameters in the migration config.
 
-I also researched [core](https://www.drupal.org/docs/8/api/migrate-api/migrate-process-plugins/list-of-core-migrate-process-plugins) and [contrib](https://www.drupal.org/docs/8/api/migrate-api/migrate-process-plugins/list-of-process-plugins-provided-by-migrate-plus) Migration plugins as well.  I decided to give the [entity_generate](https://www.drupal.org/docs/8/api/migrate-api/migrate-process-plugins/contrib-process-plugin-entity_generate) plugin a try as the name seemed promising.  I have used a lot of migration plugins, but never tried this one yet.  Again I hit a brick wall as it seems the ```entity_generate``` plugin is not capable of converting an entity type.  I could of played around with it more and possibly tried to finagle something with default values.  However I had already spent 2 hours and thus I did not want to waste the client's time more.
+I also researched [core](https://www.drupal.org/docs/8/api/migrate-api/migrate-process-plugins/list-of-core-migrate-process-plugins) and [contrib](https://www.drupal.org/docs/8/api/migrate-api/migrate-process-plugins/list-of-process-plugins-provided-by-migrate-plus) Migration plugins as well.  I decided to give the [entity_generate](https://www.drupal.org/docs/8/api/migrate-api/migrate-process-plugins/contrib-process-plugin-entity_generate) plugin a try as the name seemed promising.  I have used a lot of migration plugins, but had never tried this one.  Again I hit a brick wall as it seems the ```entity_generate``` plugin is not capable of converting an entity type.  I could of played around with it more and possibly tried to finagle something with default values, but I had already spent 2 hours and did not want to waste more valuable time.
 
-I knew I had to write something custom as I have done many time before.  With the help of my research previously I was able to accomplish my goal.
+I knew I had to write something custom as I have done many time before.  With the help of my research I was able to accomplish my goal.
 
 Migrating Drupal 7 Files to Drupal 8 Media Entities
 ----------------
@@ -118,11 +118,11 @@ class MediaGenerate extends ProcessPluginBase {
 }
 ```
 
-As you can see in the ```@code``` brackets in the annotation, I am running this through the ```sub_process``` plugin and after the ```migration_lookup``` plugin.  Obviously you will need to run your file migration prior to this.  I did it this was to handle file fields that have a cardinality greater than one.  I am passing in two config keys which makes this universal: the media entity bundle and the field within that media entity.  This site has two different media entity bundles: image and file.  So I can just tweak those fields in the migration's yaml respectively.
+As you can see in the ```@code``` brackets in the annotation, I am running this through the ```sub_process``` plugin and after the ```migration_lookup``` plugin.  Obviously you will need to run your file migration prior to this.  I did it this way to handle file fields that have a cardinality greater than one.  I am passing in two config keys which make this universal: the media entity bundle and the field within that media entity.  This site has two different media entity bundles: image and file.  So I can just tweak those fields in the migration's yaml.
 
-The plugin itself is pretty straight forward.  I am passing in the fid into the plugin itself then loading the file.  I then use that file to create the Media entity itself.  Since the D7 site did not have alt tags on any of its entities, I had to make a pseudo one to fit the bill.  The new media id gets returned to the field's target_id and that gets what we need done.
+The plugin itself is pretty straightforward.  I am passing the fid into the plugin itself then loading the file.  I then use that file to create the Media entity.  Since the D7 site did not have alt tags on any of its entities, I had to make a pseudo one to fit the bill.  The new media id gets returned to the field's target_id and that gets what we need done.
 
-I also through in the end to delete the original file as a cleanup task.  There really is no reason to keep the original file around once this is converted.  However, I would not do this until the final migration as you would have to rerun the file migration on every re-roll of the migration.  
+I also go through and delete the original files as a cleanup task in the end, since there is no reason to keep the original file around once it is converted.  However, I left this code commented out until I ran the final migration, as you would have to rerun the file migration on every re-roll of the migration.
 
 
 ### Handling the Rollback
@@ -285,10 +285,12 @@ class MigrationSubscriber implements EventSubscriberInterface {
 }
 ```
 
-Right before a rollback happens, the Event Subscriber goes through and checks the current migration's entity type and bundle for Media fields.  If the field type exists, then it cycle though the field and grabs all the media ids to delete.  Again, fairly straight forward and gets the job done.  I am sure there are other ways to do this, but this is what I ended up with.
+Right before a rollback happens, the Event Subscriber goes through and checks the current migration's entity type and bundle for Media fields.  If the field type exists, then it cycles though the field and grabs all the media ids to delete.  Again, fairly straightforward... there could be other ways to do this, but this is what I ended up with.
 
 
 Conclusion
 ---------
 
-Sometimes when doing a Drupal 8 Migration existing plugins and other people's posts just don't get the task done.  The Migration API is robust and easy to tap into.  This custom solution took me less than two hours to write and now the world can benefit from it.  Never give up, never surrender!
+Sometimes when doing a Drupal 8 migration existing plugins and other people's posts just don't get the task done.  The Migration API is robust and easy to tap into.  This custom solution took me less than two hours to write and now the world can benefit from it.
+
+If you're ever stuck in a corner on a Drupal 8 migration, [reach out to us](https://thinktandem.io/contact) and we can help you out!
