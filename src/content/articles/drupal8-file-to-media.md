@@ -95,8 +95,12 @@ class MediaGenerate extends ProcessPluginBase {
       throw new MigrateException('Referenced file does not exist');
     }
 
-    // Generate alt tag since the didn't exist in the D7 site.
-    $alt = "Media Name: " . $file->label();
+    // Grab our alt tag.
+    $alt = $row->getSourceProperty('alt');
+    if (empty($alt)) {
+      // Generate alt tag since the didn't exist in the D7 site.
+      $alt = "TwinStar Credit Union Image Name: " . $file->label();
+    }
 
     $media = Media::create([
       'bundle' => $bundle,
@@ -120,7 +124,7 @@ class MediaGenerate extends ProcessPluginBase {
 
 As you can see in the ```@code``` brackets in the annotation, I am running this through the ```sub_process``` plugin and after the ```migration_lookup``` plugin.  Obviously you will need to run your file migration prior to this.  I did it this way to handle file fields that have a cardinality greater than one.  I am passing in two config keys which make this universal: the media entity bundle and the field within that media entity.  This site has two different media entity bundles: image and file.  So I can just tweak those fields in the migration's yaml.
 
-The plugin itself is pretty straightforward.  I am passing the fid into the plugin itself then loading the file.  I then use that file to create the Media entity.  Since the D7 site did not have alt tags on any of its entities, I had to make a pseudo one to fit the bill.  The new media id gets returned to the field's target_id and that gets what we need done.
+The plugin itself is pretty straightforward.  I am passing the fid into the plugin itself then loading the file.  I then use that file to create the Media entity.  Since a lot of the D7 files did not have alt tags on any them, I had to make a pseudo one to fit the bill.  The new media id gets returned to the field's target_id and that gets what we need done.
 
 I also go through and delete the original files as a cleanup task in the end, since there is no reason to keep the original file around once it is converted.  However, I left this code commented out until I ran the final migration, as you would have to rerun the file migration on every re-roll of the migration.
 
