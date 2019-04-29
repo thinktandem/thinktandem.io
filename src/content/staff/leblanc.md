@@ -3,8 +3,8 @@ name: Dustin LeBlanc
 first: Dustin
 last: Leblanc
 color: miami
-weight: 10
-role: Senior Software Engineer
+weight: 6
+role: Technical Project Manager
 dev: Laravel, Drupal, Rails, and NodeJS
 image: images/dustin-sm.jpg
 link: https://twitter.com/DustinLeblanc
