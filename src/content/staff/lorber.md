@@ -3,9 +3,9 @@ name: Nica Lorber
 first: Nica
 last: Lorber
 color: ostara
-weight: 25
-role: Senior Designer
-dev: Branding and Design
+weight: 5
+role: Senior Designer & Strategist
+dev: Branding, Design, and Digital Strategy
 image: images/nica.jpg
 link: https://twitter.com/nicelobster
 layout: components/molecules/bio/bio.html

@@ -3,7 +3,7 @@ name: Geoff St. Pierre
 first: Geoff
 last: St. Pierre
 color: uniform
-weight: 5
+weight: 7
 role: Senior Software Engineer
 dev: Backdrop, Drupal, and Laravel
 image: images/gff-sm.jpg
