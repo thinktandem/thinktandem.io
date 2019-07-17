@@ -1,19 +1,26 @@
 language: node_js
 node_js:
-  - '6'
+  - '10'
 services:
   - docker
 
 before_install:
+
+  # Install Hyperdrive
   - sudo apt-get -y update
   - sudo apt-get -y install cgroup-bin curl
-  - curl -fsSL -o /tmp/lando.deb https://github.com/lando/lando/releases/download/v3.0.0-beta.35/lando-v3.0.0-beta.35.deb
-  - sudo dpkg -i /tmp/lando.deb
-  - lando version
+  - sudo bash -c "curl -Ls https://github.com/lando/hyperdrive/releases/download/v0.5.4/hyperdrive > /usr/local/bin/hyperdrive"
+  - sudo chmod +x /usr/local/bin/hyperdrive
 
 script:
+  # Add Repo key to prevent hyperdrive install errors.
+  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6B05F25D762E3157
+
+  # Setup hyperdrive
+  - hyperdrive -y --name "James T. Kirk" --email kirk@enterprise.mil
+
   - lando npm install
   - lando bower install -y
   - lando grunt build
   - lando start -- -v
-  - lando grunt test
+  # - lando grunt test
