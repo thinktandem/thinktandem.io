@@ -3,15 +3,15 @@
   "version": "2.0.0",
   "private": true,
   "dependencies": {
-    "bower": "~1.4.1",
+    "bower": "^1.8.8",
     "browserify": "^11.0.1",
     "browserify-shim": "^3.8.8",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "metalsmith": "~1.7.0",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-browserify": "RobLoach/metalsmith-browserify#update",
     "metalsmith-clean-css": "^5.0.1",
-    "metalsmith-collections": "^0.7.0",
+    "metalsmith-collections": "^0.9.0",
     "metalsmith-collections-convention": "^1.0.0",
     "metalsmith-env": "^2.0.0",
     "metalsmith-feed-js": "https://github.com/thinktandem/metalsmith-feed-js",
@@ -35,10 +35,10 @@
     "metalsmith-swig-helpers": "https://github.com/thinktandem/metalsmith-swig-helpers",
     "metalsmith-tags": "https://github.com/thinktandem/metalsmith-tags",
     "metalsmith-youtube": "^1.0.2",
+    "prismjs": "1.13.0",
     "swig": "^1.4.2",
     "swig-extras": "https://github.com/reynoldsalec/swig-extras.git",
-    "xor-crypt": "~1.0.0",
-    "prismjs": "1.13.0"
+    "xor-crypt": "~1.0.0"
   },
   "scripts": {
     "build": "/app/node_modules/.bin/metalsmith build",
@@ -52,7 +52,7 @@
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-exec": "^0.4.6",
-    "grunt-htmllint": "^0.2.7",
+    "grunt-htmllint": "^0.3.0",
     "grunt-sass-lint": "^0.2.0",
     "matchdep": "^1.0.1",
     "shell-escape": "^0.2.0"
