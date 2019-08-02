@@ -57,7 +57,7 @@ services:
 
 ```
 
-What this all means is that we are using Solr 6.6 (platform,sh recommends this and we will get into that later), we are [forwarding our ports](https://docs.devwithlando.io/tutorials/solr.html#portforwarding) externally, setting our Solr core, and finally pointing to the drupal config.  We also exposed the service to a url that we can throw into our browser to monitor the service with.  This is useful to check the Solr logs, config, etc.  Run ```lando rebuild -y``` and you will be good to go.
+What this all means is that we are using Solr 6.6 (platform.sh recommends this and we will get into that later), we are [forwarding our ports](https://docs.devwithlando.io/tutorials/solr.html#portforwarding) externally, setting our Solr core, and finally pointing to the drupal config.  We also exposed the service to a url that we can throw into our browser to monitor the service with.  This is useful to check the Solr logs, config, etc.  Run ```lando rebuild -y``` and you will be good to go.
 
 This gets our basic setup, we will need to tweak this most likely in the next steps if Drupal tells us to.
 
