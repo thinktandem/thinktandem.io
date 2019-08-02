@@ -104,9 +104,11 @@ From here setup your index as you need.  If you created a view, then do what you
 Configuring Solr for platform.sh
 ----------------------------
 
-Platform.sh already has [great documentation on how to setup Solr for Drupal 8](https://docs.platform.sh/frameworks/drupal8/solr.html).  However, it needs some TLC and I let them know as well.
+Platform.sh already has [great documentation on how to setup Solr for Drupal 8](https://docs.platform.sh/frameworks/drupal8/solr.html).  However, it needs some TLC and I let them know as well.  Go ahead and follow the whole guide and setup your platform files and config, etc.  
 
-Go ahead and follow the whole guide and setup your platform files and config, etc.  Here are the overrides we need to do to make this work on platform.sh:
+However we need to do some overrides to make this work on platform.sh. Side Note: to debug your Solr instance on platform.sh, just use the ```platform tunnel:open```.  Then throw whatever port onto the localhost url to see the service in your browser, i.e.: http://localhost:30001.
+
+Here are the tweaks we need to do:
 
 1. We need to change the return part of registerFormatter function in the config settings to the following:
 
