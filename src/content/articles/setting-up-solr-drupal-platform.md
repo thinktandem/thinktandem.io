@@ -76,7 +76,7 @@ You are using an incompatible Solr schema. Please follow the instructions descri
 
 If you get this message, then we need to use a different config then what is supplied by Search API Solr.  Click the config.zip button on the view page of your server.  We then need to slap this config in a folder so we can tell lando to use it.  Run the following: in the root of your project
 
-```
+```bash
 mkdir -p config/solr-conf/6.x
 ```
 
