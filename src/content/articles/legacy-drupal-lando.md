@@ -30,10 +30,10 @@ As the [documentation states](https://docs.lando.dev/config/compose.html#compose
 
 Finding the right Docker Images
 --------------------------------
+  
+Based on the requirements of Drupal 4.6, we knew we had to find a PHP 4.x and a MySQL 4.x image.  The easiest way to do this is to hop over to [https://hub.docker.com](https://hub.docker.com) and use their search bar.  I slapped "php4" into the search and filtered through the results until I came upon [this image](https://hub.docker.com/r/misryan/php4).  After looking at the [Dockerfile](https://hub.docker.com/r/misryan/php4/dockerfile) I could see that it it was a Debian based setup that utilized Apache and PHP 4.4.9.  A [Debian based](https://help.ubuntu.com/lts/installation-guide/s390x/ch01s02.html) container is a requirement for this to work easily in Lando.
 
-Originally when we tried to get this Drupal 4.6 site to work in Lando, we tried to use PHP 5.2.  It "worked" but the site did not render properly [due to this fun issue](https://www.drupal.org/forum/support/upgrading-drupal/2006-02-21/drupal-46-on-php5).  So I had to find a PHP 4.x image that also had Apache in it as well.  
-
-The easiest way to do this is to hop over to [https://hub.docker.com](https://hub.docker.com) and use their search bar.  I slapped "php4" into the search and filtered through the results until I came upon [this image](https://hub.docker.com/r/misryan/php4).  After looking at the [Dockerfile](https://hub.docker.com/r/misryan/php4/dockerfile) I could see that it it was a Debian based setup that utilized Apache and PHP 4.4.9.  A [Debian based](https://help.ubuntu.com/lts/installation-guide/s390x/ch01s02.html) container is a requirement for this to work easily in Lando.
+> Originally when we tried to get this Drupal 4.6 site to work in Lando, we tried to use a PHP 5.2 docker image.  It "worked" but the site did not render properly [due to this fun issue](https://www.drupal.org/forum/support/upgrading-drupal/2006-02-21/drupal-46-on-php5).
 
 I then followed the same method to find a [MySQL 4 Image](https://hub.docker.com/r/tommi2day/mysql4) as well.  With the basic structure intact in theory, I can truck forward with hooking this all together.
 
@@ -105,7 +105,7 @@ The vhost file I added to ```./lando/apache``` looked like this:
 </VirtualHost>
 ```
 
-Finally, to see where this should be mapped, I noticed [this COPY command](https://github.com/achih/docker-php4/blob/master/Dockerfile#L163) instruction of the Dockerfile.  When I rebuilt the lando app, I started!!  However, when I went to the localhost url, I got a 500 apache error.  After running ```lando ssh -s appserver -u root``` I then ran ```cd /var/log``` and looked at the apache error logs.  I could see that the site did not have rewrites enabled and the .htaccess of my Drupal 4.6 site needed it.
+Finally, to see where this should be mapped, I noticed [this COPY command](https://github.com/achih/docker-php4/blob/master/Dockerfile#L163) instruction of the Dockerfile.  When I rebuilt the lando app, it started!  However, when I went to the localhost url, I got a 500 apache error.  After running ```lando ssh -s appserver -u root``` I then ran ```cd /var/log``` and looked at the apache error logs.  I could see that the site did not have rewrites enabled and the .htaccess of my Drupal 4.6 site needed it.
 
 Luckily, lando has [build steps](https://docs.lando.dev/config/services.html#build-steps) for services that will allow me to enable the packages I need when this app starts up.  I the build_as_root step into my .lando.yml:
 
@@ -194,7 +194,7 @@ services:
         MYSQL_ROOT_PASSWORD: mysql4
 ```
 
-I changed the ownership of the volume mount after the database had started to allow the service to work properly.  I also threw the database creation in the config as well.  I pipped in true to basically tell lando to keep trucking ahead even if it tries to create this table again if it exists on rebuild or restart.  I am also using the default root username and passwords provided by the docker image to make life easier.
+I changed the ownership of the volume mount after the database had started to allow the service to work properly.  I also threw the database creation in the config as well.  I piped in true to basically tell lando to keep trucking ahead even if it tries to create this table again if it exists on rebuild or restart.  I am also using the default root username and passwords provided by the docker image to make life easier.
 
 All I need to do now is to import this database backup I have into this service.  I could just always do this via the command line, or have lando do it for me via its powerful [tooling](https://docs.lando.dev/config/tooling.html) setup.  My DB file is aptly named DB.sql and I just need to import it via the usual MySQL import command.  Here is the .lando.yml config with some tooling commands:
 
@@ -359,6 +359,6 @@ Finally, a big thanks to Mike Pirog, creator of Lando and our CTO for helping me
 Conclusion
 -----------
 
-Lando is the #1 local development solution in Drupal and you can see why with this post.  We can easily spin up any version of PHP, MySQL, etc with not too much effort.  You can use this guide to create any type of service within Lando as well.  It is pretty cool to run something locally that very few servers can these days.  
+Lando is the #1 local development solution in Drupal and you can see why with this post.  We can easily spin up any version of PHP, MySQL, etc with not too much effort.  You can use this guide to create any type of service within Lando as well.  It is pretty cool to run something locally that very few servers can these days.
 
 If you need help with your Lando setup, [Contact Tandem](/contact) today!
