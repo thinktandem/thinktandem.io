@@ -33,7 +33,7 @@ Finding the right Docker Images
   
 Based on the requirements of Drupal 4.6, we knew we had to find a PHP 4.x and a MySQL 4.x image.  The easiest way to do this is to hop over to [https://hub.docker.com](https://hub.docker.com) and use their search bar.  I slapped "php4" into the search and filtered through the results until I came upon [this image](https://hub.docker.com/r/misryan/php4).  After looking at the [Dockerfile](https://hub.docker.com/r/misryan/php4/dockerfile) I could see that it it was a Debian based setup that utilized Apache and PHP 4.4.9.  A [Debian based](https://help.ubuntu.com/lts/installation-guide/s390x/ch01s02.html) container is a requirement for this to work easily in Lando.
 
-> Originally when we tried to get this Drupal 4.6 site to work in Lando, we tried to use a PHP 5.2 docker image.  It "worked" but the site did not render properly [due to this fun issue](https://www.drupal.org/forum/support/upgrading-drupal/2006-02-21/drupal-46-on-php5).
+> Originally when we tried to get this Drupal 4.6 site to work in Lando, we used a PHP 5.2 docker image.  It "worked" but the site did not render properly [due to this fun issue](https://www.drupal.org/forum/support/upgrading-drupal/2006-02-21/drupal-46-on-php5).
 
 I then followed the same method to find a [MySQL 4 Image](https://hub.docker.com/r/tommi2day/mysql4) as well.  With the basic structure intact in theory, I can truck forward with hooking this all together.
 
