@@ -5,7 +5,7 @@ last: Ouellet
 color: miami
 weight: 1
 role: Senior Software Engineer
-dev: Sales Engineering, Drupal, and Wordpress
+dev: Sales Engineering, Drupal, VueJS, and Wordpress
 image: images/john-sm.jpg
 hover: images/john-hover.jpg
 link: https://twitter.com/labboy0276
