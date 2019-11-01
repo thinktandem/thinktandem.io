@@ -1,26 +1,26 @@
 ---
-title: "Brand-friendly Redesign"
+title: "Redesign + Migration"
 logo: images/clients/poets/poets.png
 org: Academy of American Poets
-byline: <strong>The Academy of American Poets</strong> needed a refreshed design that respected their time-honored brand.
+byline: <strong>The Academy of American Poets</strong> needed a new website that respected their time-honored brand.
 image:
   src: /images/case-studies/poets-design.jpg
   title: Academy of American Poets
 seo:
   description: byline
-challenge: Poets.org needed a modernized platform and a refreshed look. 
-solution: Tandem developed an elegant brand representation that paid homage to what was familiar while enhancing the overall look. 
-impact: The new design was created and the site is expected to launch Spring 2019.
+challenge: Poets.org needed a modernized platform and a refreshed look.
+solution: Create a new design and migrate to NuxtJS.
+impact: A more performant, user-friendly, and future-forward Poets.org.
 
 metrics:
-  - key: Research
-    value: Interviews, personas, and competitive review
-  - key: Accessibility
-    value: Reaching the largest possible audience
-  - key: Mobile-First Mockups
-    value: Designed with the user in mind
+  - key: Framework
+    value: Vue/NuxtJS + Drupal 8
+  - key: Entities Migrated
+    value: 100K+
+  - key: Increase in Pagespeed Score
+    value: 50%+
 
-tech: drupal
+tech: drupal, vuejs, nuxt
 industries: non-profit
 services: strategy, design
 
@@ -33,9 +33,15 @@ private: false
 date: 2019-11-15
 ---
 
-Poets.org is a elegant resource that connects users to over a million poets, poems, educational resources, event and more. With a large member-base and many more casual visitors, the site needs to be able to reach a huge audience, keeping our focus on user experience, accessibility and on brand representation.
+## How do you find your favorite poem?
 
-Tandem performed many of the tasks associated with a full discovery to build the knowledge base that would inform the team. This included:
+When Tandem began working with the Academy of American Poets to redesign and rebuild Poets.org, we were thinking of the millions of poetry lovers, teachers, and students who use Poets.org each year.
+
+Poets.org is a HUGE website. We wanted to make browsing Poets.org feel like visiting a cosy well-run bookstore, not sifting through a hoarder's house. Simplifying this large and complicated site would help more readers find the poets, poems, educational resources, and events that could deepen their love of the written word.
+
+## How We Did It.
+
+We began with a series of discovery exercises to understand Poets.org's users and their needs, including...
 
 -   Stakeholder Interviews
 
@@ -45,7 +51,7 @@ Tandem performed many of the tasks associated with a full discovery to build the
 
 -   Persona Development
 
-From here the creative team worked together with our strategists to review brand documentation and identify the strengths of the current website. We developed an array of creative assets including:
+With these resources the creative team worked with our strategists to review brand documentation and identify the strengths of the current website. We developed an array of creative assets including:
 
 -   Wireframes for specialized content types
 
@@ -55,7 +61,12 @@ From here the creative team worked together with our strategists to review brand
 
 -   Invision Prototypes
 
-With active client participation, we embraced all that Poets.org wanted to communicate in a repeatable way that can scale with their ever-growing site. This new design, reminiscent of the old, honors the tradition, creativity and overall brand of Poet.org.
+The new design honors the tradition, creativity and overall brand of Poets.org, while simplifying the information hierarchy to help readers focus on the poetry without being lost in a sea of text.
 
-Site launch is expected Spring 2019.
-expected Spring 2019. 
+To bring this design to life, we chose to migrate the legacy data to the new Drupal 8 CMS. However, instead of using Drupal's templating engine, we used a headless architecture. Drupal acted as an API to a NuxtJS app, allowing for dynamic page loads. This model will also allow flexible redesigns in the future, and the Drupal 8 API can be employed for other initiatives at the Academy for American Poets.
+
+We also created a Drupal Blackbaud SKY API module to help synchronize member data between Blackbaud and Drupal, providing an easy way for members to view their status and renew membership.
+
+## Want to Learn More?
+
+We love talking about our projects. If you're interested in the work we did with the Academy of American Poets, [contact us](contact) to chat.
