@@ -307,6 +307,10 @@ $contentWidth = 850px
 $navbarHeight = 4.3rem
 ```
 
+### Static Asssets
+
+Moving the static assets (ie images, pdfs, etc) is a fairly straight forward process.  There is a public directory in the VuePress structure that is used to store all items that will build into the root of the site.  Since I was not changing the paths of the files, I just copied all images, pdfs, etc in their respective directories and slapped them into the public directory.
+
 That is basically it on how the [ISNA site](https://isna.org/) got its new look and feel.  If you have themed in Drupal, you can write a theme in VuePress very easily.
 
 QA'ing the migration
