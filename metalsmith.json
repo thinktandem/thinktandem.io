@@ -263,7 +263,8 @@
       "files": [
         "./../assets/public/matchheight/dist/jquery.matchHeight-min.js",
         "js/entry.js",
-        "js/theme.js"
+        "js/theme.js",
+        "js/mautic.js"
       ],
       "dest": "js/scripts.js"
     },
