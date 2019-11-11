@@ -11,7 +11,7 @@ private: false
 mainImage: images/articles/drupal-vuepress/drupal-vuepress.png
 img-src: images/articles/drupal-vuepress.png
 byline: With Lando and Symfony Console, migrating this legacy Drupal 4.6 site to VuePress was fairly straightforward.
-date: 2019-11-07
+date: 2019-11-11
 ---
 
 Overview
@@ -102,13 +102,13 @@ These options allowed me to export all the node types to CSV's.  Which is basica
 
 The only thing this module did not do is export the node path or its aliases.  This site actually has a mix of non aliased and aliased paths.  Regardless I needed this option to be able to create the structure needed in the VuePress site (more on that later).  So I did the unthinkable and hacked the module for the ability for the url to be a field that we could export.  I think the Drupal best practices overseers will forgive me since the module has been obsolete for years.
 
-So with that said and done, I was able to get about 95% of the site exported to CSVs.  The site itself has a little over 1500 pieces of content, so this is saved me a ton of time creating the site content manually.  Now all I needed to do was to convert all this content to work with VuePress.  First, I will talk about why we chose VuePress and how we set that up.
+So with that said and done, I was able to get about 95% of the site exported to CSVs.  The site itself has a little over 1500 pieces of content, so this saved me a ton of time creating the site content manually.  Now all I needed to do was to convert all this content to work with VuePress.  First, I will talk about why we chose VuePress and how we set that up.
 
 
 Why VuePress
 ----------------
 
-Here at Tandem, we have adopted [VueJS](https://vuejs.org/) as our frontend technology.  While everyone in the Drupal community is all about React / Gatsby, we have found VueJS to suit our needs better.  When I first looked at VueJS templating code, it made sense to me right away.  I am mostly a backend developed, but I do have a good amount of experience with various JavaScript front end technologies.  With that said, the simplicity, ease of use, extensibility, and scalability is why we have used VueJS in house.  We have used it to build fully decoupled Drupal 8 sites like [poets.org](https://poets.org/) and partially decoupled components like [GoHealth's robust mapping feature](https://www.gohealthuc.com/nyc).  
+Here at Tandem, we have adopted [VueJS](https://vuejs.org/) as our frontend technology.  While everyone in the Drupal community is all about React / Gatsby, we have found VueJS to suit our needs better.  When I first looked at VueJS templating code, it made sense to me right away.  I am mostly a backend developed, but I do have a good amount of experience with various JavaScript front end technologies.  With that said, the simplicity, ease of use, extensibility, and scalability is why we have used VueJS in house.  We have used it to build fully decoupled Drupal 8 sites like [poets.org](https://poets.org/) and partially decoupled components like [GoHealth's robust mapping feature](https://www.gohealthuc.com/nyc).
 
 VuePress is a newer product that is used to build static based sites.  Since the 1.x version of VuePress, a lot of the theming mechanisms are similar-ish to Drupal's inheritance structures and you can build sites easily and quickly without really knowing VueJS.  VuePress can be used to create documentation based site like [Tandem's documentation site](https://docs.thinktandem.io/) or [Lando's documentation site](https://docs.lando.dev/).  You can also use it to make regular sites like [Lando's main site](https://lando.dev/).  
 
