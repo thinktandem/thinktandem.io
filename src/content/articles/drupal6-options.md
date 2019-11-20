@@ -112,4 +112,4 @@ Think of this as freezing your website in carbonite: it will now be there foreve
 Conclusion
 -----------
 
-All hope is not lost for your Drupal 6 site!  There are still many options for your organization to get years of further value from your site.  [Contact Us](https://thinktandem.io/contact/) today to talk about what options are best for your Drupal 6 site.
+All hope is not lost for your Drupal 6 site!  There are still many options for your organization to get years of further value from your site.  Fill out the form below and we can talk about what options are best for your Drupal 6 site.
