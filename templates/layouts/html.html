@@ -95,6 +95,38 @@
       ga('send', 'pageview');
     </script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a44042be1fe27e2"></script>
+    <script type="text/javascript">
+      /** This section is only needed once per page if manually copying **/
+      if (typeof MauticSDKLoaded == 'undefined') {
+        var MauticSDKLoaded = true;
+        var head            = document.getElementsByTagName('head')[0];
+        var script          = document.createElement('script');
+        script.type         = 'text/javascript';
+        script.src          = 'https://mautic.thinktandem.io/media/js/mautic-form.js';
+        script.onload       = function() {
+          MauticSDK.onLoad();
+        };
+        head.appendChild(script);
+        var MauticDomain = 'https://mautic.thinktandem.io';
+        var MauticLang   = {
+          'submittingMessage': "Please wait..."
+        }
+      }
+    </script>
+    <script type="text/javascript">
+      function verifyCallback_9c8f67dabc286dec24681e670cee0eb3( response ) {
+        document.getElementById("mauticform_input_supportrequest_recaptcha1").value = response;
+      }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+      (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+        w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+            m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://mautic.thinktandem.io/mtc.js','mt');
+
+      mt('send', 'pageview');
+    </script>
   {% endblock %}
 
 </body>

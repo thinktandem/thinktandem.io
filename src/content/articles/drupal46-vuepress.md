@@ -358,5 +358,5 @@ Final Thoughts
 
 Taking on this project allowed me to learn new things like custom Lando setups, writing a Symfony Console command, and becoming better at VuePress.  I also learned more about Netlify and its advantages and disadvantages.  The only big disadvantage I saw with Netlify was this site had too much traffic to qualify for the free plan which was a big bummer to me.  The site generates about 150 GBs / month in bandwidth from their CDN.  The site is heavily cached via [Netlify caching file](https://www.netlify.com/blog/2017/02/23/better-living-through-caching/), but it still gets hundreds of thousands of pageviews a month.  However, with the bandwidth overages, it is only $20 / month.  Which is pretty low cost considering what they were paying to keep the site going.  Other than that, Netlify is amazing and I recommend it to anyone creating a static site setup.  
 
-Here at Tandem we have migrated all types of sites to various platforms.  If you are looking to migrate your legacy site to archive it, [Contact Us](https://thinktandem.io/contact/) today to see what it would take.  
+Here at Tandem we have migrated all types of sites to various platforms.  If you are looking to migrate your legacy site to archive it, fill out the form below and we can talk to see what it would take.  
 

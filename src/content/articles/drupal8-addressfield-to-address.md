@@ -43,4 +43,4 @@ Pretty straight forward and easy.  Just like any other [process plugin used in a
 Conclusion
 ---------
 
-When doing a migration, always check first in the src/Plugin/migrate folder of the modules / entity you are trying to migrate.  The Drupal 8 migration system has matured a lot over the past 3 years.  More often than not, your solution is already baked in.  If your organization needs help with a Drupal 8 Migration, [Contact Us](https://thinktandem.io/contact/) to chat more about it!
+When doing a migration, always check first in the src/Plugin/migrate folder of the modules / entity you are trying to migrate.  The Drupal 8 migration system has matured a lot over the past 3 years.  More often than not, your solution is already baked in.  If your organization needs help with a Drupal 8 Migration, fill out the form below and we can chat more about it!
