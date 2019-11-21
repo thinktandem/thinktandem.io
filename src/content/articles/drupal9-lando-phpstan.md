@@ -130,7 +130,7 @@ So as you can see, the core Content Moderation module has some deprecations in i
 
 ### Automating Deprecation Testing
 
-While I have not tried this myself yet, there is hope.  [Drupal 8 Reactor](https://github.com/drupal8-rector/drupal8-rector) looks to be promising.  It doesn't seem to use PHPStan at all but uses a mix of [Reactor](https://getrector.org/) and [PHP Coding Standards Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) to get the job done.   I will keep an eye on this and give this a whirl on my next Drupal 8 project and report back.
+While I have not tried this myself yet, there is hope.  [Drupal 8 Rector](https://github.com/drupal8-rector/drupal8-rector) looks to be promising.  It doesn't seem to use PHPStan at all but uses a mix of [Rector](https://getrector.org/) and [PHP Coding Standards Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) to get the job done.   I will keep an eye on this and give this a whirl on my next Drupal 8 project and report back.
 
 ## Conclusion
 
