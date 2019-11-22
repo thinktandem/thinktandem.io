@@ -1,7 +1,7 @@
 ---
 layout: pages/contact.html
 title: Get in touch
-byline: In the heart of the Bay Area // Always ready to chat
+byline: We Are National // Always ready to chat
 pageSlug: contact
 seo:
   description: Contact Us
