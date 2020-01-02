@@ -2,7 +2,7 @@
 
 It's a new year and optimism is abound. Visions of what we can get done in 2020 are beginning to materialize. New marketing plans are being drafted, fleshed out, and put into motion. New articles are flying off the digital presses at a breakneck pace that makes 2010 look like one big year long vacation.
 
-In the last decade, we've seen internet megasites absolutely destroy traditional publishing and eat 
+In the last decade, we've seen internet megasites absolutely destroy traditional publishing and eat brick and mortar retailers for lunch. More and more marketing teams have caught on to the simple fact that your website is everything, and investment
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc4MDU5NzYwXX0=
+eyJoaXN0b3J5IjpbLTQwODI3ODE5OV19
 -->
