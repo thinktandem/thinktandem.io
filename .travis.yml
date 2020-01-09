@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - '10'
+addons:
+  chrome: stable
 services:
   - docker
 
@@ -11,6 +13,7 @@ before_install:
   - sudo apt-get -y install cgroup-bin curl
   - sudo bash -c "curl -Ls https://github.com/lando/hyperdrive/releases/download/v0.5.4/hyperdrive > /usr/local/bin/hyperdrive"
   - sudo chmod +x /usr/local/bin/hyperdrive
+  - npm install -g @lhci/cli@0.3.x
 
 script:
   # Add Repo key to prevent hyperdrive install errors.
@@ -23,4 +26,4 @@ script:
   - lando bower install -y
   - lando grunt build
   - lando start -- -v
-  # - lando grunt test
+  - lhci autorun --assert.preset=lighthouse:recommended --upload.target=temporary-public-storage
