@@ -63,10 +63,13 @@ No doubt *Estate De La CMS* will be a handful to maintain. With more plumbing co
 more potential for leaks. More doors and windows makes for more points of entry 
 to secure. Water, power, resources... all much higher than the track home.
 
-The house analogy diverges is in the up front cost, which adds a bit of danger. Because of 
+The cost/effort of building *Estate De La CMS* is significantly higher than the *Track Home on Static Circle*.
+
+This would typically be a barrier to entry for anyone not up to the task however the
 <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">Free
-Open Source Software (FOSS)</a>, you might be able to move into *Estate De La CMS* at a low cost, but it 
-will cost more to maintain and improve upon. If you slack on maintenance, there will be many more problems.
+Open Source Software (FOSS)</a> licenses make it as if *Estate De La CMS* was passed down to you
+by a rich uncle. It comes with great responsibility and if you slack on maintenance, there will be 
+many more problems to come.
 
 Ok, let's get back to web applications...
 
