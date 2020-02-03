@@ -130,6 +130,12 @@ We have been using SASS based solutions for years.  If you use Grunt, Gulp, or W
 
 Use this [Libraries Overrides](https://www.drupal.org/docs/8/modules/decoupled-blocks-vuejs/override-javascript-libraries) guide to strip out unused libraries by using the value of false next to their key.  Just like JS, the more efficiently you use CSS, the better.
 
+### HTML
+
+Drupal is famous for having too many divs, aka "div-itis".  Pagespeed and other performance testing tools will yell at you if you have too many divs on the page, aka DOM elements.  This is also very common in sites that just have very long, huge pages.  Always try to avoid that. 
+
+The good thing about Drupal 8 is that all of the templates are extensible and can be thrown into your subtheme.  You can remove the many wrapping divs by altering the base twig templates for each type in your subtheme.  You can alternatively use a module like [Fences](https://www.drupal.org/project/fences) to do this for you as well.  
+
 ## Conclusion
 
 I am sure there is a thing or two I missed.  I am always looking for new ways to easily make our sites as fast as possible.  If you want a great start state that comes with a lot of the tips I suggested, checkout our [Minimis Distro](https://github.com/thinktandem/minimis).  Everything I used in some shape or form is in this distro from the get go.  
