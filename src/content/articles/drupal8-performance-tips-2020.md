@@ -10,37 +10,37 @@ author: John Ouellet
 private: false
 mainImage: images/articles/drupal.jpg
 img-src: images/articles/drupal.jpg
-byline: Outlining some of the tried and tested Drupal 8 (will apply to Drupal 9) methods and that we have adopted over the past few years.
+byline: Outlining some of the tried and tested performance enhancements that will lead you to victory in Drupal 8, Drupal 9, and beyond.
 date: 2020-02-03
 ---
 
 ## Overview
 
-I have really enjoyed how much easier is to make Drupal 8 performant compared to its predecessors.  Not all the tips and tricks I used in Drupal 7 and below can be migrated up to Drupal 8 either.  In actuality, most are not needed.  Since building my first Drupal 8 since in 2015, here are some easy performance wins for sites of all sizes to adopt to make your user's experience that much better.
+I have really enjoyed how much easier it is to make Drupal 8 performant compared to its predecessors.  When I first started working with Drupal 8 performance, I was surprised how few of the tips and tricks I used from Drupal 7 and prior versions could be used in Drupal 8.  In actuality, most are no longer needed!  To save you the time, I've recorded all the performance tricks I've learned since building my first Drupal 8 site in 2015.  Sites of all sizes can adopt these methods to make your user's experience that much faster and better.
 
-## Get a better host
+## 1. Get a better host.
 
-Before I dive into code, benchmarking, etc, the first item on your checklist should be to evaluate your hosting.  When it comes to Drupal 8 specific hosting, you should stick with the 3 major hosting options: [platform.sh](https://platform.sh/), [Pantheon](https://pantheon.io/), or [Acquia](https://www.acquia.com/).  These 3 hosting providers were created with the sole purpose of making your Drupal 8 hosting experience as easy and as performant as possible.  Here at Tandem, we mainly use platform.sh as a Drupal 8 host and Pantheon as our secondary.  
+Before I dive into code, benchmarking, etc, the first item on your checklist should be to evaluate your hosting.  When it comes to Drupal 8 specific hosting, you should stick with one of the 3 major hosting options: [Platform.sh](https://platform.sh/), [Pantheon](https://pantheon.io/), or [Acquia](https://www.acquia.com/).  These 3 hosting providers were created with the sole purpose of making your Drupal 8 hosting experience as easy and as performant as possible.  Here at Tandem, we mainly use Platform.sh and Pantheon for Drupal.
 
-The reason why we choose platform.sh as our primary is we do more than Drupal here at Tandem.  Their [multi app](https://docs.platform.sh/configuration/app/multi-app.html) structure makes it easy to do decoupled Drupal and other non Drupal based architecture.  Another reason why we choose platform.sh over others is their build and deploy setup is catered to a composer based solution like Drupal 8.  Their configuration is almost a mirror to Lando, a well known local dev solution created and primarily maintained by Tandem.   On top of this, they have performance tools like Redis that are readily available on all subscription levels.  
+Platform.sh is a great choice for organizations like Tandem that build and maintain applications in many different frameworks other than Drupal.  Their [multi app](https://docs.platform.sh/configuration/app/multi-app.html) structure makes it easy to do decoupled Drupal and other non-Drupal based architectures.  Another reason why we choose Platform.sh over others is their build and deploy setup caters to [Composer](https://getcomposer.org/)-based applications like Drupal 8.  Their configuration is almost a mirror to [Lando](https://lando.dev), the [most popular local development tool for Drupal](https://youtu.be/PB5mSmqZOoE?t=917) (shameless plug alert: Lando was created and is maintained by Tandem).  On top of this, Platform.sh has performance tools like [Redis](https://redis.io/) readily available on all subscription levels.  
 
-If you are a Drupal only based shop that doesn't need such a robust devops flow, I highly recommend you use Pantheon.  We have been partners with Pantheon since they started.  They have a very hands off approach to the whole hosting experience.  They simplify the entire hosting experience.  As long as your site is built fairly within the Drupal best practices, this is an automatic performance win for you.  
+If your organization only works on Drupal and WordPress websites and prefer an easy-to-use dashboard and great support over flexibility, I highly recommend you use Pantheon.  We have been partners with Pantheon since 2012 and love their hands-off approach to the hosting experience.  Particularly for teams who don't want to tweak infrastructure, they simplify the entire hosting experience, providing a built-in world-wide CDN, automatic scaling, [Varnish](https://varnish-cache.org/)/Redis, and other performance-oriented features. As long as your site is built using Drupal best practices, Pantheon will be an automatic performance win for you.  
 
-### NGINX vs APACHE
+### NGINX vs. Apache
 
-This quote summarizes how I fell about the comparison:
+[NGINX](https://www.nginx.com) and [Apache](https://httpd.apache.org/) have been two of the most popular HTTP server options for nearly a decade. If you know enough about either to prefer it, awesome! That probably means you know enough to optimize its performance and don't need me trying to convince you to change your ways. For the rest of us, this quote summarizes how I feel about the comparison:
 
 > “Apache is like Microsoft Word. It has a million options but you only need six. NGINX does those six things, and it does five of them 50 times faster than Apache.” - [Chris Lea](https://chrislea.com/)
 
-If you use Pantheon or platform.sh, they use NGINX out of the box.  No need to configure it out do anything out of the norm.  I have spoken.
+If you use Pantheon or Platform.sh, they use NGINX out of the box.  No need to configure it out do anything out of the norm.  I have spoken.
 
-### Database Choice
+### MariaDB vs. MySQL
 
-We suggest using MariaDB over MySQL.  MariaDB is just faster.  Instead of getting into the nitty gritty of why, here is a post by [MariaDB](https://mariadb.com/resources/blog/why-should-you-migrate-from-mysql-to-mariadb/) and [Pantheon](https://pantheon.io/blog/using-mariadb-mysql-replacement) on MariaDB advantages over MySQL.  Pantheon obviously comes with MariaDB out of the box.  With platform.sh you can [switch out the database type](https://docs.platform.sh/configuration/services/mysql.html) easily in your ```.platform.app.yml```.
+We suggest using [MariaDB](https://mariadb.org/) over [MySQL](https://www.mysql.com/).  MariaDB is just faster.  Instead of getting into the nitty gritty of why, here is a post by [MariaDB](https://mariadb.com/resources/blog/why-should-you-migrate-from-mysql-to-mariadb/) and [Pantheon](https://pantheon.io/blog/using-mariadb-mysql-replacement) on MariaDB advantages over MySQL.  Pantheon obviously comes with MariaDB out of the box.  With Platform.sh you can [switch out the database type](https://docs.platform.sh/configuration/services/mysql.html) easily in your ```.platform.app.yml``` file.
 
-## Caching
+## 2. Using Caching
 
-Now that you have chosen your path to a better hosting provider, it is time to get your hands dirty.  Caching is basically how your page is stored in either the browser or server to efficiently and quickly serve it to your site's visitors.  Drupal has always been very good about having numerous caching modules to use on top of its very cache friendly core code.  Here are my suggestions for easy cache wins for your Drupal 8 site:
+Now that you have chosen your path to a better hosting provider, it is time to get your hands dirty.  Caching is basically how your page is stored in either the browser or server to efficiently and quickly serve it to your site's visitors.  Drupal has always been very good about having numerous caching modules to use on top of its very cache-friendly core code.  Here are my suggestions for easy cache wins for your Drupal 8 site:
 
 ### Core Modules
 
@@ -48,11 +48,11 @@ As mentioned above, Drupal 8 comes with a few caching modules in core.  These ar
 
 **Internal Page Cache**
 
-If you are not serving dynamic or per session pages (like a shopping cart), then turning on this module is a must for all other sites.  This [drupal.org reference](https://www.drupal.org/docs/8/administering-a-drupal-8-site/internal-page-cache) goes into more depth on how and why to use this module.
+If you are not serving dynamic or per session pages (like a shopping cart or any page where a user logs in), then turning on this module is a must for all other sites.  This [drupal.org reference](https://www.drupal.org/docs/8/administering-a-drupal-8-site/internal-page-cache) goes into more depth on how and why to use this module.
 
 **Internal Dynamic Page Cache**
 
-Almost identical to the Internal Page Cache, however this module is used for authenticated (or logged in) users.  Again, here is a [drupal.org reference](https://www.drupal.org/docs/8/core/modules/dynamic-page-cache/overview) that foes into more details on the module.  
+Almost identical to the Internal Page Cache, however this module is used for authenticated (or logged in) users.  Again, here is a [drupal.org reference](https://www.drupal.org/docs/8/core/modules/dynamic-page-cache/overview) that goes into more details on the module.  
 
 **BigPipe**
 
@@ -60,37 +60,37 @@ BigPipe has been in core since Drupal 8.3.  Basically it uses placeholders to st
 
 **Bandwidth Optimization aka CSS/JS Aggregation**
 
-Not a core module, but 2 options that come with Drupal 8 out of the box.  Just head over to ```/admin/config/development/performance``` and turn these CSS and JS  Aggregation options on.
+Not a core module, but 2 options that come with Drupal 8 out of the box.  Just head over to ```/admin/config/development/performance``` and turn these CSS and JS aggregation options on.
 
 ### Contrib Modules
 
-There are so many contrib caching modules out there.  The following list is what I have used to win the performance game.  I am sure there are a few I have missed or just don't know they exist.  In Drupal 8, you don't need much as far as contrib modules go.  However, at every con and camp, I am always headed to the performance based talks to see if I can add to my list.  
+There are so many contrib caching modules out there.  The following list is what I have used to win the performance game.  I am sure there are a few I have missed or just don't know they exist.  In Drupal 8, you don't need much as far as contrib modules go.  However, at every convention and camp, I always headed to the performance-based talks to see if I can add to my bag of tricks.
 
 **Sessionless BigPipe**
 
-As the [module's page states](https://www.drupal.org/project/big_pipe_sessionless), we used this module because uses BigPipe to accelerate the first unpersonalized response.  Since we use Internal Page Cache and BigPipe, it makes the most sense to use this module with out setup and I recommend it for yours as well.
+As the [module's page states](https://www.drupal.org/project/big_pipe_sessionless), this module uses BigPipe to accelerate the first unpersonalized (aka not user-specific) response. Chances are most pages on your site fall into this category unless you have a logged-in user experience, a shopping cart, or other feature that follows a specific user around. Since we use Internal Page Cache and BigPipe, it makes the most sense to use this module in our setup and I recommend it for yours as well.
 
 **Advanced CSS/JS Aggregation**
 
-Depending on the build of a site, we use the [advagg module](https://www.drupal.org/project/advagg) and its submodules in different ways.  Typically on most sites I usually just enable the base module and the bundler and that is it.  This is a very robust module with years worth of documentation on how and when to use this module.  
+Depending on the build of a site, we use the [advagg module](https://www.drupal.org/project/advagg) and its submodules in different ways. On most sites I just enable the base module and the bundler.  This is a very robust module with years worth of documentation on how and when to use it.
 
 ### Other Cache Considerations
 
-**Redis or Memcache**
+**Redis or Memcached**
 
-Our preferred object cache has always been [Redis](https://redis.io/).  If you use Pantheon, it is theirs as well.  On platform.sh you can choose either one.  We have found (as have others) that Redis is a more performant option.  My advice is to just use Redis.  You can also read this [Medium post on the comparison between the two](https://medium.com/@Alibaba_Cloud/redis-vs-memcached-in-memory-data-storage-systems-3395279b0941) for more clarity.  
+Our preferred object cache has always been [Redis](https://redis.io/).  If you use Pantheon, it is theirs as well.  On Platform.sh you can choose either Redis or [Memcached](https://memcached.org/).  We have found (as have others) that Redis is a more performant option.  My advice is to just use Redis, but [like Levar Burton](https://www.youtube.com/watch?v=vAvQbEeTafk) I'm a big fan of self-directed learning, so you don't have to take my word for it: read this [Medium post on the comparison between the two](https://medium.com/@Alibaba_Cloud/redis-vs-memcached-in-memory-data-storage-systems-3395279b0941) for more clarity.  
 
 **Quicklink**
 
-[Quicklink](https://www.drupal.org/project/quicklink) uses [Google Chrome Lab's Quicklink library](https://github.com/GoogleChromeLabs/quicklink) to make pages loading faster by prefetching certain links.  Another technology I don't have a full understanding of, but it does work and makes pages load very fast.  Check it out, another quick win with no configuration needed.  
+[Quicklink](https://www.drupal.org/project/quicklink) uses [Google Chrome Lab's Quicklink library](https://github.com/GoogleChromeLabs/quicklink) to make pages load faster by prefetching certain links.  This is another technology I don't have a full understanding of, but it does work and makes pages load very fast.  Check it out to get another quick win with no configuration needed.
 
 **CDN**
 
-It is an absolute must to use a Content Delivery Network to make your site serve users fast and efficiently.  There are many choices, but the most popular are [CloudFlare](https://www.cloudflare.com/) and [Fastly](https://www.fastly.com/).  Pantheon uses Fastly out of the gate, so there is no configuration needed.  We use CloudFlare for all out sites on platform.sh because their free plan is just straight up legit.  Here is a handy reference on [setting up your Cloudflare instance to work with your Drupal 8 site](https://support.cloudflare.com/hc/en-us/articles/115002911927-Caching-HTML-with-Drupal).
+It is an absolute must to use a Content Delivery Network to make your site serve users fast and efficiently.  There are many choices, but the most popular are [CloudFlare](https://www.cloudflare.com/) and [Fastly](https://www.fastly.com/).  Pantheon uses Fastly out of the gate, so there is no configuration needed.  We use CloudFlare for all our sites on Platform.sh because their free plan is more legit than MC Hammer.  Here is a handy reference on [setting up your Cloudflare instance to work with your Drupal 8 site](https://support.cloudflare.com/hc/en-us/articles/115002911927-Caching-HTML-with-Drupal).
 
 ## Image Optimizations
 
-Websites today are chalk full of images.  It is very rare to not see a site built this way.  Images can be huge and resource hogs unless you handle them correctly.  Drupal 8 core and contrib modules allow us to render images efficiently and quickly to our end users. 
+Websites today are chock full of images.  It is very rare to not see a site built this way.  Images can be huge and resource hogs unless you handle them correctly.  Drupal 8 core and contrib modules allow us to render images efficiently and quickly to our end users. 
 
 **Responsive Images and Image styles**
 
