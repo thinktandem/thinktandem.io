@@ -11,7 +11,7 @@ private: false
 mainImage: images/articles/drupal.jpg
 img-src: images/articles/drupal.jpg
 byline: Outlining some of the tried and tested performance enhancements that will lead you to victory in Drupal 8, Drupal 9, and beyond.
-date: 2020-02-03
+date: 2020-02-04
 ---
 
 ## Overview
@@ -58,6 +58,8 @@ Almost identical to the Internal Page Cache, however this module is used for aut
 
 BigPipe has been in core since Drupal 8.3.  Basically it uses placeholders to store parts of your pages.  When the content is updated, only the placeholders that reflect those content changes will be streamed while the rest of the page is cached.  While I personally don't fully understand the whole technical aspect of this, [this drupal.org overview explains it much better](https://www.drupal.org/docs/8/core/modules/big-pipe/overview).  No configuration is needed, it just works out of the box.  
 
+If you are on Pantheon, you don't need this module.  They [recommend turning it off](https://pantheon.io/docs/modules-known-issues#bigpipe) since the Pantheon Edge layer buffers text output.
+
 **Bandwidth Optimization aka CSS/JS Aggregation**
 
 Not a core module, but 2 options that come with Drupal 8 out of the box.  Just head over to ```/admin/config/development/performance``` and turn these CSS and JS aggregation options on.
@@ -74,19 +76,23 @@ As the [module's page states](https://www.drupal.org/project/big_pipe_sessionles
 
 Depending on the build of a site, we use the [advagg module](https://www.drupal.org/project/advagg) and its submodules in different ways. On most sites I just enable the base module and the bundler.  This is a very robust module with years worth of documentation on how and when to use it.
 
+**Quicklink**
+
+[Quicklink](https://www.drupal.org/project/quicklink) uses [Google Chrome Lab's Quicklink library](https://github.com/GoogleChromeLabs/quicklink) to make pages load faster by prefetching certain links.  This is another technology I don't have a full understanding of, but it does work and makes pages load very fast.  Check it out to get another quick win with no configuration needed.
+
 ### Other Cache Considerations
 
 **Redis or Memcached**
 
 Our preferred object cache has always been [Redis](https://redis.io/).  If you use Pantheon, it is theirs as well.  On Platform.sh you can choose either Redis or [Memcached](https://memcached.org/).  We have found (as have others) that Redis is a more performant option.  My advice is to just use Redis, but [like Levar Burton](https://www.youtube.com/watch?v=vAvQbEeTafk) I'm a big fan of self-directed learning, so you don't have to take my word for it: read this [Medium post on the comparison between the two](https://medium.com/@Alibaba_Cloud/redis-vs-memcached-in-memory-data-storage-systems-3395279b0941) for more clarity.  
 
-**Quicklink**
-
-[Quicklink](https://www.drupal.org/project/quicklink) uses [Google Chrome Lab's Quicklink library](https://github.com/GoogleChromeLabs/quicklink) to make pages load faster by prefetching certain links.  This is another technology I don't have a full understanding of, but it does work and makes pages load very fast.  Check it out to get another quick win with no configuration needed.
-
 **CDN**
 
 It is an absolute must to use a Content Delivery Network to make your site serve users fast and efficiently.  There are many choices, but the most popular are [CloudFlare](https://www.cloudflare.com/) and [Fastly](https://www.fastly.com/).  Pantheon uses Fastly out of the gate, so there is no configuration needed.  We use CloudFlare for all our sites on Platform.sh because their free plan is more legit than MC Hammer.  Here is a handy reference on [setting up your Cloudflare instance to work with your Drupal 8 site](https://support.cloudflare.com/hc/en-us/articles/115002911927-Caching-HTML-with-Drupal).
+
+**Varnish**
+
+If you decided to heed my advice and move to one of the three major Drupal hosting platforms, Varnish is already installed and configured for you.  You need Varnish on your Drupal site.  There is no need for me to dive into it further, but is a [handy reference for Drupal and Varnish](https://www.varnish-software.com/wiki/content/tutorials/drupal/index.html).
 
 ## Image Optimizations
 
