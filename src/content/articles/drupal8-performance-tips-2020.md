@@ -94,13 +94,15 @@ Websites today are chock full of images.  It is very rare to not see a site buil
 
 **Responsive Images and Image styles**
 
-Drupal has had image styles as part of core for quite sometime.  It is an easy way to effectively appropriate sized images throughout your site.  Now in Drupal 8, the [responsive images module is in core](https://www.drupal.org/docs/8/mobile-guide/responsive-images-in-drupal-8) which allows you to render images within the [HTML5 picture tag](https://www.w3schools.com/tags/tag_picture.asp).  To get rolling with this module, you need to [setup breakpoints in your theme](https://www.drupal.org/docs/8/theming-drupal-8/working-with-breakpoints-in-drupal-8) and then generate image styles that will be used in those breakpoints.  Here is a [handy reference from Promet Source](https://www.prometsource.com/blog/how-set-responsive-images-drupal-8) that gives you the blow by blow on how to set it all up.
+Image styles have been part of Drupal core for quite some time.  Image styles are an easy way to effectively create appropriately sized images throughout your site.  Now in Drupal 8, the [responsive images module is in core](https://www.drupal.org/docs/8/mobile-guide/responsive-images-in-drupal-8) which then allows you to render images within the [HTML5 picture tag](https://www.w3schools.com/tags/tag_picture.asp) in conjunction with image styles.  
 
-Simple, only take a couple minutes per style and the performance gains are amazing.  I see a lot of sites that will have 2 image styles, one for desktop and one for mobile.  Sometimes that is all you need, but you can legit have image styles for every breakpoint.  
+To get rolling with this responsive images module, you need to [setup breakpoints in your theme](https://www.drupal.org/docs/8/theming-drupal-8/working-with-breakpoints-in-drupal-8).  Then you need to generate image styles that will scale images to their breakpoints respective sizes.  Here is a [handy reference from Promet Source](https://www.prometsource.com/blog/how-set-responsive-images-drupal-8) that gives you the blow by blow on how to set it all up.
+
+This is a fairly straight forward process that only takes a  couple minutes per style and the performance gains are amazing.  I see a lot of sites that will have 2 image styles, one for desktop and one for mobile.  Sometimes that is all you need, but you can legit have image styles for every breakpoint.  
 
 **Image Optimize + reSmush.it**
 
-[Image Optimize](https://www.drupal.org/project/imageapi_optimize) is a module that allows you to link up to other image optimizations to reduce the size of your images.  [Lossy and Loosless](https://www.keycdn.com/support/lossy-vs-lossless) are the compression standards these days.  You can achieve this compression through a variety of tools out there.  Most image optimizations require the software to be installed on the server in order to work right.  This is why I recommend [reSmush.it](https://resmush.it/) as it is an external service that does this all for you.
+[Image Optimize](https://www.drupal.org/project/imageapi_optimize) is a module that allows you to link up to other image optimizations to reduce the size of your images.  [Lossy and Loosless](https://www.keycdn.com/support/lossy-vs-lossless) are the compression standards that all of these optimizations utilize.  Most image optimizations plugins require the software to be installed on the server in order to work right.  This is why I recommend [reSmush.it](https://resmush.it/) as it is an external service that does this all for you.
 
 There is a [Drupal 8 module](https://www.drupal.org/project/imageapi_optimize_resmushit) that allows you to setup an Image Optimize pipeline and use it on your image styles.  It is incredibly simple to use and the performance gains are amazing.  
 
@@ -108,33 +110,39 @@ There is a [Drupal 8 module](https://www.drupal.org/project/imageapi_optimize_re
 
 A quick summation of lazy loading is using a very small placeholder for an image that is outside of a site's current view.  When you scroll down, the lazy loading mechanism switches that placeholder for the actual image.  This allows for a smaller initial page download size which equates to more speed.
 
-I have been using the [Lazy module](https://www.drupal.org/project/lazy) for quite sometime.  Prior to their 3.x release, they used [Blazy](http://dinbror.dk/blazy/) for lazy loading.  Since 3.x they switched to [lazysizes](https://github.com/aFarkas/lazysizes).  Either version allows for easy site wide configuration for all media types.  You can also easily edit image templates to accommodate for the respective lazy loading library as well.  I personally prefer Blazy but one day I will check out their 3.x versions.  This is a must have module on your site.
+I have been using the [Lazy module](https://www.drupal.org/project/lazy) for quite sometime.  Prior to their 3.x release, they used [Blazy](http://dinbror.dk/blazy/) for lazy loading.  Since 3.x they switched to [lazysizes](https://github.com/aFarkas/lazysizes).  Either version allows for easy site wide configuration for all media types.  You can also edit image templates to accommodate for the respective lazy loading library as well.  I personally prefer Blazy since I have used it for so long, but one day I will check out their 3.x versions.  This is a must have module on your site.
 
 ## Other considerations
 
 ### PHP
 
-Always use the latest version of PHP your host supports.  PHP gets faster and faster with every minor version.  Right now 7.3 is the hotness and all your Drupal 8 sites should be on it.  
+Always use the latest version of PHP your host supports.  PHP gets faster and faster with every minor version.  Right now 7.3 is the hotness and all your Drupal 8 sites should be on it.  If one of your modules breaks due to the changes, update it.  Chances are there is already a fix or a patch to make everything work in the latest PHP version supported. 
 
-Also, write efficient and good code.  When you are writing custom modules, always take into the consideration how long it takes something to process this info.  Don't just slap code together and think, well this works.  That's great, but does it work well?  Also, use [PHPStorm](https://www.jetbrains.com/phpstorm/) and get the [PHP Inspections ​(EA Extended)](https://plugins.jetbrains.com/plugin/7622-php-inspections-ea-extended-) plugin.  It will make you a better Drupal programmer in general.  
+Write efficient and good code.  When you are writing custom modules, always take into the consideration how long it takes something to process this info.  Don't just slap code together and think, well this works.  That's great, but does it work well?  Also, use [PHPStorm](https://www.jetbrains.com/phpstorm/) and get the [PHP Inspections ​(EA Extended)](https://plugins.jetbrains.com/plugin/7622-php-inspections-ea-extended-) plugin.  It will make you a better Drupal programmer in general.  
+
+Use benchmarking tools like [New Relic](https://newrelic.com/) or [Blackfire](https://blackfire.io/) to test your existing code base.  Pantheon comes with a free version of New Relic out of the box.  Platform.sh gives you the options to setup [New Relic](https://docs.platform.sh/administration/integrations/new-relic.html) or [Blackfire](https://docs.platform.sh/administration/integrations/blackfire.html) in their configuration.  Here is a [great article I wrote a couple years ago](https://thinktandem.io/blog/2017/11/22/debugging-with-new-relic-blazemeter-strace-more/) on pinpointing a problem with benchmarking tools.
 
 ### JS
 
-Less is more is my philosophy here.   Always question why you are adding another JS library to does XYZ on your site.  Can CSS do it, can it be done another way.  If you do use JS, try to use vanilla JS as much as you can.  JQquery is great, but it adds another 100kb or so to your page loads.  
+Less is more is my philosophy here.   Always question why you are adding another JS library to does XYZ on your site.  Can CSS do it, can it be done another way?  If you do use JS, try to use vanilla JS as much as you can.  JQquery is great, but it adds another 100kb or so to your page loads.  Every little bit counts when it comes to performance.
 
-We use bootstrap and a lot of the times, we don't even need the whole JS library.  If we aren't using anything but the menu toggle, we have a quick JS snippet for that.  It is 5 lines long.  If you need more of the Bootstrap plugins, check this [Native JS alternative](https://github.com/thednp/bootstrap.native/) out instead.  You can use this method of thinking for whatever framework you mainly use as well.
+We have used [Bootstrap](https://getbootstrap.com/) for years as our go to responsive framework library. A lot of the times, we don't even need the whole JS library (or at all).  If we aren't using anything but the menu toggle, [we have a simple JS/Twig snippet for that](https://gist.github.com/labboy0276/244366df9b1f5821f872a252274d472c).  It is 5 lines long.  If you need more of the Bootstrap plugins, check this [Native JS alternative](https://github.com/thednp/bootstrap.native/) out instead.  
+
+Whenever using a JS framework, always try to find the non JQuery version, and use it.  
 
 ### CSS
 
-We have been using SASS based solutions for years.  If you use Grunt, Gulp, or Webpack, make sure you are compiling and minifying your CSS as efficiently as possibly.  There are so many tools out there to do this.  Also, remove Drupal 8 libraries you don't need from your subtheme.  Most of the time you don't need half the stuff that Drupal 8 core and contrib theme's come with.  
+We have been using SASS based solutions for years.  If you use Grunt, Gulp, or Webpack, make sure you are compiling and minifying your CSS as efficiently as possibly.  There are so many tools out there to do this.  Also, remove Drupal 8 libraries you don't need from your subtheme.  Most of the time you don't need half the stuff that Drupal 8 core and contrib themes come with.  
 
-Use this [Libraries Overrides](https://www.drupal.org/docs/8/modules/decoupled-blocks-vuejs/override-javascript-libraries) guide to strip out unused libraries by using the value of false next to their key.  Just like JS, the more efficiently you use CSS, the better.
+You can remove unwanted CSS (and JS) via the [Libraries Overrides](https://www.drupal.org/docs/8/modules/decoupled-blocks-vuejs/override-javascript-libraries) mechanism in Drupal 8.  To turn off a library, [just put false next](https://www.drupal.org/node/2497313) to the library key or file within the library in your override.
 
 ### HTML
 
 Drupal is famous for having too many divs, aka "div-itis".  Pagespeed and other performance testing tools will yell at you if you have too many divs on the page, aka DOM elements.  This is also very common in sites that just have very long, huge pages.  Always try to avoid that. 
 
-The good thing about Drupal 8 is that all of the templates are extensible and can be thrown into your subtheme.  You can remove the many wrapping divs by altering the base twig templates for each type in your subtheme.  You can alternatively use a module like [Fences](https://www.drupal.org/project/fences) to do this for you as well.  
+The good thing about Drupal 8 is that all of the templates are extensible and can be thrown into your subtheme.  You can remove the many wrapping divs by altering the base twig templates for each type in your subtheme.  Some of the quickest wins for me is to slap the ```container.html.twig``` and ```field.html.twig``` in my subtheme and remove all the surrounding divs.  
+
+You can alternatively use a module like [Fences](https://www.drupal.org/project/fences) to do this for you as well.  I personally have never used this module, but it has been around for quite sometime.
 
 ## Conclusion
 
