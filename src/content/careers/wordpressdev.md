@@ -1,7 +1,7 @@
 ---
 title: WordPress Developer
 short: WordPress Developer
-slug: wordpress-developer
+slug: wordpressdev
 weight: 1
 seo:
   description: WordPress Developer job opening at Tandem.
