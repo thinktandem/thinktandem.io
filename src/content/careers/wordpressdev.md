@@ -16,9 +16,9 @@ Tandem is looking for a **professional WordPress developer** for a contract posi
 
 In order to succeed this individual should…
 
-- Share [Tandem&#39;s core values](https://docs.thinktandem.io/onboarding/values.html#who-is-tandem).
+- Share [Tandem&#39;s core values](https://docs.thinktandem.io/manifesto/values.html).
 - Share the core thrusts of Tandem&#39;s engineering values.
-  - [https://docs.thinktandem.io/manifesto/](https://docs.thinktandem.io/manifesto/)
+  - [https://docs.thinktandem.io/manifesto/](https://docs.thinktandem.io/manifesto/sins.html#duplicating-work)
   - [https://docs.thinktandem.io/guides/contributing-code.html](https://docs.thinktandem.io/guides/contributing-code.html)
 - Give a shit and take pride in their (and by extension) the organization&#39;s work.
 
