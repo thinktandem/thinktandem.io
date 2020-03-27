@@ -19,7 +19,7 @@ Covid-19
 
 In the wake of the [covid-19](https://www.who.int/emergencies/diseases/novel-coronavirus-2019) world pandemic the NERD Summit and MidCamp both decided to go virtual in 2020. This in turn led me to a [heretofore](https://www.youtube.com/watch?v=OHSYWIAAY2o) [inconceivable](https://www.youtube.com/watch?v=YIP6EwqMEoE) possibility; to attend BOTH [NERD Summit](https://nerdsummit.org/) and [MidCamp](https://www.midcamp.org/)!
 
-NERD Summit, Amherst, MA
+Coffee
 ------------------------
 
 I started the day in Amherst, MA with some hallway coffee chat (virtually). In the chat we talked about our current projects and what we might be expeciting/hoping for at NERDS. In the chat I met some new people one of whom mentioned that he was planning on bouncing back and fort between NERDS and MidCamp, and I thought that was brilliant! So, I did too.
