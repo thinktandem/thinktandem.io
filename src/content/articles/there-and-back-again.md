@@ -45,7 +45,7 @@ The big points for me were:
 Backstop JS
 -----------
 
-Back to Amherst, MA for [BackstopJS: Avoid misery with Visual Regression Testing](https://nerdsummit.org/#14) by Melissa Rossii ([@mrossi113](https://twitter.com/mrossi113)) & Chelsie Johnston. I was familiar with the idea of visual regression and BackstopJS, but have never tried it. This session was well presented, with concrete ideas about why and how to BackstopJS. vid:
+Back to Amherst, MA for [BackstopJS: Avoid misery with Visual Regression Testing](https://nerdsummit.org/#14) by Melissa Rossii ([@mrossi113](https://twitter.com/mrossi113)) & Chelsie Johnston ([cj101](https://www.drupal.org/u/cj101)). I was familiar with the idea of visual regression and BackstopJS, but have never tried it. This session was well presented, with concrete ideas about why and how to BackstopJS. vid:
 
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iTX0lOTLmbE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
