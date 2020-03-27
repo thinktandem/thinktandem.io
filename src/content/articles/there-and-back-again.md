@@ -66,7 +66,7 @@ Onto keynote at NERDS: [Improvise Into the Unknown](https://nerdsummit.org/#16) 
 
 My main take aways:
 
-* fight the internal [Kahn](https://www.youtube.com/watch?v=wRnSnfiUI54)
+* fight the internal [Khan](https://www.youtube.com/watch?v=wRnSnfiUI54)
 * go slow
 * think/engineer
 * produce your best work
