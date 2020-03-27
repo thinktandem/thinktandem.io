@@ -22,7 +22,7 @@ In the wake of the [covid-19](https://www.who.int/emergencies/diseases/novel-cor
 Coffee
 ------------------------
 
-I started the day in Amherst, MA with some hallway coffee chat (virtually). In the chat we talked about our current projects and what we might be expeciting/hoping for at NERDS. In the chat I met some new people one of whom mentioned that he was planning on bouncing back and fort between NERDS and MidCamp, and I thought that was brilliant! So, I did too.
+I started the day in Amherst, MA with some hallway coffee chat (virtually). In the chat we talked about our current projects and what we might be expecting/hoping for at NERDS. In the chat I met some new people one of whom mentioned that he was planning on bouncing back and forth between NERDS and MidCamp, and I thought that was brilliant! So, I did too.
 
 Incident Management
 -------------------
@@ -31,7 +31,7 @@ The first session I attended was in the [Windy City](https://en.wikipedia.org/wi
 
 This was out of the box for me as I typically spend most of my time at technical presentations, but I've been opening my horizons to learn the business aspects of dev.
 
-The presentation did not dissapoint. I learned how Meghan deals with disruptive incidents in an digital agency framework. It was great to here the process and management wrapped around the incident. Here is the vid:
+The presentation did not dissapoint. I learned how Meghan deals with disruptive incidents in a digital agency framework. It was great to hear the process and management wrapped around the incident. Here is the vid:
 
 <center><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VatCYAbrnX0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
@@ -51,14 +51,14 @@ Back to Amherst, MA for [BackstopJS: Avoid misery with Visual Regression Testing
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iTX0lOTLmbE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 
-Here is an exmaple template repository to get you started:
+Here is an example template repository to get you started:
 
 * [lastcallmedia/backstopjs-demo](https://github.com/LastCallMedia/backstopjs-demo)
 
 Improvise Into the Unknown
 --------------------------
 
-Onto keynote at NERDS: [Improvise Into the Unknown](https://nerdsummit.org/#16) by [@pamvictor](https://twitter.com/pamvictor). Pam is a great story teller and I was glad to recieve this message. She reminded my to breathe, take my time, and produce my best work. Enough of me blabbing about though here is the vid:
+Onto keynote at NERDS: [Improvise Into the Unknown](https://nerdsummit.org/#16) by [@pamvictor](https://twitter.com/pamvictor). Pam is a great story teller and I was glad to recieve this message. She reminded me to breathe, take my time, and produce my best work. Enough of me blabbing about though here is the vid:
 
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/D0l2Nm1kg1M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><Paste>
