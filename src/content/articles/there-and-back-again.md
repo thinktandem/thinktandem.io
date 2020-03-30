@@ -17,7 +17,7 @@ date: 2020-03-27
 Covid-19
 --------
 
-In the wake of the [covid-19](https://www.who.int/emergencies/diseases/novel-coronavirus-2019) world pandemic the NERD Summit and MidCamp both decided to go virtual in 2020. This in turn led me to a [heretofore](https://www.youtube.com/watch?v=OHSYWIAAY2o) [inconceivable](https://www.youtube.com/watch?v=YIP6EwqMEoE) possibility; to attend BOTH [NERD Summit](https://nerdsummit.org/) and [MidCamp](https://www.midcamp.org/)!
+In the wake of the [covid-19](https://www.who.int/emergencies/diseases/novel-coronavirus-2019) world pandemic the NERD Summit and MidCamp both decided to go virtual in 2020. This in turn led me to a [heretofore](https://youtu.be/OHSYWIAAY2o?t=73) [inconceivable](https://www.youtube.com/watch?v=YIP6EwqMEoE) possibility; to attend BOTH [NERD Summit](https://nerdsummit.org/) and [MidCamp](https://www.midcamp.org/)!
 
 Coffee
 ------------------------
