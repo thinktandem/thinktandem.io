@@ -47,6 +47,13 @@ dependencies:
 # The hooks that will be performed when the package is deployed.
 hooks:
   build: |
+    set -e
+    unset NPM_CONFIG_PREFIX
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.2/install.sh | dash
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    nvm current
+    nvm install 10.20.0
     curl -sS https://platform.sh/cli/installer | php
     npm install
     bower install
