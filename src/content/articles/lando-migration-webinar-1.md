@@ -10,7 +10,7 @@ author: John Ouellet
 private: false
 mainImage: images/articles/drupal-migration.jpg
 img-src: images/articles/drupal-migration.jpg
-byline: In this webinar I showed you how to setup and debug a Drupal 8/9 Migration with Lando.
+byline: This webinar shows how to setup and debug a Drupal 8/9 Migration with Lando.
 date: 2020-04-28
 ---
 
@@ -20,7 +20,7 @@ Thank you for everyone who attended our first webinar.  We are extremely appreci
 
 <iframe width="750" height="422" src="https://www.youtube.com/embed/C1lhgObpHd8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-I also made the [slidedeck](https://docs.google.com/presentation/d/1bEbg0I-lumlvWrjZqMhrtHMgwkLEbi8uB2fBjHFCGFE/edit?usp=sharing) public if you wanted to check those out as well.  The full repo I used during the webinar is [available on GitHub as well](https://github.com/thinktandem/migration-webinar/tree/webinar-1-final).  Finally, [the boilerplate module](https://github.com/thinktandem/migration_boilerplate) I used as well is available.
+I also made the [slidedeck](https://docs.google.com/presentation/d/1bEbg0I-lumlvWrjZqMhrtHMgwkLEbi8uB2fBjHFCGFE/edit?usp=sharing) public if you wanted to check those out.  The full repo I used during the webinar is [available on GitHub as well](https://github.com/thinktandem/migration-webinar/tree/webinar-1-final).  Finally, [the boilerplate module](https://github.com/thinktandem/migration_boilerplate) is also available.
 
 Here is a brief overview what was discussed with relevant samples and links per section.
 
@@ -131,7 +131,7 @@ This command allows you to rollback your migrations based on the config name.  Y
 
 **drush mrs config_name**
 
-Thus command resets a migration status back to idle.  This is commonly used when a migration has become stuck.  
+This command resets a migration status back to idle.  This is commonly used when a migration has become stuck.  
 
 **drush mmsg config_name**
 
