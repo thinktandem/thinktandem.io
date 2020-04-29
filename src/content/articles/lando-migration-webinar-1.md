@@ -182,6 +182,6 @@ I am very glad that you decided to attend this webinar.  As I mentioned I have w
 - [Migrating a Drupal 7 AddressField To a Drupal 8 Address](https://thinktandem.io/blog/2019/07/17/migrating-a-drupal-7-addressfield-to-a-drupal-8-address/)
 - [Migrating a Drupal 8 Multisite to a Standalone Drupal 8 Site](https://thinktandem.io/blog/2020/03/12/migrating-a-drupal-8-multisite-to-a-standalone-drupal-8-site/)
 
-Our next webinar will be held on May 8, 2020.  I will be diving into Source, Process and Destination plugins in great detail.  I will also be showing you how to handle some of the usual cases of complex data transformations as well.  
+Our next webinar will be held on May 8, 2020; [sign up here to attend](https://us02web.zoom.us/webinar/register/WN_xWFjNrQtTNK2ZeAMu6ePmw).  I will be diving into Source, Process and Destination plugins in great detail.  I will also be showing you how to handle some of the usual cases of complex data transformations as well.  
 
 In the interim, if your organization has any questions with a migration you are performing, please fill out the form below so we can chat more.
