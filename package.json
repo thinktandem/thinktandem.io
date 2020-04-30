@@ -6,7 +6,7 @@
     "bower": "^1.8.8",
     "browserify": "^11.0.1",
     "browserify-shim": "^3.8.8",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "metalsmith": "~1.7.0",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-browserify": "RobLoach/metalsmith-browserify#update",
