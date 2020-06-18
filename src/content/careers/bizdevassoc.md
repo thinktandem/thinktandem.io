@@ -19,10 +19,7 @@ Tandem is a digital agency looking for a **business development associate** who 
 
 In order to succeed this individual should…
 
-- Share [Tandem&#39;s core values](https://docs.thinktandem.io/onboarding/values.html#who-is-tandem).
-- Share the core thrusts of Tandem&#39;s engineering values.
-  - [https://docs.devwithlando.io/contrib/vision.html](https://docs.devwithlando.io/contrib/vision.html)
-  - [https://docs.thinktandem.io/coding/guidelines.html](https://docs.thinktandem.io/coding/guidelines.html)
+- Share [Tandem&#39;s core values](https://docs.thinktandem.io/manifesto/).
 - Give a shit and take pride in their (and by extension) the organization&#39;s work.
 - Be self-motivated and passionate about learning.
 - Be pleasant to work with.
