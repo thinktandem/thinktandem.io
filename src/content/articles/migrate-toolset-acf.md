@@ -16,19 +16,21 @@ date: 2020-07-07
 
 ## Overview
 
-We recently finished a project where we had to take a legacy WordPress site and retheme it.  On top of the retheme, the site needed a lot of love in the admin experience arena.  Typically, when we build out new WordPress sites, [Advanced Custom Fields](https://www.advancedcustomfields.com/) (ACF) is one of our go to plugins for every single project.  The site we were fixing up used [Toolset Types](https://toolset.com/home/types-manage-post-types-taxonomy-and-custom-fields/) for their Custom Post Types (CPT) and Fields.  We had never seen this plugin before in action.  
+We recently finished a project retheming a legacy WordPress site.  On top of the retheme, the site needed a lot of love in the admin experience arena.  Typically, when we build out new WordPress sites, [Advanced Custom Fields](https://www.advancedcustomfields.com/) (ACF) is one of our go-to plugins.  The site we were fixing used [Toolset Types](https://toolset.com/home/types-manage-post-types-taxonomy-and-custom-fields/) for their Custom Post Types (CPT) and Fields. This presented a new challenge: how to migrate existing field data from the custom post types and fields created with Toolset Types to Advanced Custom Fields.  
 
-After playing around with Toolset, we decided to ditch the Toolset plugin and go with our typical setup.  After a little Google-fu and trial / error, I found a fairly straight forward way to handle this data migration.
+Fortunately, I was able to discover a solution using a little Google-fu combined with a healthy dose of trial and error.
 
 ## Setup
 
-When we did this project, we had created a new WordPress site and migrated the tables we needed over.  We have an internal plugin we use that utilizes multiple database containers via [Lando](https://lando.dev/) and [WP CLI](https://wp-cli.org/) to do our magic.  One day I will turn this into a public plugin.  However, you can use any migration plugin you choose.  I recommend [Migrate DB Pro](https://deliciousbrains.com/wp-migrate-db-pro) if you don't have a go to plugin.
+To start this "retheme" on a clean slate, we had created a new WordPress site and migrated the tables we needed over.  We have an internal plugin we use that utilizes multiple database containers via [Lando](https://lando.dev/) and [WP CLI](https://wp-cli.org/) to help migrate data between WordPress instances; unfortunately I haven't had the time to turn this into a public plugin. For now, use any migration plugin you're comfortable with.  I recommend [Migrate DB Pro](https://deliciousbrains.com/wp-migrate-db-pro) if you don't have a go-to plugin.
 
-All the data we will need is stored in the ```wp_postmeta``` table.  We will be recreating the CPTs manually, so any standalone Toolset tables are not needed.  Obviously you will move other tables if you are rebuilding the site.  Theoretically, you could do this on the original website that has Toolset.  However, I didn't try it that way, so tread with caution if you do.
+All the data we will need is stored in the ```wp_postmeta``` table.  We will be recreating the CPTs manually, so any standalone Toolset tables are not needed.  Obviously you will move other tables if you are rebuilding the site.  Theoretically, you could do this on the original website that has Toolset instead of migrating over to a new WordPress instance.  However, I didn't try it that way, so tread with caution if you do.
 
 ## Create CPTs Manually 
 
-The first thing we need to do is recreate the CPTs manually.  When you create these, the slugs have to be exactly how they are in Toolset.  I noticed that Toolset uses hyphens instead of underscores.  It could be just this instance, but do take note how they slugs are.  We use a pretty standard action hook for ours throughout our projects:
+The first thing we need to do is recreate the CPTs manually.  When you create these, **the slugs have to be exactly how they are in Toolset**.  I noticed that Toolset uses hyphens instead of underscores.  Regardless of how they are formatted on your instance, make careful note of the format.
+
+We use a pretty standard action hook for registering CPTs throughout our projects:
 
 ```php
 /**
@@ -110,9 +112,9 @@ function register_cpts() {
 add_action('init', 'register_cpts');
 ```
 
-As you can see in the ```$types``` array we are defining the slug name and then some options.  We found that you really only need to tweak a couple settings typically on a CPT. I used some generic examples so you get a gist of whats going on.  Also note in the str_replace function, we are using a hyphen there instead of an underscore.  
+As you can see in the ```$types``` array, we are defining the slug name and then some options.  We found that you really only need to tweak a couple settings on a CPT. I used some generic examples so you get a gist of what's going on.  Also note we are using a hyphen instead of an underscore in the str_replace function. 
 
-Also note, we set ```show_in_rest``` to true.  Since [Gutenberg](https://wordpress.org/gutenberg/), developers like to set that to false to turn off Gutenberg.  While it works, it isn't technically correct.  You are turning off the [REST API](https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-rest-api-support-for-custom-content-types/) for that CPT and that could hurt you down the road.  The correct way to turn off Gutenberg for CPTs is as follows:
+Also note, we set ```show_in_rest``` to true.  Since [Gutenberg](https://wordpress.org/gutenberg/) was introduced I've noticed some developers setting ```show_in_rest``` to FALSE to disable the Gutenberg editor.  While that works, doing so will disable the entire [REST API](https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-rest-api-support-for-custom-content-types/) for that CPT and that could hurt you down the road.  The correct way to turn off Gutenberg for CPTs is as follows:
 
 ```php
 /**
@@ -130,13 +132,13 @@ function turn_off_gutenberg($use_block_editor, $post_type) {
 add_filter('use_block_editor_for_post_type', 'turn_off_gutenberg', 10, 2);
 ```
 
-As you can see, I am turning off Gutenberg for the type and stuff CPTs.  The things CPT will have Gutenberg on in this example.  With that, our CPTs are setup as they were with Toolset's Types.  Just make sure your settings are the same and you are ready to move onto the next step.
+As you can see, I am turning off Gutenberg for the "type" and "stuff" CPTs.  The "things" CPT will have Gutenberg on in this example.  With that, our CPTs are setup as they were with Toolset's Types.  Just make sure your settings are the same and you are ready to move onto the next step.
 
 ## Create ACF Groups & Fields
 
 The next step in this journey is to manually recreate your Toolset Fields and Groups in ACF.  This is more tedious than anything, especially if you have a bunch of fields. While there are programmatic ways to generate ACF fields, it is better to just do this manually.    
 
-The first thing I did was create the groups and made sure they were named the same as the CPT's.  I then added the Location rules so they were mapped to their respective CPT's.  Pretty straight forward and easy to do.
+The first thing I did was create the groups and made sure they were named the same as the CPT's.  I then added the Location rules so they were mapped to their respective CPTs.
 
 So the next part was going through and creating all the fields within those groups.  The biggest take away from this is to ***make sure your field name has wpcf- before it***.  For example: If the field slug on the Toolset config was ```contact-type```; the ACF field name will be ```wpcf-contact-type```.  That is the magic that will line up the ```wp_postmeta``` correctly.  
 
@@ -144,9 +146,9 @@ Make sure all your fields data is exactly the same.  Especially in checkboxes, r
 
 With that, we are almost done.  The only thing left to do is some data cleanup on specific field types.
 
-## Fixing Certain Field's Meta Values
+## Fixing Certain Field Meta Values
 
-ACF stores some field types meta values different in the ```wp_postmeta``` table.  For our use case, the two field types we came across were checkboxes and files.  The checkboxes.  The checkboxes were stored in a serialized multidimensional array that had wpcf-fields-checkboxes-option as a key.  While the files stored the whole file url as a meta value.  ACF only stores the serialized checkbox values and the attachment post id for files.  
+ACF stores some field types meta values different in the ```wp_postmeta``` table.  For our use case, the two field types we came across were checkboxes and files.  In Toolset, the checkboxes were stored in a serialized multidimensional array that had ```wpcf-fields-checkboxes-option``` as a key. Files stored the whole file url as a meta value.  In contrast, ACF only stores the serialized checkbox values and the attachment post id for files.  
 
 The easiest way to fix this is either via WP CLI or through a settings form.  I whipped up a standard settings form so you can just slap this in place:
 
@@ -285,10 +287,10 @@ class MigrationCleanup {
 new MigrationCleanup();
 ```
 
-Outside of the typical settings form setup, the code does a few things.  First, in our fields property, we are defining the field names that are checkboxes.  In our constructor, we are hooking into our database via ```$wpdb``` and setting it as a property.  When we hit submit on the settings form, we are then doing the magic that fixes the data.  Also note, in the fixFiles method, make sure you update the url in str_replace to match the data in your old site.  
+Outside of the typical settings form setup, the code does a few things.  First, in our fields property, we are defining the field names that are checkboxes.  In our constructor, we are hooking into our database via ```$wpdb``` and setting it as a property.  Hitting "Submit" on the settings form will run the magic that fixes the data.  Also note, in the ```fixFiles``` method, make sure you update the ```url``` in str_replace to match the data in your old site.  
 
 You can see by the code that we are just massaging the data to fit how ACF stores the meta values.  If you come across any other field types that need some TLC, then just use this code to add your own method.
 
 ## Conclusion
 
-While there is a small amount of heavy lifting, migrating from Toolset to ACF isn't impossible.  If you have any questions on this post or need help with complex WordPress work, please fill out the form below.
+While there is a some coding heavy lifting to do, migrating from Toolset to ACF isn't impossible.  If you have any questions on this post or need help with complex WordPress work, please fill out the form below.
