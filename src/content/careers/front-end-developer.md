@@ -18,13 +18,13 @@ At Tandem, you'll work with a team of experts, including the maintainers of [Lan
 
 In order to succeed you should...
 
--   Share [Tandem's core values](https://docs.thinktandem.io/onboarding/values.html#who-is-tandem).
+-   Share [Tandem's core values](https://docs.thinktandem.io/manifesto/).
 
 -   Share the core thrusts of Tandem's engineering values.
 
   -   <https://docs.devwithlando.io/contrib/vision.html>
 
-  -   <https://docs.thinktandem.io/coding/guidelines.html>
+  -   <https://docs.thinktandem.io/guides/contributing-code.html>
 
 -   Give a shit and take pride in their (and by extension) the organization's work.
 

@@ -22,13 +22,13 @@ You are a project manager who excels in at least two of these categories and is 
 
 In order to succeed this individual should...
 
--   Share [Tandem's core values](https://docs.thinktandem.io/onboarding/values.html#who-is-tandem).
+-   Share [Tandem's core values](https://docs.thinktandem.io/manifesto/).
 
 -   Share the core thrusts of Tandem's engineering values.
 
 -   <https://docs.devwithlando.io/contrib/vision.html>
 
--   <https://docs.thinktandem.io/coding/guidelines.html>
+-   <https://docs.thinktandem.io/guides/contributing-code.html>
 
 -   Give a shit and take pride in their (and by extension) the organization's work.
 
