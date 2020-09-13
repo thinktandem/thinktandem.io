@@ -1,7 +1,9 @@
 Tandem Website
 ==============
 
-All the hacked up Kalastatic magic for [http://www.thinktandem.io](http://www.thinktandem.io). This is currently a stop-gap website to bridge the gap between the old and new brand identities.
+**This project is now deprecated in favor of <https://github.com/thinktandem/tandem>.**
+
+All the hacked up Kalastatic magic for [http://v2.thinktandem.io](http://www.thinktandem.io). This is currently a stop-gap website to bridge the gap between the old and new brand identities.
 
 Workflow
 --------
