@@ -4,10 +4,10 @@
   "private": true,
   "dependencies": {
     "bower": "^1.8.8",
-    "browserify": "^11.0.1",
+    "browserify": "^17.0.0",
     "browserify-shim": "^3.8.8",
     "jquery": "^3.4.1",
-    "metalsmith": "~1.7.0",
+    "metalsmith": "~2.5.1",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-browserify": "RobLoach/metalsmith-browserify#update",
     "metalsmith-clean-css": "^5.0.1",
@@ -47,10 +47,10 @@
     "start": "/app/node_modules/.bin/grunt"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-cli": "^0.1.13",
+    "grunt": "^1.5.3",
+    "grunt-cli": "^1.4.3",
     "grunt-contrib-uglify": "^2.0.0",
-    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-watch": "^1.1.0",
     "grunt-exec": "^0.4.6",
     "grunt-htmllint": "^0.3.0",
     "grunt-sass-lint": "^0.2.0",
